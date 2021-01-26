@@ -1,8 +1,10 @@
 //  === Requirements ===
-var express = require('express');
-var application = express();
+const express = require('express')
+const application = express()
+const logger = require("morgan")
 
-//  === Router ===
+//  === Middleware ===
+application.use(logger('combined', { stream: require("./logs/log_helper")}))
 application.use("/", require("./config/routes"))
 
 //  === Engine Setup ===
@@ -10,8 +12,7 @@ application.listen(8080)
 
 /*
 //  === Engine Setup ===
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+var cookieParser = require('cookie-parser');v
 application.set('views', path.join(__dirname, 'views'));
 application.set('view engine', 'pug');
 
@@ -38,5 +39,6 @@ application.use(function(err, req, res, next) {
   res.render('error');
 });
 */
+
 //  === Exports ===
 module.exports = application;
