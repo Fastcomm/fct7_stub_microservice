@@ -1,8 +1,9 @@
 //  === Requirements ===
-var fs = require('fs')
-var path = require('path')
+var file_stream = require('fs')
+var file_path = require('path')
  
-// create a write stream (in append mode)
-var log_helper = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
+//  === Create Stream ===
+var log_helper = file_stream.createWriteStream(file_path.join(__dirname, 'access.log'), { flags: 'a' })
 
+//  === Exports ===
 module.exports = log_helper
