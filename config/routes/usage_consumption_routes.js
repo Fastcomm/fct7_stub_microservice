@@ -5,7 +5,7 @@ var usage_consumption_controller = require("../../app/controllers/usage_consumpt
 
 //  === Routes ===
 usage_consumption_routes.get("/:id", (request, response) => {
-    response.json( usage_consumption_controller.show(request) )
+    response.send( usage_consumption_controller.show(request) )
 })
 
 usage_consumption_routes.get("/", (request, response) => {
