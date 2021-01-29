@@ -153,7 +153,7 @@ module.exports = {
     },
     index_requests: function(request)
     {
-        console.log("usage_consumption_controller.index_request")
+        console.log("usage_consumption_controller.index_requests")
         return [
             {
                 id: faker.random.uuid(),
@@ -201,7 +201,7 @@ module.exports = {
     },
     destroy_hub: function(request)
     {
-        console.log("usage_consumption_controller.destory_hub")
+        console.log("usage_consumption_controller.destroy_hub")
         return {
             id: request.params.id,
             status: "usage_consumption hub destroyed successfully"
