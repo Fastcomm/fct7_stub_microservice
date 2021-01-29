@@ -5,6 +5,7 @@ const faker = require('faker')
 module.exports = {
     show: function(request)
     {
+        console.log("usage_consumption_controller.show")
         return {
             id: request.params.id,
             href: faker.internet.url(),
@@ -44,6 +45,7 @@ module.exports = {
     },
     index: function(request)
     {
+        console.log("usage_consumption_controller.index")
         return [
             {
                 id: faker.random.uuid(),
@@ -85,6 +87,7 @@ module.exports = {
     },
     destroy: function(request)
     {
+        console.log("usage_consumption_controller.destroy")
         return {
             id: request.params.id,
             status: "usage_consumption entry destroyed successfully"
@@ -92,6 +95,7 @@ module.exports = {
     },
     create_request: function(request)
     {
+        console.log("usage_consumption_controller.create_request")
         return {
             id: faker.random.uuid(),
             href: faker.internet.url(),
@@ -120,6 +124,7 @@ module.exports = {
     },
     show_request: function(request)
     {
+        console.log("usage_consumption_controller.show_request")
         return {
             id: faker.random.uuid(),
             href: faker.internet.url(),
@@ -148,6 +153,7 @@ module.exports = {
     },
     index_requests: function(request)
     {
+        console.log("usage_consumption_controller.index_request")
         return [
             {
                 id: faker.random.uuid(),
@@ -178,6 +184,7 @@ module.exports = {
     },
     destroy_request: function(request)
     {
+        console.log("usage_consumption_controller.destroy_request")
         return {
             id: request.params.id,
             status: "usage_consumption request destroyed successfully"
@@ -185,6 +192,7 @@ module.exports = {
     },
     create_hub: function(request)
     {
+        console.log("usage_consumption_controller.create_hub")
         return {
             id: faker.random.uuid(),
             callback: faker.internet.url(),
@@ -193,6 +201,7 @@ module.exports = {
     },
     destroy_hub: function(request)
     {
+        console.log("usage_consumption_controller.destory_hub")
         return {
             id: request.params.id,
             status: "usage_consumption hub destroyed successfully"

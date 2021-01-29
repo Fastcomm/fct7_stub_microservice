@@ -10,6 +10,7 @@ routes.use("/usage_consumption_hub", require("./routes/usage_consumption_hub_rou
 routes.use("/usage", require("./routes/usage_routes"))
 routes.use("/usage_specification", require("./routes/usage_specification_routes"))
 routes.use("/usage_hub", require("./routes/usage_hub_routes"))
+routes.use("/product_ordering", require("./routes/product_ordering_routes"))
 
 //  === Exports ===
 module.exports = routes
