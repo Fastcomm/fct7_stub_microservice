@@ -2,8 +2,6 @@
 const express = require('express')
 const routes = express.Router()
 
-//  === Controllers ===
-
 //  ===   Default   ===
 routes.use("/", require("./routes/application_routes"))
 
