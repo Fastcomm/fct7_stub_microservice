@@ -7,7 +7,7 @@ module.exports = {
     {
         console.log("usage_consumption_controller.show")
         return {
-            information: {
+            stub_information: {
                 controller: 'usage_consumption_controller',
                 method: 'show'
             },
@@ -52,7 +52,7 @@ module.exports = {
         console.log("usage_consumption_controller.index")
         return [
             {
-                information: {
+                stub_information: {
                     controller: 'usage_consumption_controller',
                     method: 'index'
                 },
@@ -97,7 +97,7 @@ module.exports = {
     {
         console.log("usage_consumption_controller.destroy")
         return {
-            information: {
+            stub_information: {
                 controller: 'usage_consumption_controller',
                 method: 'destroy'
             },
@@ -109,7 +109,7 @@ module.exports = {
     {
         console.log("usage_consumption_controller.create_request")
         return {
-            information: {
+            stub_information: {
                 controller: 'usage_consumption_controller',
                 method: 'create_request'
             },
@@ -142,7 +142,7 @@ module.exports = {
     {
         console.log("usage_consumption_controller.show_request")
         return {
-            information: {
+            stub_information: {
                 controller: 'usage_consumption_controller',
                 method: 'show_request'
             },
@@ -176,7 +176,7 @@ module.exports = {
         console.log("usage_consumption_controller.index_requests")
         return [
             {
-                information: {
+                stub_information: {
                     controller: 'usage_consumption_controller',
                     method: 'index_requests'
                 },
@@ -210,7 +210,7 @@ module.exports = {
     {
         console.log("usage_consumption_controller.destroy_request")
         return {
-            information: {
+            stub_information: {
                 controller: 'usage_consumption_controller',
                 method: 'destroy_request'
             },
@@ -222,7 +222,7 @@ module.exports = {
     {
         console.log("usage_consumption_controller.create_hub")
         return {
-            information: {
+            stub_information: {
                 controller: 'usage_consumption_controller',
                 method: 'create_hub'
             },
@@ -235,7 +235,7 @@ module.exports = {
     {
         console.log("usage_consumption_controller.destroy_hub")
         return {
-            information: {
+            stub_information: {
                 controller: 'usage_consumption_controller',
                 method: 'destroy_hub'
             },

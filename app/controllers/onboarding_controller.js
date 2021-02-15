@@ -7,7 +7,7 @@ module.exports = {
     {
         console.log("onboarding_controller.index")
         return {
-            information: {
+            stub_information: {
                 controller: 'onboarding_controller',
                 method: 'index'
             },
@@ -32,7 +32,7 @@ module.exports = {
     {
         console.log("onboarding_controller.show")
         return {
-            information: {
+            stub_information: {
                 controller: 'onboarding_controller',
                 method: 'show'
             },
@@ -58,7 +58,7 @@ module.exports = {
         console.log("onboarding_controller.create")
         return [
             {
-                information: {
+                stub_information: {
                     controller: 'onboarding_controller',
                     method: 'create'
                 },
@@ -84,7 +84,7 @@ module.exports = {
     {
         console.log("onboarding_controller.update")
         return {
-            information: {
+            stub_information: {
                 controller: 'onboarding_controller',
                 method: 'update'
             },
@@ -109,7 +109,7 @@ module.exports = {
     {
         console.log("onboarding_controller.delete")
         return {
-            information: {
+            stub_information: {
                 controller: 'onboarding_controller',
                 method: 'delete'
             },

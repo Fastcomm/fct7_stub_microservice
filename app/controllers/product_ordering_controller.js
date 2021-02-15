@@ -7,7 +7,7 @@ module.exports = {
     {
         console.log("product_ordering_controller.create")
         return {
-            information: {
+            stub_information: {
                 controller: 'product_ordering_controller',
                 method: 'create'
             },
@@ -45,7 +45,7 @@ module.exports = {
     {
         console.log("product_ordering_controller.show")
         return {
-            information: {
+            stub_information: {
                 controller: 'product_ordering_controller',
                 method: 'show'
             },
@@ -84,7 +84,7 @@ module.exports = {
         console.log("product_ordering_controller.index")
         return [
             {
-                information: {
+                stub_information: {
                     controller: 'product_ordering_controller',
                     method: 'index'
                 },
@@ -123,7 +123,7 @@ module.exports = {
     {
         console.log("product_ordering_controller.update")
         return {
-            information: {
+            stub_information: {
                 controller: 'product_ordering_controller',
                 method: 'update'
             },
@@ -162,7 +162,7 @@ module.exports = {
     {
         console.log("product_ordering_controller.destroy")
         return {
-            information: {
+            stub_information: {
                 controller: 'product_ordering_controller',
                 method: 'destroy'
             },

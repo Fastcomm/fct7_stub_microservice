@@ -7,7 +7,7 @@ module.exports = {
     {
         console.log("bill_management_controller.show")
         return {
-            information: {
+            stub_information: {
                 controller: 'bill_management',
                 method: 'show'
             },
@@ -33,7 +33,7 @@ module.exports = {
         console.log("bill_management_controller.index")
         return [
             {
-                information: {
+                stub_information: {
                     controller: 'bill_management',
                     method: 'index'
                 },    
@@ -59,7 +59,7 @@ module.exports = {
     {
         console.log("bill_management_controller.update")
         return {
-            information: {
+            stub_information: {
                 controller: 'bill_management',
                 method: 'update'
             },
@@ -84,7 +84,7 @@ module.exports = {
     {
         console.log("bill_management_controller.show_rate")
         return {
-            information: {
+            stub_information: {
                 controller: 'bill_management',
                 method: 'show_rate'
             },
@@ -111,7 +111,7 @@ module.exports = {
         console.log("bill_management_controller.index_rate")
         return [
             {
-                information: {
+                stub_information: {
                     controller: 'bill_management',
                     method: 'index_rate'
                 },
@@ -138,7 +138,7 @@ module.exports = {
     {
         console.log("bill_management_controller.create_on_demand")
         return {
-            information: {
+            stub_information: {
                 controller: 'bill_management',
                 method: 'create_on_demand'
             },
@@ -168,7 +168,7 @@ module.exports = {
     {
         console.log("bill_management_controller.show_on_demand")
         return {
-            information: {
+            stub_information: {
                 controller: 'bill_management',
                 method: 'show_on_demand'
             },
@@ -199,7 +199,7 @@ module.exports = {
         console.log("bill_management_controller.index_on_demand")
         return [
             {
-                information: {
+                stub_information: {
                     controller: 'bill_management',
                     method: 'index_on_demand'
                 },
@@ -230,7 +230,7 @@ module.exports = {
     {
         console.log("bill_management_controller.create_hub")
         return {
-            information: {
+            stub_information: {
                 controller: 'bill_management',
                 method: 'create_hub'
             },
@@ -243,7 +243,7 @@ module.exports = {
     {
         console.log("bill_management_controller.destroy_hub")
         return {
-            information: {
+            stub_information: {
                 controller: 'bill_management',
                 method: 'destroy_hub'
             },

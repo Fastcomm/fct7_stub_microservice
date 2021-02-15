@@ -7,7 +7,7 @@ module.exports = {
     {
         console.log('usage_management_controller.create')
         return {
-            information: {
+            stub_information: {
                 controller: 'usage_management_controller',
                 method: 'create'
             },
@@ -60,7 +60,7 @@ module.exports = {
     {
         console.log('usage_management_controller.show')
         return {
-            information: {
+            stub_information: {
                 controller: 'usage_management_controller',
                 method: 'show'
             },
@@ -114,7 +114,7 @@ module.exports = {
         console.log('usage_management_controller.index')
         return [
             {
-                information: {
+                stub_information: {
                     controller: 'usage_management_controller',
                     method: 'index'
                 },
@@ -168,7 +168,7 @@ module.exports = {
     {
         console.log('usage_management_controller.update')
         return {
-            information: {
+            stub_information: {
                 controller: 'usage_management_controller',
                 method: 'update'
             },
@@ -221,7 +221,7 @@ module.exports = {
     {
         console.log('usage_management_controller.destroy')
         return {
-            information: {
+            stub_information: {
                 controller: 'usage_management_controller',
                 method: 'destroy'
             },
@@ -233,7 +233,7 @@ module.exports = {
     {
         console.log('usage_management_controller.create_specification')
         return {
-            information: {
+            stub_information: {
                 controller: 'usage_management_controller',
                 method: 'create_specification'
             },
@@ -267,7 +267,7 @@ module.exports = {
     {
         console.log('usage_management_controller.show_specification')
         return {
-            information: {
+            stub_information: {
                 controller: 'usage_management_controller',
                 method: 'show_specification'
             },
@@ -301,7 +301,7 @@ module.exports = {
     {
         console.log('usage_management_controller.destroy_specification')
         return {
-            information: {
+            stub_information: {
                 controller: 'usage_management_controller',
                 method: 'destroy_specification'
             },
@@ -313,7 +313,7 @@ module.exports = {
     {
         console.log('usage_management_controller.create_hub')
         return {
-            information: {
+            stub_information: {
                 controller: 'usage_management_controller',
                 method: 'create_hub'
             },
@@ -326,7 +326,7 @@ module.exports = {
     {
         console.log('usage_management_controller.show_hub')
         return {
-            information: {
+            stub_information: {
                 controller: 'usage_management_controller',
                 method: 'show_hub'
             },
@@ -340,7 +340,7 @@ module.exports = {
         console.log('usage_management_controller.index_hub')
         return [
                 {
-                information: {
+                stub_information: {
                     controller: 'usage_management_controller',
                     method: 'index_hub'
                 },
@@ -354,7 +354,7 @@ module.exports = {
     {
         console.log('usage_management_controller.destroy_hub')
         return {
-            information: {
+            stub_information: {
                 controller: 'usage_management_controller',
                 method: 'destroy_hub'
             },

@@ -7,7 +7,7 @@ module.exports = {
     {
         console.log("quote_management_controller.create")
         return {
-            information: {
+            stub_information: {
                 controller: 'quote_management_controller',
                 method: 'create'
             },
