@@ -7,6 +7,10 @@ module.exports = {
     {
         console.log("product_ordering_controller.create")
         return {
+            information: {
+                controller: 'product_ordering_controller',
+                method: 'create'
+            },
             id: faker.random.uuid(),
             href: faker.internet.url(),
             externalId: faker.random.number(),
@@ -41,6 +45,10 @@ module.exports = {
     {
         console.log("product_ordering_controller.show")
         return {
+            information: {
+                controller: 'product_ordering_controller',
+                method: 'show'
+            },
             id: request.params.id,
             href: faker.internet.url(),
             externalId: faker.random.number(),
@@ -76,6 +84,10 @@ module.exports = {
         console.log("product_ordering_controller.index")
         return [
             {
+                information: {
+                    controller: 'product_ordering_controller',
+                    method: 'index'
+                },
                 id: faker.random.uuid(),
                 href: faker.internet.url(),
                 externalId: faker.random.number(),
@@ -111,6 +123,10 @@ module.exports = {
     {
         console.log("product_ordering_controller.update")
         return {
+            information: {
+                controller: 'product_ordering_controller',
+                method: 'update'
+            },
             id: request.params.id,
             href: faker.internet.url(),
             externalId: faker.random.number(),
@@ -146,6 +162,10 @@ module.exports = {
     {
         console.log("product_ordering_controller.destroy")
         return {
+            information: {
+                controller: 'product_ordering_controller',
+                method: 'destroy'
+            },
             id: request.params.id,
             status: "product_order entry destroyed successfully"
         }

@@ -7,6 +7,10 @@ module.exports = {
     {
         console.log("onboarding_controller.index")
         return {
+            information: {
+                controller: 'onboarding_controller',
+                method: 'index'
+            },
             id: faker.random.uuid(),
             href: faker.internet.url(),
             billNo: String( faker.random.number() ),
@@ -28,6 +32,10 @@ module.exports = {
     {
         console.log("onboarding_controller.show")
         return {
+            information: {
+                controller: 'onboarding_controller',
+                method: 'show'
+            },
             id: request.params.id,
             href: faker.internet.url(),
             billNo: String( faker.random.number() ),
@@ -50,6 +58,10 @@ module.exports = {
         console.log("onboarding_controller.create")
         return [
             {
+                information: {
+                    controller: 'onboarding_controller',
+                    method: 'create'
+                },
                 id: faker.random.uuid(),
                 href: faker.internet.url(),
                 billNo: String( faker.random.number() ),
@@ -72,6 +84,10 @@ module.exports = {
     {
         console.log("onboarding_controller.update")
         return {
+            information: {
+                controller: 'onboarding_controller',
+                method: 'update'
+            },
             id: request.params.id,
             href: faker.internet.url(),
             billNo: String( faker.random.number() ),
@@ -93,6 +109,10 @@ module.exports = {
     {
         console.log("onboarding_controller.delete")
         return {
+            information: {
+                controller: 'onboarding_controller',
+                method: 'delete'
+            },
             id: request.params.id,
             href: faker.internet.url(),
             type: faker.lorem.word(),

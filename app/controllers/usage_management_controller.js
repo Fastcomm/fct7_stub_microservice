@@ -7,6 +7,10 @@ module.exports = {
     {
         console.log('usage_management_controller.create')
         return {
+            information: {
+                controller: 'usage_management_controller',
+                method: 'create'
+            },
             id: faker.random.uuid(),
             href: faker.internet.url(),
             date: new Date(),
@@ -56,6 +60,10 @@ module.exports = {
     {
         console.log('usage_management_controller.show')
         return {
+            information: {
+                controller: 'usage_management_controller',
+                method: 'show'
+            },
             id: request.params.id,
             href: faker.internet.url(),
             date: new Date(),
@@ -106,6 +114,10 @@ module.exports = {
         console.log('usage_management_controller.index')
         return [
             {
+                information: {
+                    controller: 'usage_management_controller',
+                    method: 'index'
+                },
             id: faker.random.uuid(),
             href: faker.internet.url(),
             date: new Date(),
@@ -156,6 +168,10 @@ module.exports = {
     {
         console.log('usage_management_controller.update')
         return {
+            information: {
+                controller: 'usage_management_controller',
+                method: 'update'
+            },
             id: request.params.id,
             href: faker.internet.url(),
             date: new Date(),
@@ -205,6 +221,10 @@ module.exports = {
     {
         console.log('usage_management_controller.destroy')
         return {
+            information: {
+                controller: 'usage_management_controller',
+                method: 'destroy'
+            },
             id: request.params.id,
             status: "usage entry destroyed successfully"
         }
@@ -213,6 +233,10 @@ module.exports = {
     {
         console.log('usage_management_controller.create_specification')
         return {
+            information: {
+                controller: 'usage_management_controller',
+                method: 'create_specification'
+            },
             id: faker.random.uuid(),
             href: faker.internet.url(),
             name: faker.commerce.productName(),
@@ -243,6 +267,10 @@ module.exports = {
     {
         console.log('usage_management_controller.show_specification')
         return {
+            information: {
+                controller: 'usage_management_controller',
+                method: 'show_specification'
+            },
             id: request.params.id,
             href: faker.internet.url(),
             name: faker.commerce.productName(),
@@ -273,6 +301,10 @@ module.exports = {
     {
         console.log('usage_management_controller.destroy_specification')
         return {
+            information: {
+                controller: 'usage_management_controller',
+                method: 'destroy_specification'
+            },
             id: request.params.id,
             status: "usage_specification entry destroyed successfully"
         }
@@ -281,6 +313,10 @@ module.exports = {
     {
         console.log('usage_management_controller.create_hub')
         return {
+            information: {
+                controller: 'usage_management_controller',
+                method: 'create_hub'
+            },
             id: faker.random.uuid(),
             callback: faker.internet.url(),
             query: faker.hacker.verb()
@@ -290,6 +326,10 @@ module.exports = {
     {
         console.log('usage_management_controller.show_hub')
         return {
+            information: {
+                controller: 'usage_management_controller',
+                method: 'show_hub'
+            },
             id: request.params.id,
             callback: faker.internet.url(),
             query: faker.hacker.verb()
@@ -300,6 +340,10 @@ module.exports = {
         console.log('usage_management_controller.index_hub')
         return [
                 {
+                information: {
+                    controller: 'usage_management_controller',
+                    method: 'index_hub'
+                },
                 id: faker.random.uuid(),
                 callback: faker.internet.url(),
                 query: faker.hacker.verb()
@@ -310,6 +354,10 @@ module.exports = {
     {
         console.log('usage_management_controller.destroy_hub')
         return {
+            information: {
+                controller: 'usage_management_controller',
+                method: 'destroy_hub'
+            },
             id: request.params.id,
             status: "usage_hub entry destroyed successfully"
         }
