@@ -5,19 +5,19 @@ const privacy_controller = require("../../app/controllers/privacy_management_con
 
 //  === Routes ===
 privacy_profile_type_routes.post("/", (request, response) => {
-    response.send()
+    response.send( privacy_controller.create_profile_type( request ) )
 })
 
 privacy_profile_type_routes.get("/:id", (request, response) => {
-    response.send()
+    response.send( privacy_controller.show_profile_type( request ) )
 })
 
 privacy_profile_type_routes.put("/:id", (request, response) => {
-    response.send()
+    response.send( privacy_controller.update_profile_type( request ) )
 })
 
 privacy_profile_type_routes.delete("/:id", (request, response) => {
-    response.send()
+    response.send( privacy_controller.destroy_profile_type( request ) )
 })
 
 

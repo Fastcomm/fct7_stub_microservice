@@ -5,19 +5,19 @@ const privacy_controller = require("../../app/controllers/privacy_management_con
 
 //  === Routes ===
 privacy_agreement_routes.post("/", (request, response) => {
-    response.send()
+    response.send( privacy_controller.create_agreement( request ) )
 })
 
 privacy_agreement_routes.get("/:id", (request, response) => {
-    response.send()
+    response.send( privacy_controller.show_agreement( request ) )
 })
 
 privacy_agreement_routes.put("/:id", (request, response) => {
-    response.send()
+    response.send( privacy_controller.update_agreement( request ) )
 })
 
 privacy_agreement_routes.delete("/:id", (request, response) => {
-    response.send()
+    response.send( privacy_controller.destroy_agreemeent( request ) )
 })
 
 //  === Exports ===
