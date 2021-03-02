@@ -12,6 +12,10 @@ module.exports = {
                 method: 'create'
             },
             id: faker.random.uuid(),
+            routeDetails: {
+                controller: 'Quote Management',
+                action: 'create'
+            },
             status: "quote successfully created"
         }
     }

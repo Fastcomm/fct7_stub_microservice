@@ -12,6 +12,10 @@ module.exports = {
                 method: 'create'
             },
             id: faker.random.uuid(),
+            routeDetails: {
+                controller: 'Product Ordering',
+                action: 'create'
+            },
             href: faker.internet.url(),
             externalId: faker.random.number(),
             priority: String( faker.random.number() ),
@@ -50,6 +54,10 @@ module.exports = {
                 method: 'show'
             },
             id: request.params.id,
+            routeDetails: {
+                controller: 'Product Ordering',
+                action: 'show'
+            },
             href: faker.internet.url(),
             externalId: faker.random.number(),
             priority: String( faker.random.number() ),
@@ -89,6 +97,10 @@ module.exports = {
                     method: 'index'
                 },
                 id: faker.random.uuid(),
+                routeDetails: {
+                    controller: 'Product Ordering',
+                    action: 'index'
+                },
                 href: faker.internet.url(),
                 externalId: faker.random.number(),
                 priority: String( faker.random.number() ),
@@ -128,6 +140,10 @@ module.exports = {
                 method: 'update'
             },
             id: request.params.id,
+            routeDetails: {
+                controller: 'Product Ordering',
+                action: 'update'
+            },
             href: faker.internet.url(),
             externalId: faker.random.number(),
             priority: String( faker.random.number() ),
@@ -167,6 +183,10 @@ module.exports = {
                 method: 'destroy'
             },
             id: request.params.id,
+            routeDetails: {
+                controller: 'Product Ordering',
+                action: 'destroy'
+            },
             status: "product_order entry destroyed successfully"
         }
     }

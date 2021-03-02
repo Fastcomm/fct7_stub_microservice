@@ -12,6 +12,10 @@ module.exports = {
                 method: 'create'
             },
             id: faker.random.uuid(),
+            routeDetails: {
+                controller: 'Usage Management',
+                action: 'create'
+            },
             href: faker.internet.url(),
             date: new Date(),
             type: "VOICE",
@@ -65,6 +69,10 @@ module.exports = {
                 method: 'show'
             },
             id: request.params.id,
+            routeDetails: {
+                controller: 'Usage Management',
+                action: 'show'
+            },
             href: faker.internet.url(),
             date: new Date(),
             type: "VOICE",
@@ -114,54 +122,54 @@ module.exports = {
         console.log('usage_management_controller.index')
         return [
             {
-                stub_information: {
-                    controller: 'usage_management_controller',
-                    method: 'index'
-                },
-            id: faker.random.uuid(),
-            href: faker.internet.url(),
-            date: new Date(),
-            type: "VOICE",
-            description: faker.lorem.sentence(),
-            status: "rated",
-            usageSpecification: {
                 id: faker.random.uuid(),
+                routeDetails: {
+                    controller: 'Usage Management',
+                    action: 'index'
+                },
                 href: faker.internet.url(),
-                name: faker.commerce.productName()
-            },
-            usageCharacteristic: [
-                {
-                    name: faker.address.countryCode(),
-                    value: String( faker.random.number() )
-                }
-            ],
-            relatedParty: [
-                {
+                date: new Date(),
+                type: "VOICE",
+                description: faker.lorem.sentence(),
+                status: "rated",
+                usageSpecification: {
                     id: faker.random.uuid(),
                     href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    validFor: {
-                        startDateTime: faker.date.soon(),
-                        endDateTime: faker.date.soon()
+                    name: faker.commerce.productName()
+                },
+                usageCharacteristic: [
+                    {
+                        name: faker.address.countryCode(),
+                        value: String( faker.random.number() )
                     }
-                }
-            ],
-            ratedProductUsage: [
-                {
-                    ratingDate: new Date(),
-                    usageRatingTag: "Usage",
-                    isBilled: faker.random.boolean(),
-                    ratyingAmountType: "Total",
-                    taxIncludedRatingAmount: faker.random.number(),
-                    taxExcludedRatingAmount: faker.random.number(),
-                    taxRate: faker.random.number(),
-                    isTaxExempt: false,
-                    offerTariffType: "Normal",
-                    currencyCode: faker.finance.currencyCode(),
-                    productRef: faker.internet.url()
-                }
-            ]
-        }
+                ],
+                relatedParty: [
+                    {
+                        id: faker.random.uuid(),
+                        href: faker.internet.url(),
+                        name: faker.name.findName(),
+                        validFor: {
+                            startDateTime: faker.date.soon(),
+                            endDateTime: faker.date.soon()
+                        }
+                    }
+                ],
+                ratedProductUsage: [
+                    {
+                        ratingDate: new Date(),
+                        usageRatingTag: "Usage",
+                        isBilled: faker.random.boolean(),
+                        ratyingAmountType: "Total",
+                        taxIncludedRatingAmount: faker.random.number(),
+                        taxExcludedRatingAmount: faker.random.number(),
+                        taxRate: faker.random.number(),
+                        isTaxExempt: false,
+                        offerTariffType: "Normal",
+                        currencyCode: faker.finance.currencyCode(),
+                        productRef: faker.internet.url()
+                    }
+                ]
+            }
         ]
     },
     update: function(request)
@@ -173,6 +181,10 @@ module.exports = {
                 method: 'update'
             },
             id: request.params.id,
+            routeDetails: {
+                controller: 'Usage Management',
+                action: 'update'
+            },
             href: faker.internet.url(),
             date: new Date(),
             type: "VOICE",
@@ -226,6 +238,10 @@ module.exports = {
                 method: 'destroy'
             },
             id: request.params.id,
+            routeDetails: {
+                controller: 'Usage Management',
+                action: 'destroy'
+            },
             status: "usage entry destroyed successfully"
         }
     },
@@ -238,6 +254,10 @@ module.exports = {
                 method: 'create_specification'
             },
             id: faker.random.uuid(),
+            routeDetails: {
+                controller: 'Usage Management',
+                action: 'create_specification'
+            },
             href: faker.internet.url(),
             name: faker.commerce.productName(),
             description: faker.lorem.sentence(),
@@ -272,6 +292,10 @@ module.exports = {
                 method: 'show_specification'
             },
             id: request.params.id,
+            routeDetails: {
+                controller: 'Usage Management',
+                action: 'show_specification'
+            },
             href: faker.internet.url(),
             name: faker.commerce.productName(),
             description: faker.lorem.sentence(),
@@ -306,6 +330,10 @@ module.exports = {
                 method: 'destroy_specification'
             },
             id: request.params.id,
+            routeDetails: {
+                controller: 'Usage Management',
+                action: 'destroy_specification'
+            },
             status: "usage_specification entry destroyed successfully"
         }
     },
@@ -318,6 +346,10 @@ module.exports = {
                 method: 'create_hub'
             },
             id: faker.random.uuid(),
+            routeDetails: {
+                controller: 'Usage Management',
+                action: 'create_hub'
+            },
             callback: faker.internet.url(),
             query: faker.hacker.verb()
         }
@@ -331,6 +363,10 @@ module.exports = {
                 method: 'show_hub'
             },
             id: request.params.id,
+            routeDetails: {
+                controller: 'Usage Management',
+                action: 'show_hub'
+            },
             callback: faker.internet.url(),
             query: faker.hacker.verb()
         }
@@ -345,6 +381,10 @@ module.exports = {
                     method: 'index_hub'
                 },
                 id: faker.random.uuid(),
+                routeDetails: {
+                    controller: 'Usage Management',
+                    action: 'index_hub'
+                },
                 callback: faker.internet.url(),
                 query: faker.hacker.verb()
             }
@@ -359,6 +399,10 @@ module.exports = {
                 method: 'destroy_hub'
             },
             id: request.params.id,
+            routeDetails: {
+                controller: 'Usage Management',
+                action: 'destroy_hub'
+            },
             status: "usage_hub entry destroyed successfully"
         }
     }
