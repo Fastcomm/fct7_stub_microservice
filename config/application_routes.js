@@ -23,6 +23,8 @@ routes.use("/privacy_profile_type", require("./routes/privacy_profile_type"))
 routes.use("/privacy_agreement", require("./routes/privacy_agreement"))
 routes.use("/trouble_ticket", require("./routes/trouble_ticket_routes"))
 routes.use("/trouble_ticket_hub", require("./routes/trouble_ticket_hub_routes"))
+routes.use("/roles", require("./routes/roles_routes"))
+routes.use("/permissions", require("./routes/permissions_routes"))
 
 //  ===  Onboarding  ===
 routes.use("/onboarding", require("./routes/onboarding_routes"))
