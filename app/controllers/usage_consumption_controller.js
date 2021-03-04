@@ -8,6 +8,10 @@ module.exports = {
         console.log("usage_consumption_controller.show")
         return {
             id: request.params.id,
+            routeDetails: {
+                controller: 'Usage Consumption',
+                action: 'create'
+            },
             href: faker.internet.url(),
             name: faker.name.findName(),
             description: faker.lorem.sentence(),
@@ -49,6 +53,10 @@ module.exports = {
         return [
             {
                 id: faker.random.uuid(),
+                routeDetails: {
+                    controller: 'Usage Consumption',
+                    action: 'index'
+                },
                 href: faker.internet.url(),
                 name: faker.name.findName(),
                 description: faker.lorem.sentence(),
@@ -90,6 +98,10 @@ module.exports = {
         console.log("usage_consumption_controller.destroy")
         return {
             id: request.params.id,
+            routeDetails: {
+                controller: 'Usage Consumption',
+                action: 'destroy'
+            },
             status: "usage_consumption entry destroyed successfully"
         }
     },
@@ -98,6 +110,10 @@ module.exports = {
         console.log("usage_consumption_controller.create_request")
         return {
             id: faker.random.uuid(),
+            routeDetails: {
+                controller: 'Usage Consumption',
+                action: 'create_request'
+            },
             href: faker.internet.url(),
             creationDate: new Date(),
             status: "created",
@@ -127,6 +143,10 @@ module.exports = {
         console.log("usage_consumption_controller.show_request")
         return {
             id: faker.random.uuid(),
+            routeDetails: {
+                controller: 'Usage Consumption',
+                action: 'show_request'
+            },
             href: faker.internet.url(),
             creationDate: new Date(),
             status: "created",
@@ -157,6 +177,10 @@ module.exports = {
         return [
             {
                 id: faker.random.uuid(),
+                routeDetails: {
+                    controller: 'Usage Consumption',
+                    action: 'index_request'
+                },
                 href: faker.internet.url(),
                 creationDate: new Date(),
                 status: "created",
@@ -187,6 +211,10 @@ module.exports = {
         console.log("usage_consumption_controller.destroy_request")
         return {
             id: request.params.id,
+            routeDetails: {
+                controller: 'Usage Consumption',
+                action: 'destroy_request'
+            },
             status: "usage_consumption request destroyed successfully"
         }
     },
@@ -195,6 +223,10 @@ module.exports = {
         console.log("usage_consumption_controller.create_hub")
         return {
             id: faker.random.uuid(),
+            routeDetails: {
+                controller: 'Usage Consumption',
+                action: 'create_hub'
+            },
             callback: faker.internet.url(),
             query: faker.hacker.verb()
         }
@@ -204,6 +236,10 @@ module.exports = {
         console.log("usage_consumption_controller.destroy_hub")
         return {
             id: request.params.id,
+            routeDetails: {
+                controller: 'Usage Consumption',
+                action: 'destroy_hub'
+            },
             status: "usage_consumption hub destroyed successfully"
         }
     }
