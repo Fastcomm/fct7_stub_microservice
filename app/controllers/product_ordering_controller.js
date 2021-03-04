@@ -8,6 +8,10 @@ module.exports = {
         console.log("product_ordering_controller.create")
         return {
             id: faker.random.uuid(),
+            routeDetails: {
+                controller: 'Product Ordering',
+                action: 'create'
+            },
             href: faker.internet.url(),
             externalId: faker.random.number(),
             priority: String( faker.random.number() ),
@@ -42,6 +46,10 @@ module.exports = {
         console.log("product_ordering_controller.show")
         return {
             id: request.params.id,
+            routeDetails: {
+                controller: 'Product Ordering',
+                action: 'show'
+            },
             href: faker.internet.url(),
             externalId: faker.random.number(),
             priority: String( faker.random.number() ),
@@ -77,6 +85,10 @@ module.exports = {
         return [
             {
                 id: faker.random.uuid(),
+                routeDetails: {
+                    controller: 'Product Ordering',
+                    action: 'index'
+                },
                 href: faker.internet.url(),
                 externalId: faker.random.number(),
                 priority: String( faker.random.number() ),
@@ -112,6 +124,10 @@ module.exports = {
         console.log("product_ordering_controller.update")
         return {
             id: request.params.id,
+            routeDetails: {
+                controller: 'Product Ordering',
+                action: 'update'
+            },
             href: faker.internet.url(),
             externalId: faker.random.number(),
             priority: String( faker.random.number() ),
@@ -147,6 +163,10 @@ module.exports = {
         console.log("product_ordering_controller.destroy")
         return {
             id: request.params.id,
+            routeDetails: {
+                controller: 'Product Ordering',
+                action: 'destroy'
+            },
             status: "product_order entry destroyed successfully"
         }
     }
