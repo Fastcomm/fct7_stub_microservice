@@ -8,6 +8,10 @@ module.exports = {
         console.log("bill_management_controller.show")
         return {
             id: request.params.id,
+            routeDetails: {
+                controller: 'Bill Management',
+                action: 'show'
+            },
             href: faker.internet.url(),
             billNo: String( faker.random.number() ),
             state: "new",
@@ -30,6 +34,10 @@ module.exports = {
         return [
             {
                 id: faker.random.uuid(),
+                routeDetails: {
+                    controller: 'Bill Management',
+                    action: 'index'
+                },
                 href: faker.internet.url(),
                 billNo: String( faker.random.number() ),
                 state: "new",
@@ -52,6 +60,10 @@ module.exports = {
         console.log("bill_management_controller.update")
         return {
             id: request.params.id,
+            routeDetails: {
+                controller: 'Bill Management',
+                action: 'update'
+            },
             href: faker.internet.url(),
             billNo: String( faker.random.number() ),
             state: "new",
@@ -73,6 +85,10 @@ module.exports = {
         console.log("bill_management_controller.show_rate")
         return {
             id: request.params.id,
+            routeDetails: {
+                controller: 'Bill Management',
+                action: 'show_rate'
+            },
             href: faker.internet.url(),
             type: faker.lorem.word(),
             date: new Date(),
@@ -96,6 +112,10 @@ module.exports = {
         return [
             {
                 id: faker.random.uuid(),
+                routeDetails: {
+                    controller: 'Bill Management',
+                    action: 'index_rate'
+                },
                 href: faker.internet.url(),
                 type: faker.lorem.word(),
                 date: new Date(),
@@ -119,6 +139,10 @@ module.exports = {
         console.log("bill_management_controller.create_on_demand")
         return {
             id: faker.random.uuid(),
+            routeDetails: {
+                controller: 'Bill Management',
+                action: 'create_on_demand'
+            },
             href: faker.internet.url(),
             name: faker.commerce.productName(),
             description: faker.lorem.sentence(),
@@ -145,6 +169,10 @@ module.exports = {
         console.log("bill_management_controller.show_on_demand")
         return {
             id: request.params.id,
+            routeDetails: {
+                controller: 'Bill Management',
+                action: 'show_on_demand'
+            },
             href: faker.internet.url(),
             name: faker.commerce.productName(),
             description: faker.lorem.sentence(),
@@ -172,6 +200,10 @@ module.exports = {
         return [
             {
                 id: request.params.id,
+                routeDetails: {
+                    controller: 'Bill Management',
+                    action: 'index_on_demand'
+                },
                 href: faker.internet.url(),
                 name: faker.commerce.productName(),
                 description: faker.lorem.sentence(),
@@ -199,6 +231,10 @@ module.exports = {
         console.log("bill_management_controller.create_hub")
         return {
             id: faker.random.uuid(),
+            routeDetails: {
+                controller: 'Bill Management',
+                action: 'create_hub'
+            },
             callback: faker.internet.url(),
             query: faker.hacker.verb()
         }
@@ -208,6 +244,10 @@ module.exports = {
         console.log("bill_management_controller.destroy_hub")
         return {
             id: request.params.id,
+            routeDetails: {
+                controller: 'Bill Management',
+                action: 'destroy_hub'
+            },
             status: "bill hub destroyed successfully"
         }
     }
