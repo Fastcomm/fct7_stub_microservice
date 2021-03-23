@@ -23,6 +23,7 @@ routes.use("/trouble_ticket_hub", require("./routes/trouble_ticket_hub_routes"))
 routes.use("/privacy_profile", require("./routes/privacy_profile"))
 routes.use("/privacy_profile_type", require("./routes/privacy_profile_type"))
 routes.use("/privacy_agreement", require("./routes/privacy_agreement"))
+routes.use("/prepay_balance", require("./routes/prepay_balance_routes"))
 
 //  === Exports ===
 module.exports = routes
