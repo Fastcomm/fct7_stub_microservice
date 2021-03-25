@@ -18,16 +18,14 @@ routes.use("/usage_consumption_hub", require("./routes/usage_consumption_hub_rou
 routes.use("/usage", require("./routes/usage_routes"))
 routes.use("/usage_specification", require("./routes/usage_specification_routes"))
 routes.use("/usage_hub", require("./routes/usage_hub_routes"))
+routes.use("/roles", require("./routes/roles_routes"))
+routes.use("/permissions", require("./routes/permissions_routes"))
+routes.use("/trouble_ticket", require("./routes/trouble_ticket_routes"))
+routes.use("/trouble_ticket_hub", require("./routes/trouble_ticket_hub_routes"))
 routes.use("/privacy_profile", require("./routes/privacy_profile"))
 routes.use("/privacy_profile_type", require("./routes/privacy_profile_type"))
 routes.use("/privacy_agreement", require("./routes/privacy_agreement"))
-routes.use("/trouble_ticket", require("./routes/trouble_ticket_routes"))
-routes.use("/trouble_ticket_hub", require("./routes/trouble_ticket_hub_routes"))
-routes.use("/roles", require("./routes/roles_routes"))
-routes.use("/permissions", require("./routes/permissions_routes"))
-
-//  ===  Onboarding  ===
-routes.use("/onboarding", require("./routes/onboarding_routes"))
+routes.use("/prepay_balance", require("./routes/prepay_balance_routes"))
 
 //  === Exports ===
 module.exports = routes
