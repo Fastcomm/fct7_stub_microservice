@@ -1,7 +1,5 @@
 //  === Requirements ===
-const { query } = require('express')
 const faker = require('faker')
-
 //  === Controller ===
 module.exports = {
     index_product_buckets: function(request) 
@@ -77,11 +75,11 @@ module.exports = {
         console.log("prepay_balance_controller.show_product_buckets")
 
         return {
-            id: faker.random.uuid(),
             routeDetails: {
                 controller: 'Prepay Balance',
                 action: 'show_product_buckets'
             },
+            id: request.params.bucket_id,
             href: faker.internet.url(),
             name: faker.name.findName(),
             description: faker.lorem.sentence(),
@@ -221,6 +219,7 @@ module.exports = {
         console.log("prepay_balance_controller.show_product_adjustments")
 
         return {
+                id: request.params.adjustment_id,
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'show_product_adjustments'
@@ -236,7 +235,6 @@ module.exports = {
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
-                id: faker.random.uuid(),
                 href: faker.internet.url(),
                 description: faker.lorem.sentence(),
                 requestor: {
@@ -303,6 +301,7 @@ module.exports = {
 
         return [
             {
+                id: faker.random.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'index_product_transfers'
@@ -323,7 +322,6 @@ module.exports = {
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
-                id: faker.random.uuid(),
                 href: faker.internet.url(),
                 description: faker.lorem.sentence(),
                 reason: faker.lorem.sentence(),
@@ -401,6 +399,7 @@ module.exports = {
 
         return [
             {
+                id: faker.random.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'index_product_topups'
@@ -420,7 +419,6 @@ module.exports = {
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
-                id: faker.random.uuid(),
                 href: faker.internet.url(),
                 description: faker.lorem.sentence(),
                 requestor: {
@@ -576,7 +574,7 @@ module.exports = {
                 controller: 'Prepay Balance',
                 action: 'show_buckets'
             },
-            id: faker.random.uuid(),
+            id: request.params.bucket_id,
             href: faker.internet.url(),
             name: faker.name.findName(),
             description: faker.lorem.sentence(),
@@ -711,7 +709,7 @@ module.exports = {
                 ],
                 product: [
                     {
-                        id: faker.random.uuid(),
+                        id: request.params.product_id,
                         href: faker.internet.url(),
                         name: faker.name.findName()
                     }
