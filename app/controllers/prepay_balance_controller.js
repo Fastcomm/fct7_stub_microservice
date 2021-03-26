@@ -960,6 +960,7 @@ module.exports = {
         console.log("prepay_balance_controller.show_topups")
 
         return {
+                id: request.params.topup_id,
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'show_topups'
@@ -979,7 +980,6 @@ module.exports = {
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
-                id: faker.random.uuid(),
                 href: faker.internet.url(),
                 description: faker.lorem.sentence(),
                 requestor: {
@@ -1161,6 +1161,7 @@ module.exports = {
         console.log("prepay_balance_controller.show_transfers")
 
         return {
+                id: request.params.transfers_id,
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'show_transfers'
@@ -1181,7 +1182,6 @@ module.exports = {
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
-                id: faker.random.uuid(),
                 href: faker.internet.url(),
                 description: faker.lorem.sentence(),
                 reason: faker.lorem.sentence(),
@@ -1391,6 +1391,7 @@ module.exports = {
         console.log("prepay_balance_controller.show_adjustments")
 
         return {
+                id: request.params.adjustments_id,
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'show_adjustments'
@@ -1406,7 +1407,6 @@ module.exports = {
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
-                id: faker.random.uuid(),
                 href: faker.internet.url(),
                 description: faker.lorem.sentence(),
                 requestor: {
