@@ -690,6 +690,7 @@ module.exports = {
                    controller: 'Prepay Balance',
                     action: 'show_accumulated_balance_products'
                 },
+                id: request.params.product_id,
                 name: faker.name.findName(),
                 description: faker.lorem.sentence(),
                 totalBalance: 
@@ -709,7 +710,7 @@ module.exports = {
                 ],
                 product: [
                     {
-                        id: request.params.product_id,
+                        id: faker.random.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName()
                     }
@@ -799,6 +800,7 @@ module.exports = {
                     controller: 'Prepay Balance',
                     action: 'show_activity_products'
                 },
+                id: request.params.product_id,
                 type: 'temporary',
                 date: new Date(),
                 action: 
@@ -1051,6 +1053,7 @@ module.exports = {
         console.log("prepay_balance_controller.update_topups_status")
 
         return {
+            id: request.params.topup_id,
             routeDetails: {
                 controller: 'Prepay Balance',
                 action: 'update_topups_status'
@@ -1301,6 +1304,7 @@ module.exports = {
         console.log("prepay_balance_controller.update_transfers_status")
 
         return{
+            id: request.params.transfers_id,
             routeDetails: {
                 controller: 'Prepay Balance',
                 action: 'update_transfers_status'
@@ -1456,6 +1460,7 @@ module.exports = {
         console.log("prepay_balance_controller.remove_hub")
 
         return {
+            id: request.params.hub_id,
             routeDetails: {
                 controller: 'Prepay Balance',
                 action: 'remove_hub'
