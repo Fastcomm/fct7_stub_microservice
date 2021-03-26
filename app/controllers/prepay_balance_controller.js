@@ -75,11 +75,11 @@ module.exports = {
         console.log("prepay_balance_controller.show_product_buckets")
 
         return {
+            id: request.params.bucket_id,
             routeDetails: {
                 controller: 'Prepay Balance',
                 action: 'show_product_buckets'
             },
-            id: request.params.bucket_id,
             href: faker.internet.url(),
             name: faker.name.findName(),
             description: faker.lorem.sentence(),
@@ -507,11 +507,11 @@ module.exports = {
 
         return [
             {
+                id: faker.random.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'index_buckets'
                 },
-                id: faker.random.uuid(),
                 href: faker.internet.url(),
                 name: faker.name.findName(),
                 description: faker.lorem.sentence(),
@@ -574,12 +574,11 @@ module.exports = {
         console.log("prepay_balance_controller.show_buckets")
 
         return {
-
+            id: request.params.bucket_id,
             routeDetails: {
                 controller: 'Prepay Balance',
                 action: 'show_buckets'
             },
-            id: request.params.bucket_id,
             href: faker.internet.url(),
             name: faker.name.findName(),
             description: faker.lorem.sentence(),
@@ -692,11 +691,11 @@ module.exports = {
         console.log("prepay_balance_controller.show_accumulated_balance_products")
 
         return {
+                id: request.params.product_id,
                 routeDetails: {
                    controller: 'Prepay Balance',
                     action: 'show_accumulated_balance_products'
                 },
-                id: request.params.product_id,
                 name: faker.name.findName(),
                 description: faker.lorem.sentence(),
                 totalBalance: 
@@ -803,11 +802,11 @@ module.exports = {
         console.log("prepay_balance_controller.show_activity_products")
 
         return {
+                id: request.params.product_id,
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'show_activity_products'
                 },
-                id: request.params.product_id,
                 type: 'temporary',
                 date: new Date(),
                 action: 
@@ -893,6 +892,7 @@ module.exports = {
 
         return [
             {
+                id: faker.random.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'index_topups'
@@ -912,7 +912,6 @@ module.exports = {
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
-                id: faker.random.uuid(),
                 href: faker.internet.url(),
                 description: faker.lorem.sentence(),
                 requestor: {
@@ -1504,11 +1503,11 @@ module.exports = {
         console.log("prepay_balance_controller.reserve")
 
         return {
+                id: faker.random.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'reserve'
                 },
-                id: faker.random.uuid(),
                 relatedParty: 
                 {
                     id: faker.random.uuid(),
@@ -1527,11 +1526,12 @@ module.exports = {
         console.log("prepay_balance_controller.unreserve")
 
         return {
+                id: faker.random.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'unreserve'
                 },
-                id: faker.random.uuid(),
+                
                 relatedParty: 
                 {
                     id: faker.random.uuid(),
@@ -1550,11 +1550,11 @@ module.exports = {
         console.log("prepay_balance_controller.deduct")
 
         return {
+                id: faker.random.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'deduct'
                 },
-                id: faker.random.uuid(),
                 reason: faker.lorem.sentence(),
                 relatedParty: 
                 {
