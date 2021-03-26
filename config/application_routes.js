@@ -25,6 +25,7 @@ routes.use("/privacy_profile_type", require("./routes/privacy_profile_type"))
 routes.use("/privacy_agreement", require("./routes/privacy_agreement"))
 routes.use("/prepay_balance", require("./routes/prepay_balance_routes"))
 routes.use("/agreement", require("./routes/agreement_management_routes"))
+routes.use("/agreement", require("./routes/account_management_routes"))
 
 //  === Exports ===
 module.exports = routes
