@@ -364,14 +364,14 @@ module.exports = {
             ]
         }
     },
-    remove_service: function(request)
+    destroy_service: function(request)
     {
-        console.log("service_activation_and_configuration_controller.remove_service")
+        console.log("service_activation_and_configuration_controller.destroy_service")
         return {  
             id: request.params.id,
             routeDetails: {
                 controller: 'Service Activation and Configuration',
-                action: 'remove_service'
+                action: 'destroy_service'
             },
             code: faker.random.number(),
             reason: "string",
@@ -455,7 +455,7 @@ module.exports = {
     },
     create_notification_monitor_create: function(request)
     {
-        console.log("service_activation_and_configuration_controller.create_listener_notification_monitor_create")
+        console.log("service_activation_and_configuration_controller.create_notification_monitor_create")
         return {  
             id: faker.random.uuid(),
             routeDetails: {
@@ -500,7 +500,7 @@ module.exports = {
     },
     create_notification_monitor_attribute_change: function(request)
     {
-        console.log("service_activation_and_configuration_controller.create_listener_notification_monitor_attribute_change")
+        console.log("service_activation_and_configuration_controller.create_notification_monitor_attribute_change")
         return {  
             id: faker.random.uuid(),
             routeDetails: {
@@ -545,7 +545,7 @@ module.exports = {
     },
     create_notification_monitor_state_change: function(request)
     {
-        console.log("service_activation_and_configuration_controller.create_listener_notification_monitor_state_change")
+        console.log("service_activation_and_configuration_controller.create_notification_monitor_state_change")
         return {  
             id: faker.random.uuid(),
             routeDetails: {
@@ -590,7 +590,7 @@ module.exports = {
     },
     create_notification_monitor_delete: function(request)
     {
-        console.log("service_activation_and_configuration_controller.create_listener_notification_monitor_delete")
+        console.log("service_activation_and_configuration_controller.create_notification_monitor_delete")
         return {  
             id: faker.random.uuid(),
             routeDetails: {
@@ -635,7 +635,7 @@ module.exports = {
     },
     create_notification_service_create: function(request)
     {
-        console.log("service_activation_and_configuration_controller.create_listener_notification_service_create")
+        console.log("service_activation_and_configuration_controller.create_notification_service_create")
         return {  
             id: faker.random.uuid(),
             routeDetails: {
@@ -735,7 +735,7 @@ module.exports = {
     },
     create_notification_service_attribute_change: function(request)
     {
-        console.log("service_activation_and_configuration_controller.create_listener_notification_service_attribute_change")
+        console.log("service_activation_and_configuration_controller.create_notification_service_attribute_change")
         return {  
             id: faker.random.uuid(),
             routeDetails: {
@@ -835,7 +835,7 @@ module.exports = {
     },
     create_notification_service_state_change: function(request)
     {
-        console.log("service_activation_and_configuration_controller.create_listener_notification_service_state_change")
+        console.log("service_activation_and_configuration_controller.create_notification_service_state_change")
         return {  
             id: faker.random.uuid(),
             routeDetails: {
@@ -935,7 +935,7 @@ module.exports = {
     },
     create_notification_service_delete: function(request)
     {
-        console.log("service_activation_and_configuration_controller.create_listener_notification_service_delete")
+        console.log("service_activation_and_configuration_controller.create_notification_service_delete")
         return {  
             id: faker.random.uuid(),
             routeDetails: {
@@ -1048,14 +1048,14 @@ module.exports = {
             }
         ]
     },
-    remove_hub: function(request)
+    destroy_hub: function(request)
     {
-        console.log("service_activation_and_configuration_controller.remove_hub")
+        console.log("service_activation_and_configuration_controller.destroy_hub")
         return {  
             id: request.params.id,
             routeDetails: {
                 controller: 'Service Activation and Configuration',
-                action: 'remove_hub'
+                action: 'destroy_hub'
             },
             code: faker.random.number(),
             reason: "string",
