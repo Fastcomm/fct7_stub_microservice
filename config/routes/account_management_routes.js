@@ -17,7 +17,7 @@ account_management_routes.patch('/party/:id', (request, response) => {
   response.send( account_management_controller.update_party(request) )
 })
 account_management_routes.delete('/party/:id', (request, response) => {
-  response.send( account_management_controller.remove_party(request) )
+  response.send( account_management_controller.destroy_party(request) )
 })
 
 account_management_routes.get('/billing', (request, response) => {
@@ -33,7 +33,7 @@ account_management_routes.patch('/billing/:id', (request, response) => {
   response.send( account_management_controller.update_billing(request) )
 })
 account_management_routes.delete('/billing/:id', (request, response) => {
-  response.send( account_management_controller.remove_billing(request) )
+  response.send( account_management_controller.destroy_billing(request) )
 })
 
 account_management_routes.get('/settlement', (request, response) => {
@@ -49,7 +49,7 @@ account_management_routes.patch('/settlement/:id', (request, response) => {
   response.send( account_management_controller.update_settlement(request) )
 })
 account_management_routes.delete('/settlement/:id', (request, response) => {
-  response.send( account_management_controller.remove_settlement(request) )
+  response.send( account_management_controller.destroy_settlement(request) )
 })
 
 account_management_routes.get('/financial', (request, response) => {
@@ -65,7 +65,7 @@ account_management_routes.patch('/financial/:id', (request, response) => {
   response.send( account_management_controller.update_financial(request) )
 })
 account_management_routes.delete('/financial/:id', (request, response) => {
-  response.send( account_management_controller.remove_financial(request) )
+  response.send( account_management_controller.destroy_financial(request) )
 })
 
 account_management_routes.get('/billing/cycle_specification', (request, response) => {
@@ -81,7 +81,7 @@ account_management_routes.patch('/billing/cycle_specification/:id', (request, re
   response.send( account_management_controller.update_billing_cycle_specification(request) )
 })
 account_management_routes.delete('/billing/cycle_specification/:id', (request, response) => {
-  response.send( account_management_controller.remove_billing_cycle_specification(request) )
+  response.send( account_management_controller.destroy_billing_cycle_specification(request) )
 })
 
 account_management_routes.get('/bill/format', (request, response) => {
@@ -97,7 +97,7 @@ account_management_routes.patch('/bill/format/:id', (request, response) => {
   response.send( account_management_controller.update_bill_format(request) )
 })
 account_management_routes.delete('/bill/format/:id', (request, response) => {
-  response.send( account_management_controller.remove_bill_format(request) )
+  response.send( account_management_controller.destroy_bill_format(request) )
 })
 
 account_management_routes.get('/bill/media', (request, response) => {
@@ -113,14 +113,14 @@ account_management_routes.patch('/bill/media/:id', (request, response) => {
   response.send( account_management_controller.update_bill_media(request) )
 })
 account_management_routes.delete('/bill/media/:id', (request, response) => {
-  response.send( account_management_controller.remove_bill_media(request) )
+  response.send( account_management_controller.destroy_bill_media(request) )
 })
 
 account_management_routes.post('/hub', (request, response) => {
   response.send( account_management_controller.create_hub(request) )
 })
 account_management_routes.delete('/hub/:id', (request, response) => {
-  response.send( account_management_controller.remove_hub(request) )
+  response.send( account_management_controller.destroy_hub(request) )
 })
 
 //  === Exports ===

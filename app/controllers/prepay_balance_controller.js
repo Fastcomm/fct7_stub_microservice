@@ -1466,15 +1466,15 @@ module.exports = {
             callback: "string"
         }
     },
-    remove_hub: function(request)
+    destroy_hub: function(request)
     {
-        console.log("prepay_balance_controller.remove_hub")
+        console.log("prepay_balance_controller.destroy_hub")
 
         return {
             id: request.params.hub_id,
             routeDetails: {
                 controller: 'Prepay Balance',
-                action: 'remove_hub'
+                action: 'destroy_hub'
             },
             message: "Have succesfully removed"
         }

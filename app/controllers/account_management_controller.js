@@ -688,14 +688,14 @@ module.exports = {
             ]
         }
     },
-    remove_party: function(request)
+    destroy_party: function(request)
     {
-        console.log("account_management_controller.remove_party")
+        console.log("account_management_controller.destroy_party")
         return {  
             id: request.params.id,
             routeDetails: {
                 controller: 'Account Management',
-                action: 'remove_party'
+                action: 'destroy_party'
             },
             code: faker.random.number(),
             reason: "string",
@@ -1390,14 +1390,14 @@ module.exports = {
             ]
         }
     },
-    remove_billing: function(request)
+    destroy_billing: function(request)
     {
-        console.log("account_management_controller.remove_billing")
+        console.log("account_management_controller.destroy_billing")
         return {  
             id: request.params.id,
             routeDetails: {
                 controller: 'Account Management',
-                action: 'remove_billing'
+                action: 'destroy_billing'
             },
             code: faker.random.number(),
             reason: "string",
@@ -2092,14 +2092,14 @@ module.exports = {
             ]
         }
     },
-    remove_settlement: function(request)
+    destroy_settlement: function(request)
     {
-        console.log("account_management_controller.remove_settlement")
+        console.log("account_management_controller.destroy_settlement")
         return {  
             id: request.params.id,
             routeDetails: {
                 controller: 'Account Management',
-                action: 'remove_settlement'
+                action: 'destroy_settlement'
             },
             code: faker.random.number(),
             reason: "string",
@@ -2535,7 +2535,7 @@ module.exports = {
             ]
         }
     },
-    remove_financial: function(request)
+    destroy_financial: function(request)
     {
         console.log("account_management_controller.remove_financial")
         return {  
@@ -2654,14 +2654,14 @@ module.exports = {
             }
         }
     },
-    remove_billing_cycle_specification: function(request)
+    destroy_billing_cycle_specification: function(request)
     {
-        console.log("account_management_controller.remove_billing_cycle_specification")
+        console.log("account_management_controller.destroy_billing_cycle_specification")
         return {  
             id: request.params.id,
             routeDetails: {
                 controller: 'Account Management',
-                action: 'remove_billing_cycle_specification'
+                action: 'destroy_billing_cycle_specification'
             },
             code: faker.random.number(),
             reason: "string",
@@ -2727,14 +2727,14 @@ module.exports = {
             name: "string"
         }
     },
-    remove_bill_format: function(request)
+    destroy_bill_format: function(request)
     {
-        console.log("account_management_controller.remove_bill_format")
+        console.log("account_management_controller.destroy_bill_format")
         return {  
             id: request.params.id,
             routeDetails: {
                 controller: 'Account Management',
-                action: 'remove_bill_format'
+                action: 'destroy_bill_format'
             },
             code: faker.random.number(),
             reason: "string",
@@ -2800,14 +2800,14 @@ module.exports = {
             name: "string"
         }
     },
-    remove_bill_media: function(request)
+    destroy_bill_media: function(request)
     {
-        console.log("account_management_controller.remove_bill_media")
+        console.log("account_management_controller.destroy_bill_media")
         return {  
             id: request.params.id,
             routeDetails: {
                 controller: 'Account Management',
-                action: 'remove_bill_media'
+                action: 'destroy_bill_media'
             },
             code: faker.random.number(),
             reason: "string",
@@ -2832,14 +2832,14 @@ module.exports = {
             }
         ]
     },
-    remove_hub: function(request)
+    destroy_hub: function(request)
     {
-        console.log("account_management_controller.remove_hub")
+        console.log("account_management_controller.destroy_hub")
         return {  
             id: request.params.id,
             routeDetails: {
                 controller: 'Account Management',
-                action: 'remove_hub'
+                action: 'destroy_hub'
             },
             code: faker.random.number(),
             reason: "string",
