@@ -13,7 +13,86 @@ module.exports = {
                 routeDetails: {
                     controller: 'Service Activation and Configuration',
                     action: 'index_service'
-                }
+                },
+                href: faker.internet.url(),
+                category: "string",
+                description: faker.lorem.sentence(),
+                endDate: new Date(),
+                hasStarted: true,
+                isServiceEnabled: true,
+                isStateful: true,
+                name: faker.name.findName(),
+                serviceDate: new Date(),
+                serviceType: "string",
+                startDate: new Date(),
+                startMode: "string",
+                note: [
+                    {
+                        author: faker.name.findName(),
+                        date: new Date(),
+                        system: "string",
+                        text: "string"
+                    }
+                ],
+                place: [
+                    {
+                        id: faker.random.uuid(),
+                        href: faker.internet.url(),
+                        name: faker.name.findName(),
+                        role: "user"
+                    }
+                ],
+                relatedParty: [
+                    {
+                        id: faker.random.uuid(),
+                        href: faker.internet.url(),
+                        name: faker.name.findName(),
+                        role: "user"
+                    }
+                ],
+                serviceCharacteristic: [
+                    {
+                        name: faker.name.findName(),
+                        valueType: "string"
+                    }
+                ],
+                serviceOrder: [
+                    {
+                        id: faker.random.uuid(),
+                        href: faker.internet.url(),
+                        serviceOrderItemId: "string"
+                    }
+                ],
+                serviceRelationship: [
+                    {
+                        relationshipType: "string",
+                        service: 
+                        {
+                            id: faker.random.uuid(),
+                            href: faker.internet.url()
+                        }
+                    }
+                ],
+                serviceSpecification: {
+                        id: faker.random.uuid(),
+                        href: faker.internet.url(),
+                        name: faker.name.findName(),
+                        version:"string",
+                },
+                state: "feasibilityChecked",
+                supportingResource: [
+                    {
+                        id: faker.random.uuid(),
+                        href: faker.internet.url(),
+                        name: faker.name.findName(),
+                    }
+                ],
+                supportingService: [
+                    {
+                        id: faker.random.uuid(),
+                        href: faker.internet.url()
+                    }
+                ]
             }
         ]
     },
@@ -25,7 +104,85 @@ module.exports = {
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'create_service'
-            }
+            }, 
+            category: "string",
+            description: faker.lorem.sentence(),
+            endDate: new Date(),
+            hasStarted: true,
+            isServiceEnabled: true,
+            isStateful: true,
+            name: faker.name.findName(),
+            serviceDate: new Date(),
+            serviceType: "string",
+            startDate: new Date(),
+            startMode: "string",
+            note: [
+                {
+                    author: faker.name.findName(),
+                    date: new Date(),
+                    system: "string",
+                    text: "string"
+                }
+            ],
+            place: [
+                {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url(),
+                    name: faker.name.findName(),
+                    role: "user"
+                }
+            ],
+            relatedParty: [
+                {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url(),
+                    name: faker.name.findName(),
+                    role: "user"
+                }
+            ],
+            serviceCharacteristic: [
+                {
+                    name: faker.name.findName(),
+                    valueType: "string"
+                }
+            ],
+            serviceOrder: [
+                {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url(),
+                    serviceOrderItemId: "string"
+                }
+            ],
+            serviceRelationship: [
+                {
+                    relationshipType: "string",
+                    service: 
+                    {
+                        id: faker.random.uuid(),
+                        href: faker.internet.url()
+                    }
+                }
+            ],
+            serviceSpecification: {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url(),
+                    name: faker.name.findName(),
+                    version:"string",
+            },
+            state: "feasibilityChecked",
+            supportingResource: [
+                {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url(),
+                    name: faker.name.findName(),
+                }
+            ],
+            supportingService: [
+                {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url()
+                }
+            ]
         }
     },
     show_service: function(request)
@@ -36,7 +193,86 @@ module.exports = {
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'show_service'
-            }
+            },
+            href: faker.internet.url(),
+            category: "string",
+            description: faker.lorem.sentence(),
+            endDate: new Date(),
+            hasStarted: true,
+            isServiceEnabled: true,
+            isStateful: true,
+            name: faker.name.findName(),
+            serviceDate: new Date(),
+            serviceType: "string",
+            startDate: new Date(),
+            startMode: "string",
+            note: [
+                {
+                    author: faker.name.findName(),
+                    date: new Date(),
+                    system: "string",
+                    text: "string"
+                }
+            ],
+            place: [
+                {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url(),
+                    name: faker.name.findName(),
+                    role: "user"
+                }
+            ],
+            relatedParty: [
+                {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url(),
+                    name: faker.name.findName(),
+                    role: "user"
+                }
+            ],
+            serviceCharacteristic: [
+                {
+                    name: faker.name.findName(),
+                    valueType: "string"
+                }
+            ],
+            serviceOrder: [
+                {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url(),
+                    serviceOrderItemId: "string"
+                }
+            ],
+            serviceRelationship: [
+                {
+                    relationshipType: "string",
+                    service: 
+                    {
+                        id: faker.random.uuid(),
+                        href: faker.internet.url()
+                    }
+                }
+            ],
+            serviceSpecification: {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url(),
+                    name: faker.name.findName(),
+                    version:"string",
+            },
+            state: "feasibilityChecked",
+            supportingResource: [
+                {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url(),
+                    name: faker.name.findName(),
+                }
+            ],
+            supportingService: [
+                {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url()
+                }
+            ]
         }
     },
     update_service: function(request)
@@ -47,7 +283,85 @@ module.exports = {
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'update_service'
-            }
+            },
+            category: "string",
+            description: faker.lorem.sentence(),
+            endDate: new Date(),
+            hasStarted: true,
+            isServiceEnabled: true,
+            isStateful: true,
+            name: faker.name.findName(),
+            serviceDate: new Date(),
+            serviceType: "string",
+            startDate: new Date(),
+            startMode: "string",
+            note: [
+                {
+                    author: faker.name.findName(),
+                    date: new Date(),
+                    system: "string",
+                    text: "string"
+                }
+            ],
+            place: [
+                {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url(),
+                    name: faker.name.findName(),
+                    role: "user"
+                }
+            ],
+            relatedParty: [
+                {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url(),
+                    name: faker.name.findName(),
+                    role: "user"
+                }
+            ],
+            serviceCharacteristic: [
+                {
+                    name: faker.name.findName(),
+                    valueType: "string"
+                }
+            ],
+            serviceOrder: [
+                {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url(),
+                    serviceOrderItemId: "string"
+                }
+            ],
+            serviceRelationship: [
+                {
+                    relationshipType: "string",
+                    service: 
+                    {
+                        id: faker.random.uuid(),
+                        href: faker.internet.url()
+                    }
+                }
+            ],
+            serviceSpecification: {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url(),
+                    name: faker.name.findName(),
+                    version:"string",
+            },
+            state: "feasibilityChecked",
+            supportingResource: [
+                {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url(),
+                    name: faker.name.findName(),
+                }
+            ],
+            supportingService: [
+                {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url()
+                }
+            ]
         }
     },
     remove_service: function(request)
@@ -58,10 +372,14 @@ module.exports = {
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'remove_service'
-            }
+            },
+            code: faker.random.number(),
+            reason: "string",
+            message: "string",
+            status: faker.random.number(),
+            referenceError: "string"
         }
     },
-
     index_monitor: function(request)
     {
         console.log("service_activation_and_configuration_controller.index_monitor")
@@ -72,6 +390,30 @@ module.exports = {
                 routeDetails: {
                     controller: 'Service Activation and Configuration',
                     action: 'index_monitor'
+                },
+                href: faker.internet.url(),
+                sourceHref: "string",
+                state: "string",
+                request: {
+                    body: "string",
+                    method: "string",
+                    to: "string",
+                    header: [
+                        {
+                            name: faker.name.findName(),
+                            value: faker.random.number()
+                        }
+                    ]
+                },
+                response: {
+                    body: "string",
+                    statusCode: "string",
+                    header: [
+                        {
+                            name: faker.name.findName(),
+                            value: faker.random.number()
+                        }
+                    ]
                 }
             }
         ]
@@ -84,10 +426,33 @@ module.exports = {
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'show_monitor'
+            },
+            href: faker.internet.url(),
+            sourceHref: "string",
+            state: "string",
+            request: {
+                body: "string",
+                method: "string",
+                to: "string",
+                header: [
+                    {
+                        name: faker.name.findName(),
+                        value: faker.random.number()
+                    }
+                ]
+            },
+            response: {
+                body: "string",
+                statusCode: "string",
+                header: [
+                    {
+                        name: faker.name.findName(),
+                        value: faker.random.number()
+                    }
+                ]
             }
         }
     },
-
     create_listener_notification_monitor_create: function(request)
     {
         console.log("service_activation_and_configuration_controller.create_listener_notification_monitor_create")
@@ -96,6 +461,40 @@ module.exports = {
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'create_listener_notification_monitor_create'
+            },
+            eventId: "string",
+            eventTime: new Date(),
+            eventType: "string",
+            fieldPath: "string",
+            resourcePath: "string",
+            event: {
+                monitor: {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url(),
+                    sourceHref: "string",
+                    state: "string",
+                    request: {
+                        body: "string",
+                        method: "string",
+                        to: "string",
+                        header: [
+                            {
+                                name: faker.name.findName(),
+                                value: faker.random.number()
+                            }
+                        ]
+                    },
+                    response: {
+                        body: "string",
+                        statusCode: "string",
+                        header: [
+                            {
+                                name: faker.name.findName(),
+                                value: faker.random.number()
+                            }
+                        ]
+                    }
+                }
             }
         }
     },
@@ -107,6 +506,40 @@ module.exports = {
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'create_listener_notification_monitor_attribute_change'
+            },
+            eventId: "string",
+            eventTime: new Date(),
+            eventType: "string",
+            fieldPath: "string",
+            resourcePath: "string",
+            event: {
+                monitor: {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url(),
+                    sourceHref: "string",
+                    state: "string",
+                    request: {
+                        body: "string",
+                        method: "string",
+                        to: "string",
+                        header: [
+                            {
+                                name: faker.name.findName(),
+                                value: faker.random.number()
+                            }
+                        ]
+                    },
+                    response: {
+                        body: "string",
+                        statusCode: "string",
+                        header: [
+                            {
+                                name: faker.name.findName(),
+                                value: faker.random.number()
+                            }
+                        ]
+                    }
+                }
             }
         }
     },
@@ -118,6 +551,40 @@ module.exports = {
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'create_listener_notification_monitor_state_change'
+            },
+            eventId: "string",
+            eventTime: new Date(),
+            eventType: "string",
+            fieldPath: "string",
+            resourcePath: "string",
+            event: {
+                monitor: {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url(),
+                    sourceHref: "string",
+                    state: "string",
+                    request: {
+                        body: "string",
+                        method: "string",
+                        to: "string",
+                        header: [
+                            {
+                                name: faker.name.findName(),
+                                value: faker.random.number()
+                            }
+                        ]
+                    },
+                    response: {
+                        body: "string",
+                        statusCode: "string",
+                        header: [
+                            {
+                                name: faker.name.findName(),
+                                value: faker.random.number()
+                            }
+                        ]
+                    }
+                }
             }
         }
     },
@@ -129,6 +596,40 @@ module.exports = {
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'create_listener_notification_monitor_delete'
+            },
+            eventId: "string",
+            eventTime: new Date(),
+            eventType: "string",
+            fieldPath: "string",
+            resourcePath: "string",
+            event: {
+                monitor: {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url(),
+                    sourceHref: "string",
+                    state: "string",
+                    request: {
+                        body: "string",
+                        method: "string",
+                        to: "string",
+                        header: [
+                            {
+                                name: faker.name.findName(),
+                                value: faker.random.number()
+                            }
+                        ]
+                    },
+                    response: {
+                        body: "string",
+                        statusCode: "string",
+                        header: [
+                            {
+                                name: faker.name.findName(),
+                                value: faker.random.number()
+                            }
+                        ]
+                    }
+                }
             }
         }
     },
@@ -140,6 +641,95 @@ module.exports = {
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'create_listener_notification_service_create'
+            },
+            eventId: "string",
+            eventTime: new Date(),
+            eventType: "string",
+            fieldPath: "string",
+            resourcePath: "string",
+            event: {
+                service: {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url(),
+                    category: "string",
+                    description: faker.lorem.sentence(),
+                    endDate: new Date(),
+                    hasStarted: true,
+                    isServiceEnabled: true,
+                    isStateful: true,
+                    name: faker.name.findName(),
+                    serviceDate: new Date(),
+                    serviceType: "string",
+                    startDate: new Date(),
+                    startMode: "string",
+                    note: [
+                        {
+                            author: faker.name.findName(),
+                            date: new Date(),
+                            system: "string",
+                            text: "string"
+                        }
+                    ],
+                    place: [
+                        {
+                            id: faker.random.uuid(),
+                            href: faker.internet.url(),
+                            name: faker.name.findName(),
+                            role: "user"
+                        }
+                    ],
+                    relatedParty: [
+                        {
+                            id: faker.random.uuid(),
+                            href: faker.internet.url(),
+                            name: faker.name.findName(),
+                            role: "user"
+                        }
+                    ],
+                    serviceCharacteristic: [
+                        {
+                            name: faker.name.findName(),
+                            valueType: "string"
+                        }
+                    ],
+                    serviceOrder: [
+                        {
+                            id: faker.random.uuid(),
+                            href: faker.internet.url(),
+                            serviceOrderItemId: "string"
+                        }
+                    ],
+                    serviceRelationship: [
+                        {
+                            relationshipType: "string",
+                            service: 
+                            {
+                                id: faker.random.uuid(),
+                                href: faker.internet.url()
+                            }
+                        }
+                    ],
+                    serviceSpecification: {
+                            id: faker.random.uuid(),
+                            href: faker.internet.url(),
+                            name: faker.name.findName(),
+                            version:"string",
+                    },
+                    state: "feasibilityChecked",
+                    supportingResource: [
+                        {
+                            id: faker.random.uuid(),
+                            href: faker.internet.url(),
+                            name: faker.name.findName(),
+                        }
+                    ],
+                    supportingService: [
+                        {
+                            id: faker.random.uuid(),
+                            href: faker.internet.url()
+                        }
+                    ]
+                }
             }
         }
     },
@@ -151,6 +741,95 @@ module.exports = {
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'create_listener_notification_service_attribute_change'
+            },
+            eventId: "string",
+            eventTime: new Date(),
+            eventType: "string",
+            fieldPath: "string",
+            resourcePath: "string",
+            event: {
+                service: {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url(),
+                    category: "string",
+                    description: faker.lorem.sentence(),
+                    endDate: new Date(),
+                    hasStarted: true,
+                    isServiceEnabled: true,
+                    isStateful: true,
+                    name: faker.name.findName(),
+                    serviceDate: new Date(),
+                    serviceType: "string",
+                    startDate: new Date(),
+                    startMode: "string",
+                    note: [
+                        {
+                            author: faker.name.findName(),
+                            date: new Date(),
+                            system: "string",
+                            text: "string"
+                        }
+                    ],
+                    place: [
+                        {
+                            id: faker.random.uuid(),
+                            href: faker.internet.url(),
+                            name: faker.name.findName(),
+                            role: "user"
+                        }
+                    ],
+                    relatedParty: [
+                        {
+                            id: faker.random.uuid(),
+                            href: faker.internet.url(),
+                            name: faker.name.findName(),
+                            role: "user"
+                        }
+                    ],
+                    serviceCharacteristic: [
+                        {
+                            name: faker.name.findName(),
+                            valueType: "string"
+                        }
+                    ],
+                    serviceOrder: [
+                        {
+                            id: faker.random.uuid(),
+                            href: faker.internet.url(),
+                            serviceOrderItemId: "string"
+                        }
+                    ],
+                    serviceRelationship: [
+                        {
+                            relationshipType: "string",
+                            service: 
+                            {
+                                id: faker.random.uuid(),
+                                href: faker.internet.url()
+                            }
+                        }
+                    ],
+                    serviceSpecification: {
+                            id: faker.random.uuid(),
+                            href: faker.internet.url(),
+                            name: faker.name.findName(),
+                            version:"string",
+                    },
+                    state: "feasibilityChecked",
+                    supportingResource: [
+                        {
+                            id: faker.random.uuid(),
+                            href: faker.internet.url(),
+                            name: faker.name.findName(),
+                        }
+                    ],
+                    supportingService: [
+                        {
+                            id: faker.random.uuid(),
+                            href: faker.internet.url()
+                        }
+                    ]
+                }
             }
         }
     },
@@ -162,6 +841,95 @@ module.exports = {
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'create_listener_notification_service_state_change'
+            },
+            eventId: "string",
+            eventTime: new Date(),
+            eventType: "string",
+            fieldPath: "string",
+            resourcePath: "string",
+            event: {
+                service: {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url(),
+                    category: "string",
+                    description: faker.lorem.sentence(),
+                    endDate: new Date(),
+                    hasStarted: true,
+                    isServiceEnabled: true,
+                    isStateful: true,
+                    name: faker.name.findName(),
+                    serviceDate: new Date(),
+                    serviceType: "string",
+                    startDate: new Date(),
+                    startMode: "string",
+                    note: [
+                        {
+                            author: faker.name.findName(),
+                            date: new Date(),
+                            system: "string",
+                            text: "string"
+                        }
+                    ],
+                    place: [
+                        {
+                            id: faker.random.uuid(),
+                            href: faker.internet.url(),
+                            name: faker.name.findName(),
+                            role: "user"
+                        }
+                    ],
+                    relatedParty: [
+                        {
+                            id: faker.random.uuid(),
+                            href: faker.internet.url(),
+                            name: faker.name.findName(),
+                            role: "user"
+                        }
+                    ],
+                    serviceCharacteristic: [
+                        {
+                            name: faker.name.findName(),
+                            valueType: "string"
+                        }
+                    ],
+                    serviceOrder: [
+                        {
+                            id: faker.random.uuid(),
+                            href: faker.internet.url(),
+                            serviceOrderItemId: "string"
+                        }
+                    ],
+                    serviceRelationship: [
+                        {
+                            relationshipType: "string",
+                            service: 
+                            {
+                                id: faker.random.uuid(),
+                                href: faker.internet.url()
+                            }
+                        }
+                    ],
+                    serviceSpecification: {
+                            id: faker.random.uuid(),
+                            href: faker.internet.url(),
+                            name: faker.name.findName(),
+                            version:"string",
+                    },
+                    state: "feasibilityChecked",
+                    supportingResource: [
+                        {
+                            id: faker.random.uuid(),
+                            href: faker.internet.url(),
+                            name: faker.name.findName(),
+                        }
+                    ],
+                    supportingService: [
+                        {
+                            id: faker.random.uuid(),
+                            href: faker.internet.url()
+                        }
+                    ]
+                }
             }
         }
     },
@@ -173,10 +941,98 @@ module.exports = {
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'create_listener_notification_service_delete'
+            },
+            eventId: "string",
+            eventTime: new Date(),
+            eventType: "string",
+            fieldPath: "string",
+            resourcePath: "string",
+            event: {
+                service: {
+                    id: faker.random.uuid(),
+                    href: faker.internet.url(),
+                    category: "string",
+                    description: faker.lorem.sentence(),
+                    endDate: new Date(),
+                    hasStarted: true,
+                    isServiceEnabled: true,
+                    isStateful: true,
+                    name: faker.name.findName(),
+                    serviceDate: new Date(),
+                    serviceType: "string",
+                    startDate: new Date(),
+                    startMode: "string",
+                    note: [
+                        {
+                            author: faker.name.findName(),
+                            date: new Date(),
+                            system: "string",
+                            text: "string"
+                        }
+                    ],
+                    place: [
+                        {
+                            id: faker.random.uuid(),
+                            href: faker.internet.url(),
+                            name: faker.name.findName(),
+                            role: "user"
+                        }
+                    ],
+                    relatedParty: [
+                        {
+                            id: faker.random.uuid(),
+                            href: faker.internet.url(),
+                            name: faker.name.findName(),
+                            role: "user"
+                        }
+                    ],
+                    serviceCharacteristic: [
+                        {
+                            name: faker.name.findName(),
+                            valueType: "string"
+                        }
+                    ],
+                    serviceOrder: [
+                        {
+                            id: faker.random.uuid(),
+                            href: faker.internet.url(),
+                            serviceOrderItemId: "string"
+                        }
+                    ],
+                    serviceRelationship: [
+                        {
+                            relationshipType: "string",
+                            service: 
+                            {
+                                id: faker.random.uuid(),
+                                href: faker.internet.url()
+                            }
+                        }
+                    ],
+                    serviceSpecification: {
+                            id: faker.random.uuid(),
+                            href: faker.internet.url(),
+                            name: faker.name.findName(),
+                            version:"string",
+                    },
+                    state: "feasibilityChecked",
+                    supportingResource: [
+                        {
+                            id: faker.random.uuid(),
+                            href: faker.internet.url(),
+                            name: faker.name.findName(),
+                        }
+                    ],
+                    supportingService: [
+                        {
+                            id: faker.random.uuid(),
+                            href: faker.internet.url()
+                        }
+                    ]
+                }
             }
         }
     },
-
     create_hub: function(request)
     {
         console.log("service_activation_and_configuration_controller.create_hub")
@@ -187,7 +1043,8 @@ module.exports = {
                     controller: 'Service Activation and Configuration',
                     action: 'create_hub'
                 },
-            
+                callback: "string",
+                query: "string"
             }
         ]
     },
@@ -200,6 +1057,11 @@ module.exports = {
                 controller: 'Service Activation and Configuration',
                 action: 'remove_hub'
             },
+            code: faker.random.number(),
+            reason: "string",
+            message: "string",
+            status: faker.random.number(),
+            referenceError: "string"
             
         }
     },
@@ -212,7 +1074,11 @@ module.exports = {
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'create_client_listener'
-            }
+            },
+            event: {},
+            eventType: "EVENT_TYPE",
+            eventTime:"string",
+            eventId: "string"
             
         }
     }
