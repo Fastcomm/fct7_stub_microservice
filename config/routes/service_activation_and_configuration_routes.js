@@ -25,29 +25,29 @@ service_activation_and_configuration_routes.get('/monitor', (request, response) 
 service_activation_and_configuration_routes.get('/monitor/:id', (request, response) => {
     response.send( service_activation_and_configuration_controller.show_monitor(request) )
 })
-service_activation_and_configuration_routes.post('/listener/notification/monitor_create', (request, response) => {
-    response.send( service_activation_and_configuration_controller.create_listener_notification_monitor_create(request) )
+service_activation_and_configuration_routes.post('/notification/monitor/create', (request, response) => {
+    response.send( service_activation_and_configuration_controller.create_notification_monitor_create(request) )
 })
-service_activation_and_configuration_routes.post('/listener/notification/monitor_attribute_change', (request, response) => {
-    response.send( service_activation_and_configuration_controller.create_listener_notification_monitor_attribute_change(request) )
+service_activation_and_configuration_routes.post('/notification/monitor/attribute_change', (request, response) => {
+    response.send( service_activation_and_configuration_controller.create_notification_monitor_attribute_change(request) )
 })
-service_activation_and_configuration_routes.post('/listener/notification/monitor_state_change', (request, response) => {
-    response.send( service_activation_and_configuration_controller.create_listener_notification_monitor_state_change(request) )
+service_activation_and_configuration_routes.post('/notification/monitor/state_change', (request, response) => {
+    response.send( service_activation_and_configuration_controller.create_notification_monitor_state_change(request) )
 })
-service_activation_and_configuration_routes.post('/listener/notification/monitor_delete', (request, response) => {
-    response.send( service_activation_and_configuration_controller.create_listener_notification_monitor_delete(request) )
+service_activation_and_configuration_routes.post('/notification/monitor/delete', (request, response) => {
+    response.send( service_activation_and_configuration_controller.create_notification_monitor_delete(request) )
 })
-service_activation_and_configuration_routes.post('/listener/notification/service_create', (request, response) => {
-    response.send( service_activation_and_configuration_controller.create_listener_notification_service_create(request) )
+service_activation_and_configuration_routes.post('/notification/service/create', (request, response) => {
+    response.send( service_activation_and_configuration_controller.create_notification_service_create(request) )
 })
-service_activation_and_configuration_routes.post('/listener/notification/service_attribute_change', (request, response) => {
-    response.send( service_activation_and_configuration_controller.create_listener_notification_service_attribute_change(request) )
+service_activation_and_configuration_routes.post('/notification/service/attribute_change', (request, response) => {
+    response.send( service_activation_and_configuration_controller.create_notification_service_attribute_change(request) )
 })
-service_activation_and_configuration_routes.post('/listener/notification/service_state_change', (request, response) => {
-    response.send( service_activation_and_configuration_controller.create_listener_notification_service_state_change(request) )
+service_activation_and_configuration_routes.post('/notification/service/state_change', (request, response) => {
+    response.send( service_activation_and_configuration_controller.create_notification_service_state_change(request) )
 })
-service_activation_and_configuration_routes.post('/listener/notification/service_delete', (request, response) => {
-    response.send( service_activation_and_configuration_controller.create_listener_notification_service_delete(request) )
+service_activation_and_configuration_routes.post('/notification/service/delete', (request, response) => {
+    response.send( service_activation_and_configuration_controller.create_notification_service_delete(request) )
 })
 service_activation_and_configuration_routes.post('/hub', (request, response) => {
     response.send( service_activation_and_configuration_controller.create_hub(request) )

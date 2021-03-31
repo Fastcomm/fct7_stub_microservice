@@ -453,14 +453,14 @@ module.exports = {
             }
         }
     },
-    create_listener_notification_monitor_create: function(request)
+    create_notification_monitor_create: function(request)
     {
         console.log("service_activation_and_configuration_controller.create_listener_notification_monitor_create")
         return {  
             id: faker.random.uuid(),
             routeDetails: {
                 controller: 'Service Activation and Configuration',
-                action: 'create_listener_notification_monitor_create'
+                action: 'create_notification_monitor_create'
             },
             eventId: "string",
             eventTime: new Date(),
@@ -498,14 +498,14 @@ module.exports = {
             }
         }
     },
-    create_listener_notification_monitor_attribute_change: function(request)
+    create_notification_monitor_attribute_change: function(request)
     {
         console.log("service_activation_and_configuration_controller.create_listener_notification_monitor_attribute_change")
         return {  
             id: faker.random.uuid(),
             routeDetails: {
                 controller: 'Service Activation and Configuration',
-                action: 'create_listener_notification_monitor_attribute_change'
+                action: 'create_notification_monitor_attribute_change'
             },
             eventId: "string",
             eventTime: new Date(),
@@ -543,14 +543,14 @@ module.exports = {
             }
         }
     },
-    create_listener_notification_monitor_state_change: function(request)
+    create_notification_monitor_state_change: function(request)
     {
         console.log("service_activation_and_configuration_controller.create_listener_notification_monitor_state_change")
         return {  
             id: faker.random.uuid(),
             routeDetails: {
                 controller: 'Service Activation and Configuration',
-                action: 'create_listener_notification_monitor_state_change'
+                action: 'create_notification_monitor_state_change'
             },
             eventId: "string",
             eventTime: new Date(),
@@ -588,14 +588,14 @@ module.exports = {
             }
         }
     },
-    create_listener_notification_monitor_delete: function(request)
+    create_notification_monitor_delete: function(request)
     {
         console.log("service_activation_and_configuration_controller.create_listener_notification_monitor_delete")
         return {  
             id: faker.random.uuid(),
             routeDetails: {
                 controller: 'Service Activation and Configuration',
-                action: 'create_listener_notification_monitor_delete'
+                action: 'create_notification_monitor_delete'
             },
             eventId: "string",
             eventTime: new Date(),
@@ -633,14 +633,14 @@ module.exports = {
             }
         }
     },
-    create_listener_notification_service_create: function(request)
+    create_notification_service_create: function(request)
     {
         console.log("service_activation_and_configuration_controller.create_listener_notification_service_create")
         return {  
             id: faker.random.uuid(),
             routeDetails: {
                 controller: 'Service Activation and Configuration',
-                action: 'create_listener_notification_service_create'
+                action: 'create_notification_service_create'
             },
             eventId: "string",
             eventTime: new Date(),
@@ -733,14 +733,14 @@ module.exports = {
             }
         }
     },
-    create_listener_notification_service_attribute_change: function(request)
+    create_notification_service_attribute_change: function(request)
     {
         console.log("service_activation_and_configuration_controller.create_listener_notification_service_attribute_change")
         return {  
             id: faker.random.uuid(),
             routeDetails: {
                 controller: 'Service Activation and Configuration',
-                action: 'create_listener_notification_service_attribute_change'
+                action: 'create_notification_service_attribute_change'
             },
             eventId: "string",
             eventTime: new Date(),
@@ -833,14 +833,14 @@ module.exports = {
             }
         }
     },
-    create_listener_notification_service_state_change: function(request)
+    create_notification_service_state_change: function(request)
     {
         console.log("service_activation_and_configuration_controller.create_listener_notification_service_state_change")
         return {  
             id: faker.random.uuid(),
             routeDetails: {
                 controller: 'Service Activation and Configuration',
-                action: 'create_listener_notification_service_state_change'
+                action: 'create_notification_service_state_change'
             },
             eventId: "string",
             eventTime: new Date(),
@@ -933,14 +933,14 @@ module.exports = {
             }
         }
     },
-    create_listener_notification_service_delete: function(request)
+    create_notification_service_delete: function(request)
     {
         console.log("service_activation_and_configuration_controller.create_listener_notification_service_delete")
         return {  
             id: faker.random.uuid(),
             routeDetails: {
                 controller: 'Service Activation and Configuration',
-                action: 'create_listener_notification_service_delete'
+                action: 'create_notification_service_delete'
             },
             eventId: "string",
             eventTime: new Date(),

@@ -2,7 +2,7 @@
 const express = require('express')
 const routes = express.Router()
 
-//  ===   Default   ===
+//  ===   Routes   ===
 routes.use("/", require("./routes/application_routes"))
 routes.use("/account", require("./routes/account_management_routes"))
 routes.use("/agreement", require("./routes/agreement_management_routes"))
@@ -21,7 +21,7 @@ routes.use("/usage_specification", require("./routes/usage_specification_routes"
 routes.use("/usage_hub", require("./routes/usage_hub_routes"))
 routes.use("/roles", require("./routes/roles_routes"))
 routes.use("/permissions", require("./routes/permissions_routes"))
-routes.use("/service_act_and_conf", require("./routes/service_activation_and_configuration_routes"))
+routes.use("/sac", require("./routes/service_activation_and_configuration_routes"))
 routes.use("/trouble_ticket", require("./routes/trouble_ticket_routes"))
 routes.use("/trouble_ticket_hub", require("./routes/trouble_ticket_hub_routes"))
 routes.use("/privacy_profile", require("./routes/privacy_profile"))
