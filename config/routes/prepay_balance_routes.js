@@ -98,7 +98,7 @@ prepay_balance_routes.post("/hub", (request, response) => {
     response.send( prepay_balance_controller.create_hub( request ) )
 })
 prepay_balance_routes.delete("/hub/:hub_id", (request, response) => {
-    response.send( prepay_balance_controller.remove_hub( request ) )
+    response.send( prepay_balance_controller.destroy_hub( request ) )
 })
 prepay_balance_routes.post("/client/listener", (request, response) => {
     response.send( prepay_balance_controller.create_client_listener( request ) )

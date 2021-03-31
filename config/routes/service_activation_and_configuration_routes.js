@@ -17,7 +17,7 @@ service_activation_and_configuration_routes.patch('/service/:id', (request, resp
     response.send( service_activation_and_configuration_controller.update_service(request) )
 })
 service_activation_and_configuration_routes.delete('/service/:id', (request, response) => {
-    response.send( service_activation_and_configuration_controller.remove_service(request) )
+    response.send( service_activation_and_configuration_controller.destroy_service(request) )
 })
 service_activation_and_configuration_routes.get('/monitor', (request, response) => {
     response.send( service_activation_and_configuration_controller.index_monitor(request) )
@@ -53,7 +53,7 @@ service_activation_and_configuration_routes.post('/hub', (request, response) => 
     response.send( service_activation_and_configuration_controller.create_hub(request) )
 })
 service_activation_and_configuration_routes.delete('/hub/:id', (request, response) => {
-    response.send( service_activation_and_configuration_controller.remove_hub(request) )
+    response.send( service_activation_and_configuration_controller.destroy_hub(request) )
 })
 service_activation_and_configuration_routes.post("/client/listener", (request, response) => {
     response.send( service_activation_and_configuration_controller.create_client_listener( request ) )
