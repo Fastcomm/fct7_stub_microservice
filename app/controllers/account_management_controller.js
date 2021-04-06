@@ -769,7 +769,6 @@ module.exports = {
                             id: faker.random.uuid(),
                             name: "string"
                         }
-
                     }
                 ],
                 financialAccount: {
