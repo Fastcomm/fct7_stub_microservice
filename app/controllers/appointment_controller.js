@@ -1,5 +1,4 @@
 //  === Requirements ===
-const { fake } = require('faker')
 const faker = require('faker')
 
 //  === Controller ===
@@ -573,7 +572,7 @@ module.exports = {
             code: faker.random.number(),
             reason: "string",
             message: "string",
-            status: "destroy_time_slot entry destroyed successfully",
+            status: "Time slot destroyed successfully",
             referenceError: "string"
         }
     },
