@@ -475,7 +475,7 @@ module.exports = {
                     {
                         id: faker.random.uuid(),
                         href: faker.internet.url(),
-                        name: "Internet connexion problem to solve",
+                        name: "Internet connection problem to solve",
                         "@referredType": "troubleTicket"
                     }
                 ]
@@ -521,7 +521,7 @@ module.exports = {
                 {
                     id: faker.random.uuid(),
                     href: faker.internet.url(),
-                    name: "Internet connexion problem to solve",
+                    name: "Internet connection problem to solve",
                     "@referredType": "troubleTicket"
                 }
             ]
