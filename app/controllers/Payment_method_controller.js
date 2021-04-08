@@ -6,7 +6,7 @@ module.exports = {
 
     index: function(request)
     {
-        console.log("Payment_method_controller.index")
+        console.log("payment_method_controller.index")
         return [
             {
                 id: faker.random.uuid(),
@@ -50,7 +50,7 @@ module.exports = {
     },
     create: function(request)
     {
-        console.log("Payment_method_controller.create")
+        console.log("payment_method_controller.create")
         return {
             id: faker.random.uuid(),
             routeDetails: {
@@ -93,7 +93,7 @@ module.exports = {
     },
     show: function(request)
     {
-        console.log("Payment_method_controller.show")
+        console.log("payment_method_controller.show")
         return {
             id: request.params.payment_method_id,
             routeDetails: {
@@ -154,7 +154,7 @@ module.exports = {
     },
     destroy: function(request)
     {
-        console.log("Payment_method_controller.destroy")
+        console.log("payment_method_controller.destroy")
         return {
             id: request.params.payment_method_id,
             routeDetails: {
@@ -163,7 +163,7 @@ module.exports = {
             },
             code: 0,
             reason: "Missing query parameter",
-            message: "Invalid request",
+            message: "Payment method succesfully deleted.",
             status: "failure",
             referenceError: "http://{dev_portal_domain}/{error_documentation_endpoint}",
             "@type": "type",
@@ -173,9 +173,9 @@ module.exports = {
 
     show_accounts: function(request)
     {
-        console.log("Payment_method_controller.show_accounts")
+        console.log("payment_method_controller.show_accounts")
         return {
-            id: faker.random.uuid(),
+            id: request.params.account_id ,
             routeDetails: {
                 controller: 'Payment Methods',
                 action: 'show_accounts'
