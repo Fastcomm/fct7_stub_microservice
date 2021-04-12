@@ -27,10 +27,10 @@ routes.use("/permissions", require("./routes/permissions_routes"))
 routes.use("/sac", require("./routes/service_activation_and_configuration_routes"))
 routes.use("/trouble_ticket", require("./routes/trouble_ticket_routes"))
 routes.use("/trouble_ticket_hub", require("./routes/trouble_ticket_hub_routes"))
+routes.use("/party", require("./routes/party_management_routes"))
 routes.use("/privacy_profile", require("./routes/privacy_profile"))
 routes.use("/privacy_profile_type", require("./routes/privacy_profile_type"))
 routes.use("/privacy_agreement", require("./routes/privacy_agreement"))
-
 
 //  === Exports ===
 module.exports = routes
