@@ -22,6 +22,7 @@ routes.use("/usage_consumption_hub", require("./routes/usage_consumption_hub_rou
 routes.use("/usage", require("./routes/usage_routes"))
 routes.use("/usage_specification", require("./routes/usage_specification_routes"))
 routes.use("/usage_hub", require("./routes/usage_hub_routes"))
+routes.use("/recommendation", require("./routes/recommendation_management_routes"))
 routes.use("/roles", require("./routes/roles_routes"))
 routes.use("/permissions", require("./routes/permissions_routes"))
 routes.use("/sac", require("./routes/service_activation_and_configuration_routes"))
