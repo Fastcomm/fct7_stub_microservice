@@ -678,7 +678,7 @@ module.exports = {
     {
         console.log("geographical_site_management_controller.destroy_hub")
         return {  
-            id: request.params.id,
+            id: request.params.hub_id,
             routeDetails: {
                 controller: 'Geographical Site Management',
                 action: 'destroy_hub'
