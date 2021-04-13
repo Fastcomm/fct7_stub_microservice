@@ -738,7 +738,6 @@ module.exports = {
                 action: 'show_organization'
             },
             href: faker.internet.url(),
-            href: faker.internet.url(),
             isLegalEntity: true,
             type: "string",
             existsDuring: {
