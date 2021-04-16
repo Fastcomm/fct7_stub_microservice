@@ -17,17 +17,17 @@ module.exports = {
             description: faker.lorem.sentence(),
             effectiveDate: faker.date.soon(),
             relatedParty: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: faker.company.companyName()
             },
             bucket: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: faker.system.fileName(),
                     isShared: faker.random.boolean(),
                     product: {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.commerce.productName(),
                         desc: faker.lorem.sentence(),
@@ -36,7 +36,7 @@ module.exports = {
                     bucketBalance: [
                         {
                             unit: faker.finance.currencyCode(),
-                            remainingValue: faker.random.number(),
+                            remainingValue: faker.datatype.number(),
                             validFor: {
                                 startDateTime: faker.date.soon(),
                                 endDateTime:faker.date.soon()
@@ -52,7 +52,7 @@ module.exports = {
         console.log("usage_consumption_controller.index")
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Usage Consumption',
                     action: 'index'
@@ -62,17 +62,17 @@ module.exports = {
                 description: faker.lorem.sentence(),
                 effectiveDate: faker.date.soon(),
                 relatedParty: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.company.companyName()
                 },
                 bucket: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: faker.system.fileName(),
                         isShared: faker.random.boolean(),
                         product: {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             name: faker.commerce.productName(),
                             desc: faker.lorem.sentence(),
@@ -81,7 +81,7 @@ module.exports = {
                         bucketBalance: [
                             {
                                 unit: faker.finance.currencyCode(),
-                                remainingValue: faker.random.number(),
+                                remainingValue: faker.datatype.number(),
                                 validFor: {
                                     startDateTime: faker.date.soon(),
                                     endDateTime:faker.date.soon()
@@ -109,7 +109,7 @@ module.exports = {
     {
         console.log("usage_consumption_controller.create_request")
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Usage Consumption',
                 action: 'create_request'
@@ -124,16 +124,16 @@ module.exports = {
                 endDateTime: faker.date.soon()
             },
             product: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 user: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 }
             },
             bucket: [
                 {
-                    id: faker.random.uuid()
+                    id: faker.datatype.uuid()
                 }
             ]
         }
@@ -142,7 +142,7 @@ module.exports = {
     {
         console.log("usage_consumption_controller.show_request")
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Usage Consumption',
                 action: 'show_request'
@@ -157,16 +157,16 @@ module.exports = {
                 endDateTime: faker.date.soon()
             },
             product: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 user: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 }
             },
             bucket: [
                 {
-                    id: faker.random.uuid()
+                    id: faker.datatype.uuid()
                 }
             ]
         }
@@ -176,7 +176,7 @@ module.exports = {
         console.log("usage_consumption_controller.index_requests")
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Usage Consumption',
                     action: 'index_request'
@@ -191,16 +191,16 @@ module.exports = {
                     endDateTime: faker.date.soon()
                 },
                 product: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     user: {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName()
                     }
                 },
                 bucket: [
                     {
-                        id: faker.random.uuid()
+                        id: faker.datatype.uuid()
                     }
                 ]
             }
@@ -222,7 +222,7 @@ module.exports = {
     {
         console.log("usage_consumption_controller.create_hub")
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Usage Consumption',
                 action: 'create_hub'

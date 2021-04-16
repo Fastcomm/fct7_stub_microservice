@@ -11,11 +11,11 @@ module.exports = {
                 controller: 'Trouble Ticket',
                 action: 'create'
             },
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             href: faker.internet.url(),
             name: faker.commerce.productName(),
             description: faker.lorem.sentence(),
-            externalId: faker.random.uuid(),
+            externalId: faker.datatype.uuid(),
             ticketType: 'yes',
             ticketArea: 'yes',
             ticketSubArea: 'yes',
@@ -30,14 +30,14 @@ module.exports = {
             statusChangeReason: 'none',
             relatedEntity: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.commerce.department(),
                     role: 'owner'
                 }
             ],
             channel: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 name: faker.commerce.department()
             },
             statusChange: [
@@ -49,7 +49,7 @@ module.exports = {
             ],
             note: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     date: new Date(),
                     text: faker.lorem.sentence(),
                     author: faker.name.findName()
@@ -57,7 +57,7 @@ module.exports = {
             ],
             relatedParty: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     role: 'user',
                     name: faker.commerce.department()
@@ -65,17 +65,17 @@ module.exports = {
             ],
             ticketRelationship: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     type: 'yes'
                 }
             ],
             attachment: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.image.fashion(),
-                    size: faker.random.number(),
+                    size: faker.datatype.number(),
                     description: faker.lorem.sentence()
                 }
             ]
@@ -90,11 +90,11 @@ module.exports = {
                     controller: 'Trouble Ticket',
                     action: 'index'
                 },
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: faker.commerce.productName(),
                 description: faker.lorem.sentence(),
-                externalId: faker.random.uuid(),
+                externalId: faker.datatype.uuid(),
                 ticketType: 'yes',
                 ticketArea: 'yes',
                 ticketSubArea: 'yes',
@@ -109,14 +109,14 @@ module.exports = {
                 statusChangeReason: 'none',
                 relatedEntity: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.commerce.department(),
                         role: 'owner'
                     }
                 ],
                 channel: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: faker.commerce.department()
                 },
                 statusChange: [
@@ -128,7 +128,7 @@ module.exports = {
                 ],
                 note: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         date: new Date(),
                         text: faker.lorem.sentence(),
                         author: faker.name.findName()
@@ -136,7 +136,7 @@ module.exports = {
                 ],
                 relatedParty: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         role: 'user',
                         name: faker.commerce.department()
@@ -144,17 +144,17 @@ module.exports = {
                 ],
                 ticketRelationship: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         type: 'yes'
                     }
                 ],
                 attachment: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.image.fashion(),
-                        size: faker.random.number(),
+                        size: faker.datatype.number(),
                         description: faker.lorem.sentence()
                     }
                 ]
@@ -173,7 +173,7 @@ module.exports = {
             href: faker.internet.url(),
             name: faker.commerce.productName(),
             description: faker.lorem.sentence(),
-            externalId: faker.random.uuid(),
+            externalId: faker.datatype.uuid(),
             ticketType: 'yes',
             ticketArea: 'yes',
             ticketSubArea: 'yes',
@@ -188,14 +188,14 @@ module.exports = {
             statusChangeReason: 'none',
             relatedEntity: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.commerce.department(),
                     role: 'owner'
                 }
             ],
             channel: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 name: faker.commerce.department()
             },
             statusChange: [
@@ -207,7 +207,7 @@ module.exports = {
             ],
             note: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     date: new Date(),
                     text: faker.lorem.sentence(),
                     author: faker.name.findName()
@@ -215,7 +215,7 @@ module.exports = {
             ],
             relatedParty: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     role: 'user',
                     name: faker.commerce.department()
@@ -223,17 +223,17 @@ module.exports = {
             ],
             ticketRelationship: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     type: 'yes'
                 }
             ],
             attachment: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.image.fashion(),
-                    size: faker.random.number(),
+                    size: faker.datatype.number(),
                     description: faker.lorem.sentence()
                 }
             ]
@@ -251,7 +251,7 @@ module.exports = {
             href: faker.internet.url(),
             name: faker.commerce.productName(),
             description: faker.lorem.sentence(),
-            externalId: faker.random.uuid(),
+            externalId: faker.datatype.uuid(),
             ticketType: 'yes',
             ticketArea: 'yes',
             ticketSubArea: 'yes',
@@ -266,14 +266,14 @@ module.exports = {
             statusChangeReason: 'none',
             relatedEntity: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.commerce.department(),
                     role: 'owner'
                 }
             ],
             channel: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 name: faker.commerce.department()
             },
             statusChange: [
@@ -285,7 +285,7 @@ module.exports = {
             ],
             note: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     date: new Date(),
                     text: faker.lorem.sentence(),
                     author: faker.name.findName()
@@ -293,7 +293,7 @@ module.exports = {
             ],
             relatedParty: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     role: 'user',
                     name: faker.commerce.department()
@@ -301,17 +301,17 @@ module.exports = {
             ],
             ticketRelationship: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     type: 'yes'
                 }
             ],
             attachment: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.image.fashion(),
-                    size: faker.random.number(),
+                    size: faker.datatype.number(),
                     description: faker.lorem.sentence()
                 }
             ]
@@ -337,7 +337,7 @@ module.exports = {
                 controller: 'Trouble Ticket',
                 action: 'create_hub'
             },
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             callback: faker.internet.url(),
             query: faker.hacker.phrase()
         }

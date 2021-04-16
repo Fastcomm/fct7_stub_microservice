@@ -7,14 +7,14 @@ module.exports = {
     {
         console.log("product_ordering_controller.create")
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Product Ordering',
                 action: 'create'
             },
             href: faker.internet.url(),
-            externalId: faker.random.number(),
-            priority: String( faker.random.number() ),
+            externalId: faker.datatype.number(),
+            priority: String( faker.datatype.number() ),
             description: faker.lorem.sentence(),
             state: "acknowledged",
             orderDate: new Date(),
@@ -23,7 +23,7 @@ module.exports = {
             requestedCompletionDate: faker.date.soon(),
             expectedCompletionDate: faker.date.soon(),
             channel: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: faker.commerce.productName()
             },
@@ -34,7 +34,7 @@ module.exports = {
             },
             relatedParty: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.commerce.productName()
                 }
@@ -51,8 +51,8 @@ module.exports = {
                 action: 'show'
             },
             href: faker.internet.url(),
-            externalId: faker.random.number(),
-            priority: String( faker.random.number() ),
+            externalId: faker.datatype.number(),
+            priority: String( faker.datatype.number() ),
             description: faker.lorem.sentence(),
             state: "acknowledged",
             orderDate: new Date(),
@@ -61,7 +61,7 @@ module.exports = {
             requestedCompletionDate: faker.date.soon(),
             expectedCompletionDate: faker.date.soon(),
             channel: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: faker.commerce.productName()
             },
@@ -72,7 +72,7 @@ module.exports = {
             },
             relatedParty: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.commerce.productName()
                 }
@@ -84,14 +84,14 @@ module.exports = {
         console.log("product_ordering_controller.index")
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Product Ordering',
                     action: 'index'
                 },
                 href: faker.internet.url(),
-                externalId: faker.random.number(),
-                priority: String( faker.random.number() ),
+                externalId: faker.datatype.number(),
+                priority: String( faker.datatype.number() ),
                 description: faker.lorem.sentence(),
                 state: "acknowledged",
                 orderDate: new Date(),
@@ -100,7 +100,7 @@ module.exports = {
                 requestedCompletionDate: faker.date.soon(),
                 expectedCompletionDate: faker.date.soon(),
                 channel: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.commerce.productName()
                 },
@@ -111,7 +111,7 @@ module.exports = {
                 },
                 relatedParty: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.commerce.productName()
                     }
@@ -129,8 +129,8 @@ module.exports = {
                 action: 'update'
             },
             href: faker.internet.url(),
-            externalId: faker.random.number(),
-            priority: String( faker.random.number() ),
+            externalId: faker.datatype.number(),
+            priority: String( faker.datatype.number() ),
             description: faker.lorem.sentence(),
             state: "acknowledged",
             orderDate: new Date(),
@@ -139,7 +139,7 @@ module.exports = {
             requestedCompletionDate: faker.date.soon(),
             expectedCompletionDate: faker.date.soon(),
             channel: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: faker.commerce.productName()
             },
@@ -150,7 +150,7 @@ module.exports = {
             },
             relatedParty: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.commerce.productName()
                 }

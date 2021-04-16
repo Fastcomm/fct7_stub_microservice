@@ -9,7 +9,7 @@ module.exports = {
         console.log("payment_method_controller.index")
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Payment Methods',
                     action: 'index'
@@ -23,7 +23,7 @@ module.exports = {
                 },
                 account: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: "string",
                         description: faker.lorem.sentence(),
@@ -33,7 +33,7 @@ module.exports = {
                 preferred: true,
                 relatedParty: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         "@referredType": "string",
                         name: "string",
@@ -52,7 +52,7 @@ module.exports = {
     {
         console.log("payment_method_controller.create")
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Payment Methods',
                 action: 'create'
@@ -67,7 +67,7 @@ module.exports = {
                 preferred: true,
                 account: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: "string",
                         description: faker.lorem.sentence(),
@@ -76,7 +76,7 @@ module.exports = {
                 ],
                 relatedParty: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         "@referredType": "string",
                         name: "string",
@@ -109,12 +109,12 @@ module.exports = {
             },
             account: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "string"
                 },
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "string"
                 }
@@ -122,14 +122,14 @@ module.exports = {
             preferred: true,
             relatedParty: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     type: "customer",
                     name: "string",
                     role: "string"
                 },
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     type: "customer",
                     name: "string",
@@ -189,12 +189,12 @@ module.exports = {
             },
             account: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "string"
                 },
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "string"
                 }
@@ -202,14 +202,14 @@ module.exports = {
             preferred: true,
             relatedParty: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     type: "customer",
                     name: "string",
                     role: "string"
                 },
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     type: "customer",
                     name: "string",

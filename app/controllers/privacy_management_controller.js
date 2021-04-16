@@ -11,7 +11,7 @@ module.exports = {
                 controller: 'Privacy Management',
                 action: 'create_profile'
             },
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             href: faker.internet.url(),
             name: faker.name.findName(),
             description: faker.lorem.sentence(),
@@ -22,27 +22,27 @@ module.exports = {
                 endDateTime: new Date,
             },
             agreedByParty: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 role: 'user',
                 name: faker.commerce.department()
             },
             partyPrivacyProfileType: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url()
             },
             partyPrivacyProfileCharValue: [
                 {
                     privacyUsagePurpose: faker.hacker.verb(),
                     name: faker.commerce.department(),
-                    value: faker.random.number(),
+                    value: faker.datatype.number(),
                     validFor: {
                         startDateTime: new Date(),
                         endDateTime: new Date()
                     },
                     relatedParty: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             role: 'owner'
                         }
@@ -50,7 +50,7 @@ module.exports = {
                 }
             ],
             agreement: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 type: 'temporary'
             }
@@ -65,8 +65,8 @@ module.exports = {
                     controller: 'Privacy Management',
                     action: 'index_profile'
                 },
-                id: faker.random.uuid(),
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: faker.name.findName(),
                 description: faker.lorem.sentence(),
@@ -77,27 +77,27 @@ module.exports = {
                     endDateTime: new Date,
                 },
                 agreedByParty: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     role: 'user',
                     name: faker.commerce.department()
                 },
                 partyPrivacyProfileType: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url()
                 },
                 partyPrivacyProfileCharValue: [
                     {
                         privacyUsagePurpose: faker.hacker.verb(),
                         name: faker.commerce.department(),
-                        value: faker.random.number(),
+                        value: faker.datatype.number(),
                         validFor: {
                             startDateTime: new Date(),
                             endDateTime: new Date()
                         },
                         relatedParty: [
                             {
-                                id: faker.random.uuid(),
+                                id: faker.datatype.uuid(),
                                 href: faker.internet.url(),
                                 role: 'owner'
                             }
@@ -105,7 +105,7 @@ module.exports = {
                     }
                 ],
                 agreement: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     type: 'temporary'
                 }
@@ -131,27 +131,27 @@ module.exports = {
                 endDateTime: new Date,
             },
             agreedByParty: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 role: 'user',
                 name: faker.commerce.department()
             },
             partyPrivacyProfileType: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url()
             },
             partyPrivacyProfileCharValue: [
                 {
                     privacyUsagePurpose: faker.hacker.verb(),
                     name: faker.commerce.department(),
-                    value: faker.random.number(),
+                    value: faker.datatype.number(),
                     validFor: {
                         startDateTime: new Date(),
                         endDateTime: new Date()
                     },
                     relatedParty: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             role: 'owner'
                         }
@@ -159,7 +159,7 @@ module.exports = {
                 }
             ],
             agreement: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 type: 'temporary'
             }
@@ -184,27 +184,27 @@ module.exports = {
                 endDateTime: new Date,
             },
             agreedByParty: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 role: 'user',
                 name: faker.commerce.department()
             },
             partyPrivacyProfileType: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url()
             },
             partyPrivacyProfileCharValue: [
                 {
                     privacyUsagePurpose: faker.hacker.verb(),
                     name: faker.commerce.department(),
-                    value: faker.random.number(),
+                    value: faker.datatype.number(),
                     validFor: {
                         startDateTime: new Date(),
                         endDateTime: new Date()
                     },
                     relatedParty: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             role: 'owner'
                         }
@@ -212,7 +212,7 @@ module.exports = {
                 }
             ],
             agreement: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 type: 'temporary'
             }
@@ -238,7 +238,7 @@ module.exports = {
                 controller: 'Privacy Management',
                 action: 'create_profile_type'
             },
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             href: faker.internet.url(),
             version: '1.0.2x',
             lastUpdate: new Date(),
@@ -256,14 +256,14 @@ module.exports = {
             ],
             relatedParty: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     role: 'user'
                 }
             ],
             partyPrivacyProfileTypeCharacteristic: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: faker.commerce.productName(),
                     description: faker.lorem.sentence(),
                     privacyType: 'public',
@@ -318,14 +318,14 @@ module.exports = {
             ],
             relatedParty: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     role: 'user'
                 }
             ],
             partyPrivacyProfileTypeCharacteristic: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: faker.commerce.productName(),
                     description: faker.lorem.sentence(),
                     privacyType: 'public',
@@ -380,14 +380,14 @@ module.exports = {
             ],
             relatedParty: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     role: 'user'
                 }
             ],
             partyPrivacyProfileTypeCharacteristic: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: faker.commerce.productName(),
                     description: faker.lorem.sentence(),
                     privacyType: 'public',
@@ -436,7 +436,7 @@ module.exports = {
                 controller: 'Privacy Management',
                 action: 'create_agreement'
             },
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             agreementPeriod: {
                 startDateTime: new Date(),
                 endDateTime: new Date()
@@ -447,10 +447,10 @@ module.exports = {
             type: 'idk',
             description: faker.lorem.sentence(),
             version: '2.7.1v',
-            documentNumber: faker.random.number(),
+            documentNumber: faker.datatype.number(),
             statementOfIntent: 'active',
             agreementSpecification: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 name: faker.commerce.productName(),
                 description: faker.lorem.sentence(),
                 href: faker.internet.url()
@@ -461,15 +461,15 @@ module.exports = {
                 {
                     productOffering: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             name: faker.commerce.productName(),
                             description: faker.lorem.sentence(),
-                            partyId: faker.random.uuid(),
+                            partyId: faker.datatype.uuid(),
                             partyName: faker.commerce.department(),
                             bundeledProductOffering: [
                                 {
-                                    id: faker.random.uuid(),
+                                    id: faker.datatype.uuid(),
                                     href: faker.internet.url(),
                                     name: faker.commerce.productName(),
                                     bundledProductOffering: []
@@ -479,7 +479,7 @@ module.exports = {
                     ],
                     termOrCondition: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             description: faker.lorem.sentence(),
                             validFor: {
                                 startDateTime: new Date(),
@@ -491,10 +491,10 @@ module.exports = {
             ],
             EngagedPartyRole: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.commerce.productName(),
-                    partyId: faker.random.uuid(),
+                    partyId: faker.datatype.uuid(),
                     partyName: faker.commerce.department()
                 }
             ],
@@ -513,14 +513,14 @@ module.exports = {
             ],
             associatedAgreement: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.commerce.department()
                 }
             ],
             partyPrivacyProfile: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.commerce.department()
                 }
@@ -529,14 +529,14 @@ module.exports = {
                 {
                     privacyUsagePurpose: 'stuff',
                     name: faker.commerce.department(),
-                    value: faker.random.number(),
+                    value: faker.datatype.number(),
                     validFor: {
                         startDateTime: new Date(),
                         endDateTime: new Date()
                     },
                     relatedParty: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             role: 'user',
                             name: faker.commerce.department()
@@ -565,10 +565,10 @@ module.exports = {
             type: 'idk',
             description: faker.lorem.sentence(),
             version: '2.7.1v',
-            documentNumber: faker.random.number(),
+            documentNumber: faker.datatype.number(),
             statementOfIntent: 'active',
             agreementSpecification: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 name: faker.commerce.productName(),
                 description: faker.lorem.sentence(),
                 href: faker.internet.url()
@@ -579,15 +579,15 @@ module.exports = {
                 {
                     productOffering: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             name: faker.commerce.productName(),
                             description: faker.lorem.sentence(),
-                            partyId: faker.random.uuid(),
+                            partyId: faker.datatype.uuid(),
                             partyName: faker.commerce.department(),
                             bundeledProductOffering: [
                                 {
-                                    id: faker.random.uuid(),
+                                    id: faker.datatype.uuid(),
                                     href: faker.internet.url(),
                                     name: faker.commerce.productName(),
                                     bundledProductOffering: []
@@ -597,7 +597,7 @@ module.exports = {
                     ],
                     termOrCondition: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             description: faker.lorem.sentence(),
                             validFor: {
                                 startDateTime: new Date(),
@@ -609,10 +609,10 @@ module.exports = {
             ],
             EngagedPartyRole: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.commerce.productName(),
-                    partyId: faker.random.uuid(),
+                    partyId: faker.datatype.uuid(),
                     partyName: faker.commerce.department()
                 }
             ],
@@ -631,14 +631,14 @@ module.exports = {
             ],
             associatedAgreement: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.commerce.department()
                 }
             ],
             partyPrivacyProfile: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.commerce.department()
                 }
@@ -647,14 +647,14 @@ module.exports = {
                 {
                     privacyUsagePurpose: 'stuff',
                     name: faker.commerce.department(),
-                    value: faker.random.number(),
+                    value: faker.datatype.number(),
                     validFor: {
                         startDateTime: new Date(),
                         endDateTime: new Date()
                     },
                     relatedParty: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             role: 'user',
                             name: faker.commerce.department()
@@ -683,10 +683,10 @@ module.exports = {
             type: 'idk',
             description: faker.lorem.sentence(),
             version: '2.7.1v',
-            documentNumber: faker.random.number(),
+            documentNumber: faker.datatype.number(),
             statementOfIntent: 'active',
             agreementSpecification: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 name: faker.commerce.productName(),
                 description: faker.lorem.sentence(),
                 href: faker.internet.url()
@@ -697,15 +697,15 @@ module.exports = {
                 {
                     productOffering: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             name: faker.commerce.productName(),
                             description: faker.lorem.sentence(),
-                            partyId: faker.random.uuid(),
+                            partyId: faker.datatype.uuid(),
                             partyName: faker.commerce.department(),
                             bundeledProductOffering: [
                                 {
-                                    id: faker.random.uuid(),
+                                    id: faker.datatype.uuid(),
                                     href: faker.internet.url(),
                                     name: faker.commerce.productName(),
                                     bundledProductOffering: []
@@ -715,7 +715,7 @@ module.exports = {
                     ],
                     termOrCondition: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             description: faker.lorem.sentence(),
                             validFor: {
                                 startDateTime: new Date(),
@@ -727,10 +727,10 @@ module.exports = {
             ],
             EngagedPartyRole: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.commerce.productName(),
-                    partyId: faker.random.uuid(),
+                    partyId: faker.datatype.uuid(),
                     partyName: faker.commerce.department()
                 }
             ],
@@ -749,14 +749,14 @@ module.exports = {
             ],
             associatedAgreement: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.commerce.department()
                 }
             ],
             partyPrivacyProfile: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.commerce.department()
                 }
@@ -765,14 +765,14 @@ module.exports = {
                 {
                     privacyUsagePurpose: 'stuff',
                     name: faker.commerce.department(),
-                    value: faker.random.number(),
+                    value: faker.datatype.number(),
                     validFor: {
                         startDateTime: new Date(),
                         endDateTime: new Date()
                     },
                     relatedParty: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             role: 'user',
                             name: faker.commerce.department()

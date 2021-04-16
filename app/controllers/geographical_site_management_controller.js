@@ -7,7 +7,7 @@ module.exports = {
     {
         console.log("geographical_site_management_controller.create")
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Geographical Site Management',
                 action: 'create'
@@ -21,7 +21,7 @@ module.exports = {
             "@type": "string",
             "@schemaLocation": "string",
             address: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 streetNr: "string",
                 streetNrSuffix: "string",
@@ -38,7 +38,7 @@ module.exports = {
                 "@type": "string",
                 "@schemaLocation": "string",
                 geographicLocation: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "string",
                     geometryType: "string",
@@ -56,7 +56,7 @@ module.exports = {
                 },
                 geographicSubAddress: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         type: "string",
                         name: "string",
@@ -74,7 +74,7 @@ module.exports = {
                 ]
             },
             geographicLocation: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: "string",
                 geometryType: "string",
@@ -105,7 +105,7 @@ module.exports = {
             ],
             relatedParty:[
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "string",
                     role: "string",
@@ -118,7 +118,7 @@ module.exports = {
             ],
             siteRelationship: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     type: "string",
                     role: "string",
@@ -135,7 +135,7 @@ module.exports = {
         console.log("geographical_site_management_controller.index")
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Geographical Site Management',
                     action: 'index'
@@ -149,7 +149,7 @@ module.exports = {
                 "@type": "string",
                 "@schemaLocation": "string",
                 address: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     streetNr: "string",
                     streetNrSuffix: "string",
@@ -166,7 +166,7 @@ module.exports = {
                     "@type": "string",
                     "@schemaLocation": "string",
                     geographicLocation: {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: "string",
                         geometryType: "string",
@@ -184,7 +184,7 @@ module.exports = {
                     },
                     geographicSubAddress: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             type: "string",
                             name: "string",
@@ -202,7 +202,7 @@ module.exports = {
                     ]
                 },
                 geographicLocation: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "string",
                     geometryType: "string",
@@ -233,7 +233,7 @@ module.exports = {
                 ],
                 relatedParty:[
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: "string",
                         role: "string",
@@ -246,7 +246,7 @@ module.exports = {
                 ],
                 siteRelationship: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         type: "string",
                         role: "string",
@@ -277,7 +277,7 @@ module.exports = {
             "@type": "string",
             "@schemaLocation": "string",
             address: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 streetNr: "string",
                 streetNrSuffix: "string",
@@ -294,7 +294,7 @@ module.exports = {
                 "@type": "string",
                 "@schemaLocation": "string",
                 geographicLocation: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "string",
                     geometryType: "string",
@@ -312,7 +312,7 @@ module.exports = {
                 },
                 geographicSubAddress: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         type: "string",
                         name: "string",
@@ -330,7 +330,7 @@ module.exports = {
                 ]
             },
             geographicLocation: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: "string",
                 geometryType: "string",
@@ -361,7 +361,7 @@ module.exports = {
             ],
             relatedParty:[
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "string",
                     role: "string",
@@ -374,7 +374,7 @@ module.exports = {
             ],
             siteRelationship: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     type: "string",
                     role: "string",
@@ -404,7 +404,7 @@ module.exports = {
             "@type": "string",
             "@schemaLocation": "string",
             address: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 streetNr: "string",
                 streetNrSuffix: "string",
@@ -421,7 +421,7 @@ module.exports = {
                 "@type": "string",
                 "@schemaLocation": "string",
                 geographicLocation: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "string",
                     geometryType: "string",
@@ -439,7 +439,7 @@ module.exports = {
                 },
                 geographicSubAddress: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         type: "string",
                         name: "string",
@@ -457,7 +457,7 @@ module.exports = {
                 ]
             },
             geographicLocation: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: "string",
                 geometryType: "string",
@@ -488,7 +488,7 @@ module.exports = {
             ],
             relatedParty:[
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "string",
                     role: "string",
@@ -501,7 +501,7 @@ module.exports = {
             ],
             siteRelationship: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     type: "string",
                     role: "string",
@@ -531,7 +531,7 @@ module.exports = {
             "@type": "string",
             "@schemaLocation": "string",
             address: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 streetNr: "string",
                 streetNrSuffix: "string",
@@ -548,7 +548,7 @@ module.exports = {
                 "@type": "string",
                 "@schemaLocation": "string",
                 geographicLocation: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "string",
                     geometryType: "string",
@@ -566,7 +566,7 @@ module.exports = {
                 },
                 geographicSubAddress: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         type: "string",
                         name: "string",
@@ -584,7 +584,7 @@ module.exports = {
                 ]
             },
             geographicLocation: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: "string",
                 geometryType: "string",
@@ -615,7 +615,7 @@ module.exports = {
             ],
             relatedParty:[
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "string",
                     role: "string",
@@ -628,7 +628,7 @@ module.exports = {
             ],
             siteRelationship: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     type: "string",
                     role: "string",
@@ -649,7 +649,7 @@ module.exports = {
                 controller: 'Geographical Site Management',
                 action: 'destroy'
             },
-            code: faker.random.number(),
+            code: faker.datatype.number(),
             reason: "string",
             message: "string",
             status: 0,
@@ -664,7 +664,7 @@ module.exports = {
         console.log("geographical_site_management_controller.create_hub")
         return [
             { 
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Geographical Site Management',
                     action: 'create_hub'
@@ -683,10 +683,10 @@ module.exports = {
                 controller: 'Geographical Site Management',
                 action: 'destroy_hub'
             },
-            code: faker.random.number(),
+            code: faker.datatype.number(),
             reason: "string",
             message: "string",
-            status: faker.random.number(),
+            status: faker.datatype.number(),
             referenceError: "string"
         }
     },
@@ -695,7 +695,7 @@ module.exports = {
         console.log("geographical_site_management_controller.create_client_listener")
 
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Geographical Site Management',
                 action: 'create_client_listener'
