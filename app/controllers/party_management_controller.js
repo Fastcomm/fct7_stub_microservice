@@ -7,7 +7,7 @@ module.exports = {
     {
         console.log("party_management_controller.create_individual")
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Party Management',
                 action: 'create_individual'
@@ -106,7 +106,7 @@ module.exports = {
         console.log("party_management_controller.index_individual")
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Party Management',
                     action: 'index_individual'
@@ -518,7 +518,7 @@ module.exports = {
     {
         console.log("party_management_controller.create_organization")
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Party Management',
                 action: 'create_organization'
@@ -625,7 +625,7 @@ module.exports = {
         console.log("party_management_controller.index_organization")
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Party Management',
                     action: 'index_organization'
@@ -1069,7 +1069,7 @@ module.exports = {
         console.log("party_management_controller.create_hub")
         return [
             { 
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Party Management',
                     action: 'create_hub'

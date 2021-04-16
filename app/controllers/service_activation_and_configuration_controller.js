@@ -9,7 +9,7 @@ module.exports = {
         
         return [
             {  
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Service Activation and Configuration',
                     action: 'index_service'
@@ -36,7 +36,7 @@ module.exports = {
                 ],
                 place: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         role: "user"
@@ -44,7 +44,7 @@ module.exports = {
                 ],
                 relatedParty: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         role: "user"
@@ -58,7 +58,7 @@ module.exports = {
                 ],
                 serviceOrder: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         serviceOrderItemId: "string"
                     }
@@ -68,13 +68,13 @@ module.exports = {
                         relationshipType: "string",
                         service: 
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url()
                         }
                     }
                 ],
                 serviceSpecification: {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         version:"string",
@@ -82,14 +82,14 @@ module.exports = {
                 state: "feasibilityChecked",
                 supportingResource: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                     }
                 ],
                 supportingService: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url()
                     }
                 ]
@@ -100,7 +100,7 @@ module.exports = {
     {
         console.log("service_activation_and_configuration_controller.create_service")
         return {  
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'create_service'
@@ -126,7 +126,7 @@ module.exports = {
             ],
             place: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "user"
@@ -134,7 +134,7 @@ module.exports = {
             ],
             relatedParty: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "user"
@@ -148,7 +148,7 @@ module.exports = {
             ],
             serviceOrder: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     serviceOrderItemId: "string"
                 }
@@ -158,13 +158,13 @@ module.exports = {
                     relationshipType: "string",
                     service: 
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url()
                     }
                 }
             ],
             serviceSpecification: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     version:"string",
@@ -172,14 +172,14 @@ module.exports = {
             state: "feasibilityChecked",
             supportingResource: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                 }
             ],
             supportingService: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url()
                 }
             ]
@@ -216,7 +216,7 @@ module.exports = {
             ],
             place: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "user"
@@ -224,7 +224,7 @@ module.exports = {
             ],
             relatedParty: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "user"
@@ -238,7 +238,7 @@ module.exports = {
             ],
             serviceOrder: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     serviceOrderItemId: "string"
                 }
@@ -248,13 +248,13 @@ module.exports = {
                     relationshipType: "string",
                     service: 
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url()
                     }
                 }
             ],
             serviceSpecification: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     version:"string",
@@ -262,14 +262,14 @@ module.exports = {
             state: "feasibilityChecked",
             supportingResource: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                 }
             ],
             supportingService: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url()
                 }
             ]
@@ -305,7 +305,7 @@ module.exports = {
             ],
             place: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "user"
@@ -313,7 +313,7 @@ module.exports = {
             ],
             relatedParty: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "user"
@@ -327,7 +327,7 @@ module.exports = {
             ],
             serviceOrder: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     serviceOrderItemId: "string"
                 }
@@ -337,13 +337,13 @@ module.exports = {
                     relationshipType: "string",
                     service: 
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url()
                     }
                 }
             ],
             serviceSpecification: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     version:"string",
@@ -351,14 +351,14 @@ module.exports = {
             state: "feasibilityChecked",
             supportingResource: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                 }
             ],
             supportingService: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url()
                 }
             ]
@@ -373,10 +373,10 @@ module.exports = {
                 controller: 'Service Activation and Configuration',
                 action: 'destroy_service'
             },
-            code: faker.random.number(),
+            code: faker.datatype.number(),
             reason: "string",
             message: "string",
-            status: faker.random.number(),
+            status: faker.datatype.number(),
             referenceError: "string"
         }
     },
@@ -386,7 +386,7 @@ module.exports = {
         
         return [
             {  
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Service Activation and Configuration',
                     action: 'index_monitor'
@@ -401,7 +401,7 @@ module.exports = {
                     header: [
                         {
                             name: faker.name.findName(),
-                            value: faker.random.number()
+                            value: faker.datatype.number()
                         }
                     ]
                 },
@@ -411,7 +411,7 @@ module.exports = {
                     header: [
                         {
                             name: faker.name.findName(),
-                            value: faker.random.number()
+                            value: faker.datatype.number()
                         }
                     ]
                 }
@@ -437,7 +437,7 @@ module.exports = {
                 header: [
                     {
                         name: faker.name.findName(),
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     }
                 ]
             },
@@ -447,7 +447,7 @@ module.exports = {
                 header: [
                     {
                         name: faker.name.findName(),
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     }
                 ]
             }
@@ -457,7 +457,7 @@ module.exports = {
     {
         console.log("service_activation_and_configuration_controller.create_notification_monitor_create")
         return {  
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'create_notification_monitor_create'
@@ -469,7 +469,7 @@ module.exports = {
             resourcePath: "string",
             event: {
                 monitor: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     sourceHref: "string",
                     state: "string",
@@ -480,7 +480,7 @@ module.exports = {
                         header: [
                             {
                                 name: faker.name.findName(),
-                                value: faker.random.number()
+                                value: faker.datatype.number()
                             }
                         ]
                     },
@@ -490,7 +490,7 @@ module.exports = {
                         header: [
                             {
                                 name: faker.name.findName(),
-                                value: faker.random.number()
+                                value: faker.datatype.number()
                             }
                         ]
                     }
@@ -502,7 +502,7 @@ module.exports = {
     {
         console.log("service_activation_and_configuration_controller.create_notification_monitor_attribute_change")
         return {  
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'create_notification_monitor_attribute_change'
@@ -514,7 +514,7 @@ module.exports = {
             resourcePath: "string",
             event: {
                 monitor: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     sourceHref: "string",
                     state: "string",
@@ -525,7 +525,7 @@ module.exports = {
                         header: [
                             {
                                 name: faker.name.findName(),
-                                value: faker.random.number()
+                                value: faker.datatype.number()
                             }
                         ]
                     },
@@ -535,7 +535,7 @@ module.exports = {
                         header: [
                             {
                                 name: faker.name.findName(),
-                                value: faker.random.number()
+                                value: faker.datatype.number()
                             }
                         ]
                     }
@@ -547,7 +547,7 @@ module.exports = {
     {
         console.log("service_activation_and_configuration_controller.create_notification_monitor_state_change")
         return {  
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'create_notification_monitor_state_change'
@@ -559,7 +559,7 @@ module.exports = {
             resourcePath: "string",
             event: {
                 monitor: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     sourceHref: "string",
                     state: "string",
@@ -570,7 +570,7 @@ module.exports = {
                         header: [
                             {
                                 name: faker.name.findName(),
-                                value: faker.random.number()
+                                value: faker.datatype.number()
                             }
                         ]
                     },
@@ -580,7 +580,7 @@ module.exports = {
                         header: [
                             {
                                 name: faker.name.findName(),
-                                value: faker.random.number()
+                                value: faker.datatype.number()
                             }
                         ]
                     }
@@ -592,7 +592,7 @@ module.exports = {
     {
         console.log("service_activation_and_configuration_controller.create_notification_monitor_delete")
         return {  
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'create_notification_monitor_delete'
@@ -604,7 +604,7 @@ module.exports = {
             resourcePath: "string",
             event: {
                 monitor: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     sourceHref: "string",
                     state: "string",
@@ -615,7 +615,7 @@ module.exports = {
                         header: [
                             {
                                 name: faker.name.findName(),
-                                value: faker.random.number()
+                                value: faker.datatype.number()
                             }
                         ]
                     },
@@ -625,7 +625,7 @@ module.exports = {
                         header: [
                             {
                                 name: faker.name.findName(),
-                                value: faker.random.number()
+                                value: faker.datatype.number()
                             }
                         ]
                     }
@@ -637,7 +637,7 @@ module.exports = {
     {
         console.log("service_activation_and_configuration_controller.create_notification_service_create")
         return {  
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'create_notification_service_create'
@@ -649,7 +649,7 @@ module.exports = {
             resourcePath: "string",
             event: {
                 service: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     category: "string",
                     description: faker.lorem.sentence(),
@@ -672,7 +672,7 @@ module.exports = {
                     ],
                     place: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             name: faker.name.findName(),
                             role: "user"
@@ -680,7 +680,7 @@ module.exports = {
                     ],
                     relatedParty: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             name: faker.name.findName(),
                             role: "user"
@@ -694,7 +694,7 @@ module.exports = {
                     ],
                     serviceOrder: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             serviceOrderItemId: "string"
                         }
@@ -704,13 +704,13 @@ module.exports = {
                             relationshipType: "string",
                             service: 
                             {
-                                id: faker.random.uuid(),
+                                id: faker.datatype.uuid(),
                                 href: faker.internet.url()
                             }
                         }
                     ],
                     serviceSpecification: {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             name: faker.name.findName(),
                             version:"string",
@@ -718,14 +718,14 @@ module.exports = {
                     state: "feasibilityChecked",
                     supportingResource: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             name: faker.name.findName(),
                         }
                     ],
                     supportingService: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url()
                         }
                     ]
@@ -737,7 +737,7 @@ module.exports = {
     {
         console.log("service_activation_and_configuration_controller.create_notification_service_attribute_change")
         return {  
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'create_notification_service_attribute_change'
@@ -749,7 +749,7 @@ module.exports = {
             resourcePath: "string",
             event: {
                 service: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     category: "string",
                     description: faker.lorem.sentence(),
@@ -772,7 +772,7 @@ module.exports = {
                     ],
                     place: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             name: faker.name.findName(),
                             role: "user"
@@ -780,7 +780,7 @@ module.exports = {
                     ],
                     relatedParty: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             name: faker.name.findName(),
                             role: "user"
@@ -794,7 +794,7 @@ module.exports = {
                     ],
                     serviceOrder: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             serviceOrderItemId: "string"
                         }
@@ -804,13 +804,13 @@ module.exports = {
                             relationshipType: "string",
                             service: 
                             {
-                                id: faker.random.uuid(),
+                                id: faker.datatype.uuid(),
                                 href: faker.internet.url()
                             }
                         }
                     ],
                     serviceSpecification: {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             name: faker.name.findName(),
                             version:"string",
@@ -818,14 +818,14 @@ module.exports = {
                     state: "feasibilityChecked",
                     supportingResource: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             name: faker.name.findName(),
                         }
                     ],
                     supportingService: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url()
                         }
                     ]
@@ -837,7 +837,7 @@ module.exports = {
     {
         console.log("service_activation_and_configuration_controller.create_notification_service_state_change")
         return {  
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'create_notification_service_state_change'
@@ -849,7 +849,7 @@ module.exports = {
             resourcePath: "string",
             event: {
                 service: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     category: "string",
                     description: faker.lorem.sentence(),
@@ -872,7 +872,7 @@ module.exports = {
                     ],
                     place: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             name: faker.name.findName(),
                             role: "user"
@@ -880,7 +880,7 @@ module.exports = {
                     ],
                     relatedParty: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             name: faker.name.findName(),
                             role: "user"
@@ -894,7 +894,7 @@ module.exports = {
                     ],
                     serviceOrder: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             serviceOrderItemId: "string"
                         }
@@ -904,13 +904,13 @@ module.exports = {
                             relationshipType: "string",
                             service: 
                             {
-                                id: faker.random.uuid(),
+                                id: faker.datatype.uuid(),
                                 href: faker.internet.url()
                             }
                         }
                     ],
                     serviceSpecification: {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             name: faker.name.findName(),
                             version:"string",
@@ -918,14 +918,14 @@ module.exports = {
                     state: "feasibilityChecked",
                     supportingResource: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             name: faker.name.findName(),
                         }
                     ],
                     supportingService: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url()
                         }
                     ]
@@ -937,7 +937,7 @@ module.exports = {
     {
         console.log("service_activation_and_configuration_controller.create_notification_service_delete")
         return {  
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'create_notification_service_delete'
@@ -949,7 +949,7 @@ module.exports = {
             resourcePath: "string",
             event: {
                 service: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     category: "string",
                     description: faker.lorem.sentence(),
@@ -972,7 +972,7 @@ module.exports = {
                     ],
                     place: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             name: faker.name.findName(),
                             role: "user"
@@ -980,7 +980,7 @@ module.exports = {
                     ],
                     relatedParty: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             name: faker.name.findName(),
                             role: "user"
@@ -994,7 +994,7 @@ module.exports = {
                     ],
                     serviceOrder: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             serviceOrderItemId: "string"
                         }
@@ -1004,13 +1004,13 @@ module.exports = {
                             relationshipType: "string",
                             service: 
                             {
-                                id: faker.random.uuid(),
+                                id: faker.datatype.uuid(),
                                 href: faker.internet.url()
                             }
                         }
                     ],
                     serviceSpecification: {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             name: faker.name.findName(),
                             version:"string",
@@ -1018,14 +1018,14 @@ module.exports = {
                     state: "feasibilityChecked",
                     supportingResource: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             name: faker.name.findName(),
                         }
                     ],
                     supportingService: [
                         {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url()
                         }
                     ]
@@ -1038,7 +1038,7 @@ module.exports = {
         console.log("service_activation_and_configuration_controller.create_hub")
         return [
             { 
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Service Activation and Configuration',
                     action: 'create_hub'
@@ -1057,10 +1057,10 @@ module.exports = {
                 controller: 'Service Activation and Configuration',
                 action: 'destroy_hub'
             },
-            code: faker.random.number(),
+            code: faker.datatype.number(),
             reason: "string",
             message: "string",
-            status: faker.random.number(),
+            status: faker.datatype.number(),
             referenceError: "string"
             
         }
@@ -1070,7 +1070,7 @@ module.exports = {
         console.log("service_activation_and_configuration_controller.create_client_listener")
 
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'create_client_listener'

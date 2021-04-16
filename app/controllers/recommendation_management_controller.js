@@ -9,7 +9,7 @@ module.exports = {
         console.log("recommendation_management_controller.index")
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Recommendation Management',
                     action: 'index'
@@ -162,7 +162,7 @@ module.exports = {
         console.log("Recommendation Management.create_hub")
         return [
             { 
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Recommendation Management',
                     action: 'create_hub'
@@ -195,7 +195,7 @@ module.exports = {
         console.log("Recommendation Management.create_client_listener")
 
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Recommendation Management',
                 action: 'create_client_listener'

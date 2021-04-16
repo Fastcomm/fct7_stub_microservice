@@ -8,7 +8,7 @@ module.exports = {
         console.log("shopping_cart_management_controller.index")
         return [
             {  
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Shopping Cart Management',
                     action: 'index'
@@ -146,7 +146,7 @@ module.exports = {
     {
         console.log("shopping_cart_management_controller.create")
         return {  
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Shopping Cart Management',
                 action: 'create'
@@ -879,7 +879,7 @@ module.exports = {
         console.log("shopping_cart_management_controller.create_hub")
         return [
             { 
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Shopping Cart Management',
                     action: 'create_hub'

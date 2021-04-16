@@ -8,7 +8,7 @@ module.exports = {
 
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'index_product_buckets'
@@ -19,13 +19,13 @@ module.exports = {
                 bucketType: "promotionalvoice" ,
                 remainedAmount: [
                     {
-                        amount: faker.random.number(),
+                        amount: faker.datatype.number(),
                         units: "EUR"
                     }
                 ],
                 reservedAmount:[
                     {
-                        amount: faker.random.number(),
+                        amount: faker.datatype.number(),
                         units: "EUR"
                     }
                 ],
@@ -39,21 +39,21 @@ module.exports = {
                 status: "active",
                 product: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName()
                     }
                 ],
                 partyAccount: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName()
                     }
                 ],
                 realizingResource: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         value: "Resourse value"
@@ -61,7 +61,7 @@ module.exports = {
                 ],
                 relatedParty: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         role: "Customer"
@@ -86,13 +86,13 @@ module.exports = {
             bucketType: "promotionalvoice" ,
             remainedAmount: [
                 {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR"
                 }
             ],
             reservedAmount:[
                 {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR"
                 }
             ],
@@ -106,21 +106,21 @@ module.exports = {
             status: "active",
             product: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 }
             ],
             partyAccount: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 }
             ],
             realizingResource: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     value: "Resourse value"
@@ -128,7 +128,7 @@ module.exports = {
             ],
             relatedParty: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "Customer"
@@ -142,7 +142,7 @@ module.exports = {
         console.log("prepay_balance_controller.create_product_adjustments")
 
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Prepay Balance',
                 action: 'create_product_adjustments'
@@ -150,11 +150,11 @@ module.exports = {
             type: "voice",
             reason: faker.lorem.sentence(),
             amount: {
-                amount: faker.random.number(),
+                amount: faker.datatype.number(),
                 units: "EUR"
             },
             product:{
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: faker.name.findName()
             }
@@ -166,7 +166,7 @@ module.exports = {
 
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'index_product_adjustments'
@@ -174,18 +174,18 @@ module.exports = {
                 type: "voice",
                 reason: faker.lorem.sentence(),
                 amount: {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR"
                 },
                 product:{
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 href: faker.internet.url(),
                 description: faker.lorem.sentence(),
                 requestor: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "user"
@@ -196,17 +196,17 @@ module.exports = {
                 },
                 requestedDate: new Date(),
                 bucket: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                 },
                 partyAccount: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 relatedParty: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         role: "customer"
@@ -228,18 +228,18 @@ module.exports = {
                 type: "voice",
                 reason: faker.lorem.sentence(),
                 amount: {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR"
                 },
                 product:{
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 href: faker.internet.url(),
                 description: faker.lorem.sentence(),
                 requestor: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "user"
@@ -250,17 +250,17 @@ module.exports = {
                 },
                 requestedDate: new Date(),
                 bucket: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                 },
                 partyAccount: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 relatedParty: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         role: "customer"
@@ -274,24 +274,24 @@ module.exports = {
         console.log("prepay_balance_controller.create_product_transfers")
 
         return {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'create_product_transfers'
                 },
                 type: "roaming voice",
                 channel: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 targetId: "name",
                 amount: {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR"
                 },
                 product:{
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 }
@@ -303,24 +303,24 @@ module.exports = {
 
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'index_product_transfers'
                 },
                 type: "roaming voice",
                 channel: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 targetId: "name",
                 amount: {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR"
                 },
                 product:{
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
@@ -328,20 +328,20 @@ module.exports = {
                 description: faker.lorem.sentence(),
                 reason: faker.lorem.sentence(),
                 requestor: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "user"
                 },
                 targetType: faker.lorem.sentence(),
                 receiver: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "billing account"
                 },
                 transferCost: {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR"
                 },
                 costOwner: "originator",
@@ -349,17 +349,17 @@ module.exports = {
                 confirmationDate: new Date(),
                 status: "confirmed",
                 bucket: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                 },
                 partyAccount: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 relatedParty: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         role: "customer"
@@ -373,23 +373,23 @@ module.exports = {
         console.log("prepay_balance_controller.create_product_topups")
 
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Prepay Balance',
                 action: 'create_product_topups'
             },
             type: "string",
             channel: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: faker.name.findName()
             },
             amount:{
-                amount: faker.random.number(),
+                amount: faker.datatype.number(),
                 units: "EUR"
             },
             product:{
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: faker.name.findName(),
                 
@@ -402,44 +402,44 @@ module.exports = {
 
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'index_product_topups'
                 },
                 type: "voice",
                 channel: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 amount:{
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR"
                 },
                 product:{
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 href: faker.internet.url(),
                 description: faker.lorem.sentence(),
                 requestor: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "Customer"
                 },
                 isAutoTopup: true,
                 recurringPeriod: "monthly",
-                nrOfPeriods: faker.random.number(),
+                nrOfPeriods: faker.datatype.number(),
                 paymentMethod: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     type: "credit card",
                     details:{
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         role: "missing documentation"
@@ -454,18 +454,18 @@ module.exports = {
                 confirmationDate: new Date(),
                 status: "confirmed",
                 bucket: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 partyAccount: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 relatedParty: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         role: "customer"
@@ -479,7 +479,7 @@ module.exports = {
         console.log("prepay_balance_controller.create_product_topups_status")
 
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Prepay Balance',
                 action: 'create_product_topups_status'
@@ -492,7 +492,7 @@ module.exports = {
         console.log("prepay_balance_controller.index_product_topups_status")
 
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Prepay Balance',
                 action: 'index_product_topups_status'
@@ -507,7 +507,7 @@ module.exports = {
 
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'index_buckets'
@@ -518,13 +518,13 @@ module.exports = {
                 bucketType: "promotionalvoice" ,
                 remainedAmount: [
                     {
-                        amount: faker.random.number(),
+                        amount: faker.datatype.number(),
                         units: "EUR"
                     }
                 ],
                 reservedAmount:[
                     {
-                        amount: faker.random.number(),
+                        amount: faker.datatype.number(),
                         units: "EUR"
                     }
                 ],
@@ -538,21 +538,21 @@ module.exports = {
                 status: "active",
                 product: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName()
                     }
                 ],
                 partyAccount: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName()
                     }
                 ],
                 realizingResource: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         value: "Resourse value"
@@ -560,7 +560,7 @@ module.exports = {
                 ],
                 relatedParty: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         role: "Customer"
@@ -585,13 +585,13 @@ module.exports = {
             bucketType: "promotionalvoice" ,
             remainedAmount: [
                 {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR"
                 }
             ],
             reservedAmount:[
                 {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR"
                 }
             ],
@@ -605,21 +605,21 @@ module.exports = {
             status: "active",
             product: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 }
             ],
             partyAccount: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 }
             ],
             realizingResource: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     value: "Resourse value"
@@ -627,7 +627,7 @@ module.exports = {
             ],
             relatedParty: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "Customer"
@@ -641,7 +641,7 @@ module.exports = {
 
         return [
             {   
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'index_accumulated_balance'
@@ -650,34 +650,34 @@ module.exports = {
                 description: faker.lorem.sentence(),
                 totalBalance: 
                 {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR" 
                 },
                 bucket:[
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url()
                     },
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url()
                     }
                 ],
                 product: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName()
                     }
                 ],
                 partyAccount: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 relatedParty: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         role: "customer"
@@ -700,34 +700,34 @@ module.exports = {
                 description: faker.lorem.sentence(),
                 totalBalance: 
                 {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR" 
                 },
                 bucket:[
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url()
                     },
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url()
                     }
                 ],
                 product: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName()
                     }
                 ],
                 partyAccount: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 relatedParty: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         role: "customer"
@@ -741,7 +741,7 @@ module.exports = {
 
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'index_activity'
@@ -750,45 +750,45 @@ module.exports = {
                 date: new Date(),
                 action: 
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url()
                 },
                 amount: 
                 {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR" 
                 },
                 bucketBalance: 
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url() 
                 },
                 amountBefore: 
                 {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR" 
                 },
                 amountAfter: 
                 {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR" 
                 },
                 product: 
                 [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName()
                     }
                 ],
                 partyAccount: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 relatedParty: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         role: "customer"
@@ -811,45 +811,45 @@ module.exports = {
                 date: new Date(),
                 action: 
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url()
                 },
                 amount: 
                 {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR" 
                 },
                 bucketBalance: 
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url() 
                 },
                 amountBefore: 
                 {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR" 
                 },
                 amountAfter: 
                 {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR" 
                 },
                 product: 
                 [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName()
                     }
                 ],
                 partyAccount: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 relatedParty: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         role: "customer"
@@ -863,23 +863,23 @@ module.exports = {
         console.log("prepay_balance_controller.create_topups")
 
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Prepay Balance',
                 action: 'create_topups'
             },
             type: "string",
             channel: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: faker.name.findName()
             },
             amount:{
-                amount: faker.random.number(),
+                amount: faker.datatype.number(),
                 units: "EUR"
             },
             product:{
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: faker.name.findName(),
                 
@@ -892,44 +892,44 @@ module.exports = {
 
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'index_topups'
                 },
                 type: "voice",
                 channel: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 amount:{
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR"
                 },
                 product:{
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 href: faker.internet.url(),
                 description: faker.lorem.sentence(),
                 requestor: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "Customer"
                 },
                 isAutoTopup: true,
                 recurringPeriod: "monthly",
-                nrOfPeriods: faker.random.number(),
+                nrOfPeriods: faker.datatype.number(),
                 paymentMethod: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     type: "credit card",
                     details:{
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         role: "missing documentation"
@@ -944,18 +944,18 @@ module.exports = {
                 confirmationDate: new Date(),
                 status: "confirmed",
                 bucket: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 partyAccount: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 relatedParty: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         role: "customer"
@@ -976,37 +976,37 @@ module.exports = {
                 },
                 type: "voice",
                 channel: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 amount:{
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR"
                 },
                 product:{
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 href: faker.internet.url(),
                 description: faker.lorem.sentence(),
                 requestor: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "Customer"
                 },
                 isAutoTopup: true,
                 recurringPeriod: "monthly",
-                nrOfPeriods: faker.random.number(),
+                nrOfPeriods: faker.datatype.number(),
                 paymentMethod: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     type: "credit card",
                     details:{
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         role: "missing documentation"
@@ -1021,18 +1021,18 @@ module.exports = {
                 confirmationDate: new Date(),
                 status: "confirmed",
                 bucket: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 partyAccount: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 relatedParty: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         role: "customer"
@@ -1046,7 +1046,7 @@ module.exports = {
 
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'index_topups_status'
@@ -1074,24 +1074,24 @@ module.exports = {
         console.log("prepay_balance_controller.create_transfers")
 
         return {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'create_transfers'
                 },
                 type: "roaming voice",
                 channel: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 targetId: "name",
                 amount: {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR"
                 },
                 product:{
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 }
@@ -1103,24 +1103,24 @@ module.exports = {
 
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'index_transfers'
                 },
                 type: "roaming voice",
                 channel: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 targetId: "name",
                 amount: {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR"
                 },
                 product:{
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
@@ -1128,20 +1128,20 @@ module.exports = {
                 description: faker.lorem.sentence(),
                 reason: faker.lorem.sentence(),
                 requestor: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "user"
                 },
                 targetType: faker.lorem.sentence(),
                 receiver: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "billing account"
                 },
                 transferCost: {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR"
                 },
                 costOwner: "originator",
@@ -1149,17 +1149,17 @@ module.exports = {
                 confirmationDate: new Date(),
                 status: "confirmed",
                 bucket: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                 },
                 partyAccount: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 relatedParty: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         role: "customer"
@@ -1180,17 +1180,17 @@ module.exports = {
                 },
                 type: "roaming voice",
                 channel: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 targetId: "name",
                 amount: {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR"
                 },
                 product:{
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
@@ -1198,20 +1198,20 @@ module.exports = {
                 description: faker.lorem.sentence(),
                 reason: faker.lorem.sentence(),
                 requestor: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "user"
                 },
                 targetType: faker.lorem.sentence(),
                 receiver: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "billing account"
                 },
                 transferCost: {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR"
                 },
                 costOwner: "originator",
@@ -1219,17 +1219,17 @@ module.exports = {
                 confirmationDate: new Date(),
                 status: "confirmed",
                 bucket: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                 },
                 partyAccount: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 relatedParty: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         role: "customer"
@@ -1243,24 +1243,24 @@ module.exports = {
 
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'index_transfers_status'
                 },
                 type: "roaming voice",
                 channel: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 targetId: "name",
                 amount: {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR"
                 },
                 product:{
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
@@ -1268,20 +1268,20 @@ module.exports = {
                 description: faker.lorem.sentence(),
                 reason: faker.lorem.sentence(),
                 requestor: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "user"
                 },
                 targetType: faker.lorem.sentence(),
                 receiver: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "billing account"
                 },
                 transferCost: {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR"
                 },
                 costOwner: "originator",
@@ -1289,17 +1289,17 @@ module.exports = {
                 confirmationDate: new Date(),
                 status: "confirmed",
                 bucket: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                 },
                 partyAccount: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 relatedParty: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         role: "customer"
@@ -1326,7 +1326,7 @@ module.exports = {
         console.log("prepay_balance_controller.create_adjustments")
 
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Prepay Balance',
                 action: 'create_adjustments'
@@ -1334,11 +1334,11 @@ module.exports = {
             type: "voice",
             reason: faker.lorem.sentence(),
             amount: {
-                amount: faker.random.number(),
+                amount: faker.datatype.number(),
                 units: "EUR"
             },
             product:{
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: faker.name.findName()
             }
@@ -1350,7 +1350,7 @@ module.exports = {
 
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'index_adjustments'
@@ -1358,18 +1358,18 @@ module.exports = {
                 type: "voice",
                 reason: faker.lorem.sentence(),
                 amount: {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR"
                 },
                 product:{
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 href: faker.internet.url(),
                 description: faker.lorem.sentence(),
                 requestor: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "user"
@@ -1380,17 +1380,17 @@ module.exports = {
                 },
                 requestedDate: new Date(),
                 bucket: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                 },
                 partyAccount: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 relatedParty: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         role: "customer"
@@ -1413,18 +1413,18 @@ module.exports = {
                 type: "voice",
                 reason: faker.lorem.sentence(),
                 amount: {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR"
                 },
                 product:{
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 href: faker.internet.url(),
                 description: faker.lorem.sentence(),
                 requestor: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "user"
@@ -1435,17 +1435,17 @@ module.exports = {
                 },
                 requestedDate: new Date(),
                 bucket: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                 },
                 partyAccount: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 relatedParty: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         role: "customer"
@@ -1458,7 +1458,7 @@ module.exports = {
         console.log("prepay_balance_controller.create_hub")
         
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Prepay Balance',
                 action: 'create_hub'
@@ -1484,15 +1484,15 @@ module.exports = {
         console.log("prepay_balance_controller.create_client_listener")
 
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Prepay Balance',
                 action: 'create_client_listener'
             },
-            eventId : faker.random.uuid(),
+            eventId : faker.datatype.uuid(),
             eventType: "string",
             event: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 callback: "string",
                 query: "string"
             }
@@ -1503,20 +1503,20 @@ module.exports = {
         console.log("prepay_balance_controller.reserve")
 
         return {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'reserve'
                 },
                 relatedParty: 
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "customer"
                 },
                 reservedAmount: {
-                    amount: faker.random.number(),
+                    amount: faker.datatype.number(),
                     units: "EUR"
                 }
         }
@@ -1526,7 +1526,7 @@ module.exports = {
         console.log("prepay_balance_controller.unreserve")
 
         return {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'unreserve'
@@ -1534,7 +1534,7 @@ module.exports = {
                 
                 relatedParty: 
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "customer"
@@ -1550,7 +1550,7 @@ module.exports = {
         console.log("prepay_balance_controller.deduct")
 
         return {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'deduct'
@@ -1558,7 +1558,7 @@ module.exports = {
                 reason: faker.lorem.sentence(),
                 relatedParty: 
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     role: "customer"
