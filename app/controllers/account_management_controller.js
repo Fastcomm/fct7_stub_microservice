@@ -8,14 +8,14 @@ module.exports = {
         console.log("account_management_controller.index_party")
         return [
             {  
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Account Management',
                     action: 'index_party'
                 },
                 creditLimit: {
                     unit: "string",
-                    value: faker.random.number()
+                    value: faker.datatype.number()
                 },
                 description: faker.lorem.sentence(),
                 href: faker.internet.url(),
@@ -28,34 +28,34 @@ module.exports = {
                     presentationMedia: [
                         {
                             href: faker.internet.url(),
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             name: "string",
                             activationDate: new Date()
                         }
                     ],
                     format: {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
                     },
                     cycleSpecification: {
-                        dateShift: faker.random.number(),
+                        dateShift: faker.datatype.number(),
                         frequency: "string",
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
 
                     }
                 },
                 paymentPlan: [
                     {
-                        numberOfPayments: faker.random.number(),
+                        numberOfPayments: faker.datatype.number(),
                         paymentFrequency: "string",
-                        priority: faker.random.number(),
+                        priority: faker.datatype.number(),
                         status: "string",
                         totalAmount: {
                             unit: "string",
-                            value: faker.random.number()
+                            value: faker.datatype.number()
                         },
                         type: "string",
                         validFor: {
@@ -64,7 +64,7 @@ module.exports = {
                         },
                         paymentMethod: {
                             href: faker.internet.url(),
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             name: "string"
                         }
 
@@ -72,12 +72,12 @@ module.exports = {
                 ],
                 financialAccount: {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string",
                     accountBalance: {
                         amount: {
                             unit: "string",
-                            value: faker.random.number()
+                            value: faker.datatype.number()
                         },
                         type: "string",
                         validFor: {
@@ -88,13 +88,13 @@ module.exports = {
                 },
                 defaultPaymentMethod: {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string"
                 },
                 relatedParty: [
                     {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string",
                         role: "string"
                     }
@@ -142,7 +142,7 @@ module.exports = {
                         ],
                         relatedParty: {
                             href: faker.internet.url(),
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             name: "string",
                             role: "string"
                         }
@@ -152,7 +152,7 @@ module.exports = {
                     {
                         amount: {
                             unit: "string",
-                            value: faker.random.number()
+                            value: faker.datatype.number()
                         },
                         type: "string",
                         validFor: {
@@ -171,7 +171,7 @@ module.exports = {
                         account: {
                             description: "string",
                             href: faker.internet.url(),
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             name: "string"
                         }
                     }
@@ -183,14 +183,14 @@ module.exports = {
     {
         console.log("account_management_controller.create_party")
         return {  
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Account Management',
                 action: 'create_party'
             },
             creditLimit: {
                 unit: "string",
-                value: faker.random.number()
+                value: faker.datatype.number()
             },
             description: faker.lorem.sentence(),
             href: faker.internet.url(),
@@ -203,34 +203,34 @@ module.exports = {
                 presentationMedia: [
                     {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string",
                         activationDate: new Date()
                     }
                 ],
                 format: {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string"
                 },
                 cycleSpecification: {
-                    dateShift: faker.random.number(),
+                    dateShift: faker.datatype.number(),
                     frequency: "string",
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string"
 
                 }
             },
             paymentPlan: [
                 {
-                    numberOfPayments: faker.random.number(),
+                    numberOfPayments: faker.datatype.number(),
                     paymentFrequency: "string",
-                    priority: faker.random.number(),
+                    priority: faker.datatype.number(),
                     status: "string",
                     totalAmount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -239,7 +239,7 @@ module.exports = {
                     },
                     paymentMethod: {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
                     }
 
@@ -247,12 +247,12 @@ module.exports = {
             ],
             financialAccount: {
                 href: faker.internet.url(),
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 name: "string",
                 accountBalance: {
                     amount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -263,13 +263,13 @@ module.exports = {
             },
             defaultPaymentMethod: {
                 href: faker.internet.url(),
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 name: "string"
             },
             relatedParty: [
                 {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string",
                     role: "string"
                 }
@@ -317,7 +317,7 @@ module.exports = {
                     ],
                     relatedParty: {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string",
                         role: "string"
                     }
@@ -327,7 +327,7 @@ module.exports = {
                 {
                     amount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -346,7 +346,7 @@ module.exports = {
                     account: {
                         description: "string",
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
                     }
                 }
@@ -364,7 +364,7 @@ module.exports = {
             },
             creditLimit: {
                 unit: "string",
-                value: faker.random.number()
+                value: faker.datatype.number()
             },
             description: faker.lorem.sentence(),
             href: faker.internet.url(),
@@ -377,34 +377,34 @@ module.exports = {
                 presentationMedia: [
                     {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string",
                         activationDate: new Date()
                     }
                 ],
                 format: {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string"
                 },
                 cycleSpecification: {
-                    dateShift: faker.random.number(),
+                    dateShift: faker.datatype.number(),
                     frequency: "string",
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string"
 
                 }
             },
             paymentPlan: [
                 {
-                    numberOfPayments: faker.random.number(),
+                    numberOfPayments: faker.datatype.number(),
                     paymentFrequency: "string",
-                    priority: faker.random.number(),
+                    priority: faker.datatype.number(),
                     status: "string",
                     totalAmount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -413,7 +413,7 @@ module.exports = {
                     },
                     paymentMethod: {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
                     }
 
@@ -421,12 +421,12 @@ module.exports = {
             ],
             financialAccount: {
                 href: faker.internet.url(),
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 name: "string",
                 accountBalance: {
                     amount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -437,13 +437,13 @@ module.exports = {
             },
             defaultPaymentMethod: {
                 href: faker.internet.url(),
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 name: "string"
             },
             relatedParty: [
                 {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string",
                     role: "string"
                 }
@@ -491,7 +491,7 @@ module.exports = {
                     ],
                     relatedParty: {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string",
                         role: "string"
                     }
@@ -501,7 +501,7 @@ module.exports = {
                 {
                     amount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -520,7 +520,7 @@ module.exports = {
                     account: {
                         description: "string",
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
                     }
                 }
@@ -538,7 +538,7 @@ module.exports = {
             },
             creditLimit: {
                 unit: "string",
-                value: faker.random.number()
+                value: faker.datatype.number()
             },
             description: faker.lorem.sentence(),
             href: faker.internet.url(),
@@ -551,34 +551,34 @@ module.exports = {
                 presentationMedia: [
                     {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string",
                         activationDate: new Date()
                     }
                 ],
                 format: {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string"
                 },
                 cycleSpecification: {
-                    dateShift: faker.random.number(),
+                    dateShift: faker.datatype.number(),
                     frequency: "string",
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string"
 
                 }
             },
             paymentPlan: [
                 {
-                    numberOfPayments: faker.random.number(),
+                    numberOfPayments: faker.datatype.number(),
                     paymentFrequency: "string",
-                    priority: faker.random.number(),
+                    priority: faker.datatype.number(),
                     status: "string",
                     totalAmount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -587,7 +587,7 @@ module.exports = {
                     },
                     paymentMethod: {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
                     }
 
@@ -595,12 +595,12 @@ module.exports = {
             ],
             financialAccount: {
                 href: faker.internet.url(),
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 name: "string",
                 accountBalance: {
                     amount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -611,13 +611,13 @@ module.exports = {
             },
             defaultPaymentMethod: {
                 href: faker.internet.url(),
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 name: "string"
             },
             relatedParty: [
                 {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string",
                     role: "string"
                 }
@@ -665,7 +665,7 @@ module.exports = {
                     ],
                     relatedParty: {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string",
                         role: "string"
                     }
@@ -681,7 +681,7 @@ module.exports = {
                     account: {
                         description: "string",
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
                     }
                 }
@@ -697,10 +697,10 @@ module.exports = {
                 controller: 'Account Management',
                 action: 'destroy_party'
             },
-            code: faker.random.number(),
+            code: faker.datatype.number(),
             reason: "string",
             message: "string",
-            status: faker.random.number(),
+            status: faker.datatype.number(),
             referenceError: "string"
         }
     },
@@ -710,14 +710,14 @@ module.exports = {
         console.log("account_management_controller.index_billing")
         return [
             {  
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Account Management',
                     action: 'index_billing'
                 },
                 creditLimit: {
                     unit: "string",
-                    value: faker.random.number()
+                    value: faker.datatype.number()
                 },
                 description: faker.lorem.sentence(),
                 href: faker.internet.url(),
@@ -730,34 +730,34 @@ module.exports = {
                     presentationMedia: [
                         {
                             href: faker.internet.url(),
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             name: "string",
                             activationDate: new Date()
                         }
                     ],
                     format: {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
                     },
                     cycleSpecification: {
-                        dateShift: faker.random.number(),
+                        dateShift: faker.datatype.number(),
                         frequency: "string",
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
 
                     }
                 },
                 paymentPlan: [
                     {
-                        numberOfPayments: faker.random.number(),
+                        numberOfPayments: faker.datatype.number(),
                         paymentFrequency: "string",
-                        priority: faker.random.number(),
+                        priority: faker.datatype.number(),
                         status: "string",
                         totalAmount: {
                             unit: "string",
-                            value: faker.random.number()
+                            value: faker.datatype.number()
                         },
                         type: "string",
                         validFor: {
@@ -766,7 +766,7 @@ module.exports = {
                         },
                         paymentMethod: {
                             href: faker.internet.url(),
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             name: "string"
                         }
 
@@ -774,12 +774,12 @@ module.exports = {
                 ],
                 financialAccount: {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string",
                     accountBalance: {
                         amount: {
                             unit: "string",
-                            value: faker.random.number()
+                            value: faker.datatype.number()
                         },
                         type: "string",
                         validFor: {
@@ -790,13 +790,13 @@ module.exports = {
                 },
                 defaultPaymentMethod: {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string"
                 },
                 relatedParty: [
                     {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string",
                         role: "string"
                     }
@@ -844,7 +844,7 @@ module.exports = {
                         ],
                         relatedParty: {
                             href: faker.internet.url(),
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             name: "string",
                             role: "string"
                         }
@@ -854,7 +854,7 @@ module.exports = {
                     {
                         amount: {
                             unit: "string",
-                            value: faker.random.number()
+                            value: faker.datatype.number()
                         },
                         type: "string",
                         validFor: {
@@ -873,7 +873,7 @@ module.exports = {
                         account: {
                             description: "string",
                             href: faker.internet.url(),
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             name: "string"
                         }
                     }
@@ -885,14 +885,14 @@ module.exports = {
     {
         console.log("account_management_controller.create_billing")
         return {  
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Account Management',
                 action: 'create_billing'
             },
             creditLimit: {
                 unit: "string",
-                value: faker.random.number()
+                value: faker.datatype.number()
             },
             description: faker.lorem.sentence(),
             href: faker.internet.url(),
@@ -905,34 +905,34 @@ module.exports = {
                 presentationMedia: [
                     {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string",
                         activationDate: new Date()
                     }
                 ],
                 format: {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string"
                 },
                 cycleSpecification: {
-                    dateShift: faker.random.number(),
+                    dateShift: faker.datatype.number(),
                     frequency: "string",
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string"
 
                 }
             },
             paymentPlan: [
                 {
-                    numberOfPayments: faker.random.number(),
+                    numberOfPayments: faker.datatype.number(),
                     paymentFrequency: "string",
-                    priority: faker.random.number(),
+                    priority: faker.datatype.number(),
                     status: "string",
                     totalAmount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -941,7 +941,7 @@ module.exports = {
                     },
                     paymentMethod: {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
                     }
 
@@ -949,12 +949,12 @@ module.exports = {
             ],
             financialAccount: {
                 href: faker.internet.url(),
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 name: "string",
                 accountBalance: {
                     amount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -965,13 +965,13 @@ module.exports = {
             },
             defaultPaymentMethod: {
                 href: faker.internet.url(),
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 name: "string"
             },
             relatedParty: [
                 {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string",
                     role: "string"
                 }
@@ -1019,7 +1019,7 @@ module.exports = {
                     ],
                     relatedParty: {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string",
                         role: "string"
                     }
@@ -1029,7 +1029,7 @@ module.exports = {
                 {
                     amount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -1048,7 +1048,7 @@ module.exports = {
                     account: {
                         description: "string",
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
                     }
                 }
@@ -1066,7 +1066,7 @@ module.exports = {
             },
             creditLimit: {
                 unit: "string",
-                value: faker.random.number()
+                value: faker.datatype.number()
             },
             description: faker.lorem.sentence(),
             href: faker.internet.url(),
@@ -1079,34 +1079,34 @@ module.exports = {
                 presentationMedia: [
                     {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string",
                         activationDate: new Date()
                     }
                 ],
                 format: {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string"
                 },
                 cycleSpecification: {
-                    dateShift: faker.random.number(),
+                    dateShift: faker.datatype.number(),
                     frequency: "string",
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string"
 
                 }
             },
             paymentPlan: [
                 {
-                    numberOfPayments: faker.random.number(),
+                    numberOfPayments: faker.datatype.number(),
                     paymentFrequency: "string",
-                    priority: faker.random.number(),
+                    priority: faker.datatype.number(),
                     status: "string",
                     totalAmount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -1115,7 +1115,7 @@ module.exports = {
                     },
                     paymentMethod: {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
                     }
 
@@ -1123,12 +1123,12 @@ module.exports = {
             ],
             financialAccount: {
                 href: faker.internet.url(),
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 name: "string",
                 accountBalance: {
                     amount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -1139,13 +1139,13 @@ module.exports = {
             },
             defaultPaymentMethod: {
                 href: faker.internet.url(),
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 name: "string"
             },
             relatedParty: [
                 {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string",
                     role: "string"
                 }
@@ -1193,7 +1193,7 @@ module.exports = {
                     ],
                     relatedParty: {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string",
                         role: "string"
                     }
@@ -1203,7 +1203,7 @@ module.exports = {
                 {
                     amount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -1222,7 +1222,7 @@ module.exports = {
                     account: {
                         description: "string",
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
                     }
                 }
@@ -1240,7 +1240,7 @@ module.exports = {
             },
             creditLimit: {
                 unit: "string",
-                value: faker.random.number()
+                value: faker.datatype.number()
             },
             description: faker.lorem.sentence(),
             href: faker.internet.url(),
@@ -1253,34 +1253,34 @@ module.exports = {
                 presentationMedia: [
                     {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string",
                         activationDate: new Date()
                     }
                 ],
                 format: {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string"
                 },
                 cycleSpecification: {
-                    dateShift: faker.random.number(),
+                    dateShift: faker.datatype.number(),
                     frequency: "string",
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string"
 
                 }
             },
             paymentPlan: [
                 {
-                    numberOfPayments: faker.random.number(),
+                    numberOfPayments: faker.datatype.number(),
                     paymentFrequency: "string",
-                    priority: faker.random.number(),
+                    priority: faker.datatype.number(),
                     status: "string",
                     totalAmount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -1289,7 +1289,7 @@ module.exports = {
                     },
                     paymentMethod: {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
                     }
 
@@ -1297,12 +1297,12 @@ module.exports = {
             ],
             financialAccount: {
                 href: faker.internet.url(),
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 name: "string",
                 accountBalance: {
                     amount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -1313,13 +1313,13 @@ module.exports = {
             },
             defaultPaymentMethod: {
                 href: faker.internet.url(),
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 name: "string"
             },
             relatedParty: [
                 {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string",
                     role: "string"
                 }
@@ -1367,7 +1367,7 @@ module.exports = {
                     ],
                     relatedParty: {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string",
                         role: "string"
                     }
@@ -1383,7 +1383,7 @@ module.exports = {
                     account: {
                         description: "string",
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
                     }
                 }
@@ -1399,10 +1399,10 @@ module.exports = {
                 controller: 'Account Management',
                 action: 'destroy_billing'
             },
-            code: faker.random.number(),
+            code: faker.datatype.number(),
             reason: "string",
             message: "string",
-            status: faker.random.number(),
+            status: faker.datatype.number(),
             referenceError: "string"
         }
     },
@@ -1412,14 +1412,14 @@ module.exports = {
         console.log("account_management_controller.index_settlement")
         return [
             {  
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Account Management',
                     action: 'index_settlement'
                 },
                 creditLimit: {
                     unit: "string",
-                    value: faker.random.number()
+                    value: faker.datatype.number()
                 },
                 description: faker.lorem.sentence(),
                 href: faker.internet.url(),
@@ -1432,34 +1432,34 @@ module.exports = {
                     presentationMedia: [
                         {
                             href: faker.internet.url(),
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             name: "string",
                             activationDate: new Date()
                         }
                     ],
                     format: {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
                     },
                     cycleSpecification: {
-                        dateShift: faker.random.number(),
+                        dateShift: faker.datatype.number(),
                         frequency: "string",
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
 
                     }
                 },
                 paymentPlan: [
                     {
-                        numberOfPayments: faker.random.number(),
+                        numberOfPayments: faker.datatype.number(),
                         paymentFrequency: "string",
-                        priority: faker.random.number(),
+                        priority: faker.datatype.number(),
                         status: "string",
                         totalAmount: {
                             unit: "string",
-                            value: faker.random.number()
+                            value: faker.datatype.number()
                         },
                         type: "string",
                         validFor: {
@@ -1468,7 +1468,7 @@ module.exports = {
                         },
                         paymentMethod: {
                             href: faker.internet.url(),
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             name: "string"
                         }
 
@@ -1476,12 +1476,12 @@ module.exports = {
                 ],
                 financialAccount: {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string",
                     accountBalance: {
                         amount: {
                             unit: "string",
-                            value: faker.random.number()
+                            value: faker.datatype.number()
                         },
                         type: "string",
                         validFor: {
@@ -1492,13 +1492,13 @@ module.exports = {
                 },
                 defaultPaymentMethod: {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string"
                 },
                 relatedParty: [
                     {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string",
                         role: "string"
                     }
@@ -1546,7 +1546,7 @@ module.exports = {
                         ],
                         relatedParty: {
                             href: faker.internet.url(),
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             name: "string",
                             role: "string"
                         }
@@ -1556,7 +1556,7 @@ module.exports = {
                     {
                         amount: {
                             unit: "string",
-                            value: faker.random.number()
+                            value: faker.datatype.number()
                         },
                         type: "string",
                         validFor: {
@@ -1575,7 +1575,7 @@ module.exports = {
                         account: {
                             description: "string",
                             href: faker.internet.url(),
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             name: "string"
                         }
                     }
@@ -1587,14 +1587,14 @@ module.exports = {
     {
         console.log("account_management_controller.create_settlement")
         return {  
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Account Management',
                 action: 'create_settlement'
             },
             creditLimit: {
                 unit: "string",
-                value: faker.random.number()
+                value: faker.datatype.number()
             },
             description: faker.lorem.sentence(),
             href: faker.internet.url(),
@@ -1607,34 +1607,34 @@ module.exports = {
                 presentationMedia: [
                     {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string",
                         activationDate: new Date()
                     }
                 ],
                 format: {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string"
                 },
                 cycleSpecification: {
-                    dateShift: faker.random.number(),
+                    dateShift: faker.datatype.number(),
                     frequency: "string",
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string"
 
                 }
             },
             paymentPlan: [
                 {
-                    numberOfPayments: faker.random.number(),
+                    numberOfPayments: faker.datatype.number(),
                     paymentFrequency: "string",
-                    priority: faker.random.number(),
+                    priority: faker.datatype.number(),
                     status: "string",
                     totalAmount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -1643,7 +1643,7 @@ module.exports = {
                     },
                     paymentMethod: {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
                     }
 
@@ -1651,12 +1651,12 @@ module.exports = {
             ],
             financialAccount: {
                 href: faker.internet.url(),
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 name: "string",
                 accountBalance: {
                     amount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -1667,13 +1667,13 @@ module.exports = {
             },
             defaultPaymentMethod: {
                 href: faker.internet.url(),
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 name: "string"
             },
             relatedParty: [
                 {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string",
                     role: "string"
                 }
@@ -1721,7 +1721,7 @@ module.exports = {
                     ],
                     relatedParty: {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string",
                         role: "string"
                     }
@@ -1731,7 +1731,7 @@ module.exports = {
                 {
                     amount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -1750,7 +1750,7 @@ module.exports = {
                     account: {
                         description: "string",
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
                     }
                 }
@@ -1768,7 +1768,7 @@ module.exports = {
             },
             creditLimit: {
                 unit: "string",
-                value: faker.random.number()
+                value: faker.datatype.number()
             },
             description: faker.lorem.sentence(),
             href: faker.internet.url(),
@@ -1781,34 +1781,34 @@ module.exports = {
                 presentationMedia: [
                     {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string",
                         activationDate: new Date()
                     }
                 ],
                 format: {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string"
                 },
                 cycleSpecification: {
-                    dateShift: faker.random.number(),
+                    dateShift: faker.datatype.number(),
                     frequency: "string",
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string"
 
                 }
             },
             paymentPlan: [
                 {
-                    numberOfPayments: faker.random.number(),
+                    numberOfPayments: faker.datatype.number(),
                     paymentFrequency: "string",
-                    priority: faker.random.number(),
+                    priority: faker.datatype.number(),
                     status: "string",
                     totalAmount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -1817,7 +1817,7 @@ module.exports = {
                     },
                     paymentMethod: {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
                     }
 
@@ -1825,12 +1825,12 @@ module.exports = {
             ],
             financialAccount: {
                 href: faker.internet.url(),
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 name: "string",
                 accountBalance: {
                     amount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -1841,13 +1841,13 @@ module.exports = {
             },
             defaultPaymentMethod: {
                 href: faker.internet.url(),
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 name: "string"
             },
             relatedParty: [
                 {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string",
                     role: "string"
                 }
@@ -1895,7 +1895,7 @@ module.exports = {
                     ],
                     relatedParty: {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string",
                         role: "string"
                     }
@@ -1905,7 +1905,7 @@ module.exports = {
                 {
                     amount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -1924,7 +1924,7 @@ module.exports = {
                     account: {
                         description: "string",
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
                     }
                 }
@@ -1942,7 +1942,7 @@ module.exports = {
             },
             creditLimit: {
                 unit: "string",
-                value: faker.random.number()
+                value: faker.datatype.number()
             },
             description: faker.lorem.sentence(),
             href: faker.internet.url(),
@@ -1955,34 +1955,34 @@ module.exports = {
                 presentationMedia: [
                     {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string",
                         activationDate: new Date()
                     }
                 ],
                 format: {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string"
                 },
                 cycleSpecification: {
-                    dateShift: faker.random.number(),
+                    dateShift: faker.datatype.number(),
                     frequency: "string",
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string"
 
                 }
             },
             paymentPlan: [
                 {
-                    numberOfPayments: faker.random.number(),
+                    numberOfPayments: faker.datatype.number(),
                     paymentFrequency: "string",
-                    priority: faker.random.number(),
+                    priority: faker.datatype.number(),
                     status: "string",
                     totalAmount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -1991,7 +1991,7 @@ module.exports = {
                     },
                     paymentMethod: {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
                     }
 
@@ -1999,12 +1999,12 @@ module.exports = {
             ],
             financialAccount: {
                 href: faker.internet.url(),
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 name: "string",
                 accountBalance: {
                     amount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -2015,13 +2015,13 @@ module.exports = {
             },
             defaultPaymentMethod: {
                 href: faker.internet.url(),
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 name: "string"
             },
             relatedParty: [
                 {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string",
                     role: "string"
                 }
@@ -2069,7 +2069,7 @@ module.exports = {
                     ],
                     relatedParty: {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string",
                         role: "string"
                     }
@@ -2085,7 +2085,7 @@ module.exports = {
                     account: {
                         description: "string",
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
                     }
                 }
@@ -2101,10 +2101,10 @@ module.exports = {
                 controller: 'Account Management',
                 action: 'destroy_settlement'
             },
-            code: faker.random.number(),
+            code: faker.datatype.number(),
             reason: "string",
             message: "string",
-            status: faker.random.number(),
+            status: faker.datatype.number(),
             referenceError: "string"
         }
     },
@@ -2114,14 +2114,14 @@ module.exports = {
         console.log("account_management_controller.index_financial")
         return [
             {  
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Account Management',
                     action: 'index_financial'
                 },
                 creditLimit: {
                     unit: "string",
-                    value: faker.random.number()
+                    value: faker.datatype.number()
                 },
                 description: faker.lorem.sentence(),
                 href: faker.internet.url(),
@@ -2132,7 +2132,7 @@ module.exports = {
                 relatedParty: [
                     {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string",
                         role: "string"
                     }
@@ -2180,7 +2180,7 @@ module.exports = {
                         ],
                         relatedParty: {
                             href: faker.internet.url(),
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             name: "string",
                             role: "string"
                         }
@@ -2190,7 +2190,7 @@ module.exports = {
                     {
                         amount: {
                             unit: "string",
-                            value: faker.random.number()
+                            value: faker.datatype.number()
                         },
                         type: "string",
                         validFor: {
@@ -2209,7 +2209,7 @@ module.exports = {
                         account: {
                             description: "string",
                             href: faker.internet.url(),
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             name: "string"
                         }
                     }
@@ -2221,14 +2221,14 @@ module.exports = {
     {
         console.log("account_management_controller.create_financial")
         return {  
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Account Management',
                 action: 'create_financial'
             },
             creditLimit: {
                 unit: "string",
-                value: faker.random.number()
+                value: faker.datatype.number()
             },
             description: faker.lorem.sentence(),
             href: faker.internet.url(),
@@ -2239,7 +2239,7 @@ module.exports = {
             relatedParty: [
                 {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string",
                     role: "string"
                 }
@@ -2287,7 +2287,7 @@ module.exports = {
                     ],
                     relatedParty: {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string",
                         role: "string"
                     }
@@ -2297,7 +2297,7 @@ module.exports = {
                 {
                     amount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -2316,7 +2316,7 @@ module.exports = {
                     account: {
                         description: "string",
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
                     }
                 }
@@ -2334,7 +2334,7 @@ module.exports = {
             },
             creditLimit: {
                 unit: "string",
-                value: faker.random.number()
+                value: faker.datatype.number()
             },
             description: faker.lorem.sentence(),
             href: faker.internet.url(),
@@ -2345,7 +2345,7 @@ module.exports = {
             relatedParty: [
                 {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string",
                     role: "string"
                 }
@@ -2393,7 +2393,7 @@ module.exports = {
                     ],
                     relatedParty: {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string",
                         role: "string"
                     }
@@ -2403,7 +2403,7 @@ module.exports = {
                 {
                     amount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -2422,7 +2422,7 @@ module.exports = {
                     account: {
                         description: "string",
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
                     }
                 }
@@ -2440,7 +2440,7 @@ module.exports = {
             },
             creditLimit: {
                 unit: "string",
-                value: faker.random.number()
+                value: faker.datatype.number()
             },
             description: faker.lorem.sentence(),
             href: faker.internet.url(),
@@ -2451,7 +2451,7 @@ module.exports = {
             relatedParty: [
                 {
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: "string",
                     role: "string"
                 }
@@ -2499,7 +2499,7 @@ module.exports = {
                     ],
                     relatedParty: {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string",
                         role: "string"
                     }
@@ -2509,7 +2509,7 @@ module.exports = {
                 {
                     amount: {
                         unit: "string",
-                        value: faker.random.number()
+                        value: faker.datatype.number()
                     },
                     type: "string",
                     validFor: {
@@ -2528,7 +2528,7 @@ module.exports = {
                     account: {
                         description: "string",
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: "string"
                     }
                 }
@@ -2544,10 +2544,10 @@ module.exports = {
                 controller: 'Account Management',
                 action: 'remove_financial'
             },
-            code: faker.random.number(),
+            code: faker.datatype.number(),
             reason: "string",
             message: "string",
-            status: faker.random.number(),
+            status: faker.datatype.number(),
             referenceError: "string"
         }
     },
@@ -2557,21 +2557,21 @@ module.exports = {
         console.log("account_management_controller.index_billing_cycle_specification")
         return [
             {  
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Account Management',
                     action: 'index_billing_cycle_specification'
                 },
-                billingDateShift: faker.random.number(),
+                billingDateShift: faker.datatype.number(),
                 billingPeriod: "string",
-                chargeDateOffset: faker.random.number(),
-                creditDateOffset: faker.random.number(),
+                chargeDateOffset: faker.datatype.number(),
+                creditDateOffset: faker.datatype.number(),
                 description: faker.lorem.sentence(),
                 frequency: "string",
                 href: faker.internet.url(),
-                mailingDateOffset: faker.random.number(),
+                mailingDateOffset: faker.datatype.number(),
                 name: "string",
-                paymentDueDateOffset: faker.random.number(),
+                paymentDueDateOffset: faker.datatype.number(),
                 validFor: {
                     endDateTime: new Date(),
                     startDateTime: new Date()
@@ -2583,21 +2583,21 @@ module.exports = {
     {
         console.log("account_management_controller.create_billing_cycle_specification")
         return {  
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Account Management',
                 action: 'create_billing_cycle_specification'
             },
-            billingDateShift: faker.random.number(),
+            billingDateShift: faker.datatype.number(),
             billingPeriod: "string",
-            chargeDateOffset: faker.random.number(),
-            creditDateOffset: faker.random.number(),
+            chargeDateOffset: faker.datatype.number(),
+            creditDateOffset: faker.datatype.number(),
             description: faker.lorem.sentence(),
             frequency: "string",
             href: faker.internet.url(),
-            mailingDateOffset: faker.random.number(),
+            mailingDateOffset: faker.datatype.number(),
             name: "string",
-            paymentDueDateOffset: faker.random.number(),
+            paymentDueDateOffset: faker.datatype.number(),
             validFor: {
                 endDateTime: new Date(),
                 startDateTime: new Date()
@@ -2613,16 +2613,16 @@ module.exports = {
                 controller: 'Account Management',
                 action: 'show_billing_cycle_specification'
             },
-            billingDateShift: faker.random.number(),
+            billingDateShift: faker.datatype.number(),
             billingPeriod: "string",
-            chargeDateOffset: faker.random.number(),
-            creditDateOffset: faker.random.number(),
+            chargeDateOffset: faker.datatype.number(),
+            creditDateOffset: faker.datatype.number(),
             description: faker.lorem.sentence(),
             frequency: "string",
             href: faker.internet.url(),
-            mailingDateOffset: faker.random.number(),
+            mailingDateOffset: faker.datatype.number(),
             name: "string",
-            paymentDueDateOffset: faker.random.number(),
+            paymentDueDateOffset: faker.datatype.number(),
             validFor: {
                 endDateTime: new Date(),
                 startDateTime: new Date()
@@ -2638,16 +2638,16 @@ module.exports = {
                 controller: 'Account Management',
                 action: 'update_billing_cycle_specification'
             },
-            billingDateShift: faker.random.number(),
+            billingDateShift: faker.datatype.number(),
             billingPeriod: "string",
-            chargeDateOffset: faker.random.number(),
-            creditDateOffset: faker.random.number(),
+            chargeDateOffset: faker.datatype.number(),
+            creditDateOffset: faker.datatype.number(),
             description: faker.lorem.sentence(),
             frequency: "string",
             href: faker.internet.url(),
-            mailingDateOffset: faker.random.number(),
+            mailingDateOffset: faker.datatype.number(),
             name: "string",
-            paymentDueDateOffset: faker.random.number(),
+            paymentDueDateOffset: faker.datatype.number(),
             validFor: {
                 endDateTime: new Date(),
                 startDateTime: new Date()
@@ -2663,10 +2663,10 @@ module.exports = {
                 controller: 'Account Management',
                 action: 'destroy_billing_cycle_specification'
             },
-            code: faker.random.number(),
+            code: faker.datatype.number(),
             reason: "string",
             message: "string",
-            status: faker.random.number(),
+            status: faker.datatype.number(),
             referenceError: "string"
         }
     },
@@ -2676,7 +2676,7 @@ module.exports = {
         console.log("account_management_controller.index_bill_format")
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Account Management',
                     action: 'index_bill_format'
@@ -2691,7 +2691,7 @@ module.exports = {
     {
         console.log("account_management_controller.create_bill_format")
         return {  
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Account Management',
                     action: 'create_bill_format'
@@ -2736,10 +2736,10 @@ module.exports = {
                 controller: 'Account Management',
                 action: 'destroy_bill_format'
             },
-            code: faker.random.number(),
+            code: faker.datatype.number(),
             reason: "string",
             message: "string",
-            status: faker.random.number(),
+            status: faker.datatype.number(),
             referenceError: "string"
         }
     },
@@ -2749,7 +2749,7 @@ module.exports = {
         console.log("account_management_controller.index_bill_media")
         return [
             { 
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Account Management',
                     action: 'index_bill_media'
@@ -2764,7 +2764,7 @@ module.exports = {
     {
         console.log("account_management_controller.create_bill_media")
         return { 
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Account Management',
                 action: 'create_bill_media'
@@ -2809,10 +2809,10 @@ module.exports = {
                 controller: 'Account Management',
                 action: 'destroy_bill_media'
             },
-            code: faker.random.number(),
+            code: faker.datatype.number(),
             reason: "string",
             message: "string",
-            status: faker.random.number(),
+            status: faker.datatype.number(),
             referenceError: "string"
         }
     },
@@ -2822,7 +2822,7 @@ module.exports = {
         console.log("account_management_controller.create_hub")
         return [
             { 
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Account Management',
                     action: 'create_hub'
@@ -2841,10 +2841,10 @@ module.exports = {
                 controller: 'Account Management',
                 action: 'destroy_hub'
             },
-            code: faker.random.number(),
+            code: faker.datatype.number(),
             reason: "string",
             message: "string",
-            status: faker.random.number(),
+            status: faker.datatype.number(),
             referenceError: "string"
         }
     }

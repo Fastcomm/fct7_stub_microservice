@@ -7,7 +7,7 @@ module.exports = {
     {
         console.log("appointment_controller.create")
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Appointment',
                 action: 'create_appointment'
@@ -28,27 +28,27 @@ module.exports = {
             "@schemaLocation": "string",
             attachment: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "string",
                     description: faker.lorem.sentence(),
                     mimeType:  "string",
                     sizeUnit:  "string",
-                    size: faker.random.number(),
+                    size: faker.datatype.number(),
                     url:  "string",
                     "@type": "string",
                     "@schemaLocation": "string"
                 }
             ],
             calendarEvent: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 description: faker.lorem.sentence(),
                 "@referredType": "string"
             },
             relatedParty: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "string",
                     role: "string",
@@ -56,7 +56,7 @@ module.exports = {
                 }
             ],
             place: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: "string",
                 role: "string",
@@ -74,7 +74,7 @@ module.exports = {
             },
             relatedEntity: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "string",
                     role: "string",
@@ -96,7 +96,7 @@ module.exports = {
         console.log("appointment_controller.index")
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Appointment',
                     action: 'index_appointment'
@@ -114,30 +114,30 @@ module.exports = {
                 },
                 attachment: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: "string",
                         mimeType:  "string",
                         sizeUnit:  "string",
-                        size: faker.random.number(),
+                        size: faker.datatype.number(),
                         url:  "string",
                         "@type": "string"
                     }
                 ],
                 calendarEvent: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     description: faker.lorem.sentence(),
                 },
                 relatedParty: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: "string",
                         role: "string",
                     },
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: "string",
                         role: "string",
@@ -147,23 +147,23 @@ module.exports = {
                     role: "interventionAddress",
                     "@referredType": "geographicAddress",
                     geographicAddress: {
-                        streetNr: faker.random.number(),
+                        streetNr: faker.datatype.number(),
                         streetType: "Avenue",
                         streetName: "string",
-                        postCode: faker.random.number(),
+                        postCode: faker.datatype.number(),
                         city: "Paris",
                         country: "France"
                     }
                 },
                 relatedEntity: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: "string",
                         "@referredType": "string"
                     },
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: "Work order generated for technician intervention",
                         "@referredType": "workOrder"
@@ -208,30 +208,30 @@ module.exports = {
             },
             attachment: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "string",
                     mimeType:  "string",
                     sizeUnit:  "string",
-                    size: faker.random.number(),
+                    size: faker.datatype.number(),
                     url:  "string",
                     "@type": "string"
                 }
             ],
             calendarEvent: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 description: faker.lorem.sentence(),
             },
             relatedParty: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "string",
                     role: "string",
                 },
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "string",
                     role: "string",
@@ -241,23 +241,23 @@ module.exports = {
                 role: "interventionAddress",
                 "@referredType": "geographicAddress",
                 geographicAddress: {
-                    streetNr: faker.random.number(),
+                    streetNr: faker.datatype.number(),
                     streetType: "Avenue",
                     streetName: "string",
-                    postCode: faker.random.number(),
+                    postCode: faker.datatype.number(),
                     city: "Paris",
                     country: "France"
                 }
             },
             relatedEntity: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "string",
                     "@referredType": "string"
                 },
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "Work order generated for technician intervention",
                     "@referredType": "workOrder"
@@ -302,27 +302,27 @@ module.exports = {
             "@schemaLocation": "string",
             attachment: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "string",
                     description: faker.lorem.sentence(),
                     mimeType:  "string",
                     sizeUnit:  "string",
-                    size: faker.random.number(),
+                    size: faker.datatype.number(),
                     url:  "string",
                     "@type": "string",
                     "@schemaLocation": "string"
                 }
             ],
             calendarEvent: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 description: faker.lorem.sentence(),
                 "@referredType": "string"
             },
             relatedParty: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "string",
                     role: "string",
@@ -330,7 +330,7 @@ module.exports = {
                 }
             ],
             place: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: "string",
                 role: "string",
@@ -348,7 +348,7 @@ module.exports = {
             },
             relatedEntity: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "string",
                     role: "string",
@@ -376,7 +376,7 @@ module.exports = {
                 controller: 'Appointment',
                 action: 'destroy_appointment'
             },
-            code: faker.random.number(),
+            code: faker.datatype.number(),
             reason: "string",
             message: "string",
             status: "Appointment entry destroyed successfully",
@@ -390,27 +390,27 @@ module.exports = {
     {
         console.log("appointment_controller.create_time_slot")
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Appointment',
                 action: 'create_time_slot'
             },
             relatedParty: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: "string",
                 role: "string",
                 "@referredType": "string"
             },
             relatedEntity: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: "string",
                 role: "string",
                 "@referredType": "string"
             },
             place: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: "string",
                 role: "string",
@@ -424,7 +424,7 @@ module.exports = {
                         endDateTime: new Date()    
                     },
                     relatedParty: {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: "string",
                         role: "string",
@@ -440,7 +440,7 @@ module.exports = {
         console.log("appointment_controller.index_time_slot")
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Appointment',
                     action: 'index_time_slot'
@@ -454,7 +454,7 @@ module.exports = {
                     }
                 ],
                 relatedParty: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "string",
                     role: "string",
@@ -463,17 +463,17 @@ module.exports = {
                     role: "interventionAddress",
                     "@referredType": "geographicAddress",
                     geographicAddress: {
-                        streetNr: faker.random.number(),
+                        streetNr: faker.datatype.number(),
                         streetType: "Avenue",
                         streetName: "string",
-                        postCode: faker.random.number(),
+                        postCode: faker.datatype.number(),
                         city: "Paris",
                         country: "France" 
                     }
                 },
                 relatedEntity: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: "Internet connection problem to solve",
                         "@referredType": "troubleTicket"
@@ -500,7 +500,7 @@ module.exports = {
                 }
             ],
             relatedParty: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: "string",
                 role: "string",
@@ -509,17 +509,17 @@ module.exports = {
                 role: "interventionAddress",
                 "@referredType": "geographicAddress",
                 geographicAddress: {
-                    streetNr: faker.random.number(),
+                    streetNr: faker.datatype.number(),
                     streetType: "Avenue",
                     streetName: "string",
-                    postCode: faker.random.number(),
+                    postCode: faker.datatype.number(),
                     city: "Paris",
                     country: "France" 
                 }
             },
             relatedEntity: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: "Internet connection problem to solve",
                     "@referredType": "troubleTicket"
@@ -549,7 +549,7 @@ module.exports = {
                         endDateTime: new Date()    
                     },
                     relatedParty: {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: "string",
                         role: "string",
@@ -569,7 +569,7 @@ module.exports = {
                 controller: 'Appointment',
                 action: 'destroy_time_slot'
             },
-            code: faker.random.number(),
+            code: faker.datatype.number(),
             reason: "string",
             message: "string",
             status: "Time slot destroyed successfully",
@@ -582,7 +582,7 @@ module.exports = {
         console.log("appointment_controller.create_hub")
         return [
             { 
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Appointment',
                     action: 'create_hub'
@@ -596,15 +596,15 @@ module.exports = {
     {
         console.log("appointment_controller.destroy_hub")
         return {  
-            id: request.params.id,
+            id: request.params.hub_id,
             routeDetails: {
                 controller: 'Appointment',
                 action: 'destroy_hub'
             },
-            code: faker.random.number(),
+            code: faker.datatype.number(),
             reason: "string",
             message: "string",
-            status: faker.random.number(),
+            status: faker.datatype.number(),
             referenceError: "string"
         }
     }

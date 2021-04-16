@@ -11,26 +11,26 @@ module.exports = {
                 controller: 'User Roles and Permissions',
                 action: 'create_permission'
             },
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             description: faker.lorem.sentence(),
             period: {
                 startDateTime: new Date(),
                 endDateTime: new Date()
             },
             user: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: faker.name.findName()
             },
             granter: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: faker.name.findName()
             },
             privilege: [
                 {
                     manageableAsset: {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         entityType: 'yes'
                     },
@@ -41,12 +41,12 @@ module.exports = {
             assetUserRole: [
                 {
                     manageableAsset: {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         entityType: 'yes'
                     },
                     userRole: {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         role: 'owner'
                     }
@@ -63,26 +63,26 @@ module.exports = {
                     controller: 'User Roles and Permissions',
                     action: 'index_permissions'
                 },
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 description: faker.lorem.sentence(),
                 period: {
                     startDateTime: new Date(),
                     endDateTime: new Date()
                 },
                 user: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 granter: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName()
                 },
                 privilege: [
                     {
                         manageableAsset: {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             entityType: 'yes'
                         },
@@ -93,12 +93,12 @@ module.exports = {
                 assetUserRole: [
                     {
                         manageableAsset: {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             entityType: 'yes'
                         },
                         userRole: {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             href: faker.internet.url(),
                             role: 'owner'
                         }
@@ -122,19 +122,19 @@ module.exports = {
                 endDateTime: new Date()
             },
             user: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: faker.name.findName()
             },
             granter: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: faker.name.findName()
             },
             privilege: [
                 {
                     manageableAsset: {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         entityType: 'yes'
                     },
@@ -145,12 +145,12 @@ module.exports = {
             assetUserRole: [
                 {
                     manageableAsset: {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         entityType: 'yes'
                     },
                     userRole: {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         role: 'owner'
                     }
@@ -166,13 +166,13 @@ module.exports = {
                 controller: 'User Roles and Permissions',
                 action: 'create_role'
             },
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             href: faker.internet.url(),
             involvementRole: 'owner',
             entitlement: [
                 {
                     manageableAsset: {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         entityType: 'yes'
                     },
                     function: faker.hacker.adjective(),
@@ -190,13 +190,13 @@ module.exports = {
                     controller: 'User Roles and Permissions',
                     action: 'index_roles'
                 },
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 involvementRole: 'owner',
                 entitlement: [
                     {
                         manageableAsset: {
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             entityType: 'yes'
                         },
                         function: faker.hacker.adjective(),
@@ -220,7 +220,7 @@ module.exports = {
             entitlement: [
                 {
                     manageableAsset: {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         entityType: 'yes'
                     },
                     function: faker.hacker.adjective(),

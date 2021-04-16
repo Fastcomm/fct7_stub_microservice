@@ -4,6 +4,10 @@ var account_management_routes = express.Router()
 var account_management_controller = require("../../app/controllers/account_management_controller")
 
 //  === Routes ===
+account_management_routes.get('/billing/cycle_specification', (request, response) => {
+  response.send( account_management_controller.index_billing_cycle_specification(request) )
+})
+
 account_management_routes.get('/party', (request, response) => {
   response.send( account_management_controller.index_party(request) )
 })
@@ -68,9 +72,7 @@ account_management_routes.delete('/financial/:id', (request, response) => {
   response.send( account_management_controller.destroy_financial(request) )
 })
 
-account_management_routes.get('/billing/cycle_specification', (request, response) => {
-  response.send( account_management_controller.index_billing_cycle_specification(request) )
-})
+
 account_management_routes.post('/billing/cycle_specification', (request, response) => {
   response.send( account_management_controller.create_billing_cycle_specification(request) )
 })

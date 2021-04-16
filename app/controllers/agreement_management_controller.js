@@ -9,7 +9,7 @@ module.exports = {
 
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Agreement Management',
                     action: 'index'
@@ -23,7 +23,7 @@ module.exports = {
                     startDateTime: new Date()
                 },
                 description: faker.lorem.sentence(),
-                documentNumber: faker.random.number(),
+                documentNumber: faker.datatype.number(),
                 href: faker.internet.url(),
                 initialDate: new Date(),
                 name: faker.name.findName(),
@@ -34,7 +34,7 @@ module.exports = {
                 requestor: {
                     description: faker.lorem.sentence(),
                     href: faker.internet.url(),
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     name: faker.name.findName(),
                 },
                 agreementItem: [
@@ -42,7 +42,7 @@ module.exports = {
                         productOffering: [
                             {
                                 href: faker.internet.url(),
-                                id: faker.random.uuid(),
+                                id: faker.datatype.uuid(),
                                 name: faker.name.findName(),
                             }
                         ]
@@ -50,7 +50,7 @@ module.exports = {
                     {
                         termOrCondition:{
                             description: faker.lorem.sentence(),
-                            id: faker.random.uuid(),
+                            id: faker.datatype.uuid(),
                             validFor: {
                                 endDateTime: new Date(),
                                 startDateTime: new Date()
@@ -62,9 +62,9 @@ module.exports = {
                 engagedPartyRole: [
                     {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: faker.name.findName(),
-                        partyId: faker.random.number(),
+                        partyId: faker.datatype.number(),
                         partyName: faker.name.findName(),
                     }
                 ],
@@ -79,17 +79,17 @@ module.exports = {
                 characteristic: [
                     {
                         name: faker.name.findName(),
-                        value: faker.random.number(),
+                        value: faker.datatype.number(),
                     },
                     {
                         name: faker.name.findName(),
-                        value: faker.random.number(),
+                        value: faker.datatype.number(),
                     }
                 ],
                 associateAgreement: [
                     {
                         href: faker.internet.url(),
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         name: faker.name.findName()
                     }
                 ]

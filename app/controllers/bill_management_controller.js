@@ -13,7 +13,7 @@ module.exports = {
                 action: 'show'
             },
             href: faker.internet.url(),
-            billNo: String( faker.random.number() ),
+            billNo: String( faker.datatype.number() ),
             state: "new",
             lastUpdate: new Date(),
             billDate: new Date(),
@@ -24,7 +24,7 @@ module.exports = {
             },
             amountDue: {
                 unit: faker.finance.currencyCode(),
-                unit: faker.random.number()
+                unit: faker.datatype.number()
             }
         }
     },
@@ -33,13 +33,13 @@ module.exports = {
         console.log("bill_management_controller.index")
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Bill Management',
                     action: 'index'
                 },
                 href: faker.internet.url(),
-                billNo: String( faker.random.number() ),
+                billNo: String( faker.datatype.number() ),
                 state: "new",
                 lastUpdate: new Date(),
                 billDate: new Date(),
@@ -50,7 +50,7 @@ module.exports = {
                 },
                 amountDue: {
                     unit: faker.finance.currencyCode(),
-                    unit: faker.random.number()
+                    unit: faker.datatype.number()
                 }
             }
         ]
@@ -65,7 +65,7 @@ module.exports = {
                 action: 'update'
             },
             href: faker.internet.url(),
-            billNo: String( faker.random.number() ),
+            billNo: String( faker.datatype.number() ),
             state: "new",
             lastUpdate: new Date(),
             billDate: new Date(),
@@ -76,7 +76,7 @@ module.exports = {
             },
             amountDue: {
                 unit: faker.finance.currencyCode(),
-                unit: faker.random.number()
+                unit: faker.datatype.number()
             }
         }
     },
@@ -95,13 +95,13 @@ module.exports = {
             name: faker.commerce.productName(),
             description: faker.lorem.sentence(),
             bill: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url()
             },
             characteristic: [
                 {
                     name: faker.commerce.productName(),
-                    value: String( faker.random.number() )
+                    value: String( faker.datatype.number() )
                 }
             ]
         }
@@ -111,7 +111,7 @@ module.exports = {
         console.log("bill_management_controller.index_rate")
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Bill Management',
                     action: 'index_rate'
@@ -122,13 +122,13 @@ module.exports = {
                 name: faker.commerce.productName(),
                 description: faker.lorem.sentence(),
                 bill: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url()
                 },
                 characteristic: [
                     {
                         name: faker.commerce.productName(),
-                        value: String( faker.random.number() )
+                        value: String( faker.datatype.number() )
                     }
                 ]
             }
@@ -138,7 +138,7 @@ module.exports = {
     {
         console.log("bill_management_controller.create_on_demand")
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Bill Management',
                 action: 'create_on_demand'
@@ -149,17 +149,17 @@ module.exports = {
             state: "inProgress",
             lastUpdate: new Date(),
             billingAccount: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: faker.commerce.productName()
             },
             relatedParty: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: faker.commerce.productName(),
             },
             customerBill: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url()
             }
         }
@@ -179,17 +179,17 @@ module.exports = {
             state: "inProgress",
             lastUpdate: new Date(),
             billingAccount: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: faker.commerce.productName()
             },
             relatedParty: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: faker.commerce.productName(),
             },
             customerBill: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url()
             }
         }
@@ -210,17 +210,17 @@ module.exports = {
                 state: "inProgress",
                 lastUpdate: new Date(),
                 billingAccount: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.commerce.productName()
                 },
                 relatedParty: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.commerce.productName(),
                 },
                 customerBill: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url()
                 }
             }
@@ -230,7 +230,7 @@ module.exports = {
     {
         console.log("bill_management_controller.create_hub")
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Bill Management',
                 action: 'create_hub'

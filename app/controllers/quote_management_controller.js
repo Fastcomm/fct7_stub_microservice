@@ -7,7 +7,7 @@ module.exports = {
     {
         console.log("quote_management_controller.create")
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Quote Management',
                 action: 'create'

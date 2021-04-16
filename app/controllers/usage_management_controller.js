@@ -7,7 +7,7 @@ module.exports = {
     {
         console.log('usage_management_controller.create')
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Usage Management',
                 action: 'create'
@@ -18,19 +18,19 @@ module.exports = {
             description: faker.lorem.sentence(),
             status: "rated",
             usageSpecification: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: faker.commerce.productName()
             },
             usageCharacteristic: [
                 {
                     name: faker.address.countryCode(),
-                    value: String( faker.random.number() )
+                    value: String( faker.datatype.number() )
                 }
             ],
             relatedParty: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     validFor: {
@@ -45,9 +45,9 @@ module.exports = {
                     usageRatingTag: "Usage",
                     isBilled: faker.random.boolean(),
                     ratyingAmountType: "Total",
-                    taxIncludedRatingAmount: faker.random.number(),
-                    taxExcludedRatingAmount: faker.random.number(),
-                    taxRate: faker.random.number(),
+                    taxIncludedRatingAmount: faker.datatype.number(),
+                    taxExcludedRatingAmount: faker.datatype.number(),
+                    taxRate: faker.datatype.number(),
                     isTaxExempt: false,
                     offerTariffType: "Normal",
                     currencyCode: faker.finance.currencyCode(),
@@ -71,19 +71,19 @@ module.exports = {
             description: faker.lorem.sentence(),
             status: "rated",
             usageSpecification: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: faker.commerce.productName()
             },
             usageCharacteristic: [
                 {
                     name: faker.address.countryCode(),
-                    value: String( faker.random.number() )
+                    value: String( faker.datatype.number() )
                 }
             ],
             relatedParty: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     validFor: {
@@ -98,9 +98,9 @@ module.exports = {
                     usageRatingTag: "Usage",
                     isBilled: faker.random.boolean(),
                     ratyingAmountType: "Total",
-                    taxIncludedRatingAmount: faker.random.number(),
-                    taxExcludedRatingAmount: faker.random.number(),
-                    taxRate: faker.random.number(),
+                    taxIncludedRatingAmount: faker.datatype.number(),
+                    taxExcludedRatingAmount: faker.datatype.number(),
+                    taxRate: faker.datatype.number(),
                     isTaxExempt: false,
                     offerTariffType: "Normal",
                     currencyCode: faker.finance.currencyCode(),
@@ -114,7 +114,7 @@ module.exports = {
         console.log('usage_management_controller.index')
         return [
             {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Usage Management',
                     action: 'index'
@@ -125,19 +125,19 @@ module.exports = {
                 description: faker.lorem.sentence(),
                 status: "rated",
                 usageSpecification: {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.commerce.productName()
                 },
                 usageCharacteristic: [
                     {
                         name: faker.address.countryCode(),
-                        value: String( faker.random.number() )
+                        value: String( faker.datatype.number() )
                     }
                 ],
                 relatedParty: [
                     {
-                        id: faker.random.uuid(),
+                        id: faker.datatype.uuid(),
                         href: faker.internet.url(),
                         name: faker.name.findName(),
                         validFor: {
@@ -152,9 +152,9 @@ module.exports = {
                         usageRatingTag: "Usage",
                         isBilled: faker.random.boolean(),
                         ratyingAmountType: "Total",
-                        taxIncludedRatingAmount: faker.random.number(),
-                        taxExcludedRatingAmount: faker.random.number(),
-                        taxRate: faker.random.number(),
+                        taxIncludedRatingAmount: faker.datatype.number(),
+                        taxExcludedRatingAmount: faker.datatype.number(),
+                        taxRate: faker.datatype.number(),
                         isTaxExempt: false,
                         offerTariffType: "Normal",
                         currencyCode: faker.finance.currencyCode(),
@@ -179,19 +179,19 @@ module.exports = {
             description: faker.lorem.sentence(),
             status: "rated",
             usageSpecification: {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
                 name: faker.commerce.productName()
             },
             usageCharacteristic: [
                 {
                     name: faker.address.countryCode(),
-                    value: String( faker.random.number() )
+                    value: String( faker.datatype.number() )
                 }
             ],
             relatedParty: [
                 {
-                    id: faker.random.uuid(),
+                    id: faker.datatype.uuid(),
                     href: faker.internet.url(),
                     name: faker.name.findName(),
                     validFor: {
@@ -206,9 +206,9 @@ module.exports = {
                     usageRatingTag: "Usage",
                     isBilled: faker.random.boolean(),
                     ratyingAmountType: "Total",
-                    taxIncludedRatingAmount: faker.random.number(),
-                    taxExcludedRatingAmount: faker.random.number(),
-                    taxRate: faker.random.number(),
+                    taxIncludedRatingAmount: faker.datatype.number(),
+                    taxExcludedRatingAmount: faker.datatype.number(),
+                    taxRate: faker.datatype.number(),
                     isTaxExempt: false,
                     offerTariffType: "Normal",
                     currencyCode: faker.finance.currencyCode(),
@@ -233,7 +233,7 @@ module.exports = {
     {
         console.log('usage_management_controller.create_specification')
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Usage Management',
                 action: 'create_specification'
@@ -254,9 +254,9 @@ module.exports = {
                         {
                             valueType: "number",
                             default: faker.random.boolean(),
-                            value: String( faker.random.number() ),
-                            valueFrom: String( faker.random.number() ),
-                            valueTo: String( faker.random.number() )
+                            value: String( faker.datatype.number() ),
+                            valueFrom: String( faker.datatype.number() ),
+                            valueTo: String( faker.datatype.number() )
                         }
                     ]
                 }
@@ -288,9 +288,9 @@ module.exports = {
                         {
                             valueType: "number",
                             default: faker.random.boolean(),
-                            value: String( faker.random.number() ),
-                            valueFrom: String( faker.random.number() ),
-                            valueTo: String( faker.random.number() )
+                            value: String( faker.datatype.number() ),
+                            valueFrom: String( faker.datatype.number() ),
+                            valueTo: String( faker.datatype.number() )
                         }
                     ]
                 }
@@ -313,7 +313,7 @@ module.exports = {
     {
         console.log('usage_management_controller.create_hub')
         return {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Usage Management',
                 action: 'create_hub'
@@ -340,7 +340,7 @@ module.exports = {
         console.log('usage_management_controller.index_hub')
         return [
                 {
-                id: faker.random.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Usage Management',
                     action: 'index_hub'
