@@ -1,5 +1,4 @@
 //  === Requirements ===
-const { fake } = require('faker')
 const faker = require('faker')
 
 //  === Controller ===
