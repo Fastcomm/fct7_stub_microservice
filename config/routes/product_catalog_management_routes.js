@@ -53,61 +53,61 @@ product_catalog_management_routes.delete('/product_offering/:id', (request, resp
 })
 
 product_catalog_management_routes.get('/product_offering_price', (request, response) => {
-  response.send( product_catalog_management_controller.index(request) )
+  response.send( product_catalog_management_controller.index_product_offering_price(request) )
 })
 product_catalog_management_routes.get('/product_offering_price/:id', (request, response) => {
-  response.send( product_catalog_management_controller.show(request) )
+  response.send( product_catalog_management_controller.show_product_offering_price(request) )
 })
 product_catalog_management_routes.post('/product_offering_price', (request, response) => {
-    response.send( product_catalog_management_controller.create(request) )
+    response.send( product_catalog_management_controller.create_product_offering_price(request) )
 })
 product_catalog_management_routes.patch('/product_offering_price/:id', (request, response) => {
-    response.send( product_catalog_management_controller.update(request) )
+    response.send( product_catalog_management_controller.update_product_offering_price(request) )
 })
 product_catalog_management_routes.delete('/product_offering_price/:id', (request, response) => {
-    response.send( product_catalog_management_controller.destroy(request) )
+    response.send( product_catalog_management_controller.destroy_product_offering_price(request) )
 })
 
 product_catalog_management_routes.get('/product_specification', (request, response) => {
-  response.send( product_catalog_management_controller.index(request) )
+  response.send( product_catalog_management_controller.index_product_specification(request) )
 })
 product_catalog_management_routes.get('/product_specification/:id', (request, response) => {
-  response.send( product_catalog_management_controller.show(request) )
+  response.send( product_catalog_management_controller.show_product_specification(request) )
 })
 product_catalog_management_routes.post('/product_specification', (request, response) => {
-    response.send( product_catalog_management_controller.create(request) )
+    response.send( product_catalog_management_controller.create_product_specification(request) )
 })
 product_catalog_management_routes.patch('/product_specification/:id', (request, response) => {
-    response.send( product_catalog_management_controller.update(request) )
+    response.send( product_catalog_management_controller.update_product_specification(request) )
 })
 product_catalog_management_routes.delete('/product_specification/:id', (request, response) => {
-    response.send( product_catalog_management_controller.destroy(request) )
+    response.send( product_catalog_management_controller.destroy_product_specification(request) )
 })
 
 product_catalog_management_routes.get('/import_job', (request, response) => {
-  response.send( product_catalog_management_controller.index(request) )
+  response.send( product_catalog_management_controller.index_import_job(request) )
 })
 product_catalog_management_routes.get('/import_job/:id', (request, response) => {
-  response.send( product_catalog_management_controller.show(request) )
+  response.send( product_catalog_management_controller.show_import_job(request) )
 })
 product_catalog_management_routes.post('/import_job', (request, response) => {
-    response.send( product_catalog_management_controller.create(request) )
+    response.send( product_catalog_management_controller.create_import_job(request) )
 })
 product_catalog_management_routes.delete('/import_job/:id', (request, response) => {
-    response.send( product_catalog_management_controller.destroy(request) )
+    response.send( product_catalog_management_controller.destroy_import_job(request) )
 })
 
 product_catalog_management_routes.get('/export_job', (request, response) => {
-  response.send( product_catalog_management_controller.index(request) )
+  response.send( product_catalog_management_controller.index_export_job(request) )
 })
 product_catalog_management_routes.get('/export_job/:id', (request, response) => {
-  response.send( product_catalog_management_controller.show(request) )
+  response.send( product_catalog_management_controller.show_export_job(request) )
 })
 product_catalog_management_routes.post('/export_job', (request, response) => {
-    response.send( product_catalog_management_controller.create(request) )
+    response.send( product_catalog_management_controller.create_export_job(request) )
 })
 product_catalog_management_routes.delete('/export_job/:id', (request, response) => {
-    response.send( product_catalog_management_controller.destroy(request) )
+    response.send( product_catalog_management_controller.destroy_export_job(request) )
 })
 
 product_catalog_management_routes.post("/hub", (request, response) => {
