@@ -15,6 +15,7 @@ routes.use("/geographic_site", require("./routes/geographical_site_management_ro
 routes.use("/payment_method", require("./routes/payment_method_routes"))
 routes.use("/prepay", require("./routes/prepay_balance_routes"))
 routes.use("/product_ordering", require("./routes/product_ordering_routes"))
+routes.use("/product_catalog", require("./routes/product_catalog_management_routes"))
 routes.use("/quotes", require("./routes/quote_routes"))
 routes.use("/usage_consumption", require("./routes/usage_consumption_routes"))
 routes.use("/usage_consumption_request", require("./routes/usage_consumption_request_routes"))
