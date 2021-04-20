@@ -41,15 +41,41 @@ module.exports = {
                 attachment: {
                     description: faker.random.words(),
                     id: faker.datatype.uuid(),
-                }
-
-
+                    href: faker.internet.url(),
+                    path: "/attachedfile/1", 
+                    name: "File_XYZ_001",
+                    validFor: {
+                        startDateTime: new Date(),
+                        endDateTime: new Date()
+                    }
+                },
+                sender: {
+                    id: faker.datatype.uuid(),
+                    name: faker.name.findName(),
+                    phoneNumber: "10086",
+                    relatedParty: {
+                        id: faker.datatype.uuid(),
+                        href: faker.internet.url(),
+                        role: "agent",
+                        name: "johathan doelock"
+                    }
+                },
+                receiver: [
+                    {
+                        id: faker.datatype.uuid(),
+                        name: faker.name.findName(),
+                        phoneNumber: "10086",
+                        relatedParty: {
+                            id: faker.datatype.uuid(),
+                            href: faker.internet.url(),
+                            role: "customer",
+                            name: "John Lock"
+                        }
+                    }
+                ]
             }
         ]
-
     },
-       
-    
     create_message: function(request)
     {
         console.log("communication_management_controller.create_message")
@@ -59,8 +85,84 @@ module.exports = {
                 controller: 'Communication Management',
                 action: 'create_message'
             },
-            href: faker.internet.url(),
-            
+            callbackFlag: false,
+            content: faker.random.words(),
+            description: faker.random.words(),
+            logFlag: true,
+            priority: "1",
+            sendTime: new Date(),
+            sendTimeComplete: new Date(),
+            status: "Completed",
+            subject: "News: the latest promotion for you ",
+            tryTimes: "3",
+            type: "email",
+            version: "1.0",
+            attachment: [
+                {
+                    description: faker.random.words(),
+                    href: faker.internet.url(),
+                    id: faker.datatype.uuid(),
+                    mimeType: "string",
+                    name: "string",
+                    path: "string",
+                    size: 0,
+                    sizeUnit: 0,
+                    url: "string",
+                    validFor: {
+                        startDateTime: new Date(),
+                        endDateTime: new Date()
+                    },
+                    "@type": "string",
+                    "@schemaLocation": "string",
+                    "@baseType": "string"
+                }
+            ],
+            receiver: [
+                {
+                    appUserId: "string",
+                    email:"joebush@yahoo.com",
+                    id:"10234",
+                    ip: "string",
+                    name:"Joe Bush",
+                    phoneNumber: "string",
+                    type:"string",
+                    relatedParty: {
+                        href: faker.internet.url(),
+                        id: faker.datatype.uuid(),
+                        name: "John Lock",
+                        role: "customer",
+                        "@referredType": "string"
+                    },
+                    "@type": "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string"
+                }
+            ],
+            sender: {
+                email:"joe@yahoo.com",
+                id:"1094",
+                name:"ABC Bush",
+                phoneNumber: "string",
+                relatedParty: {
+                    href: faker.internet.url(),
+                    id: faker.datatype.uuid(),
+                    name: "John Lock",
+                    role: "customer",
+                    "@referredType": "string"
+                },
+                "@type": "string",
+                "@baseType": "string",
+                "@schemaLocation": "string"
+            },
+            characteristic:[
+                {
+                    name: "string",
+                    value: "string"
+                }
+            ],
+            "@type": "string",
+            "@schemaLocation": "string",
+            "@baseType": "string" 
         }
     },
     create_message_send: function(request)
@@ -72,8 +174,84 @@ module.exports = {
                 controller: 'Communication Management',
                 action: 'create_message_send'
             },
-            href: faker.internet.url(),
-            
+            callbackFlag: false,
+            content: faker.random.words(),
+            description: faker.random.words(),
+            logFlag: true,
+            priority: "1",
+            sendTime: new Date(),
+            sendTimeComplete: new Date(),
+            status: "Completed",
+            subject: "News: the latest promotion for you ",
+            tryTimes: "3",
+            type: "email",
+            version: "1.0",
+            attachment: [
+                {
+                    description: faker.random.words(),
+                    href: faker.internet.url(),
+                    id: faker.datatype.uuid(),
+                    mimeType: "string",
+                    name: "string",
+                    path: "string",
+                    size: 0,
+                    sizeUnit: 0,
+                    url: "string",
+                    validFor: {
+                        startDateTime: new Date(),
+                        endDateTime: new Date()
+                    },
+                    "@type": "string",
+                    "@schemaLocation": "string",
+                    "@baseType": "string"
+                }
+            ],
+            receiver: [
+                {
+                    appUserId: "string",
+                    email:"joebush@yahoo.com",
+                    id:"10234",
+                    ip: "string",
+                    name:"Joe Bush",
+                    phoneNumber: "string",
+                    type:"string",
+                    relatedParty: {
+                        href: faker.internet.url(),
+                        id: faker.datatype.uuid(),
+                        name: "John Lock",
+                        role: "customer",
+                        "@referredType": "string"
+                    },
+                    "@type": "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string"
+                }
+            ],
+            sender: {
+                email:"joe@yahoo.com",
+                id:"1094",
+                name:"ABC Bush",
+                phoneNumber: "string",
+                relatedParty: {
+                    href: faker.internet.url(),
+                    id: faker.datatype.uuid(),
+                    name: "John Lock",
+                    role: "customer",
+                    "@referredType": "string"
+                },
+                "@type": "string",
+                "@baseType": "string",
+                "@schemaLocation": "string"
+            },
+            characteristic:[
+                {
+                    name: "string",
+                    value: "string"
+                }
+            ],
+            "@type": "string",
+            "@schemaLocation": "string",
+            "@baseType": "string"      
         }
     },
     show_message: function(request)
@@ -81,13 +259,69 @@ module.exports = {
         console.log("communication_management_controller.index_message")
         return [
             {
-                id: faker.datatype.uuid(),
+                id: request.params.id,
                 routeDetails: {
                     controller: 'Communication Management',
                     action: 'index_message'
                 },
                 href: faker.internet.url(),
-                
+                type: "1",
+                priority: "1",
+                subject: "News: the latest promotion for you ",
+                sendTime: new Date(),
+                sendTimeComplete: new Date(),
+                status: "Completed",
+                description: faker.random.words(),
+                content: "Dear $Parameter1,Here is the information of the promotion $Parameter2",
+                contactLogFlag: "false",
+                callbackFlag: "true",
+                tryTimes: "3",
+                version: "1.0",
+                characteristic: [
+                    {
+                        name: faker.name.findName(),
+                        value: "string"
+                    },
+                    {
+                        name: faker.name.findName(),
+                        value: "string"
+                    }
+                ],
+                attachment: {
+                    description: faker.random.words(),
+                    id: faker.datatype.uuid(),
+                    href: faker.internet.url(),
+                    path: "/attachedfile/1", 
+                    name: "File_XYZ_001",
+                    validFor: {
+                        startDateTime: new Date(),
+                        endDateTime: new Date()
+                    }
+                },
+                sender: {
+                    id: faker.datatype.uuid(),
+                    name: faker.name.findName(),
+                    phoneNumber: "10086",
+                    relatedParty: {
+                        id: faker.datatype.uuid(),
+                        href: faker.internet.url(),
+                        role: "agent",
+                        name: "johathan doelock"
+                    }
+                },
+                receiver: [
+                    {
+                        id: faker.datatype.uuid(),
+                        name: faker.name.findName(),
+                        phoneNumber: "10086",
+                        relatedParty: {
+                            id: faker.datatype.uuid(),
+                            href: faker.internet.url(),
+                            role: "customer",
+                            name: "John Lock"
+                        }
+                    }
+                ]
             }
         ]
     },
@@ -104,7 +338,84 @@ module.exports = {
                 controller: 'Communication Management',
                 action: 'update_message'
             },
-            href: faker.internet.url(),
+            callbackFlag: false,
+            content: faker.random.words(),
+            description: faker.random.words(),
+            logFlag: true,
+            priority: "1",
+            sendTime: new Date(),
+            sendTimeComplete: new Date(),
+            status: "Completed",
+            subject: "News: the latest promotion for you ",
+            tryTimes: 0,
+            type: "email",
+            version: "1.0",
+            attachment: [
+                {
+                    description: faker.random.words(),
+                    href: faker.internet.url(),
+                    id: faker.datatype.uuid(),
+                    mimeType: "string",
+                    name: "string",
+                    path: "string",
+                    size: 0,
+                    sizeUnit: 0,
+                    url: "string",
+                    validFor: {
+                        startDateTime: new Date(),
+                        endDateTime: new Date()
+                    },
+                    "@type": "string",
+                    "@schemaLocation": "string",
+                    "@baseType": "string"
+                }
+            ],
+            receiver: [
+                {
+                    appUserId: "string",
+                    email:"joebush@yahoo.com",
+                    id:"10234",
+                    ip: "string",
+                    name:"Joe Bush",
+                    phoneNumber: "string",
+                    type:"string",
+                    relatedParty: {
+                        href: faker.internet.url(),
+                        id: faker.datatype.uuid(),
+                        name: "John Lock",
+                        role: "customer",
+                        "@referredType": "string"
+                    },
+                    "@type": "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string"
+                }
+            ],
+            sender: {
+                email:"joe@yahoo.com",
+                id:"1094",
+                name:"ABC Bush",
+                phoneNumber: "string",
+                relatedParty: {
+                    href: faker.internet.url(),
+                    id: faker.datatype.uuid(),
+                    name: "John Lock",
+                    role: "customer",
+                    "@referredType": "string"
+                },
+                "@type": "string",
+                "@baseType": "string",
+                "@schemaLocation": "string"
+            },
+            characteristic:[
+                {
+                    name: "string",
+                    value: "string"
+                }
+            ],
+            "@type": "string",
+            "@schemaLocation": "string",
+            "@baseType": "string" 
             
         }
 
@@ -113,16 +424,18 @@ module.exports = {
     {
         console.log("communication_management_controller.destroy_message")
         return {
-            stub_information: {
-                controller: 'product_ordering_controller',
-                method: 'destroy'
-            },
             id: request.params.id,
             routeDetails: {
                 controller: 'Communication Management',
                 action: 'destroy_message'
             },
-            status: "product_order entry destroyed successfully"
+            code: 204,
+            reason: "string",
+            message: "string",
+            status: "product_order entry destroyed successfully",
+            referenceError: "string",
+            "@type": "string",
+            "@schemaLocation": "string"
         }
     },
     create_send: function(request)
@@ -135,7 +448,63 @@ module.exports = {
                 action: 'create_send'
             },
             href: faker.internet.url(),
-            
+            type: "1",
+            priority: "1",
+            subject: "News: the latest promotion for you ",
+            sendTime: new Date(),
+            sendTimeComplete: new Date(),
+            status: "Completed",
+            description: faker.random.words(),
+            content: "Dear $Parameter1,Here is the information of the promotion $Parameter2",
+            contactLogFlag: "false",
+            callbackFlag: "true",
+            tryTimes: "3",
+            version: "1.0",
+            characteristic: [
+                {
+                    name: faker.name.findName(),
+                    value: "string"
+                },
+                {
+                    name: faker.name.findName(),
+                    value: "string"
+                }
+            ],
+            attachment: {
+                description: faker.random.words(),
+                id: faker.datatype.uuid(),
+                href: faker.internet.url(),
+                path: "/attachedfile/1", 
+                name: "File_XYZ_001",
+                validFor: {
+                    startDateTime: new Date(),
+                    endDateTime: new Date()
+                }
+            },
+            sender: {
+                id: faker.datatype.uuid(),
+                name: faker.name.findName(),
+                phoneNumber: "10086",
+                relatedParty: {
+                    id: faker.datatype.uuid(),
+                    href: faker.internet.url(),
+                    role: "agent",
+                    name: "johathan doelock"
+                }
+            },
+            receiver: [
+                {
+                    id: faker.datatype.uuid(),
+                    name: faker.name.findName(),
+                    phoneNumber: "10086",
+                    relatedParty: {
+                        id: faker.datatype.uuid(),
+                        href: faker.internet.url(),
+                        role: "customer",
+                        name: "John Lock"
+                    }
+                }
+            ]
         }
     },
     create_hub: function(request)
@@ -148,7 +517,8 @@ module.exports = {
                 controller: 'Communication Management',
                 action: 'create_hub'
             },
-            callback: "string"
+            callback: "string",
+            query: "string"
         }
     },
     destroy_hub: function(request)
@@ -161,7 +531,13 @@ module.exports = {
                 controller: 'Communication Management',
                 action: 'destroy_hub'
             },
-            message: "Have succesfully removed"
+            code: 204,
+            reason: "string",
+            message: "string",
+            status: "destroy_hub entry destroyed successfully",
+            referenceError: "string",
+            "@type": "string",
+            "@schemaLocation": "string"
         }
     },
     create_client_listener: function(request)
@@ -174,14 +550,10 @@ module.exports = {
                 controller: 'Communication Management',
                 action: 'create_client_listener'
             },
-            eventId : faker.datatype.uuid(),
+            event: {},
             eventType: "string",
-            event: {
-                id: faker.datatype.uuid(),
-                callback: "string",
-                query: "string"
-            }
+            eventTime: "string",
+            eventId: "string", 
         }
     },
-
 }
