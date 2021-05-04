@@ -31,11 +31,12 @@ module.exports = {
                 status: "process",
                 type: "commercial",
                 version: "1.5",
-                requestor: {
+                agreementSpecification: {
                     description: faker.lorem.sentence(),
                     href: faker.internet.url(),
                     id: faker.datatype.uuid(),
                     name: faker.name.findName(),
+                    "@referredType": "string"
                 },
                 agreementItem: [
                     {
@@ -44,19 +45,22 @@ module.exports = {
                                 href: faker.internet.url(),
                                 id: faker.datatype.uuid(),
                                 name: faker.name.findName(),
+                                "@referredType": "string"
                             }
-                        ]
-                    },
-                    {
-                        termOrCondition:{
-                            description: faker.lorem.sentence(),
-                            id: faker.datatype.uuid(),
-                            validFor: {
-                                endDateTime: new Date(),
-                                startDateTime: new Date()
-                            },
-                        }
-                            
+                        ],
+                        termOrCondition: [
+                            {
+                                description: faker.lorem.sentence(),
+                                id: faker.datatype.uuid(),
+                                validFor: 
+                                {
+                                    endDateTime: new Date(),
+                                    startDateTime: new Date()
+                                },
+                                "@type": "string"
+                            }
+                        ],
+                        "@type": "string"
                     }
                 ],
                 engagedPartyRole: [
@@ -66,6 +70,7 @@ module.exports = {
                         name: faker.name.findName(),
                         partyId: faker.datatype.number(),
                         partyName: faker.name.findName(),
+                        "@referredType": "string"
                     }
                 ],
                 agreementAuthorization: [
@@ -73,30 +78,29 @@ module.exports = {
                         date: new Date(),
                         signatureRepresentation: faker.name.findName(),
                         status: "rejected",
-
+                        "@type": "string"
                     }
                 ],
                 characteristic: [
                     {
                         name: faker.name.findName(),
                         value: faker.datatype.number(),
-                    },
-                    {
-                        name: faker.name.findName(),
-                        value: faker.datatype.number(),
-                    }
+                        "@type": "string",
+                        "@schemaLocation": "string"
+                    }  
                 ],
                 associateAgreement: [
                     {
                         href: faker.internet.url(),
                         id: faker.datatype.uuid(),
-                        name: faker.name.findName()
+                        name: faker.name.findName(),
+                        "@referredType": "string"
                     }
-                ]
+                ],
+                "@type": "string",
+                "@schemaLocation": "string",
+                "@baseType": "string"
             }
-
         ]
-       
     }
-
 }

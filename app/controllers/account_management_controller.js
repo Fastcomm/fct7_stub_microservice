@@ -8,23 +8,81 @@ module.exports = {
         console.log("account_management_controller.index_party")
         return [
             {  
+
                 id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Account Management',
                     action: 'index_party'
                 },
-                creditLimit: {
-                    unit: "string",
-                    value: faker.datatype.number()
-                },
-                description: faker.lorem.sentence(),
                 href: faker.internet.url(),
+                accountType: "string",
+                description: faker.lorem.sentence(),
                 lastModified: new Date(),
                 name: "string",
-                status: "string",
-                type: "string",
                 paymentStatus: "string",
+                state: "string",
+                accountBalance: [
+                    {
+                        balanceType: "string",
+                        amount: {
+                            unit: "string",
+                            value: faker.datatype.number()
+                        },
+                        validFor: {
+                            endDateTime: new Date(),
+                            startDateTime: new Date()
+                        },
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string"
+                    }
+                ],
+                accountRelationship: [
+                    {
+                        relationshipType: "string",
+                        account: {
+                            id: faker.datatype.uuid(),
+                            href: faker.internet.url(),
+                            description: "string",
+                            name: "string",
+                            "@baseType": "string",
+                            "@schemaLocation": "string",
+                            "@type": "string",
+                            "@referredType": "string"
+                        },
+                        validFor: {
+                            endDateTime: new Date(),
+                            startDateTime: new Date()
+                        },
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string"
+                    }
+                ],
                 billStructure: {
+                    cycleSpecification: {
+                        id: faker.datatype.uuid(),
+                        href: faker.internet.url(),
+                        billingDateShift: 0,
+                        billingPeriod: "string",
+                        chargeDateOffset: 0,
+                        creditDateOffset:0,
+                        dateShift: 0,
+                        description: "string",
+                        frequency: "string",
+                        isRef: true,
+                        mailingDateOffset: 0,
+                        name: "string",
+                        paymentDueDateOffset: 0,
+                        validFor: {
+                            endDateTime: new Date(),
+                            startDateTime: new Date()
+                        },
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string",
+                        "@referredType": "string"
+                    },
                     presentationMedia: [
                         {
                             href: faker.internet.url(),
@@ -33,20 +91,15 @@ module.exports = {
                             activationDate: new Date()
                         }
                     ],
-                    format: {
-                        href: faker.internet.url(),
-                        id: faker.datatype.uuid(),
-                        name: "string"
-                    },
-                    cycleSpecification: {
-                        dateShift: faker.datatype.number(),
-                        frequency: "string",
-                        href: faker.internet.url(),
-                        id: faker.datatype.uuid(),
-                        name: "string"
-
-                    }
+                    
                 },
+
+                
+                
+                
+                
+                paymentStatus: "string",
+                
                 paymentPlan: [
                     {
                         numberOfPayments: faker.datatype.number(),
@@ -148,34 +201,8 @@ module.exports = {
                         }
                     }
                 ],
-                accountBalance: [
-                    {
-                        amount: {
-                            unit: "string",
-                            value: faker.datatype.number()
-                        },
-                        type: "string",
-                        validFor: {
-                            endDateTime: new Date(),
-                            startDateTime: new Date()
-                        }
-                    }
-                ],
-                accountRelationship: [
-                    {
-                        relationshipType: "string",
-                        validFor: {
-                            endDateTime: new Date(),
-                            startDateTime: new Date()
-                        },
-                        account: {
-                            description: "string",
-                            href: faker.internet.url(),
-                            id: faker.datatype.uuid(),
-                            name: "string"
-                        }
-                    }
-                ]
+                
+                
             }
         ]
     },
@@ -769,7 +796,6 @@ module.exports = {
                             id: faker.datatype.uuid(),
                             name: "string"
                         }
-
                     }
                 ],
                 financialAccount: {
