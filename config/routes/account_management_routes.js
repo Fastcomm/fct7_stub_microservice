@@ -118,6 +118,37 @@ account_management_routes.delete('/bill/media/:id', (request, response) => {
   response.send( account_management_controller.destroy_bill_media(request) )
 })
 
+account_management_routes.post('/listener/party/acc_attribute_value_change_event', (request, response) => {
+  response.send( account_management_controller.create_listeners_party_acc_attribute_value_change_event(request) )
+})
+account_management_routes.post('/listener/party/acc_state_change_event', (request, response) => {
+  response.send( account_management_controller.create_listeners_party_acc_state_change_event(request) )
+})
+account_management_routes.post('/listener/billing/acc_attribute_value_change_event', (request, response) => {
+  response.send( account_management_controller.create_listeners_billing_acc_attribute_value_change_event(request) )
+})
+account_management_routes.post('/listener/billing/acc_state_change_event', (request, response) => {
+  response.send( account_management_controller.create_listeners_billing_acc_state_change_event(request) )
+})
+account_management_routes.post('/listener/settlement/acc_attribute_value_change_event', (request, response) => {
+  response.send( account_management_controller.create_listeners_settlement_acc_attribute_value_change_event(request) )
+})
+account_management_routes.post('/listener/settlement/acc_state_change_event', (request, response) => {
+  response.send( account_management_controller.create_listeners_settlement_acc_state_change_event(request) )
+})
+account_management_routes.post('/listener/financial/acc_create_event', (request, response) => {
+  response.send( account_management_controller.create_listeners_financial_acc_create_event(request) )
+})
+account_management_routes.post('/listener/financial/acc_attribute_value_change_event', (request, response) => {
+  response.send( account_management_controller.create_listeners_financial_acc_attribute_value_change_event(request) )
+})
+account_management_routes.post('/listener/financial/acc_state_change_event', (request, response) => {
+  response.send( account_management_controller.create_listeners_financial_acc_state_change_event(request) )
+})
+account_management_routes.post('/listener/financial/acc_delete_event', (request, response) => {
+  response.send( account_management_controller.create_listeners_financial_acc_delete_event(request) )
+})
+
 account_management_routes.post('/hub', (request, response) => {
   response.send( account_management_controller.create_hub(request) )
 })
