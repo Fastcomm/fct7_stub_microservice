@@ -449,22 +449,22 @@ module.exports = {
         }
     },
 
-    create_client_listener: function(request)
-    {
-        console.log("geographical_site_management_controller.create_client_listener")
+    // create_client_listener: function(request)
+    // {
+    //     console.log("geographical_site_management_controller.create_client_listener")
 
-        return {
-            id: faker.datatype.uuid(),
-            routeDetails: {
-                controller: 'Geographical Site Management',
-                action: 'create_client_listener'
-            },
-            event: {},
-            eventType: "EVENT_TYPE",
-            eventTime: "string",
-            eventId: "string"
-        }
-    },
+    //     return {
+    //         id: faker.datatype.uuid(),
+    //         routeDetails: {
+    //             controller: 'Geographical Site Management',
+    //             action: 'create_client_listener'
+    //         },
+    //         event: {},
+    //         eventType: "EVENT_TYPE",
+    //         eventTime: "string",
+    //         eventId: "string"
+    //     }
+    // },
 
     create_client_listener_site_create_event: function(request)
     {
@@ -522,6 +522,7 @@ module.exports = {
             query: "string" 
         }
     },
+
     create_hub: function(request)
     {
         console.log("geographical_site_management_controller.create_hub")
