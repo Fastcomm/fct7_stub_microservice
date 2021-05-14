@@ -234,7 +234,7 @@ module.exports = {
     {
         console.log("communication_management_controller.index_message")
         return {
-            id: require.datatype.id,
+            id: request.params.id,
             routeDetails: {
                 controller: 'Communication Management',
                 action: 'show_message'
@@ -346,7 +346,7 @@ module.exports = {
     {
         console.log("communication_management_controller.update_message")
         return {
-          id: require.datatype.id,
+          id: request.params.id,
           routeDetails: {
               controller: 'Communication Management',
               action: 'update_message'

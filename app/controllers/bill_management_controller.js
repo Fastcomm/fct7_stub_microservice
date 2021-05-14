@@ -9,7 +9,7 @@ module.exports = {
         console.log("bill_management_controller.index_on_demand")
         return [
             {
-                id: faker.params.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Bill Management',
                     action: 'index_on_demand'
@@ -56,7 +56,7 @@ module.exports = {
     {
         console.log("bill_management_controller.create_on_demand")
         return {
-                id: faker.params.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Bill Management',
                     action: 'create_on_demand'
@@ -102,7 +102,7 @@ module.exports = {
     {
         console.log("bill_management_controller.show_on_demand")
         return {
-            id: faker.params.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Bill Management',
                 action: 'show_on_demand'
@@ -151,7 +151,7 @@ module.exports = {
         console.log("bill_management_controller.index")
         return [
             {
-                id: faker.params.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Bill Management',
                     action: 'index'
@@ -701,7 +701,7 @@ module.exports = {
     {
         console.log("bill_management_controller.show_rate")
         return {
-            id: require.params.id,
+            id: request.params.id,
             routeDetails: {
                 controller: 'Bill Management',
                 action: 'show_rate'

@@ -8,7 +8,7 @@ module.exports = {
         console.log("customer_management_controller.index")
         return [
             {
-                id: faker.params.uuid(),
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Customer Management',
                     action: 'index'
@@ -140,7 +140,7 @@ module.exports = {
     {
         console.log("customer_management_controller.create")
         return {
-            id: faker.params.uuid(),
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Customer Management',
                 action: 'create'
@@ -271,7 +271,7 @@ module.exports = {
     {
         console.log("customer_management_controller.show")
         return {
-            id: require.params.id,
+            id: request.params.id,
             routeDetails: {
                 controller: 'Customer Management',
                 action: 'show'
@@ -402,7 +402,7 @@ module.exports = {
     {
         console.log("customer_management_controller.update")
         return {
-            id: require.params.id,
+            id: request.params.id,
             routeDetails: {
                 controller: 'Customer Management',
                 action: 'update'
@@ -546,7 +546,7 @@ module.exports = {
     {
         console.log("customer_management_controller.create_listner_create_event")
         return {
-            id: require.params.id,
+            id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Customer Management',
                 action: 'create_listner_create_event'
@@ -559,7 +559,7 @@ module.exports = {
     {
         console.log("customer_management_controller.create_listner_attribute_value_change_event")
         return {
-            id: require.params.id,
+            id: request.params.id,
             routeDetails: {
                 controller: 'Customer Management',
                 action: 'create_listner_attribute_value_change_event'
@@ -572,7 +572,7 @@ module.exports = {
     {
         console.log("customer_management_controller.create_listner_state_change_event")
         return {
-            id: require.params.id,
+            id: request.params.id,
             routeDetails: {
                 controller: 'Customer Management',
                 action: 'create_listner_state_change_event'
@@ -585,7 +585,7 @@ module.exports = {
     {
         console.log("customer_management_controller.create_listner_delete_event")
         return {
-            id: require.params.id,
+            id: request.params.id,
             routeDetails: {
                 controller: 'Customer Management',
                 action: 'create_listner_delete_event'

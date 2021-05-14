@@ -161,7 +161,7 @@ module.exports = {
     {
         console.log("geographical_site_management_controller.show")
         return {
-            id: require.datatype.geographic_site_id,
+            id: request.params.geographic_site_id,
             routeDetails: {
                 controller: 'Geographical Site Management',
                 action: 'show'
@@ -364,7 +364,7 @@ module.exports = {
     {
         console.log("geographical_site_management_controller.patch_update")
         return {
-            id: require.datatype.geographic_site_id,
+            id: request.params.geographic_site_id,
             routeDetails: {
                 controller: 'Geographical Site Management',
                 action: 'patch_update'
@@ -549,6 +549,5 @@ module.exports = {
             },
             code: 204
         }
-    },
-
+    }
 }
