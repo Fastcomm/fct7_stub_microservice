@@ -56,6 +56,7 @@ party_management_routes.post('/individual/listner_delete_event', (request, respo
     response.send( party_management_controller.create_listner_individual_delete_event(request) )
 })
 
+
 party_management_routes.post('/organization/listner_create_event', (request, response) => {
     response.send( party_management_controller.create_listner_organization_create_event(request) )
 })

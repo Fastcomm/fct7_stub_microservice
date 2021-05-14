@@ -25,6 +25,42 @@ payment_management_routes.get('/:payment_id', (request, response) => {
     response.send( payment_management_controller.show_payment(request) )
 })
 
+payment_management_routes.post('/listner_create_event', (request, response) => {
+    response.send( payment_management_controller.create_listner_payment_create_event(request) )
+})
+payment_management_routes.post('/listner_attribute_value_change', (request, response) => {
+    response.send( payment_management_controller.create_listner_payment_attribute_value_change_event(request) )
+})
+payment_management_routes.post('/listner_state_change_event', (request, response) => {
+    response.send( payment_management_controller.create_listner_payment_state_change_event(request) )
+})
+payment_management_routes.post('/listner_delete_event', (request, response) => {
+    response.send( payment_management_controller.create_listner_payment_delete_event(request) )
+})
+
+payment_management_routes.post('/refund/listner_create_event', (request, response) => {
+    response.send( payment_management_controller.create_listner_refund_create_event(request) )
+})
+payment_management_routes.post('/refund/listner_attribute_value_change', (request, response) => {
+    response.send( payment_management_controller.create_listner_refund_attribute_value_change_event(request) )
+})
+payment_management_routes.post('/refund/listner_state_change_event', (request, response) => {
+    response.send( payment_management_controller.create_listner_refund_state_change_event(request) )
+})
+payment_management_routes.post('/refund/listner_delete_event', (request, response) => {
+    response.send( payment_management_controller.create_listner_refund_delete_event(request) )
+})
+
+
+payment_management_routes.post("/hub", (request, response) => {
+    response.send( payment_management_controller.create_hub( request ) )
+})
+payment_management_routes.delete("/hub/:hub_id", (request, response) => {
+    response.send( payment_management_controller.destroy_hub( request ) )
+})
+
+
+
 
 //  === Exports ===
 module.exports = payment_management_routes

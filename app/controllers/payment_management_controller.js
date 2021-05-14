@@ -6,7 +6,6 @@ module.exports = {
     index_payment: function(request)
     {
         console.log("payment_management_controller.index_payment")
-
         return [
             {
                 id: faker.datatype.uuid(),
@@ -14,106 +13,126 @@ module.exports = {
                     controller: 'Payment Management',
                     action: 'index_payment'
                 },
-                "@type": "string",
-                "@schemaLocation": "string",
-                correlatorId: "string",
-                paymentDate: new Date(),
-                name: "string",
-                description: "string",
+                href: faker.internet.url(),
                 authorizationCode: "string",
-                amount: {
-                    amount: 0,
-                    units: "string"
-                },
-                taxAmount: {
-                    amount: 0,
-                    units: "string"
-                },
-                totalAmount: {
-                    amount: 0,
-                    units: "string"
-                },
-                channel: {
-                    id: "string",
-                    href: "string",
-                    "@referredType": "string",
-                    name: "string",
-                    description: "string"
-                },
-                account: {
-                    id: "string",
-                    href: "string",
-                    "@referredType": "string",
-                    name: "string",
-                    description: "string"
-                },
-                paymentItem: [
-                    {
-                        amount: {
-                            amount: 0,
-                            units: "string"
-                        },
-                        taxAmount: {
-                            amount: 0,
-                            units: "string"
-                        },
-                        totalAmount: {
-                            amount: 0,
-                            units: "string"
-                        },
-                        item: {
-                            id: "string",
-                            href: "string",
-                            "@referredType": "string",
-                            name: "string",
-                            description: "string"
-                        }
-                    }
-                ],
-                paymentMethod: {
-                    id: "string",
-                    href: "string",
-                    "@referredType": "string",
-                    name: "string",
-                    description: "string",
-                    validFor: {
-                        startDateTime: new Date(),
-                        endDateTime: new Date()    
-                    },
-                    account: [
-                        {
-                            id: "string",
-                            href: "string",
-                            "@referredType": "string",
-                            name: "string",
-                            description: "string" 
-                        }
-                    ],
-                    preferred: true,
-                    relatedParty: [
-                        {
-                            id: "string",
-                            href: "string",
-                            "@referredType": "string",
-                            name: "string",
-                            role: "string"
-                        }
-                    ],
-                    "@type": "cash",
-                    authorizationCode: "string",
-                    status: "string",
-                    statusDate: new Date(),
-                    details: {}
-                },
+                correlatorId: "string",
+                description: "string",
+                name: "string",
+                paymentDate: new Date(),
                 status: "string",
                 statusDate: new Date(),
+                account: {
+                  id: "string",
+                  href: "string",
+                  description: "string",
+                  name: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                amount: {
+                  unit: "string",
+                  value: 0
+                },
+                channel: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
                 payer: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                paymentItem: [
+                  {
+                    id: "string",
+                    amount: {
+                      unit: "string",
+                      value: 0
+                    },
+                    item: {
+                      id: "string",
+                      href: "string",
+                      name: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
+                    },
+                    taxAmount: {
+                      unit: "string",
+                      value: 0
+                    },
+                    totalAmount: {
+                      unit: "string",
+                      value: 0
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                paymentMethod: {
+                  id: "string",
+                  href: "string",
+                  description: "string",
+                  isPreferred: true,
+                  name: "string",
+                  status: "string",
+                  statusDate: new Date(),
+                  account: [
+                    {
+                      id: "string",
+                      href: "string",
+                      description: "string",
+                      name: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
+                    }
+                  ],
+                  relatedParty: {
                     id: "string",
                     href: "string",
-                    "@referredType": "string",
                     name: "string",
-                    role: "string"
-                }
+                    role: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  },
+                  validFor: {
+                    endDateTime: new Date(),
+                    startDateTime: new Date()
+                  },
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                taxAmount: {
+                  unit: "string",
+                  value: 0
+                },
+                totalAmount: {
+                  unit: "string",
+                  value: 0
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
             }
         ]  
     },
@@ -126,106 +145,126 @@ module.exports = {
                 controller: 'Payment Management',
                 action: 'create_payment'
             },
-            "@type": "string",
-            "@schemaLocation": "string",
-            correlatorId: "string",
-            paymentDate: new Date(),
-            name: "string",
-            description: "string",
+            href: faker.internet.url(),
             authorizationCode: "string",
-            amount: {
-                amount: 0,
-                units: "string"
-            },
-            taxAmount: {
-                amount: 0,
-                units: "string"
-            },
-            totalAmount: {
-                amount: 0,
-                units: "string"
-            },
-            channel: {
-                id: "string",
-                href: "string",
-                "@referredType": "string",
-                name: "string",
-                description: "string"
-            },
-            account: {
-                id: "string",
-                href: "string",
-                "@referredType": "string",
-                name: "string",
-                description: "string"
-            },
-            paymentItem: [
-                {
-                    amount: {
-                        amount: 0,
-                        units: "string"
-                    },
-                    taxAmount: {
-                        amount: 0,
-                        units: "string"
-                    },
-                    totalAmount: {
-                        amount: 0,
-                        units: "string"
-                    },
-                    item: {
-                        id: "string",
-                        href: "string",
-                        "@referredType": "string",
-                        name: "string",
-                        description: "string"
-                    }
-                }
-            ],
-            paymentMethod: {
-                id: "string",
-                href: "string",
-                "@referredType": "string",
-                name: "string",
-                description: "string",
-                validFor: {
-                    startDateTime: new Date(),
-                    endDateTime: new Date()    
-                },
-                account: [
-                    {
-                        id: "string",
-                        href: "string",
-                        "@referredType": "string",
-                        name: "string",
-                        description: "string" 
-                    }
-                ],
-                preferred: true,
-                relatedParty: [
-                    {
-                        id: "string",
-                        href: "string",
-                        "@referredType": "string",
-                        name: "string",
-                        role: "string"
-                    }
-                ],
-                "@type": "cash",
-                authorizationCode: "string",
-                status: "string",
-                statusDate: new Date(),
-                details: {}
-            },
+            correlatorId: "string",
+            description: "string",
+            name: "string",
+            paymentDate: new Date(),
             status: "string",
             statusDate: new Date(),
+            account: {
+              id: "string",
+              href: "string",
+              description: "string",
+              name: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            amount: {
+              unit: "string",
+              value: 0
+            },
+            channel: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
             payer: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            paymentItem: [
+              {
+                id: "string",
+                amount: {
+                  unit: "string",
+                  value: 0
+                },
+                item: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                taxAmount: {
+                  unit: "string",
+                  value: 0
+                },
+                totalAmount: {
+                  unit: "string",
+                  value: 0
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            paymentMethod: {
+              id: "string",
+              href: "string",
+              description: "string",
+              isPreferred: true,
+              name: "string",
+              status: "string",
+              statusDate: new Date(),
+              account: [
+                {
+                  id: "string",
+                  href: "string",
+                  description: "string",
+                  name: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                }
+              ],
+              relatedParty: {
                 id: "string",
                 href: "string",
-                "@referredType": "string",
                 name: "string",
-                role: "string"
-            }
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              },
+              validFor: {
+                endDateTime: new Date(),
+                startDateTime: new Date()
+              },
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            taxAmount: {
+              unit: "string",
+              value: 0
+            },
+            totalAmount: {
+              unit: "string",
+              value: 0
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     show_payment: function(request)
@@ -238,108 +277,125 @@ module.exports = {
                 action: 'show_payment'
             },
             href: faker.internet.url(),
-            "@type": "string",
-            "@schemaLocation": "string",
-            correlatorId: "string",
-            paymentDate: new Date(),
-            name: "string",
-            description: "string",
             authorizationCode: "string",
-            amount: {
-                amount: 0,
-                units: "string"
-            },
-            taxAmount: {
-                amount: 0,
-                units: "string"
-            },
-            totalAmount: {
-                amount: 0,
-                units: "string"
-            },
-            channel: {
-                id: "string",
-                href: "string",
-                "@referredType": "string",
-                name: "string",
-                description: "string"
-            },
-            account: {
-                id: "string",
-                href: "string",
-                "@referredType": "string",
-                name: "string",
-                description: "string"
-            },
-            paymentItem: [
-                {
-                    amount: {
-                        amount: 0,
-                        units: "string"
-                    },
-                    taxAmount: {
-                        amount: 0,
-                        units: "string"
-                    },
-                    totalAmount: {
-                        amount: 0,
-                        units: "string"
-                    },
-                    item: {
-                        id: "string",
-                        href: "string",
-                        "@referredType": "string",
-                        name: "string",
-                        description: "string"
-                    }
-                }
-            ],
-            paymentMethod: {
-                id: "string",
-                href: "string",
-                "@referredType": "string",
-                name: "string",
-                description: "string",
-                validFor: {
-                    startDateTime: new Date(),
-                    endDateTime: new Date()    
-                },
-                account: [
-                    {
-                        id: "string",
-                        href: "string",
-                        "@referredType": "string",
-                        name: "string",
-                        description: "string" 
-                    }
-                ],
-                preferred: true,
-                relatedParty: [
-                    {
-                        id: "string",
-                        href: "string",
-                        "@referredType": "string",
-                        name: "string",
-                        role: "string"
-                    }
-                ],
-                "@type": "cash",
-                authorizationCode: "string",
-                status: "string",
-                statusDate: new Date(),
-                details: {}
-            },
+            correlatorId: "string",
+            description: "string",
+            name: "string",
+            paymentDate: new Date(),
             status: "string",
             statusDate: new Date(),
+            account: {
+              id: "string",
+              href: "string",
+              description: "string",
+              name: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            amount: {
+              unit: "string",
+              value: 0
+            },
+            channel: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
             payer: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            paymentItem: [
+              {
+                id: "string",
+                amount: {
+                  unit: "string",
+                  value: 0
+                },
+                item: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                taxAmount: {
+                  unit: "string",
+                  value: 0
+                },
+                totalAmount: {
+                  unit: "string",
+                  value: 0
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            paymentMethod: {
+              id: "string",
+              href: "string",
+              description: "string",
+              isPreferred: true,
+              name: "string",
+              status: "string",
+              statusDate: new Date(),
+              account: [
+                {
+                  id: "string",
+                  href: "string",
+                  description: "string",
+                  name: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                }
+              ],
+              relatedParty: {
                 id: "string",
                 href: "string",
-                "@referredType": "string",
                 name: "string",
-                role: "string"
-            }
-            
-            
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              },
+              validFor: {
+                endDateTime: new Date(),
+                startDateTime: new Date()
+              },
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            taxAmount: {
+              unit: "string",
+              value: 0
+            },
+            totalAmount: {
+              unit: "string",
+              value: 0
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
 
@@ -354,92 +410,106 @@ module.exports = {
                     controller: 'Payment Management',
                     action: 'index_refund'
                 },
-                "@type": "string",
-                "@schemaLocation": "string",
-                correlatorId: "string",
-                refundDate: new Date(),
-                description: "string",
+                href: faker.internet.url(),
                 authorizationCode: "string",
+                correlatorId: "string",
+                description: "string",
+                name: "string",
+                refundDate: new Date(),
+                status: "string",
+                statusDate: new Date(),
+                account: {
+                  id: "string",
+                  href: "string",
+                  description: "string",
+                  name: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
                 amount: {
-                    amount: 0,
-                    units: "string"
-                },
-                taxAmount: {
-                    amount: 0,
-                    units: "string"
-                },
-                totalAmount: {
-                    amount: 0,
-                    units: "string"
+                  unit: "string",
+                  value: 0
                 },
                 channel: {
-                    id: "string",
-                    href: "string",
-                    "@referredType": "string",
-                    name: "string",
-                    description: "string"
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
                 },
-                account: {
-                    id: "string",
-                    href: "string",
-                    "@referredType": "string",
-                    name: "string",
-                    description: "string"
+                payment: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
                 },
                 paymentMethod: {
-                    id: "string",
-                    href: "string",
-                    "@referredType": "string",
-                    name: "string",
-                    description: "string",
-                    validFor: {
-                        startDateTime: new Date(),
-                        endDateTime: new Date()    
-                    },
-                    account: [
-                        {
-                            id: "string",
-                            href: "string",
-                            "@referredType": "string",
-                            name: "string",
-                            description: "string" 
-                        }
-                    ],
-                    preferred: true,
-                    relatedParty: [
-                        {
-                            id: "string",
-                            href: "string",
-                            "@referredType": "string",
-                            name: "string",
-                            role: "string"
-                        }
-                    ],
-                    "@type": "cash",
-                    authorizationCode: "string",
-                    status: "string",
-                    statusDate: new Date(),
-                    details: {}
-                },
-                relatedPayment: {
-                    id: "string",
-                    href: "string",
-                    "@referredType": "string",
-                    name: "string",
-                    description: "string"
-                },
-                reason: "string",
-                status: "pendingAuthorization",
-                statusDate: new Date(),
-                relatedParty: [
+                  id: "string",
+                  href: "string",
+                  description: "string",
+                  isPreferred: true,
+                  name: "string",
+                  status: "string",
+                  statusDate: new Date(),
+                  account: [
                     {
-                        id: "string",
-                        href: "string",
-                        "@referredType": "string",
-                        name: "string",
-                        role: "string"
+                      id: "string",
+                      href: "string",
+                      description: "string",
+                      name: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
                     }
-                ]
+                  ],
+                  relatedParty: {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    role: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  },
+                  validFor: {
+                    endDateTime: new Date(),
+                    startDateTime: new Date()
+                  },
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                requestor: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                taxAmount: {
+                  unit: "string",
+                  value: 0
+                },
+                totalAmount: {
+                  unit: "string",
+                  value: 0
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
             }
         ]  
     },
@@ -452,190 +522,355 @@ module.exports = {
                 controller: 'Payment Management',
                 action: 'create_refund'
             },
-            "@type": "string",
-            "@schemaLocation": "string",
-            correlatorId: "string",
-            refundDate: new Date(),
-            description: "string",
+            href: faker.internet.url(),
             authorizationCode: "string",
+            correlatorId: "string",
+            description: "string",
+            name: "string",
+            refundDate: new Date(),
+            status: "string",
+            statusDate: new Date(),
+            account: {
+              id: "string",
+              href: "string",
+              description: "string",
+              name: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
             amount: {
-                amount: 0,
-                units: "string"
-            },
-            taxAmount: {
-                amount: 0,
-                units: "string"
-            },
-            totalAmount: {
-                amount: 0,
-                units: "string"
+              unit: "string",
+              value: 0
             },
             channel: {
-                id: "string",
-                href: "string",
-                "@referredType": "string",
-                name: "string",
-                description: "string"
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
             },
-            account: {
-                id: "string",
-                href: "string",
-                "@referredType": "string",
-                name: "string",
-                description: "string"
+            payment: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
             },
             paymentMethod: {
-                id: "string",
-                href: "string",
-                "@referredType": "string",
-                name: "string",
-                description: "string",
-                validFor: {
-                    startDateTime: new Date(),
-                    endDateTime: new Date()    
-                },
-                account: [
-                    {
-                        id: "string",
-                        href: "string",
-                        "@referredType": "string",
-                        name: "string",
-                        description: "string" 
-                    }
-                ],
-                preferred: true,
-                relatedParty: [
-                    {
-                        id: "string",
-                        href: "string",
-                        "@referredType": "string",
-                        name: "string",
-                        role: "string"
-                    }
-                ],
-                "@type": "cash",
-                authorizationCode: "string",
-                status: "string",
-                statusDate: new Date(),
-                details: {}
-            },
-            relatedPayment: {
-                id: "string",
-                href: "string",
-                "@referredType": "string",
-                name: "string",
-                description: "string"
-            },
-            reason: "string",
-            status: "pendingAuthorization",
-            statusDate: new Date(),
-            relatedParty: [
+              id: "string",
+              href: "string",
+              description: "string",
+              isPreferred: true,
+              name: "string",
+              status: "string",
+              statusDate: new Date(),
+              account: [
                 {
-                    id: "string",
-                    href: "string",
-                    "@referredType": "string",
-                    name: "string",
-                    role: "string"
+                  id: "string",
+                  href: "string",
+                  description: "string",
+                  name: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
                 }
-            ]
+              ],
+              relatedParty: {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              },
+              validFor: {
+                endDateTime: new Date(),
+                startDateTime: new Date()
+              },
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            requestor: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            taxAmount: {
+              unit: "string",
+              value: 0
+            },
+            totalAmount: {
+              unit: "string",
+              value: 0
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     show_refund: function(request)
     {
         console.log('payment_management_controller.show_refund')
         return {
-            id: request.params.payment_id,
+            id: request.params.refund_id,
             routeDetails: {
                 controller: 'Payment Management',
                 action: 'show_refund'
             },
             href: faker.internet.url(),
-            "@type": "string",
-            "@schemaLocation": "string",
-            correlatorId: "string",
-            refundDate: new Date(),
-            description: "string",
             authorizationCode: "string",
+            correlatorId: "string",
+            description: "string",
+            name: "string",
+            refundDate: new Date(),
+            status: "string",
+            statusDate: new Date(),
+            account: {
+              id: "string",
+              href: "string",
+              description: "string",
+              name: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
             amount: {
-                amount: 0,
-                units: "string"
-            },
-            taxAmount: {
-                amount: 0,
-                units: "string"
-            },
-            totalAmount: {
-                amount: 0,
-                units: "string"
+              unit: "string",
+              value: 0
             },
             channel: {
-                id: "string",
-                href: "string",
-                "@referredType": "string",
-                name: "string",
-                description: "string"
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
             },
-            account: {
-                id: "string",
-                href: "string",
-                "@referredType": "string",
-                name: "string",
-                description: "string"
+            payment: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
             },
             paymentMethod: {
-                id: "string",
-                href: "string",
-                "@referredType": "string",
-                name: "string",
-                description: "string",
-                validFor: {
-                    startDateTime: new Date(),
-                    endDateTime: new Date()    
-                },
-                account: [
-                    {
-                        id: "string",
-                        href: "string",
-                        "@referredType": "string",
-                        name: "string",
-                        description: "string" 
-                    }
-                ],
-                preferred: true,
-                relatedParty: [
-                    {
-                        id: "string",
-                        href: "string",
-                        "@referredType": "string",
-                        name: "string",
-                        role: "string"
-                    }
-                ],
-                "@type": "cash",
-                authorizationCode: "string",
-                status: "string",
-                statusDate: new Date(),
-                details: {}
-            },
-            relatedPayment: {
-                id: "string",
-                href: "string",
-                "@referredType": "string",
-                name: "string",
-                description: "string"
-            },
-            reason: "string",
-            status: "pendingAuthorization",
-            statusDate: new Date(),
-            relatedParty: [
+              id: "string",
+              href: "string",
+              description: "string",
+              isPreferred: true,
+              name: "string",
+              status: "string",
+              statusDate: new Date(),
+              account: [
                 {
-                    id: "string",
-                    href: "string",
-                    "@referredType": "string",
-                    name: "string",
-                    role: "string"
+                  id: "string",
+                  href: "string",
+                  description: "string",
+                  name: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
                 }
-            ]   
+              ],
+              relatedParty: {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              },
+              validFor: {
+                endDateTime: new Date(),
+                startDateTime: new Date()
+              },
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            requestor: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            taxAmount: {
+              unit: "string",
+              value: 0
+            },
+            totalAmount: {
+              unit: "string",
+              value: 0
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+        }
+    },
+
+
+    create_listner_payment_create_event: function(request)
+    {
+        console.log("party_management_controller.create_listner_payment_create_event")
+        return  {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Party Management',
+                action: 'create_listner_payment_create_event'
+            },
+            "callback": "string",
+            "query": "string"
+          }
+    },
+    create_listner_payment_attribute_value_change_event: function(request)
+    {
+        console.log("party_management_controller.create_listner_payment_attribute_value_change_event")
+        return  {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Party Management',
+                action: 'create_listner_payment_attribute_value_change_event'
+            },
+            "callback": "string",
+            "query": "string"
+          }
+    },
+    create_listner_payment_state_change_event: function(request)
+    {
+        console.log("party_management_controller.create_listner_payment_state_change_event")
+        return  {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Party Management',
+                action: 'create_listner_payment_state_change_event'
+            },
+            "callback": "string",
+            "query": "string"
+          }
+    },
+    create_listner_payment_delete_event: function(request)
+    {
+        console.log("party_management_controller.create_listner_payment_delete_event")
+        return  {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Party Management',
+                action: 'create_listner_payment_delete_event'
+            },
+            "callback": "string",
+            "query": "string"
+          }
+    },
+
+    create_listner_refund_create_event: function(request)
+    {
+        console.log("party_management_controller.create_listner_refund_create_event")
+        return  {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Party Management',
+                action: 'create_listner_refund_create_event'
+            },
+            "callback": "string",
+            "query": "string"
+          }
+    },
+    create_listner_refund_attribute_value_change_event: function(request)
+    {
+        console.log("party_management_controller.create_listner_refund_attribute_value_change_event")
+        return  {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Party Management',
+                action: 'create_listner_refund_attribute_value_change_event'
+            },
+            "callback": "string",
+            "query": "string"
+          }
+    },
+    create_listner_refund_state_change_event: function(request)
+    {
+        console.log("party_management_controller.create_listner_refund_state_change_event")
+        return  {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Party Management',
+                action: 'create_listner_refund_state_change_event'
+            },
+            "callback": "string",
+            "query": "string"
+          }
+    },
+    create_listner_refund_delete_event: function(request)
+    {
+        console.log("party_management_controller.create_listner_refund_delete_event")
+        return  {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Party Management',
+                action: 'create_listner_refund_delete_event'
+            },
+            "callback": "string",
+            "query": "string"
+          }
+    },
+
+
+
+    create_hub: function(request)
+    {
+        console.log("payment_management_controller.create_hub")
+        return [
+            { 
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'payment_management_controller',
+                    action: 'create_hub'
+                },
+                callback: "string",
+                query: "string"
+            }
+        ]
+    },
+    destroy_hub: function(request)
+    {
+        console.log("payment_management_controller.destroy_hub")
+        return {  
+            id: request.params.hub_id,
+            routeDetails: {
+                controller: 'payment_management_controller',
+                action: 'destroy_hub'
+            },
+            code: 204
         }
     }
+
 }
