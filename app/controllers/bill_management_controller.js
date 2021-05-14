@@ -701,7 +701,7 @@ module.exports = {
     {
         console.log("bill_management_controller.show_rate")
         return {
-            id: require.datatype.id,
+            id: require.params.id,
             routeDetails: {
                 controller: 'Bill Management',
                 action: 'show_rate'

@@ -273,7 +273,7 @@ module.exports = {
     {
         console.log("appointment_controller.show")
         return {
-            id: require.datatype.id,
+            id: require.params.id,
             routeDetails: {
                 controller: 'Appointment',
                 action: 'show_appointment'
@@ -405,7 +405,7 @@ module.exports = {
     {
         console.log("appointment_controller.update")
         return {
-            id: require.datatype.id,
+            id: require.params.id,
             routeDetails: {
                 controller: 'Appointment',
                 action: 'update_appointment'
@@ -745,7 +745,7 @@ module.exports = {
     {
         console.log("appointment_controller.show_time_slot")
         return {
-            id: require.datatype.slot_id,
+            id: require.params.slot_id,
             routeDetails: {
                 controller: 'Appointment',
                 action: 'show_time_slot'
@@ -841,7 +841,7 @@ module.exports = {
     {
         console.log("appointment_controller.update_time_slot")
         return {
-            id: require.datatype.slot_id,
+            id: require.params.slot_id,
             routeDetails: {
                 controller: 'Appointment',
                 action: 'update_time_slot'
