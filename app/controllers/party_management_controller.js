@@ -530,7 +530,7 @@ module.exports = {
     {
         console.log("party_management_controller.show_individual")
         return {
-            id: require.params.individual_id,
+            id: request.params.individual_id,
             routeDetails: {
                 controller: 'Party Management',
                 action: 'show_individual'
@@ -888,7 +888,7 @@ module.exports = {
     {
         console.log("party_management_controller.patch_update_individual")
         return {
-            id: require.params.individual_id,
+            id: request.params.individual_id,
             routeDetails: {
                 controller: 'Party Management',
                 action: 'patch_update_individual'
@@ -1621,7 +1621,7 @@ module.exports = {
     {
         console.log("party_management_controller.show_organization")
         return {
-            id: require.params.organization_id,
+            id: request.params.organization_id,
             routeDetails: {
                 controller: 'Party Management',
                 action: 'show_organization'
@@ -1956,7 +1956,7 @@ module.exports = {
     {
         console.log("party_management_controller.patch_update_organization")
         return {
-            id: require.params.organization_id,
+            id: request.params.organization_id,
             routeDetails: {
                 controller: 'Party Management',
                 action: 'patch_update_organization'
@@ -2193,6 +2193,113 @@ module.exports = {
             code: 204
         }
     },
+
+    create_listner_individual_create_event: function(request)
+    {
+        console.log("party_management_controller.create_listner_individual_create_event")
+        return  {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Party Management',
+                action: 'create_listner_individual_create_event'
+            },
+            "callback": "string",
+            "query": "string"
+          }
+    },
+    create_listner_individual_attribute_value_change_event: function(request)
+    {
+        console.log("party_management_controller.create_listner_individual_attribute_value_change_event")
+        return  {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Party Management',
+                action: 'create_listner_individual_attribute_value_change_event'
+            },
+            "callback": "string",
+            "query": "string"
+          }
+    },
+    create_listner_individual_state_change_event: function(request)
+    {
+        console.log("party_management_controller.create_listner_individual_state_change_event")
+        return  {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Party Management',
+                action: 'create_listner_individual_state_change_event'
+            },
+            "callback": "string",
+            "query": "string"
+          }
+    },
+    create_listner_individual_delete_event: function(request)
+    {
+        console.log("party_management_controller.create_listner_individual_delete_event")
+        return  {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Party Management',
+                action: 'create_listner_individual_delete_event'
+            },
+            "callback": "string",
+            "query": "string"
+          }
+    },
+
+    create_listner_organization_create_event: function(request)
+    {
+        console.log("party_management_controller.create_listner_organization_create_event")
+        return  {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Party Management',
+                action: 'create_listner_organization_create_event'
+            },
+            "callback": "string",
+            "query": "string"
+          }
+    },
+    create_listner_organization_attribute_value_change_event: function(request)
+    {
+        console.log("party_management_controller.create_listner_organization_attribute_value_change_event")
+        return  {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Party Management',
+                action: 'create_listner_organization_attribute_value_change_event'
+            },
+            "callback": "string",
+            "query": "string"
+          }
+    },
+    create_listner_organization_state_change_event: function(request)
+    {
+        console.log("party_management_controller.create_listner_organization_state_change_event")
+        return  {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Party Management',
+                action: 'create_listner_organization_state_change_event'
+            },
+            "callback": "string",
+            "query": "string"
+          }
+    },
+    create_listner_organization_delete_event: function(request)
+    {
+        console.log("party_management_controller.create_listner_organization_delete_event")
+        return  {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Party Management',
+                action: 'create_listner_organization_delete_event'
+            },
+            "callback": "string",
+            "query": "string"
+          }
+    },
+
 
     create_hub: function(request)
     {

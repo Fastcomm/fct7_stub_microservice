@@ -42,6 +42,35 @@ party_management_routes.delete('/organization/:organization_id', (request, respo
     response.send( party_management_controller.destroy_organization(request) )
 })
 
+
+party_management_routes.post('/individual/listner_create_event', (request, response) => {
+    response.send( party_management_controller.create_listner_individual_create_event(request) )
+})
+party_management_routes.post('/individual/listner_attribute_value_change', (request, response) => {
+    response.send( party_management_controller.create_listner_individual_attribute_value_change_event(request) )
+})
+party_management_routes.post('/individual/listner_state_change_event', (request, response) => {
+    response.send( party_management_controller.create_listner_individual_state_change_event(request) )
+})
+party_management_routes.post('/individual/listner_delete_event', (request, response) => {
+    response.send( party_management_controller.create_listner_individual_delete_event(request) )
+})
+
+party_management_routes.post('/organization/listner_create_event', (request, response) => {
+    response.send( party_management_controller.create_listner_organization_create_event(request) )
+})
+party_management_routes.post('/organization/listner_attribute_value_change', (request, response) => {
+    response.send( party_management_controller.create_listner_organization_attribute_value_change_event(request) )
+})
+party_management_routes.post('/organization/listner_state_change_event', (request, response) => {
+    response.send( party_management_controller.create_listner_organization_state_change_event(request) )
+})
+party_management_routes.post('/organization/listner_delete_event', (request, response) => {
+    response.send( party_management_controller.create_listner_organization_delete_event(request) )
+})
+
+
+
 party_management_routes.post("/hub", (request, response) => {
     response.send( party_management_controller.create_hub( request ) )
 })
