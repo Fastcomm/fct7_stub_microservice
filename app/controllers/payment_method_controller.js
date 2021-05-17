@@ -7,6 +7,7 @@ module.exports = {
     index: function(request)
     {
         console.log("payment_method_controller.index")
+        
         return [
             {
                 id: faker.datatype.uuid(),
@@ -16,29 +17,29 @@ module.exports = {
                 },
                 href: faker.internet.url(),
                 name: "string",
-                description: faker.lorem.sentence(),
+                description: "string",
                 validFor: {
-                    startDateTime: new Date(),
-                    endDateTime: new Date()    
+                  startDateTime: new Date(),
+                  endDateTime: new Date()
                 },
                 account: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: "string",
-                        description: faker.lorem.sentence(),
-                        "@referredType": "string"
-                    }
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    description: "string",
+                    "@referredType": "string"
+                  }
                 ],
                 preferred: true,
                 relatedParty: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        "@referredType": "string",
-                        name: "string",
-                        role: "string"
-                    }
+                  {
+                    id: "string",
+                    href: "string",
+                    "@referredType": "string",
+                    "name": "string",
+                    "role": "string"
+                  }
                 ],
                 "@type": "cash",
                 authorizationCode: "string",
@@ -58,37 +59,33 @@ module.exports = {
                 action: 'create'
             },
             href: faker.internet.url(),
-                name: "string",
-                description: faker.lorem.sentence(),
-                validFor: {
-                    startDateTime: new Date(),
-                    endDateTime: new Date()    
-                },
-                preferred: true,
-                account: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: "string",
-                        description: faker.lorem.sentence(),
-                        "@referredType": "string"
-                    }
-                ],
-                relatedParty: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        "@referredType": "string",
-                        name: "string",
-                        role: "string"
-                    }
-                ],
-                "@type": "cash",
-                authorizationCode: "string",
-                status: "string",
-                statusDate: new Date(),
-                details: {}
-            
+            name: "string",
+            description: "string",
+            validFor: {
+              startDateTime: new Date(),
+              endDateTime: new Date()
+            },
+            preferred: false,
+            relatedParty: [
+                {
+                id: "55554444",
+                href: "{customerManagementAPI}/customer/55554444",
+                "@referredType": "customer",
+                name: "John Doe ",
+                role: "owner"
+                }
+            ],
+            "@type": "bankAccountTransfer",
+            authorizationCode: "1234567890",
+            status: "Active",
+            statusDate: new Date(),
+            details: {
+                accountNumber: "DE44 5001 0517 5407 3249 31",
+                accountNumberType: "IBAN",
+                BIC: "DEUTDEFF",
+                owner: "John Doe",
+                bank: "Deutsche Bank"
+            }
         }
     },
     show: function(request)
@@ -101,56 +98,56 @@ module.exports = {
                 action: 'show'
             },
             href: faker.internet.url(),
-            name: "string",
-            description: faker.lorem.sentence(),
+            name: "Main credit card",
+            description: "My mastercard gold",
             validFor: {
-                startDateTime: new Date(),
-                endDateTime: new Date()    
+              startDateTime: new Date(),
+              endDateTime: new Date()
             },
             account: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string"
-                },
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string"
-                }
+              {
+                id: "321654",
+                href: "{accountsManagementAPI}/account/321654",
+                name: "John Doe’s account"
+              },
+              {
+                id: "987654",
+                href: "{accountsManagementAPI}/account/987654",
+                name: "The account of John Doe’s daughter"
+              }
             ],
             preferred: true,
             relatedParty: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    type: "customer",
-                    name: "string",
-                    role: "string"
-                },
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    type: "customer",
-                    name: "string",
-                    role: "string"
-                }
+              {
+                id: "55554444",
+                href: "{customerManagementAPI}/customers/55554444",
+                type: "customer",
+                name: "John Doe",
+                role: "owner"
+              },
+              {
+                id: "66665555",
+                href: "{customerManagementAPI}/customers/66665555",
+                type: "customer",
+                name: "John Doe’s daughter",
+                role: "user"
+              }
             ],
             "@type": "bankCard",
-            authorizationCode: "string",
-            status: "string",
+            authorizationCode: "1234567890",
+            status: "Active",
             statusDate: new Date(),
             details: {
-                brand: "MasterCard",
-                type: "Debit",
-                number: "000000000000000",
-                expirationDate: new Date(),
-                cvv: "000",
-                lastFourDigits: "0000",
-                nameOnCard: "John Doe",
-                bank: "Fictional Bank"
+              brand: "MasterCard",
+              type: "Debit",
+              number: "00000000000000000",
+              expirationDate: new Date(),
+              cvv: "000",
+              lastFourDigits: "0000",
+              nameOnCard: "John Doe",
+              bank: "Fictitious Bank.inc"
             }
-        }
+          }
     },
     destroy: function(request)
     {
@@ -161,13 +158,7 @@ module.exports = {
                 controller: 'Payment Methods',
                 action: 'destroy'
             },
-            code: 0,
-            reason: "Missing query parameter",
-            message: "Payment method succesfully deleted.",
-            status: "failure",
-            referenceError: "http://{dev_portal_domain}/{error_documentation_endpoint}",
-            "@type": "type",
-            "@schemaLocation": "schemaLocation"
+            code: 204
         }
     },
 
@@ -181,54 +172,54 @@ module.exports = {
                 action: 'show_accounts'
             },
             href: faker.internet.url(),
-            name: "string",
-            description: faker.lorem.sentence(),
+            name: "Main credit card",
+            description: "My mastercard gold",
             validFor: {
-                startDateTime: new Date(),
-                endDateTime: new Date()    
+              startDateTime: new Date(),
+              endDateTime: new Date()
             },
             account: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string"
-                },
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string"
-                }
+              {
+                id: "321654",
+                href: "{accountsManagementAPI}/account/321654",
+                name: "John Doe’s account"
+              },
+              {
+                id: "987654",
+                href: "{accountsManagementAPI}/account/987654",
+                name: "The account of John Doe’s daughter"
+              }
             ],
             preferred: true,
             relatedParty: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    type: "customer",
-                    name: "string",
-                    role: "string"
-                },
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    type: "customer",
-                    name: "string",
-                    role: "string"
-                }
+              {
+                id: "55554444",
+                href: "{customerManagementAPI}/customers/55554444",
+                type: "customer",
+                name: "John Doe",
+                role: "owner"
+              },
+              {
+                id: "66665555",
+                href: "{customerManagementAPI}/customers/66665555",
+                type: "customer",
+                name: "John Doe’s daughter",
+                role: "user"
+              }
             ],
             "@type": "bankCard",
-            authorizationCode: "string",
-            status: "string",
+            authorizationCode: "1234567890",
+            status: "Active",
             statusDate: new Date(),
             details: {
-                brand: "MasterCard",
-                type: "Debit",
-                number: "000000000000000",
-                expirationDate: new Date(),
-                cvv: "000",
-                lastFourDigits: "0000",
-                nameOnCard: "John Doe",
-                bank: "Fictional Bank"
+              brand: "MasterCard",
+              type: "Debit",
+              number: "00000000000000000",
+              expirationDate: new Date(),
+              cvv: "000",
+              lastFourDigits: "0000",
+              nameOnCard: "John Doe",
+              bank: "Fictitious Bank.inc"
             }
         }
     }
