@@ -13,7 +13,7 @@ module.exports = {
                     controller: 'quote_management_controller',
                     action: 'index'
                 },
-                href: faker.internet.url(),
+            href: faker.internet.url(),
             category: "string",
             description: "string",
             effectiveQuoteCompletionDate: new Date(),

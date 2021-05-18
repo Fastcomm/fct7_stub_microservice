@@ -2,509 +2,10 @@
 const faker = require('faker')
 //  === Controller ===
 module.exports = {
-    index_product_buckets: function(request) 
-    {
-        console.log("prepay_balance_controller.index_product_buckets")
 
-        return [
-            {
-                id: faker.datatype.uuid(),
-                routeDetails: {
-                    controller: 'Prepay Balance',
-                    action: 'index_product_buckets'
-                },
-                href: faker.internet.url(),
-                name: faker.name.findName(),
-                description: faker.lorem.sentence(),
-                bucketType: "promotionalvoice" ,
-                remainedAmount: [
-                    {
-                        amount: faker.datatype.number(),
-                        units: "EUR"
-                    }
-                ],
-                reservedAmount:[
-                    {
-                        amount: faker.datatype.number(),
-                        units: "EUR"
-                    }
-                ],
-                validFor: [
-                    {
-                        startDateTime: new Date(),
-                        endDateTime: new Date()
-                    }
-            
-                ],
-                status: "active",
-                product: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName()
-                    }
-                ],
-                partyAccount: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName()
-                    }
-                ],
-                realizingResource: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        value: "Resourse value"
-                    }
-                ],
-                relatedParty: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        role: "Customer"
-                    }
-                ]
-            }
-        ]
-    },
-    show_product_buckets: function(request)
-    {
-        console.log("prepay_balance_controller.show_product_buckets")
-
-        return {
-            id: request.params.bucket_id,
-            routeDetails: {
-                controller: 'Prepay Balance',
-                action: 'show_product_buckets'
-            },
-            href: faker.internet.url(),
-            name: faker.name.findName(),
-            description: faker.lorem.sentence(),
-            bucketType: "promotionalvoice" ,
-            remainedAmount: [
-                {
-                    amount: faker.datatype.number(),
-                    units: "EUR"
-                }
-            ],
-            reservedAmount:[
-                {
-                    amount: faker.datatype.number(),
-                    units: "EUR"
-                }
-            ],
-            validFor: [
-                {
-                    startDateTime: new Date(),
-                    endDateTime: new Date()
-                }
-        
-            ],
-            status: "active",
-            product: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                }
-            ],
-            partyAccount: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                }
-            ],
-            realizingResource: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    value: "Resourse value"
-                }
-            ],
-            relatedParty: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "Customer"
-                }
-            ]
-        
-        }
-    },
-    create_product_adjustments: function(request)
-    {
-        console.log("prepay_balance_controller.create_product_adjustments")
-
-        return {
-            id: faker.datatype.uuid(),
-            routeDetails: {
-                controller: 'Prepay Balance',
-                action: 'create_product_adjustments'
-            },
-            type: "voice",
-            reason: faker.lorem.sentence(),
-            amount: {
-                amount: faker.datatype.number(),
-                units: "EUR"
-            },
-            product:{
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                name: faker.name.findName()
-            }
-        }
-    },
-    index_product_adjustments: function(request)
-    {
-        console.log("prepay_balance_controller.index_product_adjustments")
-
-        return [
-            {
-                id: faker.datatype.uuid(),
-                routeDetails: {
-                    controller: 'Prepay Balance',
-                    action: 'index_product_adjustments'
-                },
-                type: "voice",
-                reason: faker.lorem.sentence(),
-                amount: {
-                    amount: faker.datatype.number(),
-                    units: "EUR"
-                },
-                product:{
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                href: faker.internet.url(),
-                description: faker.lorem.sentence(),
-                requestor: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "user"
-                },
-                validFor: {
-                    startDateTime: new Date(),
-                    endDateTime: new Date()
-                },
-                requestedDate: new Date(),
-                bucket: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                },
-                partyAccount: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                relatedParty: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        role: "customer"
-                    }
-                ]
-            }
-        ]
-    },
-    show_product_adjustments: function(request)
-    {
-        console.log("prepay_balance_controller.show_product_adjustments")
-
-        return {
-                id: request.params.adjustment_id,
-                routeDetails: {
-                    controller: 'Prepay Balance',
-                    action: 'show_product_adjustments'
-                },
-                type: "voice",
-                reason: faker.lorem.sentence(),
-                amount: {
-                    amount: faker.datatype.number(),
-                    units: "EUR"
-                },
-                product:{
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                href: faker.internet.url(),
-                description: faker.lorem.sentence(),
-                requestor: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "user"
-                },
-                validFor: {
-                    startDateTime: new Date(),
-                    endDateTime: new Date()
-                },
-                requestedDate: new Date(),
-                bucket: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                },
-                partyAccount: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                relatedParty: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        role: "customer"
-                    }
-                ]
-        }
-        
-    },
-    create_product_transfers: function(request)
-    {
-        console.log("prepay_balance_controller.create_product_transfers")
-
-        return {
-                id: faker.datatype.uuid(),
-                routeDetails: {
-                    controller: 'Prepay Balance',
-                    action: 'create_product_transfers'
-                },
-                type: "roaming voice",
-                channel: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                targetId: "name",
-                amount: {
-                    amount: faker.datatype.number(),
-                    units: "EUR"
-                },
-                product:{
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                }
-        }
-    },
-    index_product_transfers: function(request)
-    {
-        console.log("prepay_balance_controller.index_product_transfers")
-
-        return [
-            {
-                id: faker.datatype.uuid(),
-                routeDetails: {
-                    controller: 'Prepay Balance',
-                    action: 'index_product_transfers'
-                },
-                type: "roaming voice",
-                channel: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                targetId: "name",
-                amount: {
-                    amount: faker.datatype.number(),
-                    units: "EUR"
-                },
-                product:{
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                href: faker.internet.url(),
-                description: faker.lorem.sentence(),
-                reason: faker.lorem.sentence(),
-                requestor: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "user"
-                },
-                targetType: faker.lorem.sentence(),
-                receiver: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "billing account"
-                },
-                transferCost: {
-                    amount: faker.datatype.number(),
-                    units: "EUR"
-                },
-                costOwner: "originator",
-                requestedDate: new Date(),
-                confirmationDate: new Date(),
-                status: "confirmed",
-                bucket: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                },
-                partyAccount: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                relatedParty: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        role: "customer"
-                    }
-                ]
-            }
-        ]
-    },
-    create_product_topups: function(request)
-    {
-        console.log("prepay_balance_controller.create_product_topups")
-
-        return {
-            id: faker.datatype.uuid(),
-            routeDetails: {
-                controller: 'Prepay Balance',
-                action: 'create_product_topups'
-            },
-            type: "string",
-            channel: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                name: faker.name.findName()
-            },
-            amount:{
-                amount: faker.datatype.number(),
-                units: "EUR"
-            },
-            product:{
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                name: faker.name.findName(),
-                
-            }
-        }
-    },
-    index_product_topups: function(request)
-    {
-        console.log("prepay_balance_controller.index_product_topups")
-
-        return [
-            {
-                id: faker.datatype.uuid(),
-                routeDetails: {
-                    controller: 'Prepay Balance',
-                    action: 'index_product_topups'
-                },
-                type: "voice",
-                channel: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                amount:{
-                    amount: faker.datatype.number(),
-                    units: "EUR"
-                },
-                product:{
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                href: faker.internet.url(),
-                description: faker.lorem.sentence(),
-                requestor: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "Customer"
-                },
-                isAutoTopup: true,
-                recurringPeriod: "monthly",
-                nrOfPeriods: faker.datatype.number(),
-                paymentMethod: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    type: "credit card",
-                    details:{
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        role: "missing documentation"
-                    }
-                },
-                voucher: "voucher voice",
-                validFor: {
-                    startDateTime: new Date(),
-                    endDateTime: new Date()
-                },
-                requestedDate: new Date(),
-                confirmationDate: new Date(),
-                status: "confirmed",
-                bucket: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                partyAccount: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                relatedParty: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        role: "customer"
-                    }
-                ]
-            }
-        ]
-    },
-    create_product_topups_status: function(request)
-    {
-        console.log("prepay_balance_controller.create_product_topups_status")
-
-        return {
-            id: faker.datatype.uuid(),
-            routeDetails: {
-                controller: 'Prepay Balance',
-                action: 'create_product_topups_status'
-            },
-            status: "cancelled"
-        }
-    },
-    index_product_topups_status: function(request)
-    {
-        console.log("prepay_balance_controller.index_product_topups_status")
-
-        return {
-            id: faker.datatype.uuid(),
-            routeDetails: {
-                controller: 'Prepay Balance',
-                action: 'index_product_topups_status'
-            },
-            status: "cancelled",
-            statusChangeDate: new Date()
-        }
-    },
     index_buckets: function(request)
     {
         console.log("prepay_balance_controller.index_buckets")
-
         return [
             {
                 id: faker.datatype.uuid(),
@@ -513,66 +14,89 @@ module.exports = {
                     action: 'index_buckets'
                 },
                 href: faker.internet.url(),
-                name: faker.name.findName(),
-                description: faker.lorem.sentence(),
-                bucketType: "promotionalvoice" ,
-                remainedAmount: [
-                    {
-                        amount: faker.datatype.number(),
-                        units: "EUR"
-                    }
+                confirmationDate: new Date(),
+                description: "string",
+                isShared: true,
+                name: "string",
+                remainingValueName: "string",
+                requestedDate: new Date(),
+                logicalResource: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
                 ],
-                reservedAmount:[
-                    {
-                        amount: faker.datatype.number(),
-                        units: "EUR"
-                    }
-                ],
-                validFor: [
-                    {
-                        startDateTime: new Date(),
-                        endDateTime: new Date()
-                    }
-            
-                ],
-                status: "active",
+                partyAccount: {
+                  id: "string",
+                  href: "string",
+                  description: "string",
+                  name: "string",
+                  status: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
                 product: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName()
-                    }
-                ],
-                partyAccount: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName()
-                    }
-                ],
-                realizingResource: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        value: "Resourse value"
-                    }
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
                 ],
                 relatedParty: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        role: "Customer"
-                    }
-                ]
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    role: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
+                remainingValue: {
+                  amount: 1,
+                  units: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                reservedValue: {
+                  amount: 1,
+                  units: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                status: "active",
+                usageType: "monetary",
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date(),
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
             }
         ]
     },
     show_buckets: function(request)
     {
         console.log("prepay_balance_controller.show_buckets")
-
         return {
             id: request.params.bucket_id,
             routeDetails: {
@@ -580,283 +104,218 @@ module.exports = {
                 action: 'show_buckets'
             },
             href: faker.internet.url(),
-            name: faker.name.findName(),
-            description: faker.lorem.sentence(),
-            bucketType: "promotionalvoice" ,
-            remainedAmount: [
-                {
-                    amount: faker.datatype.number(),
-                    units: "EUR"
-                }
+            confirmationDate: new Date(),
+            description: "string",
+            isShared: true,
+            name: "string",
+            remainingValueName: "string",
+            requestedDate: new Date(),
+            logicalResource: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
             ],
-            reservedAmount:[
-                {
-                    amount: faker.datatype.number(),
-                    units: "EUR"
-                }
-            ],
-            validFor: [
-                {
-                    startDateTime: new Date(),
-                    endDateTime: new Date()
-                }
-        
-            ],
-            status: "active",
+            partyAccount: {
+              id: "string",
+              href: "string",
+              description: "string",
+              name: "string",
+              status: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
             product: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                }
-            ],
-            partyAccount: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                }
-            ],
-            realizingResource: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    value: "Resourse value"
-                }
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
             ],
             relatedParty: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "Customer"
-                }
-            ]
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            remainingValue: {
+              amount: 1,
+              units: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            reservedValue: {
+              amount: 1,
+              units: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            status: "active",
+            usageType: "monetary",
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date(),
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
-    index_accumulated_balance: function(request)
-    {
-        console.log("prepay_balance_controller.index_accumulated_balance")
 
-        return [
-            {   
-                id: faker.datatype.uuid(),
-                routeDetails: {
-                    controller: 'Prepay Balance',
-                    action: 'index_accumulated_balance'
-                },
-                name: faker.name.findName(),
-                description: faker.lorem.sentence(),
-                totalBalance: 
-                {
-                    amount: faker.datatype.number(),
-                    units: "EUR" 
-                },
-                bucket:[
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url()
-                    },
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url()
-                    }
-                ],
-                product: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName()
-                    }
-                ],
-                partyAccount: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                relatedParty: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        role: "customer"
-                    }
-                ]
-            }
-        ]
-    },
-    show_accumulated_balance_products: function(request)
+    index_topups: function(request)
     {
-        console.log("prepay_balance_controller.show_accumulated_balance_products")
-
-        return {
-                id: request.params.product_id,
-                routeDetails: {
-                   controller: 'Prepay Balance',
-                    action: 'show_accumulated_balance_products'
-                },
-                name: faker.name.findName(),
-                description: faker.lorem.sentence(),
-                totalBalance: 
-                {
-                    amount: faker.datatype.number(),
-                    units: "EUR" 
-                },
-                bucket:[
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url()
-                    },
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url()
-                    }
-                ],
-                product: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName()
-                    }
-                ],
-                partyAccount: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                relatedParty: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        role: "customer"
-                    }
-                ]
-        } 
-    },
-    index_activity: function(request)
-    {
-        console.log("prepay_balance_controller.index_activity")
-
+        console.log("prepay_balance_controller.index_topups")
         return [
             {
                 id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
-                    action: 'index_activity'
+                    action: 'index_topups'
                 },
-                type: 'temporary',
-                date: new Date(),
-                action: 
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url()
+                href: faker.internet.url(),
+                confirmationDate: new Date(),
+                description: "string",
+                isAutoTopup: true,
+                numberOfPeriods: 0,
+                reason: "string",
+                requestedDate: new Date(),
+                voucher: "string",
+                amount: {
+                  amount: 1,
+                  units: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
                 },
-                amount: 
-                {
-                    amount: faker.datatype.number(),
-                    units: "EUR" 
+                balanceTopup: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
                 },
-                bucketBalance: 
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url() 
+                bucket: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
                 },
-                amountBefore: 
-                {
-                    amount: faker.datatype.number(),
-                    units: "EUR" 
+                channel: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
                 },
-                amountAfter: 
-                {
-                    amount: faker.datatype.number(),
-                    units: "EUR" 
-                },
-                product: 
-                [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName()
-                    }
+                logicalResource: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
                 ],
                 partyAccount: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
+                  id: "string",
+                  href: "string",
+                  description: "string",
+                  name: "string",
+                  status: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
                 },
+                paymentMethod: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                product: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
+                recurringPeriod: "weekly",
                 relatedParty: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        role: "customer"
-                    }
-                ]
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    role: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
+                requestor: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                status: "created",
+                usageType: "monetary",
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date(),
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
             }
         ]
-    },
-    show_activity_products: function(request)
-    {
-        console.log("prepay_balance_controller.show_activity_products")
-
-        return {
-                id: request.params.product_id,
-                routeDetails: {
-                    controller: 'Prepay Balance',
-                    action: 'show_activity_products'
-                },
-                type: 'temporary',
-                date: new Date(),
-                action: 
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url()
-                },
-                amount: 
-                {
-                    amount: faker.datatype.number(),
-                    units: "EUR" 
-                },
-                bucketBalance: 
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url() 
-                },
-                amountBefore: 
-                {
-                    amount: faker.datatype.number(),
-                    units: "EUR" 
-                },
-                amountAfter: 
-                {
-                    amount: faker.datatype.number(),
-                    units: "EUR" 
-                },
-                product: 
-                [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName()
-                    }
-                ],
-                partyAccount: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                relatedParty: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        role: "customer"
-                    }
-                ]
-
-        }
     },
     create_topups: function(request)
     {
@@ -868,458 +327,515 @@ module.exports = {
                 controller: 'Prepay Balance',
                 action: 'create_topups'
             },
-            type: "string",
+            href: faker.internet.url(),
+            confirmationDate: new Date(),
+            description: "string",
+            isAutoTopup: true,
+            numberOfPeriods: 0,
+            reason: "string",
+            requestedDate: new Date(),
+            voucher: "string",
+            amount: {
+              amount: 1,
+              units: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            balanceTopup: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            bucket: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
             channel: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                name: faker.name.findName()
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
             },
-            amount:{
-                amount: faker.datatype.number(),
-                units: "EUR"
+            logicalResource: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            partyAccount: {
+              id: "string",
+              href: "string",
+              description: "string",
+              name: "string",
+              status: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
             },
-            product:{
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                name: faker.name.findName(),
-                
-            }
+            paymentMethod: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            product: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            recurringPeriod: "weekly",
+            relatedParty: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            requestor: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            status: "created",
+            usageType: "monetary",
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date(),
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
-    index_topups: function(request)
+    update_topups: function(request)
     {
-        console.log("prepay_balance_controller.index_topups")
-
-        return [
-            {
-                id: faker.datatype.uuid(),
+        console.log("prepay_balance_controller.update_topups")
+        return {
+            id: request.params.topup_id,
                 routeDetails: {
                     controller: 'Prepay Balance',
-                    action: 'index_topups'
+                    action: 'update_topups'
                 },
-                type: "voice",
-                channel: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                amount:{
-                    amount: faker.datatype.number(),
-                    units: "EUR"
-                },
-                product:{
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                href: faker.internet.url(),
-                description: faker.lorem.sentence(),
-                requestor: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "Customer"
-                },
-                isAutoTopup: true,
-                recurringPeriod: "monthly",
-                nrOfPeriods: faker.datatype.number(),
-                paymentMethod: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    type: "credit card",
-                    details:{
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        role: "missing documentation"
-                    }
-                },
-                voucher: "voucher voice",
-                validFor: {
-                    startDateTime: new Date(),
-                    endDateTime: new Date()
-                },
-                requestedDate: new Date(),
-                confirmationDate: new Date(),
-                status: "confirmed",
-                bucket: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                partyAccount: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                relatedParty: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        role: "customer"
-                    }
-                ]
-            }
-        ]
+            href: faker.internet.url(),
+            confirmationDate: new Date(),
+            description: "string",
+            isAutoTopup: true,
+            numberOfPeriods: 0,
+            reason: "string",
+            requestedDate: new Date(),
+            voucher: "string",
+            amount: {
+              amount: 1,
+              units: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            balanceTopup: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            bucket: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            channel: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            logicalResource: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            partyAccount: {
+              id: "string",
+              href: "string",
+              description: "string",
+              name: "string",
+              status: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            paymentMethod: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            product: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            recurringPeriod: "weekly",
+            relatedParty: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            requestor: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            status: "created",
+            usageType: "monetary",
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date(),
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+        }
     },
     show_topups: function(request)
     {
         console.log("prepay_balance_controller.show_topups")
 
         return {
-                id: request.params.topup_id,
+            id: request.params.topup_id,
                 routeDetails: {
                     controller: 'Prepay Balance',
                     action: 'show_topups'
                 },
-                type: "voice",
-                channel: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                amount:{
-                    amount: faker.datatype.number(),
-                    units: "EUR"
-                },
-                product:{
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
+            href: faker.internet.url(),
+            confirmationDate: new Date(),
+            description: "string",
+            isAutoTopup: true,
+            numberOfPeriods: 0,
+            reason: "string",
+            requestedDate: new Date(),
+            voucher: "string",
+            amount: {
+              amount: 1,
+              units: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            balanceTopup: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            bucket: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            channel: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            logicalResource: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            partyAccount: {
+              id: "string",
+              href: "string",
+              description: "string",
+              name: "string",
+              status: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            paymentMethod: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            product: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            recurringPeriod: "weekly",
+            relatedParty: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            requestor: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            status: "created",
+            usageType: "monetary",
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date(),
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+        }
+    },
+    destroy_topups: function(request)
+    {
+        console.log("prepay_balance_controller.destroy_topups")
+        return {
+            id: request.params.id,
+            routeDetails: {
+                controller: 'prepay_balance_controller',
+                action: 'destroy_topups'
+            },
+            code: 204,
+        }
+    },
+
+    
+    index_adjustments: function(request)
+    {
+        console.log("prepay_balance_controller.index_adjustments")
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'Prepay Balance',
+                    action: 'index_adjustments'
                 },
                 href: faker.internet.url(),
-                description: faker.lorem.sentence(),
+                confirmationDate: new Date(),
+                description: "string",
+                reason: "string",
+                requestedDate: new Date(),
+                adjustType: "recurring",
+                amount: {
+                  amount: 1,
+                  units: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                bucket: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                channel: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                logicalResource: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
+                partyAccount: {
+                  id: "string",
+                  href: "string",
+                  description: "string",
+                  name: "string",
+                  status: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                product: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
+                relatedParty: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    role: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
                 requestor: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "Customer"
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
                 },
-                isAutoTopup: true,
-                recurringPeriod: "monthly",
-                nrOfPeriods: faker.datatype.number(),
-                paymentMethod: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    type: "credit card",
-                    details:{
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        role: "missing documentation"
-                    }
-                },
-                voucher: "voucher voice",
+                status: "created",
+                usageType: "monetary",
                 validFor: {
-                    startDateTime: new Date(),
-                    endDateTime: new Date()
+                  endDateTime: new Date(),
+                  startDateTime: new Date(),
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
                 },
-                requestedDate: new Date(),
-                confirmationDate: new Date(),
-                status: "confirmed",
-                bucket: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                partyAccount: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                relatedParty: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        role: "customer"
-                    }
-                ]
-        }
-    },
-    index_topups_status: function(request)
-    {
-        console.log("prepay_balance_controller.index_topups_status")
-
-        return [
-            {
-                id: faker.datatype.uuid(),
-                routeDetails: {
-                    controller: 'Prepay Balance',
-                    action: 'index_topups_status'
-                },
-                status: "cancelled",
-                statusChangeDate: new Date()
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
             }
         ]
-    },
-    update_topups_status: function(request)
-    {
-        console.log("prepay_balance_controller.update_topups_status")
-
-        return {
-            id: request.params.topup_id,
-            routeDetails: {
-                controller: 'Prepay Balance',
-                action: 'update_topups_status'
-            },
-            status: "cancelled"
-        }
-    },
-    create_transfers: function(request)
-    {
-        console.log("prepay_balance_controller.create_transfers")
-
-        return {
-                id: faker.datatype.uuid(),
-                routeDetails: {
-                    controller: 'Prepay Balance',
-                    action: 'create_transfers'
-                },
-                type: "roaming voice",
-                channel: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                targetId: "name",
-                amount: {
-                    amount: faker.datatype.number(),
-                    units: "EUR"
-                },
-                product:{
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                }
-        }
-    },
-    index_transfers: function(request)
-    {
-        console.log("prepay_balance_controller.index_transfers")
-
-        return [
-            {
-                id: faker.datatype.uuid(),
-                routeDetails: {
-                    controller: 'Prepay Balance',
-                    action: 'index_transfers'
-                },
-                type: "roaming voice",
-                channel: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                targetId: "name",
-                amount: {
-                    amount: faker.datatype.number(),
-                    units: "EUR"
-                },
-                product:{
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                href: faker.internet.url(),
-                description: faker.lorem.sentence(),
-                reason: faker.lorem.sentence(),
-                requestor: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "user"
-                },
-                targetType: faker.lorem.sentence(),
-                receiver: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "billing account"
-                },
-                transferCost: {
-                    amount: faker.datatype.number(),
-                    units: "EUR"
-                },
-                costOwner: "originator",
-                requestedDate: new Date(),
-                confirmationDate: new Date(),
-                status: "confirmed",
-                bucket: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                },
-                partyAccount: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                relatedParty: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        role: "customer"
-                    }
-                ]
-            }
-        ]
-    },
-    show_transfers: function(request)
-    {
-        console.log("prepay_balance_controller.show_transfers")
-
-        return {
-                id: request.params.transfers_id,
-                routeDetails: {
-                    controller: 'Prepay Balance',
-                    action: 'show_transfers'
-                },
-                type: "roaming voice",
-                channel: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                targetId: "name",
-                amount: {
-                    amount: faker.datatype.number(),
-                    units: "EUR"
-                },
-                product:{
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                href: faker.internet.url(),
-                description: faker.lorem.sentence(),
-                reason: faker.lorem.sentence(),
-                requestor: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "user"
-                },
-                targetType: faker.lorem.sentence(),
-                receiver: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "billing account"
-                },
-                transferCost: {
-                    amount: faker.datatype.number(),
-                    units: "EUR"
-                },
-                costOwner: "originator",
-                requestedDate: new Date(),
-                confirmationDate: new Date(),
-                status: "confirmed",
-                bucket: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                },
-                partyAccount: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                relatedParty: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        role: "customer"
-                    }
-                ]
-        }
-    },
-    index_transfers_status: function(request)
-    {
-        console.log("prepay_balance_controller.index_transfers_status")
-
-        return [
-            {
-                id: faker.datatype.uuid(),
-                routeDetails: {
-                    controller: 'Prepay Balance',
-                    action: 'index_transfers_status'
-                },
-                type: "roaming voice",
-                channel: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                targetId: "name",
-                amount: {
-                    amount: faker.datatype.number(),
-                    units: "EUR"
-                },
-                product:{
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                href: faker.internet.url(),
-                description: faker.lorem.sentence(),
-                reason: faker.lorem.sentence(),
-                requestor: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "user"
-                },
-                targetType: faker.lorem.sentence(),
-                receiver: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "billing account"
-                },
-                transferCost: {
-                    amount: faker.datatype.number(),
-                    units: "EUR"
-                },
-                costOwner: "originator",
-                requestedDate: new Date(),
-                confirmationDate: new Date(),
-                status: "confirmed",
-                bucket: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                },
-                partyAccount: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                relatedParty: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        role: "customer"
-                    }
-                ]
-            }
-        ]
-    },
-    update_transfers_status: function(request)
-    {
-        console.log("prepay_balance_controller.update_transfers_status")
-
-        return{
-            id: request.params.transfers_id,
-            routeDetails: {
-                controller: 'Prepay Balance',
-                action: 'update_transfers_status'
-            },
-            status: "cancelled"
-        }
     },
     create_adjustments: function(request)
     {
@@ -1331,128 +847,2101 @@ module.exports = {
                 controller: 'Prepay Balance',
                 action: 'create_adjustments'
             },
-            type: "voice",
-            reason: faker.lorem.sentence(),
+            href: faker.internet.url(),
+            confirmationDate: new Date(),
+            description: "string",
+            reason: "string",
+            requestedDate: new Date(),
+            adjustType: "recurring",
             amount: {
-                amount: faker.datatype.number(),
-                units: "EUR"
+              amount: 1,
+              units: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
             },
-            product:{
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                name: faker.name.findName()
-            }
+            bucket: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            channel: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            logicalResource: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            partyAccount: {
+              id: "string",
+              href: "string",
+              description: "string",
+              name: "string",
+              status: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            product: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            relatedParty: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            requestor: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            status: "created",
+            usageType: "monetary",
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date(),
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+          }
+    },
+    update_adjustments: function(request)
+    {
+        console.log("prepay_balance_controller.update_adjustments")
+        return {
+            id: request.params.adjustments_id,
+            routeDetails: {
+                controller: 'Prepay Balance',
+                action: 'update_adjustments'
+            },
+            href: faker.internet.url(),
+            confirmationDate: new Date(),
+            description: "string",
+            reason: "string",
+            requestedDate: new Date(),
+            adjustType: "recurring",
+            amount: {
+              amount: 1,
+              units: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            bucket: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            channel: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            logicalResource: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            partyAccount: {
+              id: "string",
+              href: "string",
+              description: "string",
+              name: "string",
+              status: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            product: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            relatedParty: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            requestor: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            status: "created",
+            usageType: "monetary",
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date(),
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+          }
+    },
+    show_adjustments: function(request)
+    {
+        console.log("prepay_balance_controller.show_adjustments")
+        return {
+            id: request.params.adjustments_id,
+            routeDetails: {
+                controller: 'Prepay Balance',
+                action: 'show_adjustments'
+            },
+            href: faker.internet.url(),
+            confirmationDate: new Date(),
+            description: "string",
+            reason: "string",
+            requestedDate: new Date(),
+            adjustType: "recurring",
+            amount: {
+              amount: 1,
+              units: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            bucket: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            channel: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            logicalResource: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            partyAccount: {
+              id: "string",
+              href: "string",
+              description: "string",
+              name: "string",
+              status: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            product: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            relatedParty: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            requestor: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            status: "created",
+            usageType: "monetary",
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date(),
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+          }
+    },
+    destroy_adjustments: function(request)
+    {
+        console.log("prepay_balance_controller.destroy_adjustments")
+        return {
+            id: request.params.id,
+            routeDetails: {
+                controller: 'prepay_balance_controller',
+                action: 'destroy_adjustments'
+            },
+            code: 204,
         }
     },
-    index_adjustments: function(request)
-    {
-        console.log("prepay_balance_controller.index_adjustments")
 
+    index_transfers: function(request)
+    {
+        console.log("prepay_balance_controller.index_transfers")
+        
         return [
             {
                 id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Prepay Balance',
-                    action: 'index_adjustments'
-                },
-                type: "voice",
-                reason: faker.lorem.sentence(),
-                amount: {
-                    amount: faker.datatype.number(),
-                    units: "EUR"
-                },
-                product:{
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
+                    action: 'index_transfers'
                 },
                 href: faker.internet.url(),
-                description: faker.lorem.sentence(),
-                requestor: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "user"
-                },
-                validFor: {
-                    startDateTime: new Date(),
-                    endDateTime: new Date()
-                },
+                confirmationDate: new Date(),
+                description: "string",
+                reason: "string",
                 requestedDate: new Date(),
-                bucket: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
+                amount: {
+                  amount: 1,
+                  units: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
                 },
+                bucket: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                channel: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                costOwner: "originator",
+                logicalResource: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
                 partyAccount: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
+                  id: "string",
+                  href: "string",
+                  description: "string",
+                  name: "string",
+                  status: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                product: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
+                receiver: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                receiverBucket: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                receiverBucketUsageType: "monetary",
+                receiverLogicalResource: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                receiverProduct: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
                 },
                 relatedParty: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        role: "customer"
-                    }
-                ]
-
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    role: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
+                requestor: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                status: "created",
+                transferCost: {
+                  unit: "string",
+                  value: 0,
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                usageType: "monetary",
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date(),
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
             }
         ]
     },
-    show_adjustments: function(request)
+    create_transfers: function(request)
     {
-        console.log("prepay_balance_controller.show_adjustments")
+        console.log("prepay_balance_controller.create_transfers")
 
         return {
-                id: request.params.adjustments_id,
-                routeDetails: {
-                    controller: 'Prepay Balance',
-                    action: 'show_adjustments'
-                },
-                type: "voice",
-                reason: faker.lorem.sentence(),
-                amount: {
-                    amount: faker.datatype.number(),
-                    units: "EUR"
-                },
-                product:{
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                href: faker.internet.url(),
-                description: faker.lorem.sentence(),
-                requestor: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "user"
-                },
-                validFor: {
-                    startDateTime: new Date(),
-                    endDateTime: new Date()
-                },
-                requestedDate: new Date(),
-                bucket: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                },
-                partyAccount: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                },
-                relatedParty: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        role: "customer"
-                    }
-                ]
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Prepay Balance',
+                action: 'create_transfers'
+            },
+            href: faker.internet.url(),
+            confirmationDate: new Date(),
+            description: "string",
+            reason: "string",
+            requestedDate: new Date(),
+            amount: {
+              amount: 1,
+              units: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            bucket: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            channel: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            costOwner: "originator",
+            logicalResource: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            partyAccount: {
+              id: "string",
+              href: "string",
+              description: "string",
+              name: "string",
+              status: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            product: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            receiver: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            receiverBucket: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            receiverBucketUsageType: "monetary",
+            receiverLogicalResource: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            receiverProduct: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            relatedParty: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            requestor: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            status: "created",
+            transferCost: {
+              unit: "string",
+              value: 0,
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            usageType: "monetary",
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date(),
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
+    update_transfers: function(request)
+    {
+        console.log("prepay_balance_controller.show_transfers")
+        return {
+            id: request.params.transfers_id,
+            routeDetails: {
+                controller: 'Prepay Balance',
+                action: 'update_transfers'
+            },
+            href: faker.internet.url(),
+            confirmationDate: new Date(),
+            description: "string",
+            reason: "string",
+            requestedDate: new Date(),
+            amount: {
+              amount: 1,
+              units: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            bucket: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            channel: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            costOwner: "originator",
+            logicalResource: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            partyAccount: {
+              id: "string",
+              href: "string",
+              description: "string",
+              name: "string",
+              status: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            product: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            receiver: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            receiverBucket: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            receiverBucketUsageType: "monetary",
+            receiverLogicalResource: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            receiverProduct: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            relatedParty: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            requestor: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            status: "created",
+            transferCost: {
+              unit: "string",
+              value: 0,
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            usageType: "monetary",
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date(),
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+        }
+    },
+    show_transfers: function(request)
+    {
+        console.log("prepay_balance_controller.show_transfers")
+        return {
+            id: request.params.transfers_id,
+            routeDetails: {
+                controller: 'Prepay Balance',
+                action: 'show_transfers'
+            },
+            href: faker.internet.url(),
+            confirmationDate: new Date(),
+            description: "string",
+            reason: "string",
+            requestedDate: new Date(),
+            amount: {
+              amount: 1,
+              units: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            bucket: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            channel: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            costOwner: "originator",
+            logicalResource: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            partyAccount: {
+              id: "string",
+              href: "string",
+              description: "string",
+              name: "string",
+              status: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            product: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            receiver: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            receiverBucket: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            receiverBucketUsageType: "monetary",
+            receiverLogicalResource: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            receiverProduct: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            relatedParty: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            requestor: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            status: "created",
+            transferCost: {
+              unit: "string",
+              value: 0,
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            usageType: "monetary",
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date(),
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+        }
+    },
+    destroy_transfers: function(request)
+    {
+        console.log("prepay_balance_controller.destroy_transfers")
+        return {
+            id: request.params.id,
+            routeDetails: {
+                controller: 'prepay_balance_controller',
+                action: 'destroy_transfers'
+            },
+            code: 204,
+        }
+    },
+
+    index_reserve: function(request)
+    {
+        console.log("prepay_balance_controller.index_reserve")
+        
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'Prepay Balance',
+                    action: 'index_reserve'
+                },
+                href: faker.internet.url(),
+                confirmationDate: new Date(),
+                description: "string",
+                reason: "string",
+                requestedDate: new Date(),
+                amount: {
+                  amount: 1,
+                  units: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                bucket: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                channel: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                logicalResource: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
+                partyAccount: {
+                  id: "string",
+                  href: "string",
+                  description: "string",
+                  name: "string",
+                  status: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                product: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
+                relatedParty: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    role: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
+                requestor: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                status: "created",
+                usageType: "monetary",
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date(),
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+            }
+        ]
+    },
+    create_reserve: function(request)
+    {
+        console.log("prepay_balance_controller.create_reserve")
+        return {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'Prepay Balance',
+                    action: 'create_reserve'
+                },
+                href: faker.internet.url(),
+                confirmationDate: new Date(),
+                description: "string",
+                reason: "string",
+                requestedDate: new Date(),
+                amount: {
+                  amount: 1,
+                  units: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                bucket: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                channel: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                logicalResource: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
+                partyAccount: {
+                  id: "string",
+                  href: "string",
+                  description: "string",
+                  name: "string",
+                  status: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                product: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
+                relatedParty: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    role: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
+                requestor: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                status: "created",
+                usageType: "monetary",
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date(),
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+            }
+    },
+    update_reserve: function(request)
+    {
+        console.log("prepay_balance_controller.update_reserve")
+        return {
+            id: request.params.reserve_id,
+            routeDetails: {
+                controller: 'Prepay Balance',
+                action: 'update_reserve'
+            },
+            href: faker.internet.url(),
+                confirmationDate: new Date(),
+                description: "string",
+                reason: "string",
+                requestedDate: new Date(),
+                amount: {
+                  amount: 1,
+                  units: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                bucket: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                channel: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                logicalResource: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
+                partyAccount: {
+                  id: "string",
+                  href: "string",
+                  description: "string",
+                  name: "string",
+                  status: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                product: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
+                relatedParty: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    role: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
+                requestor: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                status: "created",
+                usageType: "monetary",
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date(),
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+            }
+    },
+    show_reserve: function(request)
+    {
+        console.log("prepay_balance_controller.show_reserve")
+        return {
+            id: request.params.reserve_id,
+            routeDetails: {
+                controller: 'Prepay Balance',
+                action: 'show_reserve'
+            },
+            href: faker.internet.url(),
+                confirmationDate: new Date(),
+                description: "string",
+                reason: "string",
+                requestedDate: new Date(),
+                amount: {
+                  amount: 1,
+                  units: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                bucket: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                channel: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                logicalResource: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
+                partyAccount: {
+                  id: "string",
+                  href: "string",
+                  description: "string",
+                  name: "string",
+                  status: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                product: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
+                relatedParty: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    role: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
+                requestor: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                status: "created",
+                usageType: "monetary",
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date(),
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+            }
+    },
+    destroy_reserve: function(request)
+    {
+        console.log("prepay_balance_controller.destroy_reserve")
+        return {
+            id: request.params.reserve_id,
+            routeDetails: {
+                controller: 'prepay_balance_controller',
+                action: 'destroy_reserve'
+            },
+            code: 204,
+        }
+    },
+
+   
+
+    index_accumulated_balance: function(request)
+    {
+        console.log("prepay_balance_controller.index_accumulated_balance")
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'Prepay Balance',
+                    action: 'index_accumulated_balance'
+                },
+                href: faker.internet.url(),
+                description: "string",
+                name: "string",
+                bucket: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
+                logicalResource: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                partyAccount: {
+                  id: "string",
+                  href: "string",
+                  description: "string",
+                  name: "string",
+                  status: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                product: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
+                relatedParty: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    role: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
+                totalBalance: {
+                  amount: 1,
+                  units: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+            }
+        ]
+    },
+    show_accumulated_balance: function(request)
+    {
+        console.log("prepay_balance_controller.show_accumulated_balance")
+        
+        return {
+            id: request.params.product_id,
+                routeDetails: {
+                   controller: 'Prepay Balance',
+                    action: 'show_accumulated_balance'
+                },
+            href: faker.internet.url(),
+            description: "string",
+            name: "string",
+            bucket: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            logicalResource: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "ResourceSpecification",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+              "@type": "LogicalResourceSpecification",
+              "@referredType": "string"
+            },
+            partyAccount: {
+              id: "string",
+              href: "string",
+              description: "string",
+              name: "string",
+              status: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            product: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            relatedParty: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                "@type": "LogicalResourceSpecification",
+                "@referredType": "string"
+              }
+            ],
+            totalBalance: {
+              amount: 1,
+              units: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+        }
+    },
+
+    index_action_history: function(request)
+    {
+        console.log("prepay_balance_controller.index_action_history")
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'Prepay Balance',
+                    action: 'index_action_history'
+                },
+                href: faker.internet.url(),
+                confirmationDate: new Date(),
+                description: "string",
+                isAutoTopup: true,
+                numberOfPeriods: 0,
+                reason: "string",
+                requestedDate: new Date(),
+                voucher: "string",
+                adjustType: "recurring",
+                amount: {
+                  amount: 1,
+                  units: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                balanceTopup: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                bucket: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                channel: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                costOwner: "originator",
+                logicalResource: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
+                partyAccount: {
+                  id: "string",
+                  href: "string",
+                  description: "string",
+                  name: "string",
+                  status: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                paymentMethod: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                product: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
+                receiver: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                receiverBucket: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                receiverBucketUsageType: "monetary",
+                receiverLogicalResource: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                receiverProduct: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                recurringPeriod: "weekly",
+                relatedParty: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    role: "string",
+                    "@baseType": "ResourceSpecification",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                    "@type": "LogicalResourceSpecification",
+                    "@referredType": "string"
+                  }
+                ],
+                requestor: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "ResourceSpecification",
+                  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+                  "@type": "LogicalResourceSpecification",
+                  "@referredType": "string"
+                },
+                status: "created",
+                transferCost: {
+                  unit: "string",
+                  value: 0,
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                usageType: "monetary",
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date(),
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+        ]
+    },
+    show_action_history: function(request)
+    {
+        console.log("prepay_balance_controller.show_action_history")
+        return {
+            id: request.params.product_id,
+            routeDetails: {
+                controller: 'Prepay Balance',
+                action: 'show_action_history'
+            },
+        confirmationDate: new Date(),
+        description: "string",
+        isAutoTopup: true,
+        numberOfPeriods: 0,
+        reason: "string",
+        requestedDate: new Date(),
+        voucher: "string",
+        adjustType: "recurring",
+        amount: {
+          amount: 1,
+          units: "string",
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "@type": "string"
+        },
+        balanceTopup: {
+          id: "string",
+          href: "string",
+          name: "string",
+          role: "string",
+          "@baseType": "ResourceSpecification",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+          "@type": "LogicalResourceSpecification",
+          "@referredType": "string"
+        },
+        bucket: {
+          id: "string",
+          href: "string",
+          name: "string",
+          "@baseType": "ResourceSpecification",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+          "@type": "LogicalResourceSpecification",
+          "@referredType": "string"
+        },
+        channel: {
+          id: "string",
+          href: "string",
+          name: "string",
+          "@baseType": "ResourceSpecification",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+          "@type": "LogicalResourceSpecification",
+          "@referredType": "string"
+        },
+        costOwner: "originator",
+        logicalResource: [
+          {
+            id: "string",
+            href: "string",
+            name: "string",
+            "@baseType": "ResourceSpecification",
+            "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+            "@type": "LogicalResourceSpecification",
+            "@referredType": "string"
+          }
+        ],
+        partyAccount: {
+          id: "string",
+          href: "string",
+          description: "string",
+          name: "string",
+          status: "string",
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "@type": "string",
+          "@referredType": "string"
+        },
+        paymentMethod: {
+          id: "string",
+          href: "string",
+          name: "string",
+          "@baseType": "ResourceSpecification",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+          "@type": "LogicalResourceSpecification",
+          "@referredType": "string"
+        },
+        product: [
+          {
+            id: "string",
+            href: "string",
+            name: "string",
+            "@baseType": "ResourceSpecification",
+            "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+            "@type": "LogicalResourceSpecification",
+            "@referredType": "string"
+          }
+        ],
+        receiver: {
+          id: "string",
+          href: "string",
+          name: "string",
+          role: "string",
+          "@baseType": "ResourceSpecification",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+          "@type": "LogicalResourceSpecification",
+          "@referredType": "string"
+        },
+        receiverBucket: {
+          id: "string",
+          href: "string",
+          name: "string",
+          "@baseType": "ResourceSpecification",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+          "@type": "LogicalResourceSpecification",
+          "@referredType": "string"
+        },
+        receiverBucketUsageType: "monetary",
+        receiverLogicalResource: {
+          id: "string",
+          href: "string",
+          name: "string",
+          "@baseType": "ResourceSpecification",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+          "@type": "LogicalResourceSpecification",
+          "@referredType": "string"
+        },
+        receiverProduct: {
+          id: "string",
+          href: "string",
+          name: "string",
+          "@baseType": "ResourceSpecification",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+          "@type": "LogicalResourceSpecification",
+          "@referredType": "string"
+        },
+        recurringPeriod: "weekly",
+        relatedParty: [
+          {
+            id: "string",
+            href: "string",
+            name: "string",
+            role: "string",
+            "@baseType": "ResourceSpecification",
+            "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+            "@type": "LogicalResourceSpecification",
+            "@referredType": "string"
+          }
+        ],
+        requestor: {
+          id: "string",
+          href: "string",
+          name: "string",
+          role: "string",
+          "@baseType": "ResourceSpecification",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+          "@type": "LogicalResourceSpecification",
+          "@referredType": "string"
+        },
+        status: "created",
+        transferCost: {
+          unit: "string",
+          value: 0,
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "@type": "string"
+        },
+        usageType: "monetary",
+        validFor: {
+          endDateTime: new Date(),
+          startDateTime: new Date(),
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "@type": "string"
+        },
+        "@baseType": "string",
+        "@schemaLocation": "string",
+        "@type": "string"
+      }
+    },
+
+
+    create_listener_topup_create_event: function(request)
+    {
+        console.log("prepay_balance_controller.create_listener_topup_create_event")
+
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Prepay Balance',
+                action: 'create_listener_topup_create_event'
+            },
+            code: 204
+        }
+    },
+    create_listener_topup_cancel_event: function(request)
+    {
+        console.log("prepay_balance_controller.create_listener_topup_cancel_event")
+
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Prepay Balance',
+                action: 'create_listener_topup_cancel_event'
+            },
+            code: 204
+        }
+    },
+    create_listener_topup_failure_event: function(request)
+    {
+        console.log("prepay_balance_controller.create_listener_topup_failure_event")
+
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Prepay Balance',
+                action: 'create_listener_topup_failure_event'
+            },
+            code: 204
+        }
+    },
+
+    create_listener_adjust_create_event: function(request)
+    {
+        console.log("prepay_balance_controller.create_listener_adjust_create_event")
+
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Prepay Balance',
+                action: 'create_listener_adjust_create_event'
+            },
+            code: 204
+        }
+    },
+    create_listener_adjust_cancel_event: function(request)
+    {
+        console.log("prepay_balance_controller.create_listener_adjust_cancel_event")
+
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Prepay Balance',
+                action: 'create_listener_adjust_cancel_event'
+            },
+            code: 204
+        }
+    },
+    create_listener_adjust_failure_event: function(request)
+    {
+        console.log("prepay_balance_controller.create_listener_adjust_failure_event")
+
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Prepay Balance',
+                action: 'create_listener_adjust_failure_event'
+            },
+            code: 204
+        }
+    },
+
+    create_listener_transfer_create_event: function(request)
+    {
+        console.log("prepay_balance_controller.create_listener_transfer_create_event")
+
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Prepay Balance',
+                action: 'create_listener_transfer_create_event'
+            },
+            code: 204
+        }
+    },
+    create_listener_transfer_cancel_event: function(request)
+    {
+        console.log("prepay_balance_controller.create_listener_transfer_cancel_event")
+
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Prepay Balance',
+                action: 'create_listener_transfer_cancel_event'
+            },
+            code: 204
+        }
+    },
+    create_listener_transfer_failure_event: function(request)
+    {
+        console.log("prepay_balance_controller.create_listener_transfer_failure_event")
+
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Prepay Balance',
+                action: 'create_listener_transfer_failure_event'
+            },
+            code: 204
+        }
+    },
+
+    create_listener_reserve_create_event: function(request)
+    {
+        console.log("prepay_balance_controller.create_listener_reserve_create_event")
+
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Prepay Balance',
+                action: 'create_listener_reserve_create_event'
+            },
+            code: 204
+        }
+    },
+    create_listener_reserve_cancel_event: function(request)
+    {
+        console.log("prepay_balance_controller.create_listener_reserve_cancel_event")
+
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Prepay Balance',
+                action: 'create_listener_reserve_cancel_event'
+            },
+            code: 204
+        }
+    },
+    create_listener_reserve_failure_event: function(request)
+    {
+        console.log("prepay_balance_controller.create_listener_reserve_failure_event")
+
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Prepay Balance',
+                action: 'create_listener_reserve_failure_event'
+            },
+            code: 204
+        }
+    },
+    
+
+
     create_hub: function(request)
     {
         console.log("prepay_balance_controller.create_hub")
@@ -1476,98 +2965,7 @@ module.exports = {
                 controller: 'Prepay Balance',
                 action: 'destroy_hub'
             },
-            message: "Have succesfully removed"
-        }
-    },
-    create_client_listener: function(request)
-    {
-        console.log("prepay_balance_controller.create_client_listener")
-
-        return {
-            id: faker.datatype.uuid(),
-            routeDetails: {
-                controller: 'Prepay Balance',
-                action: 'create_client_listener'
-            },
-            eventId : faker.datatype.uuid(),
-            eventType: "string",
-            event: {
-                id: faker.datatype.uuid(),
-                callback: "string",
-                query: "string"
-            }
-        }
-    },
-    reserve: function(request)
-    {
-        console.log("prepay_balance_controller.reserve")
-
-        return {
-                id: faker.datatype.uuid(),
-                routeDetails: {
-                    controller: 'Prepay Balance',
-                    action: 'reserve'
-                },
-                relatedParty: 
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "customer"
-                },
-                reservedAmount: {
-                    amount: faker.datatype.number(),
-                    units: "EUR"
-                }
-        }
-    },
-    unreserve: function(request)
-    {
-        console.log("prepay_balance_controller.unreserve")
-
-        return {
-                id: faker.datatype.uuid(),
-                routeDetails: {
-                    controller: 'Prepay Balance',
-                    action: 'unreserve'
-                },
-                
-                relatedParty: 
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "customer"
-                },
-                balanceReserve: {
-                    id: "string",
-                    href: faker.internet.url()
-                }
-        }
-    },
-    deduct: function(request)
-    {
-        console.log("prepay_balance_controller.deduct")
-
-        return {
-                id: faker.datatype.uuid(),
-                routeDetails: {
-                    controller: 'Prepay Balance',
-                    action: 'deduct'
-                },
-                reason: faker.lorem.sentence(),
-                relatedParty: 
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "customer"
-                },
-                balanceReserve: {
-                    id: "string",
-                    href: faker.internet.url()
-                }
+            code: 204
         }
     }
-
 }
