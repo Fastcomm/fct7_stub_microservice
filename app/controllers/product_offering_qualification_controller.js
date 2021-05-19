@@ -2606,5 +2606,99 @@ module.exports = {
             },
             code: 204
         }
+    },
+
+    create_listener_create_event: function(request)
+    {
+        console.log("product_offering_qualification_controller.create_listener_create_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'product_offering_qualification_controller',
+                action: 'create_listener_create_event'
+            },
+            "callback": "string",
+            "query": "string" 
+        }
+    },
+    create_listener_attribute_value_change: function(request)
+    {
+        console.log("product_offering_qualification_controller.create_listener_attribute_value_change")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'product_offering_qualification_controller',
+                action: 'create_listener_attribute_value_change'
+            },
+            "callback": "string",
+            "query": "string" 
+        }
+    },
+    create_listener_state_change_event: function(request)
+    {
+        console.log("product_offering_qualification_controller.create_listener_state_change_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'product_offering_qualification_controller',
+                action: 'create_listener_state_change_event'
+            },
+            "callback": "string",
+            "query": "string" 
+        }
+    },
+    create_listener_delete_event: function(request)
+    {
+        console.log("product_offering_qualification_controller.create_listener_delete_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'product_offering_qualification_controller',
+                action: 'create_listener_delete_event'
+            },
+            "callback": "string",
+            "query": "string" 
+        }
+    },
+    create_listener_information_required_event: function(request)
+    {
+        console.log("product_offering_qualification_controller.create_listener_information_required_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'product_offering_qualification_controller',
+                action: 'create_listener_information_required_event'
+            },
+            "callback": "string",
+            "query": "string" 
+        }
+    },
+
+    create_hub: function(request)
+    {
+        console.log("product_offering_qualification_controller.create_hub")
+        
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'product_offering_qualification_controller',
+                action: 'create_hub'
+            },
+            callback: "string",
+            query: null
+        }
+    },
+    destroy_hub: function(request)
+    {
+        console.log("product_offering_qualification_controller.destroy_hub")
+
+        return {
+            id: request.params.hub_id,
+            routeDetails: {
+                controller: 'product_offering_qualification_controller',
+                action: 'destroy_hub'
+            },
+            code: 204
+        }
     }
 }
