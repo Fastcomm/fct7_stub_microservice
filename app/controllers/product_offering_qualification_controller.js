@@ -2677,7 +2677,6 @@ module.exports = {
     create_hub: function(request)
     {
         console.log("product_offering_qualification_controller.create_hub")
-        
         return {
             id: faker.datatype.uuid(),
             routeDetails: {
@@ -2691,7 +2690,6 @@ module.exports = {
     destroy_hub: function(request)
     {
         console.log("product_offering_qualification_controller.destroy_hub")
-
         return {
             id: request.params.hub_id,
             routeDetails: {
