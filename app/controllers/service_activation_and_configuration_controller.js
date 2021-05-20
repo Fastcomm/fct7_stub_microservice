@@ -6,9 +6,8 @@ module.exports = {
     index_service: function(request)
     {
         console.log("service_activation_and_configuration_controller.index_service")
-        
         return [
-            {  
+            {
                 id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Service Activation and Configuration',
@@ -16,179 +15,268 @@ module.exports = {
                 },
                 href: faker.internet.url(),
                 category: "string",
-                description: faker.lorem.sentence(),
+                description: "string",
                 endDate: new Date(),
                 hasStarted: true,
                 isServiceEnabled: true,
                 isStateful: true,
-                name: faker.name.findName(),
-                serviceDate: new Date(),
+                name: "string",
+                serviceDate: "string",
                 serviceType: "string",
                 startDate: new Date(),
                 startMode: "string",
                 note: [
-                    {
-                        author: faker.name.findName(),
-                        date: new Date(),
-                        system: "string",
-                        text: "string"
-                    }
+                  {
+                    author: "string",
+                    date: new Date(),
+                    system: "string",
+                    text: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
                 ],
                 place: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        role: "user"
-                    }
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    role: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
                 ],
                 relatedParty: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        role: "user"
-                    }
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    role: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
                 ],
                 serviceCharacteristic: [
-                    {
-                        name: faker.name.findName(),
-                        valueType: "string"
-                    }
+                  {
+                    name: "string",
+                    valueType: "string",
+                    value: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
                 ],
                 serviceOrder: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        serviceOrderItemId: "string"
-                    }
+                  {
+                    id: "string",
+                    href: "string",
+                    serviceOrderItemId: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
                 ],
                 serviceRelationship: [
-                    {
-                        relationshipType: "string",
-                        service: 
-                        {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url()
-                        }
-                    }
+                  {
+                    relationshipType: "string",
+                    service: {
+                      id: "string",
+                      href: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
                 ],
                 serviceSpecification: {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        version:"string",
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  version: "string",
+                  targetServiceSchema: {
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  },
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
                 },
                 state: "feasibilityChecked",
                 supportingResource: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                    }
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
                 ],
                 supportingService: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url()
-                    }
-                ]
+                  {
+                    id: "string",
+                    href: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
             }
         ]
     },
     create_service: function(request)
     {
         console.log("service_activation_and_configuration_controller.create_service")
-        return {  
+        return {
             id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'create_service'
-            }, 
+            },
+            href: faker.internet.url(),
             category: "string",
-            description: faker.lorem.sentence(),
+            description: "string",
             endDate: new Date(),
             hasStarted: true,
             isServiceEnabled: true,
             isStateful: true,
-            name: faker.name.findName(),
-            serviceDate: new Date(),
+            name: "string",
+            serviceDate: "string",
             serviceType: "string",
             startDate: new Date(),
             startMode: "string",
             note: [
-                {
-                    author: faker.name.findName(),
-                    date: new Date(),
-                    system: "string",
-                    text: "string"
-                }
+              {
+                author: "string",
+                date: new Date(),
+                system: "string",
+                text: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
             place: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "user"
-                }
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
             relatedParty: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "user"
-                }
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             serviceCharacteristic: [
-                {
-                    name: faker.name.findName(),
-                    valueType: "string"
-                }
+              {
+                name: "string",
+                valueType: "string",
+                value: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
             serviceOrder: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    serviceOrderItemId: "string"
-                }
+              {
+                id: "string",
+                href: "string",
+                serviceOrderItemId: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             serviceRelationship: [
-                {
-                    relationshipType: "string",
-                    service: 
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url()
-                    }
-                }
+              {
+                relationshipType: "string",
+                service: {
+                  id: "string",
+                  href: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
             serviceSpecification: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    version:"string",
+              id: "string",
+              href: "string",
+              name: "string",
+              version: "string",
+              targetServiceSchema: {
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              },
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
             },
             state: "feasibilityChecked",
             supportingResource: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                }
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             supportingService: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url()
-                }
-            ]
+              {
+                id: "string",
+                href: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     show_service: function(request)
     {
         console.log("service_activation_and_configuration_controller.show_service")
-        return {  
+        return {
             id: request.params.id,
             routeDetails: {
                 controller: 'Service Activation and Configuration',
@@ -196,172 +284,261 @@ module.exports = {
             },
             href: faker.internet.url(),
             category: "string",
-            description: faker.lorem.sentence(),
+            description: "string",
             endDate: new Date(),
             hasStarted: true,
             isServiceEnabled: true,
             isStateful: true,
-            name: faker.name.findName(),
-            serviceDate: new Date(),
+            name: "string",
+            serviceDate: "string",
             serviceType: "string",
             startDate: new Date(),
             startMode: "string",
             note: [
-                {
-                    author: faker.name.findName(),
-                    date: new Date(),
-                    system: "string",
-                    text: "string"
-                }
+              {
+                author: "string",
+                date: new Date(),
+                system: "string",
+                text: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
             place: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "user"
-                }
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
             relatedParty: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "user"
-                }
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             serviceCharacteristic: [
-                {
-                    name: faker.name.findName(),
-                    valueType: "string"
-                }
+              {
+                name: "string",
+                valueType: "string",
+                value: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
             serviceOrder: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    serviceOrderItemId: "string"
-                }
+              {
+                id: "string",
+                href: "string",
+                serviceOrderItemId: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             serviceRelationship: [
-                {
-                    relationshipType: "string",
-                    service: 
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url()
-                    }
-                }
+              {
+                relationshipType: "string",
+                service: {
+                  id: "string",
+                  href: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
             serviceSpecification: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    version:"string",
+              id: "string",
+              href: "string",
+              name: "string",
+              version: "string",
+              targetServiceSchema: {
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              },
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
             },
             state: "feasibilityChecked",
             supportingResource: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                }
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             supportingService: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url()
-                }
-            ]
+              {
+                id: "string",
+                href: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     update_service: function(request)
     {
         console.log("service_activation_and_configuration_controller.update_service")
-        return {  
+        return {
             id: request.params.id,
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'update_service'
             },
+            href: faker.internet.url(),
             category: "string",
-            description: faker.lorem.sentence(),
+            description: "string",
             endDate: new Date(),
             hasStarted: true,
             isServiceEnabled: true,
             isStateful: true,
-            name: faker.name.findName(),
-            serviceDate: new Date(),
+            name: "string",
+            serviceDate: "string",
             serviceType: "string",
             startDate: new Date(),
             startMode: "string",
             note: [
-                {
-                    author: faker.name.findName(),
-                    date: new Date(),
-                    system: "string",
-                    text: "string"
-                }
+              {
+                author: "string",
+                date: new Date(),
+                system: "string",
+                text: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
             place: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "user"
-                }
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
             relatedParty: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    role: "user"
-                }
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             serviceCharacteristic: [
-                {
-                    name: faker.name.findName(),
-                    valueType: "string"
-                }
+              {
+                name: "string",
+                valueType: "string",
+                value: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
             serviceOrder: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    serviceOrderItemId: "string"
-                }
+              {
+                id: "string",
+                href: "string",
+                serviceOrderItemId: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             serviceRelationship: [
-                {
-                    relationshipType: "string",
-                    service: 
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url()
-                    }
-                }
+              {
+                relationshipType: "string",
+                service: {
+                  id: "string",
+                  href: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
             serviceSpecification: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    version:"string",
+              id: "string",
+              href: "string",
+              name: "string",
+              version: "string",
+              targetServiceSchema: {
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              },
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
             },
             state: "feasibilityChecked",
             supportingResource: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                }
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             supportingService: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url()
-                }
-            ]
+              {
+                id: "string",
+                href: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     destroy_service: function(request)
@@ -380,79 +557,108 @@ module.exports = {
             referenceError: "string"
         }
     },
+
     index_monitor: function(request)
     {
         console.log("service_activation_and_configuration_controller.index_monitor")
-        
         return [
-            {  
+            {
                 id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Service Activation and Configuration',
                     action: 'index_monitor'
                 },
-                href: faker.internet.url(),
                 sourceHref: "string",
                 state: "string",
                 request: {
-                    body: "string",
-                    method: "string",
-                    to: "string",
-                    header: [
-                        {
-                            name: faker.name.findName(),
-                            value: faker.datatype.number()
-                        }
-                    ]
+                  body: "string",
+                  method: "string",
+                  to: "string",
+                  header: [
+                    {
+                      name: "string",
+                      value: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    }
+                  ],
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
                 },
                 response: {
-                    body: "string",
-                    statusCode: "string",
-                    header: [
-                        {
-                            name: faker.name.findName(),
-                            value: faker.datatype.number()
-                        }
-                    ]
-                }
+                  body: "string",
+                  statusCode: "string",
+                  header: [
+                    {
+                      name: "string",
+                      value: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    }
+                  ],
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
             }
         ]
     },
     show_monitor: function(request)
     {
         console.log("service_activation_and_configuration_controller.show_monitor")
-        return {  
+        return {
             id: request.params.id,
             routeDetails: {
                 controller: 'Service Activation and Configuration',
                 action: 'show_monitor'
             },
-            href: faker.internet.url(),
             sourceHref: "string",
             state: "string",
             request: {
-                body: "string",
-                method: "string",
-                to: "string",
-                header: [
-                    {
-                        name: faker.name.findName(),
-                        value: faker.datatype.number()
-                    }
-                ]
+              body: "string",
+              method: "string",
+              to: "string",
+              header: [
+                {
+                  name: "string",
+                  value: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                }
+              ],
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
             },
             response: {
-                body: "string",
-                statusCode: "string",
-                header: [
-                    {
-                        name: faker.name.findName(),
-                        value: faker.datatype.number()
-                    }
-                ]
-            }
+              body: "string",
+              statusCode: "string",
+              header: [
+                {
+                  name: "string",
+                  value: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                }
+              ],
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
+
     create_notification_monitor_create: function(request)
     {
         console.log("service_activation_and_configuration_controller.create_notification_monitor_create")
@@ -462,40 +668,8 @@ module.exports = {
                 controller: 'Service Activation and Configuration',
                 action: 'create_notification_monitor_create'
             },
-            eventId: "string",
-            eventTime: new Date(),
-            eventType: "string",
-            fieldPath: "string",
-            resourcePath: "string",
-            event: {
-                monitor: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    sourceHref: "string",
-                    state: "string",
-                    request: {
-                        body: "string",
-                        method: "string",
-                        to: "string",
-                        header: [
-                            {
-                                name: faker.name.findName(),
-                                value: faker.datatype.number()
-                            }
-                        ]
-                    },
-                    response: {
-                        body: "string",
-                        statusCode: "string",
-                        header: [
-                            {
-                                name: faker.name.findName(),
-                                value: faker.datatype.number()
-                            }
-                        ]
-                    }
-                }
-            }
+            callback: "string",
+            query: "string"
         }
     },
     create_notification_monitor_attribute_change: function(request)
@@ -507,40 +681,8 @@ module.exports = {
                 controller: 'Service Activation and Configuration',
                 action: 'create_notification_monitor_attribute_change'
             },
-            eventId: "string",
-            eventTime: new Date(),
-            eventType: "string",
-            fieldPath: "string",
-            resourcePath: "string",
-            event: {
-                monitor: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    sourceHref: "string",
-                    state: "string",
-                    request: {
-                        body: "string",
-                        method: "string",
-                        to: "string",
-                        header: [
-                            {
-                                name: faker.name.findName(),
-                                value: faker.datatype.number()
-                            }
-                        ]
-                    },
-                    response: {
-                        body: "string",
-                        statusCode: "string",
-                        header: [
-                            {
-                                name: faker.name.findName(),
-                                value: faker.datatype.number()
-                            }
-                        ]
-                    }
-                }
-            }
+            callback: "string",
+            query: "string"
         }
     },
     create_notification_monitor_state_change: function(request)
@@ -552,40 +694,8 @@ module.exports = {
                 controller: 'Service Activation and Configuration',
                 action: 'create_notification_monitor_state_change'
             },
-            eventId: "string",
-            eventTime: new Date(),
-            eventType: "string",
-            fieldPath: "string",
-            resourcePath: "string",
-            event: {
-                monitor: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    sourceHref: "string",
-                    state: "string",
-                    request: {
-                        body: "string",
-                        method: "string",
-                        to: "string",
-                        header: [
-                            {
-                                name: faker.name.findName(),
-                                value: faker.datatype.number()
-                            }
-                        ]
-                    },
-                    response: {
-                        body: "string",
-                        statusCode: "string",
-                        header: [
-                            {
-                                name: faker.name.findName(),
-                                value: faker.datatype.number()
-                            }
-                        ]
-                    }
-                }
-            }
+            callback: "string",
+            query: "string"
         }
     },
     create_notification_monitor_delete: function(request)
@@ -642,95 +752,8 @@ module.exports = {
                 controller: 'Service Activation and Configuration',
                 action: 'create_notification_service_create'
             },
-            eventId: "string",
-            eventTime: new Date(),
-            eventType: "string",
-            fieldPath: "string",
-            resourcePath: "string",
-            event: {
-                service: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    category: "string",
-                    description: faker.lorem.sentence(),
-                    endDate: new Date(),
-                    hasStarted: true,
-                    isServiceEnabled: true,
-                    isStateful: true,
-                    name: faker.name.findName(),
-                    serviceDate: new Date(),
-                    serviceType: "string",
-                    startDate: new Date(),
-                    startMode: "string",
-                    note: [
-                        {
-                            author: faker.name.findName(),
-                            date: new Date(),
-                            system: "string",
-                            text: "string"
-                        }
-                    ],
-                    place: [
-                        {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url(),
-                            name: faker.name.findName(),
-                            role: "user"
-                        }
-                    ],
-                    relatedParty: [
-                        {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url(),
-                            name: faker.name.findName(),
-                            role: "user"
-                        }
-                    ],
-                    serviceCharacteristic: [
-                        {
-                            name: faker.name.findName(),
-                            valueType: "string"
-                        }
-                    ],
-                    serviceOrder: [
-                        {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url(),
-                            serviceOrderItemId: "string"
-                        }
-                    ],
-                    serviceRelationship: [
-                        {
-                            relationshipType: "string",
-                            service: 
-                            {
-                                id: faker.datatype.uuid(),
-                                href: faker.internet.url()
-                            }
-                        }
-                    ],
-                    serviceSpecification: {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url(),
-                            name: faker.name.findName(),
-                            version:"string",
-                    },
-                    state: "feasibilityChecked",
-                    supportingResource: [
-                        {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url(),
-                            name: faker.name.findName(),
-                        }
-                    ],
-                    supportingService: [
-                        {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url()
-                        }
-                    ]
-                }
-            }
+            callback: "string",
+            query: "string"
         }
     },
     create_notification_service_attribute_change: function(request)
@@ -742,95 +765,8 @@ module.exports = {
                 controller: 'Service Activation and Configuration',
                 action: 'create_notification_service_attribute_change'
             },
-            eventId: "string",
-            eventTime: new Date(),
-            eventType: "string",
-            fieldPath: "string",
-            resourcePath: "string",
-            event: {
-                service: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    category: "string",
-                    description: faker.lorem.sentence(),
-                    endDate: new Date(),
-                    hasStarted: true,
-                    isServiceEnabled: true,
-                    isStateful: true,
-                    name: faker.name.findName(),
-                    serviceDate: new Date(),
-                    serviceType: "string",
-                    startDate: new Date(),
-                    startMode: "string",
-                    note: [
-                        {
-                            author: faker.name.findName(),
-                            date: new Date(),
-                            system: "string",
-                            text: "string"
-                        }
-                    ],
-                    place: [
-                        {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url(),
-                            name: faker.name.findName(),
-                            role: "user"
-                        }
-                    ],
-                    relatedParty: [
-                        {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url(),
-                            name: faker.name.findName(),
-                            role: "user"
-                        }
-                    ],
-                    serviceCharacteristic: [
-                        {
-                            name: faker.name.findName(),
-                            valueType: "string"
-                        }
-                    ],
-                    serviceOrder: [
-                        {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url(),
-                            serviceOrderItemId: "string"
-                        }
-                    ],
-                    serviceRelationship: [
-                        {
-                            relationshipType: "string",
-                            service: 
-                            {
-                                id: faker.datatype.uuid(),
-                                href: faker.internet.url()
-                            }
-                        }
-                    ],
-                    serviceSpecification: {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url(),
-                            name: faker.name.findName(),
-                            version:"string",
-                    },
-                    state: "feasibilityChecked",
-                    supportingResource: [
-                        {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url(),
-                            name: faker.name.findName(),
-                        }
-                    ],
-                    supportingService: [
-                        {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url()
-                        }
-                    ]
-                }
-            }
+            callback: "string",
+            query: "string"
         }
     },
     create_notification_service_state_change: function(request)
@@ -842,95 +778,8 @@ module.exports = {
                 controller: 'Service Activation and Configuration',
                 action: 'create_notification_service_state_change'
             },
-            eventId: "string",
-            eventTime: new Date(),
-            eventType: "string",
-            fieldPath: "string",
-            resourcePath: "string",
-            event: {
-                service: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    category: "string",
-                    description: faker.lorem.sentence(),
-                    endDate: new Date(),
-                    hasStarted: true,
-                    isServiceEnabled: true,
-                    isStateful: true,
-                    name: faker.name.findName(),
-                    serviceDate: new Date(),
-                    serviceType: "string",
-                    startDate: new Date(),
-                    startMode: "string",
-                    note: [
-                        {
-                            author: faker.name.findName(),
-                            date: new Date(),
-                            system: "string",
-                            text: "string"
-                        }
-                    ],
-                    place: [
-                        {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url(),
-                            name: faker.name.findName(),
-                            role: "user"
-                        }
-                    ],
-                    relatedParty: [
-                        {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url(),
-                            name: faker.name.findName(),
-                            role: "user"
-                        }
-                    ],
-                    serviceCharacteristic: [
-                        {
-                            name: faker.name.findName(),
-                            valueType: "string"
-                        }
-                    ],
-                    serviceOrder: [
-                        {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url(),
-                            serviceOrderItemId: "string"
-                        }
-                    ],
-                    serviceRelationship: [
-                        {
-                            relationshipType: "string",
-                            service: 
-                            {
-                                id: faker.datatype.uuid(),
-                                href: faker.internet.url()
-                            }
-                        }
-                    ],
-                    serviceSpecification: {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url(),
-                            name: faker.name.findName(),
-                            version:"string",
-                    },
-                    state: "feasibilityChecked",
-                    supportingResource: [
-                        {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url(),
-                            name: faker.name.findName(),
-                        }
-                    ],
-                    supportingService: [
-                        {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url()
-                        }
-                    ]
-                }
-            }
+            callback: "string",
+            query: "string"
         }
     },
     create_notification_service_delete: function(request)
@@ -942,97 +791,11 @@ module.exports = {
                 controller: 'Service Activation and Configuration',
                 action: 'create_notification_service_delete'
             },
-            eventId: "string",
-            eventTime: new Date(),
-            eventType: "string",
-            fieldPath: "string",
-            resourcePath: "string",
-            event: {
-                service: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    category: "string",
-                    description: faker.lorem.sentence(),
-                    endDate: new Date(),
-                    hasStarted: true,
-                    isServiceEnabled: true,
-                    isStateful: true,
-                    name: faker.name.findName(),
-                    serviceDate: new Date(),
-                    serviceType: "string",
-                    startDate: new Date(),
-                    startMode: "string",
-                    note: [
-                        {
-                            author: faker.name.findName(),
-                            date: new Date(),
-                            system: "string",
-                            text: "string"
-                        }
-                    ],
-                    place: [
-                        {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url(),
-                            name: faker.name.findName(),
-                            role: "user"
-                        }
-                    ],
-                    relatedParty: [
-                        {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url(),
-                            name: faker.name.findName(),
-                            role: "user"
-                        }
-                    ],
-                    serviceCharacteristic: [
-                        {
-                            name: faker.name.findName(),
-                            valueType: "string"
-                        }
-                    ],
-                    serviceOrder: [
-                        {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url(),
-                            serviceOrderItemId: "string"
-                        }
-                    ],
-                    serviceRelationship: [
-                        {
-                            relationshipType: "string",
-                            service: 
-                            {
-                                id: faker.datatype.uuid(),
-                                href: faker.internet.url()
-                            }
-                        }
-                    ],
-                    serviceSpecification: {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url(),
-                            name: faker.name.findName(),
-                            version:"string",
-                    },
-                    state: "feasibilityChecked",
-                    supportingResource: [
-                        {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url(),
-                            name: faker.name.findName(),
-                        }
-                    ],
-                    supportingService: [
-                        {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url()
-                        }
-                    ]
-                }
-            }
+            callback: "string",
+            query: "string"
         }
     },
+
     create_hub: function(request)
     {
         console.log("service_activation_and_configuration_controller.create_hub")
@@ -1065,9 +828,10 @@ module.exports = {
             
         }
     },
+
     create_client_listener: function(request)
     {
-        console.log("service_activation_and_configuration_controller.create_client_listener")
+        console.log(service_activation_and_configuration_controller.create_client_listener)
 
         return {
             id: faker.datatype.uuid(),
@@ -1076,7 +840,7 @@ module.exports = {
                 action: 'create_client_listener'
             },
             event: {},
-            eventType: "EVENT_TYPE",
+            eventType: EVENT_TYPE,
             eventTime:"string",
             eventId: "string"
             
