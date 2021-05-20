@@ -21,5 +21,9 @@ usage_consumption_request_routes.delete("/:id", (request, response) => {
     response.send( usage_consumption_controller.destroy_request(request) )
 })
 
+usage_consumption_request_routes.post("/listener", (request, response) => {
+    response.send( usage_consumption_controller.create_listener_request_state_change(request) )
+})
+
 //  === Exports ===
 module.exports = usage_consumption_request_routes

@@ -599,7 +599,7 @@ module.exports = {
                 controller: 'Trouble Ticket',
                 action: 'destroy_hub'
             },
-            id: request.params.id,
+            code:204,
             status: 'trouble_ticket_hub successfully destroyed'
         }
     }

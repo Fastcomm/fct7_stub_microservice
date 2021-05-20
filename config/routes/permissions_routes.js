@@ -32,5 +32,9 @@ permissions_routes.post("/delete_Event", (request, response) => {
     response.send( roles_and_permissiosn_controller.listener_permission_delete_event( request ) )
 })
 
+permissions_routes.post("/bun", (request, response) => {
+    response.send( roles_and_permissiosn_controller.listener_permission_delete_event( request ) )
+})
+
 //  === Exports ===
 module.exports = permissions_routes
