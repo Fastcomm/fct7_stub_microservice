@@ -2352,7 +2352,8 @@ module.exports = {
                 controller: 'shopping_cart_management_controller',
                 action: 'create_listener_create_event'
             },
-            code: 204
+            callback: "string",
+            query: "string"
         }
     },
     create_listener_attribute_value_change_event: function(request)
@@ -2365,7 +2366,8 @@ module.exports = {
                 controller: 'shopping_cart_management_controller',
                 action: 'create_listecreate_listener_create_eventner_attribute_value_change_event'
             },
-            code: 204
+            callback: "string",
+            query: "string"
         }
     },
     create_listener_delete_event: function(request)
@@ -2378,7 +2380,8 @@ module.exports = {
                 controller: 'shopping_cart_management_controller',
                 action: 'create_listener_delete_event'
             },
-            code: 204
+            callback: "string",
+            query: "string"
         }
     },
 

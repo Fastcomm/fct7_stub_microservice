@@ -3,318 +3,478 @@ const faker = require('faker')
 
 //  === Controller ===
 module.exports = {
-    create: function(request)
-    {
-        console.log("trouble_ticket_controller.create")
-        return {
-            routeDetails: {
-                controller: 'Trouble Ticket',
-                action: 'create'
-            },
-            id: faker.datatype.uuid(),
-            href: faker.internet.url(),
-            name: faker.commerce.productName(),
-            description: faker.lorem.sentence(),
-            externalId: faker.datatype.uuid(),
-            ticketType: 'yes',
-            ticketArea: 'yes',
-            ticketSubArea: 'yes',
-            creationDate: new Date(),
-            lastUpdate: new Date(),
-            severity: 'high',
-            priority: 'high',
-            requestedResolutionDate: new Date(),
-            expectedResolutionDate: new Date(),
-            resolutionDate: new Date(),
-            status: 'active',
-            statusChangeReason: 'none',
-            relatedEntity: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.commerce.department(),
-                    role: 'owner'
-                }
-            ],
-            channel: {
-                id: faker.datatype.uuid(),
-                name: faker.commerce.department()
-            },
-            statusChange: [
-                {
-                    status: 'active',
-                    changeReason: 'none',
-                    changeDate: new Date()
-                }
-            ],
-            note: [
-                {
-                    id: faker.datatype.uuid(),
-                    date: new Date(),
-                    text: faker.lorem.sentence(),
-                    author: faker.name.findName()
-                }
-            ],
-            relatedParty: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    role: 'user',
-                    name: faker.commerce.department()
-                }
-            ],
-            ticketRelationship: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    type: 'yes'
-                }
-            ],
-            attachment: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.image.fashion(),
-                    size: faker.datatype.number(),
-                    description: faker.lorem.sentence()
-                }
-            ]
-        }
-    },
     index: function(request)
     {
         console.log("trouble_ticket_controller.index")
         return [
             {
+                id: faker.datatype.uuid(),
                 routeDetails: {
                     controller: 'Trouble Ticket',
                     action: 'index'
                 },
-                id: faker.datatype.uuid(),
                 href: faker.internet.url(),
-                name: faker.commerce.productName(),
-                description: faker.lorem.sentence(),
-                externalId: faker.datatype.uuid(),
-                ticketType: 'yes',
-                ticketArea: 'yes',
-                ticketSubArea: 'yes',
                 creationDate: new Date(),
-                lastUpdate: new Date(),
-                severity: 'high',
-                priority: 'high',
-                requestedResolutionDate: new Date(),
+                description: "string",
                 expectedResolutionDate: new Date(),
+                externalId: "string",
+                lastUpdate: new Date(),
+                name: "string",
+                priority: "string",
+                requestedResolutionDate: new Date(),
                 resolutionDate: new Date(),
-                status: 'active',
-                statusChangeReason: 'none',
-                relatedEntity: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.commerce.department(),
-                        role: 'owner'
-                    }
+                severity: "string",
+                statusChangeDate: new Date(),
+                statusChangeReason: "string",
+                ticketType: "string",
+                attachment: [
+                  {
+                    id: "string",
+                    href: "string",
+                    attachmentType: "string",
+                    content: "string",
+                    description: "string",
+                    mimeType: "string",
+                    name: "string",
+                    url: "string",
+                    size: {
+                      amount: 1,
+                      units: "string"
+                    },
+                    validFor: {
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
                 ],
                 channel: {
-                    id: faker.datatype.uuid(),
-                    name: faker.commerce.department()
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
                 },
-                statusChange: [
-                    {
-                        status: 'active',
-                        changeReason: 'none',
-                        changeDate: new Date()
-                    }
-                ],
                 note: [
-                    {
-                        id: faker.datatype.uuid(),
-                        date: new Date(),
-                        text: faker.lorem.sentence(),
-                        author: faker.name.findName()
-                    }
+                  {
+                    id: "string",
+                    author: "string",
+                    date: new Date(),
+                    text: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                relatedEntity: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    role: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
                 ],
                 relatedParty: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        role: 'user',
-                        name: faker.commerce.department()
-                    }
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    role: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
                 ],
-                ticketRelationship: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        type: 'yes'
-                    }
+                status: "acknowledged",
+                statusChange: [
+                  {
+                    changeDate: new Date(),
+                    changeReason: "string",
+                    status: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
                 ],
-                attachment: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.image.fashion(),
-                        size: faker.datatype.number(),
-                        description: faker.lorem.sentence()
-                    }
-                ]
+                troubleTicketRelationship: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    relationshipType: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
             }
         ]
+    },
+    create: function(request)
+    {
+        console.log("trouble_ticket_controller.create")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Trouble Ticket',
+                action: 'create'
+            },
+            href: faker.internet.url(),
+            creationDate: new Date(),
+            description: "string",
+            expectedResolutionDate: new Date(),
+            externalId: "string",
+            lastUpdate: new Date(),
+            name: "string",
+            priority: "string",
+            requestedResolutionDate: new Date(),
+            resolutionDate: new Date(),
+            severity: "string",
+            statusChangeDate: new Date(),
+            statusChangeReason: "string",
+            ticketType: "string",
+            attachment: [
+              {
+                id: "string",
+                href: "string",
+                attachmentType: "string",
+                content: "string",
+                description: "string",
+                mimeType: "string",
+                name: "string",
+                url: "string",
+                size: {
+                  amount: 1,
+                  units: "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            channel: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            note: [
+              {
+                id: "string",
+                author: "string",
+                date: new Date(),
+                text: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            relatedEntity: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            relatedParty: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            status: "acknowledged",
+            statusChange: [
+              {
+                changeDate: new Date(),
+                changeReason: "string",
+                status: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            troubleTicketRelationship: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                relationshipType: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+        }
     },
     show: function(request)
     {
         console.log("trouble_ticket_controller.show")
         return {
+            id: request.params.id,
             routeDetails: {
                 controller: 'Trouble Ticket',
                 action: 'show'
             },
-            id: request.params.id,
             href: faker.internet.url(),
-            name: faker.commerce.productName(),
-            description: faker.lorem.sentence(),
-            externalId: faker.datatype.uuid(),
-            ticketType: 'yes',
-            ticketArea: 'yes',
-            ticketSubArea: 'yes',
             creationDate: new Date(),
-            lastUpdate: new Date(),
-            severity: 'high',
-            priority: 'high',
-            requestedResolutionDate: new Date(),
+            description: "string",
             expectedResolutionDate: new Date(),
+            externalId: "string",
+            lastUpdate: new Date(),
+            name: "string",
+            priority: "string",
+            requestedResolutionDate: new Date(),
             resolutionDate: new Date(),
-            status: 'active',
-            statusChangeReason: 'none',
-            relatedEntity: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.commerce.department(),
-                    role: 'owner'
-                }
+            severity: "string",
+            statusChangeDate: new Date(),
+            statusChangeReason: "string",
+            ticketType: "string",
+            attachment: [
+              {
+                id: "string",
+                href: "string",
+                attachmentType: "string",
+                content: "string",
+                description: "string",
+                mimeType: "string",
+                name: "string",
+                url: "string",
+                size: {
+                  amount: 1,
+                  units: "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             channel: {
-                id: faker.datatype.uuid(),
-                name: faker.commerce.department()
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
             },
-            statusChange: [
-                {
-                    status: 'active',
-                    changeReason: 'none',
-                    changeDate: new Date()
-                }
-            ],
             note: [
-                {
-                    id: faker.datatype.uuid(),
-                    date: new Date(),
-                    text: faker.lorem.sentence(),
-                    author: faker.name.findName()
-                }
+              {
+                id: "string",
+                author: "string",
+                date: new Date(),
+                text: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            relatedEntity: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             relatedParty: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    role: 'user',
-                    name: faker.commerce.department()
-                }
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
-            ticketRelationship: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    type: 'yes'
-                }
+            status: "acknowledged",
+            statusChange: [
+              {
+                changeDate: new Date(),
+                changeReason: "string",
+                status: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
-            attachment: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.image.fashion(),
-                    size: faker.datatype.number(),
-                    description: faker.lorem.sentence()
-                }
-            ]
+            troubleTicketRelationship: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                relationshipType: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     update: function(request)
     {
         console.log("trouble_ticket_controller.update")
-        return {
+        return{
+            id: request.params.id,
             routeDetails: {
                 controller: 'Trouble Ticket',
                 action: 'update'
             },
-            id: request.params.id,
             href: faker.internet.url(),
-            name: faker.commerce.productName(),
-            description: faker.lorem.sentence(),
-            externalId: faker.datatype.uuid(),
-            ticketType: 'yes',
-            ticketArea: 'yes',
-            ticketSubArea: 'yes',
             creationDate: new Date(),
-            lastUpdate: new Date(),
-            severity: 'high',
-            priority: 'high',
-            requestedResolutionDate: new Date(),
+            description: "string",
             expectedResolutionDate: new Date(),
+            externalId: "string",
+            lastUpdate: new Date(),
+            name: "string",
+            priority: "string",
+            requestedResolutionDate: new Date(),
             resolutionDate: new Date(),
-            status: 'active',
-            statusChangeReason: 'none',
-            relatedEntity: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.commerce.department(),
-                    role: 'owner'
-                }
+            severity: "string",
+            statusChangeDate: new Date(),
+            statusChangeReason: "string",
+            ticketType: "string",
+            attachment: [
+              {
+                id: "string",
+                href: "string",
+                attachmentType: "string",
+                content: "string",
+                description: "string",
+                mimeType: "string",
+                name: "string",
+                url: "string",
+                size: {
+                  amount: 1,
+                  units: "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             channel: {
-                id: faker.datatype.uuid(),
-                name: faker.commerce.department()
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
             },
-            statusChange: [
-                {
-                    status: 'active',
-                    changeReason: 'none',
-                    changeDate: new Date()
-                }
-            ],
             note: [
-                {
-                    id: faker.datatype.uuid(),
-                    date: new Date(),
-                    text: faker.lorem.sentence(),
-                    author: faker.name.findName()
-                }
+              {
+                id: "string",
+                author: "string",
+                date: new Date(),
+                text: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            relatedEntity: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             relatedParty: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    role: 'user',
-                    name: faker.commerce.department()
-                }
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
-            ticketRelationship: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    type: 'yes'
-                }
+            status: "acknowledged",
+            statusChange: [
+              {
+                changeDate: new Date(),
+                changeReason: "string",
+                status: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
-            attachment: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.image.fashion(),
-                    size: faker.datatype.number(),
-                    description: faker.lorem.sentence()
-                }
-            ]
+            troubleTicketRelationship: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                relationshipType: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     destroy: function(request)
@@ -326,9 +486,98 @@ module.exports = {
                 action: 'destroy'
             },
             id: request.params.id,
+            code: 204,
             status: 'trouble_ticket successfully destroyed'
         }
     },
+
+    create_listener_create_event: function(request)
+    {
+        console.log("trouble_ticket_controller.create_listener_create_event")
+
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'trouble_ticket_controller',
+                action: 'create_listener_create_event'
+            },
+            callback: "string",
+            query: "string"
+        }
+    },
+    create_listener_attribute_value_change_event: function(request)
+    {
+        console.log("trouble_ticket_controller.create_listener_attribute_value_change_event")
+
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'trouble_ticket_controller',
+                action: 'create_listener_attribute_value_change_event'
+            },
+            callback: "string",
+            query: "string"
+        }
+    },
+    create_listener_status_change_event: function(request)
+    {
+        console.log("trouble_ticket_controller.create_listener_status_change_event")
+
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'trouble_ticket_controller',
+                action: 'create_listener_status_change_event'
+            },
+            callback: "string",
+            query: "string"
+        }
+    },
+    create_listener_delete_event: function(request)
+    {
+        console.log("trouble_ticket_controller.create_listener_delete_event")
+
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'trouble_ticket_controller',
+                action: 'create_listener_delete_event'
+            },
+            callback: "string",
+            query: "string"
+        }
+    },
+    create_listener_resolved_event: function(request)
+    {
+        console.log("trouble_ticket_controller.create_listener_resolved_event")
+
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'trouble_ticket_controller',
+                action: 'create_listener_resolved_event'
+            },
+            callback: "string",
+            query: "string"
+        }
+    },
+    create_listener_information_required_event: function(request)
+    {
+        console.log("trouble_ticket_controller.create_listener_information_required_event")
+
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'trouble_ticket_controller',
+                action: 'create_listener_information_required_event'
+            },
+            callback: "string",
+            query: "string"
+        }
+    },
+
+
+
     create_hub: function(request)
     {
         console.log("trouble_ticket_controller.create_hub")
