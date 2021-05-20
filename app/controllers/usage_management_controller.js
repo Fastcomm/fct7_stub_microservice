@@ -229,6 +229,7 @@ module.exports = {
             status: "usage entry destroyed successfully"
         }
     },
+
     create_specification: function(request)
     {
         console.log('usage_management_controller.create_specification')
@@ -309,6 +310,7 @@ module.exports = {
             status: "usage_specification entry destroyed successfully"
         }
     },
+
     create_hub: function(request)
     {
         console.log('usage_management_controller.create_hub')
@@ -321,34 +323,6 @@ module.exports = {
             callback: faker.internet.url(),
             query: faker.hacker.verb()
         }
-    },
-    show_hub: function(request)
-    {
-        console.log('usage_management_controller.show_hub')
-        return {
-            id: request.params.id,
-            routeDetails: {
-                controller: 'Usage Management',
-                action: 'show_hub'
-            },
-            callback: faker.internet.url(),
-            query: faker.hacker.verb()
-        }
-    },
-    index_hub: function(request)
-    {
-        console.log('usage_management_controller.index_hub')
-        return [
-                {
-                id: faker.datatype.uuid(),
-                routeDetails: {
-                    controller: 'Usage Management',
-                    action: 'index_hub'
-                },
-                callback: faker.internet.url(),
-                query: faker.hacker.verb()
-            }
-        ]
     },
     destroy_hub: function(request)
     {

@@ -4,6 +4,10 @@ const privacy_agreement_routes = express.Router()
 const privacy_controller = require("../../app/controllers/privacy_management_controller")
 
 //  === Routes ===
+privacy_agreement_routes.get("/", (request, response) => {
+    response.send( privacy_controller.index_agreement( request ) )
+})
+
 privacy_agreement_routes.post("/", (request, response) => {
     response.send( privacy_controller.create_agreement( request ) )
 })
