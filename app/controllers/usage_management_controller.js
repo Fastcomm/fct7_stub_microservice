@@ -3,6 +3,119 @@ const faker = require('faker')
 
 //  === Controller ===
 module.exports = {
+    index: function(request)
+    {
+        console.log('usage_management_controller.index')
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'Usage Management',
+                    action: 'index'
+                },
+                href: faker.internet.url(),
+                description: "Voicemail Retrieval",
+                usageDate: new Date(),
+                usageType: "string",
+                ratedProductUsage: [
+                  {
+                    isBilled: true,
+                    isTaxExempt: true,
+                    offerTariffType: "string",
+                    ratingAmountType: "string",
+                    ratingDate: new Date(),
+                    taxRate: 0,
+                    usageRatingTag: "string",
+                    bucketValueConvertedInAmount: {
+                      id: "string",
+                      href: "string",
+                      unit: "string",
+                      value: 0,
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    },
+                    productRef: {
+                      id: "string",
+                      href: "string",
+                      name: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
+                    },
+                    taxExcludedRatingAmount: {
+                      id: "string",
+                      href: "string",
+                      unit: "string",
+                      value: 0,
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    },
+                    taxIncludedRatingAmount: {
+                      id: "string",
+                      href: "string",
+                      unit: "string",
+                      value: 0,
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                relatedParty: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    role: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                status: "received",
+                usageCharacteristic: [
+                  {
+                    id: "string",
+                    name: "string",
+                    valueType: "string",
+                    characteristicRelationship: [
+                      {
+                        id: "string",
+                        href: "string",
+                        relationshipType: "string",
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string"
+                      }
+                    ],
+                    value: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                usageSpecification: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+        ]
+    },
     create: function(request)
     {
         console.log('usage_management_controller.create')
@@ -13,47 +126,105 @@ module.exports = {
                 action: 'create'
             },
             href: faker.internet.url(),
-            date: new Date(),
-            type: "VOICE",
-            description: faker.lorem.sentence(),
-            status: "rated",
-            usageSpecification: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                name: faker.commerce.productName()
-            },
-            usageCharacteristic: [
-                {
-                    name: faker.address.countryCode(),
-                    value: String( faker.datatype.number() )
-                }
+            description: "Voicemail Retrieval",
+            usageDate: new Date(),
+            usageType: "string",
+            ratedProductUsage: [
+              {
+                isBilled: true,
+                isTaxExempt: true,
+                offerTariffType: "string",
+                ratingAmountType: "string",
+                ratingDate: new Date(),
+                taxRate: 0,
+                usageRatingTag: "string",
+                bucketValueConvertedInAmount: {
+                  id: "string",
+                  href: "string",
+                  unit: "string",
+                  value: 0,
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                productRef: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                taxExcludedRatingAmount: {
+                  id: "string",
+                  href: "string",
+                  unit: "string",
+                  value: 0,
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                taxIncludedRatingAmount: {
+                  id: "string",
+                  href: "string",
+                  unit: "string",
+                  value: 0,
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
             relatedParty: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    validFor: {
-                        startDateTime: faker.date.soon(),
-                        endDateTime: faker.date.soon()
-                    }
-                }
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
-            ratedProductUsage: [
-                {
-                    ratingDate: new Date(),
-                    usageRatingTag: "Usage",
-                    isBilled: faker.random.boolean(),
-                    ratyingAmountType: "Total",
-                    taxIncludedRatingAmount: faker.datatype.number(),
-                    taxExcludedRatingAmount: faker.datatype.number(),
-                    taxRate: faker.datatype.number(),
-                    isTaxExempt: false,
-                    offerTariffType: "Normal",
-                    currencyCode: faker.finance.currencyCode(),
-                    productRef: faker.internet.url()
-                }
-            ]
+            status: "received",
+            usageCharacteristic: [
+              {
+                id: "string",
+                name: "string",
+                valueType: "string",
+                characteristicRelationship: [
+                  {
+                    id: "string",
+                    href: "string",
+                    relationshipType: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                value: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            usageSpecification: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     show: function(request)
@@ -66,103 +237,106 @@ module.exports = {
                 action: 'show'
             },
             href: faker.internet.url(),
-            date: new Date(),
-            type: "VOICE",
-            description: faker.lorem.sentence(),
-            status: "rated",
-            usageSpecification: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                name: faker.commerce.productName()
-            },
-            usageCharacteristic: [
-                {
-                    name: faker.address.countryCode(),
-                    value: String( faker.datatype.number() )
-                }
+            description: "Voicemail Retrieval",
+            usageDate: new Date(),
+            usageType: "string",
+            ratedProductUsage: [
+              {
+                isBilled: true,
+                isTaxExempt: true,
+                offerTariffType: "string",
+                ratingAmountType: "string",
+                ratingDate: new Date(),
+                taxRate: 0,
+                usageRatingTag: "string",
+                bucketValueConvertedInAmount: {
+                  id: "string",
+                  href: "string",
+                  unit: "string",
+                  value: 0,
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                productRef: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                taxExcludedRatingAmount: {
+                  id: "string",
+                  href: "string",
+                  unit: "string",
+                  value: 0,
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                taxIncludedRatingAmount: {
+                  id: "string",
+                  href: "string",
+                  unit: "string",
+                  value: 0,
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
             relatedParty: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    validFor: {
-                        startDateTime: faker.date.soon(),
-                        endDateTime: faker.date.soon()
-                    }
-                }
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
-            ratedProductUsage: [
-                {
-                    ratingDate: new Date(),
-                    usageRatingTag: "Usage",
-                    isBilled: faker.random.boolean(),
-                    ratyingAmountType: "Total",
-                    taxIncludedRatingAmount: faker.datatype.number(),
-                    taxExcludedRatingAmount: faker.datatype.number(),
-                    taxRate: faker.datatype.number(),
-                    isTaxExempt: false,
-                    offerTariffType: "Normal",
-                    currencyCode: faker.finance.currencyCode(),
-                    productRef: faker.internet.url()
-                }
-            ]
+            status: "received",
+            usageCharacteristic: [
+              {
+                id: "string",
+                name: "string",
+                valueType: "string",
+                characteristicRelationship: [
+                  {
+                    id: "string",
+                    href: "string",
+                    relationshipType: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                value: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            usageSpecification: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
-    },
-    index: function(request)
-    {
-        console.log('usage_management_controller.index')
-        return [
-            {
-                id: faker.datatype.uuid(),
-                routeDetails: {
-                    controller: 'Usage Management',
-                    action: 'index'
-                },
-                href: faker.internet.url(),
-                date: new Date(),
-                type: "VOICE",
-                description: faker.lorem.sentence(),
-                status: "rated",
-                usageSpecification: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.commerce.productName()
-                },
-                usageCharacteristic: [
-                    {
-                        name: faker.address.countryCode(),
-                        value: String( faker.datatype.number() )
-                    }
-                ],
-                relatedParty: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName(),
-                        validFor: {
-                            startDateTime: faker.date.soon(),
-                            endDateTime: faker.date.soon()
-                        }
-                    }
-                ],
-                ratedProductUsage: [
-                    {
-                        ratingDate: new Date(),
-                        usageRatingTag: "Usage",
-                        isBilled: faker.random.boolean(),
-                        ratyingAmountType: "Total",
-                        taxIncludedRatingAmount: faker.datatype.number(),
-                        taxExcludedRatingAmount: faker.datatype.number(),
-                        taxRate: faker.datatype.number(),
-                        isTaxExempt: false,
-                        offerTariffType: "Normal",
-                        currencyCode: faker.finance.currencyCode(),
-                        productRef: faker.internet.url()
-                    }
-                ]
-            }
-        ]
     },
     update: function(request)
     {
@@ -174,47 +348,105 @@ module.exports = {
                 action: 'update'
             },
             href: faker.internet.url(),
-            date: new Date(),
-            type: "VOICE",
-            description: faker.lorem.sentence(),
-            status: "rated",
-            usageSpecification: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                name: faker.commerce.productName()
-            },
-            usageCharacteristic: [
-                {
-                    name: faker.address.countryCode(),
-                    value: String( faker.datatype.number() )
-                }
+            description: "Voicemail Retrieval",
+            usageDate: new Date(),
+            usageType: "string",
+            ratedProductUsage: [
+              {
+                isBilled: true,
+                isTaxExempt: true,
+                offerTariffType: "string",
+                ratingAmountType: "string",
+                ratingDate: new Date(),
+                taxRate: 0,
+                usageRatingTag: "string",
+                bucketValueConvertedInAmount: {
+                  id: "string",
+                  href: "string",
+                  unit: "string",
+                  value: 0,
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                productRef: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                taxExcludedRatingAmount: {
+                  id: "string",
+                  href: "string",
+                  unit: "string",
+                  value: 0,
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                taxIncludedRatingAmount: {
+                  id: "string",
+                  href: "string",
+                  unit: "string",
+                  value: 0,
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
             relatedParty: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName(),
-                    validFor: {
-                        startDateTime: faker.date.soon(),
-                        endDateTime: faker.date.soon()
-                    }
-                }
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
-            ratedProductUsage: [
-                {
-                    ratingDate: new Date(),
-                    usageRatingTag: "Usage",
-                    isBilled: faker.random.boolean(),
-                    ratyingAmountType: "Total",
-                    taxIncludedRatingAmount: faker.datatype.number(),
-                    taxExcludedRatingAmount: faker.datatype.number(),
-                    taxRate: faker.datatype.number(),
-                    isTaxExempt: false,
-                    offerTariffType: "Normal",
-                    currencyCode: faker.finance.currencyCode(),
-                    productRef: faker.internet.url()
-                }
-            ]
+            status: "received",
+            usageCharacteristic: [
+              {
+                id: "string",
+                name: "string",
+                valueType: "string",
+                characteristicRelationship: [
+                  {
+                    id: "string",
+                    href: "string",
+                    relationshipType: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                value: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            usageSpecification: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     destroy: function(request)
@@ -226,10 +458,204 @@ module.exports = {
                 controller: 'Usage Management',
                 action: 'destroy'
             },
-            status: "usage entry destroyed successfully"
+            code:204
         }
     },
 
+    index_specification: function(request)
+    {
+        console.log('usage_management_controller.index_specification')
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'Usage Management',
+                    action: 'index_specification'
+                },
+                href: faker.internet.url(),
+                description: "string",
+                isBundle: true,
+                lastUpdate: new Date(),
+                lifecycleStatus: "string",
+                name: "string",
+                version: "string",
+                attachment: [
+                  {
+                    id: "sting",
+                    href: "http://host/Attachment/4aafacbd-11ff-4dc8-b445-305f2215715f",
+                    attachmentType: "video",
+                    content: "string",
+                    description: "Photograph of the Product",
+                    mimeType: "string",
+                    name: "string",
+                    url: "http://host/Content/4aafacbd-11ff-4dc8-b445-305f2215715f",
+                    size: {
+                      amount: 1,
+                      units: "string"
+                    },
+                    validFor: {
+                      id: "string",
+                      href: "string",
+                      endDateTime: new Date(),
+                      startDateTime: new Date(),
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                constraint: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    version: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                entitySpecRelationship: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    relationshipType: "string",
+                    role: "string",
+                    associationSpec: {
+                      id: "string",
+                      href: "string",
+                      name: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
+                    },
+                    validFor: {
+                      id: "string",
+                      href: "string",
+                      endDateTime: new Date(),
+                      startDateTime: new Date(),
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                relatedParty: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    role: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                specCharacteristic: [
+                  {
+                    id: "string",
+                    configurable: true,
+                    description: "string",
+                    extensible: true,
+                    isUnique: true,
+                    maxCardinality: 0,
+                    minCardinality: 0,
+                    name: "string",
+                    regex: "string",
+                    valueType: "string",
+                    charSpecRelationship: [
+                      {
+                        id: "string",
+                        href: "string",
+                        characteristicSpecificationId: "string",
+                        name: "string",
+                        parentSpecificationHref: "string",
+                        parentSpecificationId: "string",
+                        relationshipType: "string",
+                        validFor: {
+                          id: "string",
+                          href: "string",
+                          endDateTime: new Date(),
+                          startDateTime: new Date(),
+                          "@baseType": "string",
+                          "@schemaLocation": "string",
+                          "@type": "string"
+                        },
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string"
+                      }
+                    ],
+                    characteristicValueSpecification: [
+                      {
+                        isDefault: true,
+                        rangeInterval: "string",
+                        regex: "string",
+                        unitOfMeasure: "string",
+                        valueFrom: 0,
+                        valueTo: 0,
+                        valueType: "string",
+                        validFor: {
+                          id: "string",
+                          href: "string",
+                          endDateTime: new Date(),
+                          startDateTime: new Date(),
+                          "@baseType": "string",
+                          "@schemaLocation": "string",
+                          "@type": "string"
+                        },
+                        value: "string",
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string"
+                      }
+                    ],
+                    validFor: {
+                      id: "string",
+                      href: "string",
+                      endDateTime: new Date(),
+                      startDateTime: new Date(),
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@valueSchemaLocation": "string"
+                  }
+                ],
+                targetEntitySchema: {
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                validFor: {
+                  id: "string",
+                  href: "string",
+                  endDateTime: new Date(),
+                  startDateTime: new Date(),
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+            }
+        ]
+    },
     create_specification: function(request)
     {
         console.log('usage_management_controller.create_specification')
@@ -240,28 +666,186 @@ module.exports = {
                 action: 'create_specification'
             },
             href: faker.internet.url(),
-            name: faker.commerce.productName(),
-            description: faker.lorem.sentence(),
-            validFor: {
-                startDateTime: faker.date.soon(),
-                endDateTime: faker.date.soon()
+            description: "string",
+            isBundle: true,
+            lastUpdate: new Date(),
+            lifecycleStatus: "string",
+            name: "string",
+            version: "string",
+            attachment: [
+              {
+                id: "sting",
+                href: "http://host/Attachment/4aafacbd-11ff-4dc8-b445-305f2215715f",
+                attachmentType: "video",
+                content: "string",
+                description: "Photograph of the Product",
+                mimeType: "string",
+                name: "string",
+                url: "http://host/Content/4aafacbd-11ff-4dc8-b445-305f2215715f",
+                size: {
+                  amount: 1,
+                  units: "string"
+                },
+                validFor: {
+                  id: "string",
+                  href: "string",
+                  endDateTime: new Date(),
+                  startDateTime: new Date(),
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            constraint: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                version: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            entitySpecRelationship: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                relationshipType: "string",
+                role: "string",
+                associationSpec: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                validFor: {
+                  id: "string",
+                  href: "string",
+                  endDateTime: new Date(),
+                  startDateTime: new Date(),
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            relatedParty: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            specCharacteristic: [
+              {
+                id: "string",
+                configurable: true,
+                description: "string",
+                extensible: true,
+                isUnique: true,
+                maxCardinality: 0,
+                minCardinality: 0,
+                name: "string",
+                regex: "string",
+                valueType: "string",
+                charSpecRelationship: [
+                  {
+                    id: "string",
+                    href: "string",
+                    characteristicSpecificationId: "string",
+                    name: "string",
+                    parentSpecificationHref: "string",
+                    parentSpecificationId: "string",
+                    relationshipType: "string",
+                    validFor: {
+                      id: "string",
+                      href: "string",
+                      endDateTime: new Date(),
+                      startDateTime: new Date(),
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                characteristicValueSpecification: [
+                  {
+                    isDefault: true,
+                    rangeInterval: "string",
+                    regex: "string",
+                    unitOfMeasure: "string",
+                    valueFrom: 0,
+                    valueTo: 0,
+                    valueType: "string",
+                    validFor: {
+                      id: "string",
+                      href: "string",
+                      endDateTime: new Date(),
+                      startDateTime: new Date(),
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    },
+                    value: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                validFor: {
+                  id: "string",
+                  href: "string",
+                  endDateTime: new Date(),
+                  startDateTime: new Date(),
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@valueSchemaLocation": "string"
+              }
+            ],
+            targetEntitySchema: {
+              "@schemaLocation": "string",
+              "@type": "string"
             },
-            usageSpecCharacteristic: [
-                {
-                    name: faker.address.countryCode(),
-                    description: faker.lorem.sentence(),
-                    configurable: faker.random.boolean(),
-                    usageSpecCharacteristicValue: [
-                        {
-                            valueType: "number",
-                            default: faker.random.boolean(),
-                            value: String( faker.datatype.number() ),
-                            valueFrom: String( faker.datatype.number() ),
-                            valueTo: String( faker.datatype.number() )
-                        }
-                    ]
-                }
-            ]
+            validFor: {
+              id: "string",
+              href: "string",
+              endDateTime: new Date(),
+              startDateTime: new Date(),
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     show_specification: function(request)
@@ -274,28 +858,378 @@ module.exports = {
                 action: 'show_specification'
             },
             href: faker.internet.url(),
-            name: faker.commerce.productName(),
-            description: faker.lorem.sentence(),
-            validFor: {
-                startDateTime: faker.date.soon(),
-                endDateTime: faker.date.soon()
+            description: "string",
+            isBundle: true,
+            lastUpdate: new Date(),
+            lifecycleStatus: "string",
+            name: "string",
+            version: "string",
+            attachment: [
+              {
+                id: "sting",
+                href: "http://host/Attachment/4aafacbd-11ff-4dc8-b445-305f2215715f",
+                attachmentType: "video",
+                content: "string",
+                description: "Photograph of the Product",
+                mimeType: "string",
+                name: "string",
+                url: "http://host/Content/4aafacbd-11ff-4dc8-b445-305f2215715f",
+                size: {
+                  amount: 1,
+                  units: "string"
+                },
+                validFor: {
+                  id: "string",
+                  href: "string",
+                  endDateTime: new Date(),
+                  startDateTime: new Date(),
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            constraint: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                version: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            entitySpecRelationship: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                relationshipType: "string",
+                role: "string",
+                associationSpec: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                validFor: {
+                  id: "string",
+                  href: "string",
+                  endDateTime: new Date(),
+                  startDateTime: new Date(),
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            relatedParty: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            specCharacteristic: [
+              {
+                id: "string",
+                configurable: true,
+                description: "string",
+                extensible: true,
+                isUnique: true,
+                maxCardinality: 0,
+                minCardinality: 0,
+                name: "string",
+                regex: "string",
+                valueType: "string",
+                charSpecRelationship: [
+                  {
+                    id: "string",
+                    href: "string",
+                    characteristicSpecificationId: "string",
+                    name: "string",
+                    parentSpecificationHref: "string",
+                    parentSpecificationId: "string",
+                    relationshipType: "string",
+                    validFor: {
+                      id: "string",
+                      href: "string",
+                      endDateTime: new Date(),
+                      startDateTime: new Date(),
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                characteristicValueSpecification: [
+                  {
+                    isDefault: true,
+                    rangeInterval: "string",
+                    regex: "string",
+                    unitOfMeasure: "string",
+                    valueFrom: 0,
+                    valueTo: 0,
+                    valueType: "string",
+                    validFor: {
+                      id: "string",
+                      href: "string",
+                      endDateTime: new Date(),
+                      startDateTime: new Date(),
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    },
+                    value: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                validFor: {
+                  id: "string",
+                  href: "string",
+                  endDateTime: new Date(),
+                  startDateTime: new Date(),
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@valueSchemaLocation": "string"
+              }
+            ],
+            targetEntitySchema: {
+              "@schemaLocation": "string",
+              "@type": "string"
             },
-            usageSpecCharacteristic: [
-                {
-                    name: faker.address.countryCode(),
-                    description: faker.lorem.sentence(),
-                    configurable: faker.random.boolean(),
-                    usageSpecCharacteristicValue: [
-                        {
-                            valueType: "number",
-                            default: faker.random.boolean(),
-                            value: String( faker.datatype.number() ),
-                            valueFrom: String( faker.datatype.number() ),
-                            valueTo: String( faker.datatype.number() )
-                        }
-                    ]
-                }
-            ]
+            validFor: {
+              id: "string",
+              href: "string",
+              endDateTime: new Date(),
+              startDateTime: new Date(),
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+        }
+    },
+    update_specification: function(request)
+    {
+        console.log('usage_management_controller.update_specification')
+        return {
+            id: request.params.id,
+            routeDetails: {
+                controller: 'Usage Management',
+                action: 'update_specification'
+            },
+            href: faker.internet.url(),
+            description: "string",
+            isBundle: true,
+            lastUpdate: new Date(),
+            lifecycleStatus: "string",
+            name: "string",
+            version: "string",
+            attachment: [
+              {
+                id: "sting",
+                href: "http://host/Attachment/4aafacbd-11ff-4dc8-b445-305f2215715f",
+                attachmentType: "video",
+                content: "string",
+                description: "Photograph of the Product",
+                mimeType: "string",
+                name: "string",
+                url: "http://host/Content/4aafacbd-11ff-4dc8-b445-305f2215715f",
+                size: {
+                  amount: 1,
+                  units: "string"
+                },
+                validFor: {
+                  id: "string",
+                  href: "string",
+                  endDateTime: new Date(),
+                  startDateTime: new Date(),
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            constraint: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                version: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            entitySpecRelationship: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                relationshipType: "string",
+                role: "string",
+                associationSpec: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                validFor: {
+                  id: "string",
+                  href: "string",
+                  endDateTime: new Date(),
+                  startDateTime: new Date(),
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            relatedParty: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            specCharacteristic: [
+              {
+                id: "string",
+                configurable: true,
+                description: "string",
+                extensible: true,
+                isUnique: true,
+                maxCardinality: 0,
+                minCardinality: 0,
+                name: "string",
+                regex: "string",
+                valueType: "string",
+                charSpecRelationship: [
+                  {
+                    id: "string",
+                    href: "string",
+                    characteristicSpecificationId: "string",
+                    name: "string",
+                    parentSpecificationHref: "string",
+                    parentSpecificationId: "string",
+                    relationshipType: "string",
+                    validFor: {
+                      id: "string",
+                      href: "string",
+                      endDateTime: new Date(),
+                      startDateTime: new Date(),
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                characteristicValueSpecification: [
+                  {
+                    isDefault: true,
+                    rangeInterval: "string",
+                    regex: "string",
+                    unitOfMeasure: "string",
+                    valueFrom: 0,
+                    valueTo: 0,
+                    valueType: "string",
+                    validFor: {
+                      id: "string",
+                      href: "string",
+                      endDateTime: new Date(),
+                      startDateTime: new Date(),
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    },
+                    value: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                validFor: {
+                  id: "string",
+                  href: "string",
+                  endDateTime: new Date(),
+                  startDateTime: new Date(),
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@valueSchemaLocation": "string"
+              }
+            ],
+            targetEntitySchema: {
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            validFor: {
+              id: "string",
+              href: "string",
+              endDateTime: new Date(),
+              startDateTime: new Date(),
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     destroy_specification: function(request)
@@ -307,7 +1241,7 @@ module.exports = {
                 controller: 'Usage Management',
                 action: 'destroy_specification'
             },
-            status: "usage_specification entry destroyed successfully"
+            scode: 204
         }
     },
 
