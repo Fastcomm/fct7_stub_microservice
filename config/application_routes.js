@@ -37,8 +37,9 @@ routes.use("/trouble_ticket", require("./routes/trouble_ticket_routes"))
 routes.use("/trouble_ticket_hub", require("./routes/trouble_ticket_hub_routes"))
 routes.use("/party", require("./routes/party_management_routes"))
 routes.use("/privacy_profile", require("./routes/privacy_profile"))
-routes.use("/privacy_profile_type", require("./routes/privacy_profile_type"))
+routes.use("/privacy_profile_specification", require("./routes/privacy_profile_specification_routes"))
 routes.use("/privacy_agreement", require("./routes/privacy_agreement"))
+routes.use("/privacy_hub", require("./routes/privacy_hub_routes"))
 
 //  === Exports ===
 module.exports = routes

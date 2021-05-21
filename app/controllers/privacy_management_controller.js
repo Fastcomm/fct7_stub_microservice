@@ -353,15 +353,15 @@ module.exports = {
         }
     },
 
-    index_profile_type: function(request)
+    index_profile_specification: function(request)
     {
-        console.log("privacy_management_controller.index_profile_type")
+        console.log("privacy_management_controller.index_profile_specification")
         return [
             {
             id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Privacy Management',
-                action: 'index_profile_type'
+                action: 'index_profile_specification'
             },
             href: faker.internet.url(),
             description: "string",
@@ -468,14 +468,14 @@ module.exports = {
           }
         ]
     },
-    create_profile_type: function(request)
+    create_profile_specification: function(request)
     {
-        console.log("privacy_management_controller.create_profile_type")
+        console.log("privacy_management_controller.create_profile_specification")
         return {
             id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Privacy Management',
-                action: 'create_profile_type'
+                action: 'create_profile_specification'
             },
             href: faker.internet.url(),
             description: "string",
@@ -581,14 +581,14 @@ module.exports = {
             "@type": "string"
           }
     },
-    show_profile_type: function(request)
+    show_profile_specification: function(request)
     {
-        console.log("privacy_management_controller.show_profile_type")
+        console.log("privacy_management_controller.show_profile_specification")
         return {
             id: request.params.id,
             routeDetails: {
                 controller: 'Privacy Management',
-                action: 'create_profile_type'
+                action: 'create_profile_specification'
             },
             href: faker.internet.url(),
             description: "string",
@@ -694,14 +694,14 @@ module.exports = {
             "@type": "string"
         }
     },
-    update_profile_type: function(request)
+    update_profile_specification: function(request)
     {
-        console.log("privacy_management_controller.update_profile_type")
+        console.log("privacy_management_controller.update_profile_specification")
         return {
             id: request.params.id,
             routeDetails: {
                 controller: 'Privacy Management',
-                action: 'create_profile_type'
+                action: 'create_profile_specification'
             },
             href: faker.internet.url(),
             description: "string",
@@ -807,13 +807,13 @@ module.exports = {
             "@type": "string"
         }
     },
-    destroy_profile_type: function(request)
+    destroy_profile_specification: function(request)
     {
-        console.log("privacy_management_controller.destroy_profile_type")
+        console.log("privacy_management_controller.destroy_profile_specification")
         return {
             routeDetails: {
                 controller: 'Privacy Management',
-                action: 'destroy_profile_type'
+                action: 'destroy_profile_specification'
             },
             code: 204
         }
@@ -1475,5 +1475,215 @@ module.exports = {
             },
             code: 204
         }
+    },
+
+    listener_profile_create_event: function(request)
+    {
+        console.log('profile_and_permissions_controller.listener_profile_create_event')
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'User profile and Permissions',
+                    action: 'listener_profile_create_event'
+                },
+                callback: "string",
+                query: "string"
+            } 
+        ]
+    }, 
+    listener_profile_attribute_value_change: function(request)
+    {
+        console.log('profile_and_permissions_controller.listener_profile_attribute_value_change')
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'User profile and Permissions',
+                    action: 'listener_profile_attribute_value_change'
+                },
+                callback: "string",
+                query: "string"
+            } 
+        ]
+    }, 
+    listener_profile_state_change_event: function(request)
+    {
+        console.log('profile_and_permissions_controller.listener_profile_state_change_event')
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'User profile and Permissions',
+                    action: 'listener_profile_state_change_event'
+                },
+                callback: "string",
+                query: "string"
+            } 
+        ]
+    },   
+    listener_profile_delete_event: function(request)
+    {
+        console.log('profile_and_permissions_controller.listener_profile_delete_event')
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'User profile and Permissions',
+                    action: 'listener_profile_delete_event'
+                },
+                callback: "string",
+                query: "string"
+            } 
+        ]
+    },
+
+    listener_specification_create_event: function(request)
+    {
+        console.log('profile_and_permissions_controller.listener_specification_create_event')
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'User profile and Permissions',
+                    action: 'listener_specification_create_event'
+                },
+                callback: "string",
+                query: "string"
+            } 
+        ]
+    }, 
+    listener_specification_attribute_value_change: function(request)
+    {
+        console.log('profile_and_permissions_controller.listener_specification_attribute_value_change')
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'User profile and Permissions',
+                    action: 'listener_specification_attribute_value_change'
+                },
+                callback: "string",
+                query: "string"
+            } 
+        ]
+    }, 
+    listener_specification_state_change_event: function(request)
+    {
+        console.log('profile_and_permissions_controller.listener_specification_state_change_event')
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'User profile and Permissions',
+                    action: 'listener_specification_state_change_event'
+                },
+                callback: "string",
+                query: "string"
+            } 
+        ]
+    },   
+    listener_specification_delete_event: function(request)
+    {
+        console.log('profile_and_permissions_controller.listener_specification_delete_event')
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'User profile and Permissions',
+                    action: 'listener_specification_delete_event'
+                },
+                callback: "string",
+                query: "string"
+            } 
+        ]
+    },
+
+    listener_agreement_create_event: function(request)
+    {
+        console.log('profile_and_permissions_controller.listener_agreement_create_event')
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'User profile and Permissions',
+                    action: 'listener_agreement_create_event'
+                },
+                callback: "string",
+                query: "string"
+            } 
+        ]
+    }, 
+    listener_agreement_attribute_value_change: function(request)
+    {
+        console.log('profile_and_permissions_controller.listener_agreement_attribute_value_change')
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'User profile and Permissions',
+                    action: 'listener_agreement_attribute_value_change'
+                },
+                callback: "string",
+                query: "string"
+            } 
+        ]
+    }, 
+    listener_agreement_state_change_event: function(request)
+    {
+        console.log('profile_and_permissions_controller.listener_agreement_state_change_event')
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'User profile and Permissions',
+                    action: 'listener_agreement_state_change_event'
+                },
+                callback: "string",
+                query: "string"
+            } 
+        ]
+    },   
+    listener_agreement_delete_event: function(request)
+    {
+        console.log('profile_and_permissions_controller.listener_agreement_delete_event')
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'User profile and Permissions',
+                    action: 'listener_agreement_delete_event'
+                },
+                callback: "string",
+                query: "string"
+            } 
+        ]
+    },
+
+    create_hub: function(request)
+    {
+        console.log("profile_and_permissions_controller.create_hub")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'profile_and_permissions_controller',
+                action: 'create_hub'
+            },
+            callback: faker.internet.url(),
+            query: faker.hacker.phrase()
+        }
+    },
+    destroy_hub: function(request)
+    {
+        console.log("profile_and_permissions_controller.destroy_hub")
+        return {
+            routeDetails: {
+                controller: 'profile_and_permissions_controller',
+                action: 'destroy_hub'
+            },
+            code:204,
+        }
     } 
+
+
 }
