@@ -10,7 +10,7 @@ module.exports = {
             {
                 id: faker.datatype.uuid(),
                 routeDetails: {
-                    controller: 'Appointment',
+                    controller: 'Appointment - 1',
                     action: 'index_appointment'
                 },
                 href: faker.internet.url(),
