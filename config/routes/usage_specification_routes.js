@@ -22,5 +22,16 @@ usage_specification_routes.delete("/:id", (request, response) => {
     response.send( usage_management_controller.destroy_specification( request ) )
 })
 
+usage_specification_routes.post("/listener_create_event", (request, response) => {
+    response.send( usage_management_controller.listener_specification_create_event( request ) )
+})
+usage_specification_routes.post("/listener_attribute_value_change", (request, response) => {
+    response.send( usage_management_controller.listener_specification_attribute_value_change( request ) )
+})
+usage_specification_routes.post("/listener_delete_event", (request, response) => {
+    response.send( usage_management_controller.listener_specification_delete_event( request ) )
+})
+
+
 //  === Exports ===
 module.exports = usage_specification_routes

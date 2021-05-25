@@ -1245,6 +1245,114 @@ module.exports = {
         }
     },
 
+    listener_usage_create_event: function(request)
+    {
+        console.log('usage_management_controller.listener_usage_create_event')
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'usage_management_controller',
+                    action: 'listener_usage_create_event'
+                },
+                callback: "string",
+                query: "string"
+            } 
+        ]
+    },
+    listener_usage_attribute_value_change: function(request)
+    {
+        console.log('usage_management_controller.listener_usage_attribute_value_change')
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'usage_management_controller',
+                    action: 'listener_usage_attribute_value_change'
+                },
+                callback: "string",
+                query: "string"
+            } 
+        ]
+    },
+    listener_usage_delete_event: function(request)
+    {
+        console.log('usage_management_controller.listener_usage_delete_event')
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'usage_management_controller',
+                    action: 'listener_usage_delete_event'
+                },
+                callback: "string",
+                query: "string"
+            } 
+        ]
+    },
+    listener_usage_state_change_event: function(request)
+    {
+        console.log('usage_management_controller.listener_usage_state_change_event')
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'usage_management_controller',
+                    action: 'listener_usage_state_change_event'
+                },
+                callback: "string",
+                query: "string"
+            } 
+        ]
+    },
+
+    listener_specification_create_event: function(request)
+    {
+        console.log('usage_management_controller.listener_specification_create_event')
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'usage_management_controller',
+                    action: 'listener_specification_create_event'
+                },
+                callback: "string",
+                query: "string"
+            } 
+        ]
+    },
+    listener_specification_attribute_value_change: function(request)
+    {
+        console.log('usage_management_controller.listener_specification_attribute_value_change')
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'usage_management_controller',
+                    action: 'listener_specification_attribute_value_change'
+                },
+                callback: "string",
+                query: "string"
+            } 
+        ]
+    },
+    listener_specification_delete_event: function(request)
+    {
+        console.log('usage_management_controller.listener_specification_delete_event')
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'usage_management_controller',
+                    action: 'listener_specification_delete_event'
+                },
+                callback: "string",
+                query: "string"
+            } 
+        ]
+    },
+    
+
     create_hub: function(request)
     {
         console.log('usage_management_controller.create_hub')
