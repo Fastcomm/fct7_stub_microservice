@@ -110,15 +110,64 @@ product_catalog_management_routes.delete('/export_job/:id', (request, response) 
     response.send( product_catalog_management_controller.destroy_export_job(request) )
 })
 
+product_catalog_management_routes.post("/listener/catalog_create_event", (request, response) => {
+  response.send( product_catalog_management_controller.create_listener_catalog_create_event( request ) )
+})
+product_catalog_management_routes.post("/listener/catalog_delete_event", (request, response) => {
+  response.send( product_catalog_management_controller.create_listener_catalog_delete_event( request ) )
+})
+product_catalog_management_routes.post("/listener/catalog_batch_event", (request, response) => {
+  response.send( product_catalog_management_controller.create_listener_catalog_batch_event( request ) )
+})
+
+product_catalog_management_routes.post("/listener/category_create_event", (request, response) => {
+  response.send( product_catalog_management_controller.create_listener_category_create_event( request ) )
+})
+product_catalog_management_routes.post("/listener/category_delete_event", (request, response) => {
+  response.send( product_catalog_management_controller.create_listener_category_delete_event( request ) )
+})
+
+product_catalog_management_routes.post("/listener/product_offering_create_event", (request, response) => {
+  response.send( product_catalog_management_controller.create_listener_product_offerenig_create_event( request ) )
+})
+product_catalog_management_routes.post("/listener/product_offering_attribute_value_change_event", (request, response) => {
+  response.send( product_catalog_management_controller.create_listener_product_offering_attribute_value_change_event( request ) )
+})
+product_catalog_management_routes.post("/listener/product_offering_state_change_event", (request, response) => {
+  response.send( product_catalog_management_controller.create_listener_product_offering_state_change_event( request ) )
+})
+product_catalog_management_routes.post("/listener/product_offering_delete_event", (request, response) => {
+  response.send( product_catalog_management_controller.create_listener_product_offering_delete_event( request ) )
+})
+
+product_catalog_management_routes.post("/listener/product_offering_price_create_event", (request, response) => {
+  response.send( product_catalog_management_controller.create_listener_product_offering_price_change_event( request ) )
+})
+product_catalog_management_routes.post("/listener/product_offering_price_attribute_value_change_event", (request, response) => {
+  response.send( product_catalog_management_controller.create_listener_product_offering_price_attribute_value_change_event( request ) )
+})
+product_catalog_management_routes.post("/listener/product_offering_price_state_change_event", (request, response) => {
+  response.send( product_catalog_management_controller.create_listener_product_offering_price_state_change_event( request ) )
+})
+product_catalog_management_routes.post("/listener/product_offering_price_delete_event", (request, response) => {
+  response.send( product_catalog_management_controller.create_listener_product_offering_price_delete_event( request ) )
+})
+
+product_catalog_management_routes.post("/listener/product_spesification_create_event", (request, response) => {
+  response.send( product_catalog_management_controller.create_listener_product_spesification_create_event( request ) )
+})
+product_catalog_management_routes.post("/listener/product_spesification_delete_event", (request, response) => {
+  response.send( product_catalog_management_controller.create_listener_product_spesification_delete_event( request ) )
+})
+
 product_catalog_management_routes.post("/hub", (request, response) => {
   response.send( product_catalog_management_controller.create_hub( request ) )
 })
 product_catalog_management_routes.delete("/hub/:hub_id", (request, response) => {
   response.send( product_catalog_management_controller.destroy_hub( request ) )
 })
-product_catalog_management_routes.post("/client/listener", (request, response) => {
-  response.send( product_catalog_management_controller.create_client_listener( request ) )
-})
+
+
 
 
 

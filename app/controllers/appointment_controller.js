@@ -3,6 +3,140 @@ const faker = require('faker')
 
 //  === Controller ===
 module.exports = {
+    index: function(request)
+    {
+        console.log("appointment_controller.index")
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'Appointment - 1',
+                    action: 'index_appointment'
+                },
+                href: faker.internet.url(),
+                category: "string",
+                creationDate: new Date(),
+                description: "string",
+                externalId: "string",
+                lastUpdate: new Date(),
+                attachment: [
+                  {
+                    id: "string",
+                    href: "string",
+                    attachmentType: "string",
+                    content: "string",
+                    description: "string",
+                    mimeType: "string",
+                    name: "string",
+                    url: "string",
+                    size: {
+                      amount: 1,
+                      units: "string"
+                    },
+                    validFor: {
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                calendarEvent: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                contactMedium: [
+                  {
+                    mediumType: "string",
+                    preferred: true,
+                    characteristic: {
+                      city: "string",
+                      contactType: "string",
+                      country: "string",
+                      emailAddress: "string",
+                      faxNumber: "string",
+                      phoneNumber: "string",
+                      postCode: "string",
+                      socialNetworkId: "string",
+                      stateOrProvince: "string",
+                      street1: "string",
+                      street2: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    },
+                    validFor: {
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                note: [
+                  {
+                    id: "string",
+                    author: "string",
+                    date: new Date(),
+                    text: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                relatedEntity: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    role: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                relatedParty: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    role: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                relatedPlace: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                status: "initialized",
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+        ]
+    },
     create: function(request)
     {
         console.log("appointment_controller.create")
@@ -13,178 +147,127 @@ module.exports = {
                 action: 'create_appointment'
             },
             href: faker.internet.url(),
-            externalId: "string",
-            description: faker.lorem.sentence(),
             category: "string",
-            status: "initialized",
             creationDate: new Date(),
+            description: "string",
+            externalId: "string",
             lastUpdate: new Date(),
-            validFor: {
-                startDateTime: new Date(),
-                endDateTime: new Date()    
-            },
-            "@baseType": "string",
-            "@type": "string",
-            "@schemaLocation": "string",
             attachment: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string",
-                    description: faker.lorem.sentence(),
-                    mimeType:  "string",
-                    sizeUnit:  "string",
-                    size: faker.datatype.number(),
-                    url:  "string",
-                    "@type": "string",
-                    "@schemaLocation": "string"
-                }
+              {
+                id: "string",
+                href: "string",
+                attachmentType: "string",
+                content: "string",
+                description: "string",
+                mimeType: "string",
+                name: "string",
+                url: "string",
+                size: {
+                  amount: 1,
+                  units: "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             calendarEvent: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                description: faker.lorem.sentence(),
-                "@referredType": "string"
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
             },
-            relatedParty: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string",
-                    role: "string",
-                    "@referredType": "string"
-                }
-            ],
-            place: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                name: "string",
-                role: "string",
-                "@referredType": "string",
-                "@schemaLocation": "string"
-            },
-            contactMedium: {
-                type: "string",
+            contactMedium: [
+              {
+                mediumType: "string",
+                preferred: true,
                 characteristic: {
-                    phoneNumber: "string",
-                    emailAddress: "string",
-                    "@type": "string",
-                    "@schemaLocation": "string"
-                }
-            },
-            relatedEntity: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string",
-                    role: "string",
-                    "@referredType": "string"
-                }
+                  city: "string",
+                  contactType: "string",
+                  country: "string",
+                  emailAddress: "string",
+                  faxNumber: "string",
+                  phoneNumber: "string",
+                  postCode: "string",
+                  socialNetworkId: "string",
+                  stateOrProvince: "string",
+                  street1: "string",
+                  street2: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
             note: [
-                {
-                    date: new Date(),
-                    author: "string",
-                    text: faker.lorem.sentence(),
-                }
-            ]
-            
-        }
-    },
-    index: function(request)
-    {
-        console.log("appointment_controller.index")
-        return [
-            {
-                id: faker.datatype.uuid(),
-                routeDetails: {
-                    controller: 'Appointment',
-                    action: 'index_appointment'
-                },
-                href: faker.internet.url(),
-                externalId: "string",
-                category: "string",
-                description: faker.lorem.sentence(),
-                status: "accepted",
-                creationDate: new Date(),
-                lastUpdate: new Date(),
-                validFor: {
-                    startDateTime: new Date(),
-                    endDateTime: new Date()    
-                },
-                attachment: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: "string",
-                        mimeType:  "string",
-                        sizeUnit:  "string",
-                        size: faker.datatype.number(),
-                        url:  "string",
-                        "@type": "string"
-                    }
-                ],
-                calendarEvent: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    description: faker.lorem.sentence(),
-                },
-                relatedParty: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: "string",
-                        role: "string",
-                    },
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: "string",
-                        role: "string",
-                    }
-                ],
-                place: {
-                    role: "interventionAddress",
-                    "@referredType": "geographicAddress",
-                    geographicAddress: {
-                        streetNr: faker.datatype.number(),
-                        streetType: "Avenue",
-                        streetName: "string",
-                        postCode: faker.datatype.number(),
-                        city: "Paris",
-                        country: "France"
-                    }
-                },
-                relatedEntity: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: "string",
-                        "@referredType": "string"
-                    },
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: "Work order generated for technician intervention",
-                        "@referredType": "workOrder"
-                    }
-                ],
-                note: [
-                    {
-                        date: new Date(),
-                        author: "string",
-                        text: faker.lorem.sentence()
-                    },
-                    {
-                        date: new Date(),
-                        author: "string",
-                        text: faker.lorem.sentence()
-                    }
-                ]
-
-                
-            }
-        ]
+              {
+                id: "string",
+                author: "string",
+                date: new Date(),
+                text: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            relatedEntity: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            relatedParty: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            relatedPlace: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            status: "initialized",
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date()
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+          }
     },
     show: function(request)
     {
@@ -196,85 +279,126 @@ module.exports = {
                 action: 'show_appointment'
             },
             href: faker.internet.url(),
-            externalId: "string",
             category: "string",
-            description: faker.lorem.sentence(),
-            status: "accepted",
             creationDate: new Date(),
+            description: "string",
+            externalId: "string",
             lastUpdate: new Date(),
-            validFor: {
-                startDateTime: new Date(),
-                endDateTime: new Date()    
-            },
             attachment: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string",
-                    mimeType:  "string",
-                    sizeUnit:  "string",
-                    size: faker.datatype.number(),
-                    url:  "string",
-                    "@type": "string"
-                }
+              {
+                id: "string",
+                href: "string",
+                attachmentType: "string",
+                content: "string",
+                description: "string",
+                mimeType: "string",
+                name: "string",
+                url: "string",
+                size: {
+                  amount: 1,
+                  units: "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             calendarEvent: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                description: faker.lorem.sentence(),
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
             },
-            relatedParty: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string",
-                    role: "string",
+            contactMedium: [
+              {
+                mediumType: "string",
+                preferred: true,
+                characteristic: {
+                  city: "string",
+                  contactType: "string",
+                  country: "string",
+                  emailAddress: "string",
+                  faxNumber: "string",
+                  phoneNumber: "string",
+                  postCode: "string",
+                  socialNetworkId: "string",
+                  stateOrProvince: "string",
+                  street1: "string",
+                  street2: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
                 },
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string",
-                    role: "string",
-                }
-            ],
-            place: {
-                role: "interventionAddress",
-                "@referredType": "geographicAddress",
-                geographicAddress: {
-                    streetNr: faker.datatype.number(),
-                    streetType: "Avenue",
-                    streetName: "string",
-                    postCode: faker.datatype.number(),
-                    city: "Paris",
-                    country: "France"
-                }
-            },
-            relatedEntity: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string",
-                    "@referredType": "string"
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
                 },
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "Work order generated for technician intervention",
-                    "@referredType": "workOrder"
-                }
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
             note: [
-                {
-                    date: new Date(),
-                    author: "string",
-                    text: faker.lorem.sentence()
-                },
-                {
-                    date: new Date(),
-                    author: "string",
-                    text: faker.lorem.sentence()
-                }
-            ]
+              {
+                id: "string",
+                author: "string",
+                date: new Date(),
+                text: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            relatedEntity: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            relatedParty: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            relatedPlace: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            status: "initialized",
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date()
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     update: function(request)
@@ -287,83 +411,126 @@ module.exports = {
                 action: 'update_appointment'
             },
             href: faker.internet.url(),
-            externalId: "string",
-            description: faker.lorem.sentence(),
             category: "string",
-            status: "initialized",
             creationDate: new Date(),
+            description: "string",
+            externalId: "string",
             lastUpdate: new Date(),
-            validFor: {
-                startDateTime: new Date(),
-                endDateTime: new Date()    
-            },
-            "@baseType": "string",
-            "@type": "string",
-            "@schemaLocation": "string",
             attachment: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string",
-                    description: faker.lorem.sentence(),
-                    mimeType:  "string",
-                    sizeUnit:  "string",
-                    size: faker.datatype.number(),
-                    url:  "string",
-                    "@type": "string",
-                    "@schemaLocation": "string"
-                }
+              {
+                id: "string",
+                href: "string",
+                attachmentType: "string",
+                content: "string",
+                description: "string",
+                mimeType: "string",
+                name: "string",
+                url: "string",
+                size: {
+                  amount: 1,
+                  units: "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             calendarEvent: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                description: faker.lorem.sentence(),
-                "@referredType": "string"
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
             },
-            relatedParty: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string",
-                    role: "string",
-                    "@referredType": "string"
-                }
-            ],
-            place: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                name: "string",
-                role: "string",
-                "@referredType": "string",
-                "@schemaLocation": "string"
-            },
-            contactMedium: {
-                type: "string",
+            contactMedium: [
+              {
+                mediumType: "string",
+                preferred: true,
                 characteristic: {
-                    phoneNumber: "string",
-                    emailAddress: "string",
-                    "@type": "string",
-                    "@schemaLocation": "string"
-                }
-            },
-            relatedEntity: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string",
-                    role: "string",
-                    "@referredType": "string"
-                }
+                  city: "string",
+                  contactType: "string",
+                  country: "string",
+                  emailAddress: "string",
+                  faxNumber: "string",
+                  phoneNumber: "string",
+                  postCode: "string",
+                  socialNetworkId: "string",
+                  stateOrProvince: "string",
+                  street1: "string",
+                  street2: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
             note: [
-                {
-                    date: new Date(),
-                    author: "string",
-                    text: faker.lorem.sentence(),
-                }
-            ]
-            
-           
+              {
+                id: "string",
+                author: "string",
+                date: new Date(),
+                text: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            relatedEntity: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            relatedParty: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            relatedPlace: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            status: "initialized",
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date()
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
 
     },
@@ -376,65 +543,10 @@ module.exports = {
                 controller: 'Appointment',
                 action: 'destroy_appointment'
             },
-            code: faker.datatype.number(),
-            reason: "string",
-            message: "string",
-            status: "Appointment entry destroyed successfully",
-            referenceError: "string",
-            "@type": "string",
-            "@schemaLocation": "string"
+            code: 204,
         }
     },
 
-    create_time_slot: function(request)
-    {
-        console.log("appointment_controller.create_time_slot")
-        return {
-            id: faker.datatype.uuid(),
-            routeDetails: {
-                controller: 'Appointment',
-                action: 'create_time_slot'
-            },
-            relatedParty: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                name: "string",
-                role: "string",
-                "@referredType": "string"
-            },
-            relatedEntity: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                name: "string",
-                role: "string",
-                "@referredType": "string"
-            },
-            place: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                name: "string",
-                role: "string",
-                "@referredType": "string",
-                "@schemaLocation": "string"
-            },
-            requestedTimeSlot: [
-                {
-                    validFor: {
-                        startDateTime: new Date(),
-                        endDateTime: new Date()    
-                    },
-                    relatedParty: {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: "string",
-                        role: "string",
-                        "@referredType": "string",
-                        
-                    },
-                }
-            ]    
-        }
-    },
     index_time_slot: function(request)
     {
         console.log("appointment_controller.index_time_slot")
@@ -445,42 +557,189 @@ module.exports = {
                     controller: 'Appointment',
                     action: 'index_time_slot'
                 },
-                requestedTimeSlot: [
-                    {
-                        validFor: {
-                            startDateTime: new Date(),
-                            endDateTime: new Date()    
-                        }
-                    }
+                href: faker.internet.url(),
+                searchDate: new Date(),
+                searchResult: "string",
+                availableTimeSlot: [
+                  {
+                    id: "string",
+                    href: "string",
+                    relatedParty: {
+                      id: "string",
+                      href: "string",
+                      name: "string",
+                      role: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
+                    },
+                    validFor: {
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
                 ],
-                relatedParty: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
+                relatedEntity: [
+                  {
+                    id: "string",
+                    href: "string",
                     name: "string",
                     role: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                relatedParty: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
                 },
-                place: {
-                    role: "interventionAddress",
-                    "@referredType": "geographicAddress",
-                    geographicAddress: {
-                        streetNr: faker.datatype.number(),
-                        streetType: "Avenue",
-                        streetName: "string",
-                        postCode: faker.datatype.number(),
-                        city: "Paris",
-                        country: "France" 
-                    }
+                relatedPlace: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
                 },
-                relatedEntity: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: "Internet connection problem to solve",
-                        "@referredType": "troubleTicket"
-                    }
-                ]
-            }
+                requestedTimeSlot: [
+                  {
+                    id: "string",
+                    href: "string",
+                    relatedParty: {
+                      id: "string",
+                      href: "string",
+                      name: "string",
+                      role: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
+                    },
+                    validFor: {
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                status: "inProgress",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
         ]
+    },
+    create_time_slot: function(request)
+    {
+        console.log("appointment_controller.create_time_slot")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Appointment',
+                action: 'create_time_slot'
+            },
+            href: faker.internet.url(),
+            searchDate: new Date(),
+            searchResult: "string",
+            availableTimeSlot: [
+              {
+                id: "string",
+                href: "string",
+                relatedParty: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            relatedEntity: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            relatedParty: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            relatedPlace: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            requestedTimeSlot: [
+              {
+                id: "string",
+                href: "string",
+                relatedParty: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            status: "inProgress",
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+          }
     },
     show_time_slot: function(request)
     {
@@ -491,41 +750,92 @@ module.exports = {
                 controller: 'Appointment',
                 action: 'show_time_slot'
             },
-            requestedTimeSlot: [
-                {
-                    validFor: {
-                        startDateTime: new Date(),
-                        endDateTime: new Date()    
-                    }
-                }
+            href: faker.internet.url(),
+            searchDate: new Date(),
+            searchResult: "string",
+            availableTimeSlot: [
+              {
+                id: "string",
+                href: "string",
+                relatedParty: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
-            relatedParty: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
+            relatedEntity: [
+              {
+                id: "string",
+                href: "string",
                 name: "string",
                 role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            relatedParty: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
             },
-            place: {
-                role: "interventionAddress",
-                "@referredType": "geographicAddress",
-                geographicAddress: {
-                    streetNr: faker.datatype.number(),
-                    streetType: "Avenue",
-                    streetName: "string",
-                    postCode: faker.datatype.number(),
-                    city: "Paris",
-                    country: "France" 
-                }
+            relatedPlace: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
             },
-            relatedEntity: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "Internet connection problem to solve",
-                    "@referredType": "troubleTicket"
-                }
-            ]
-        }
+            requestedTimeSlot: [
+              {
+                id: "string",
+                href: "string",
+                relatedParty: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            status: "inProgress",
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+          }
     },
     update_time_slot: function(request)
     {
@@ -537,28 +847,91 @@ module.exports = {
                 action: 'update_time_slot'
             },
             href: faker.internet.url(),
-            status: "string",
             searchDate: new Date(),
             searchResult: "string",
-            "@type": "string",
-            "@schemaLocation": "string",
             availableTimeSlot: [
-                {
-                    validFor: {
-                        startDateTime: new Date(),
-                        endDateTime: new Date()    
-                    },
-                    relatedParty: {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: "string",
-                        role: "string",
-                        "@referredType": "string",
-                    }
-                }
-            ]
-
-        }
+              {
+                id: "string",
+                href: "string",
+                relatedParty: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            relatedEntity: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            relatedParty: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            relatedPlace: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            requestedTimeSlot: [
+              {
+                id: "string",
+                href: "string",
+                relatedParty: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            status: "inProgress",
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+          }
     },
     destroy_time_slot: function(request)
     {
@@ -569,14 +942,116 @@ module.exports = {
                 controller: 'Appointment',
                 action: 'destroy_time_slot'
             },
-            code: faker.datatype.number(),
-            reason: "string",
-            message: "string",
-            status: "Time slot destroyed successfully",
-            referenceError: "string"
+            code: 204
         }
     },
 
+    create_appointment_notification_listener_create_event: function(request)
+    {
+        console.log("appointment_controller.create_appointment_notification_listener_create_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Appointment',
+                action: 'create_appointment_notification_listener_create_event'
+            },
+            "callback": "string",
+            "query": "string"
+          }
+    },
+    create_appointment_notification_listener_attribute_value_change_event: function(request)
+    {
+        console.log("appointment_controller.create_appointment_notification_listener_attribute_value_change_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Appointment',
+                action: 'create_appointment_notification_listener_attribute_value_change_event'
+            },
+            "callback": "string",
+            "query": "string"
+          }
+    },
+    create_appointment_notification_listener_state_change_event: function(request)
+    {
+        console.log("appointment_controller.create_appointment_notification_listener_state_change_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Appointment',
+                action: 'create_appointment_notification_listener_state_change_event'
+            },
+            "callback": "string",
+            "query": "string"
+          }
+    },
+    create_appointment_notification_listener_delete_event: function(request)
+    {
+        console.log("appointment_controller.create_appointment_notification_listener_delete_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Appointment',
+                action: 'create_appointment_notification_listener_delete_event'
+            },
+            "callback": "string",
+            "query": "string"
+          }
+    },
+
+    create_search_time_slot_notification_listener_create_event: function(request)
+    {
+        console.log("appointment_controller.create_search_time_slot_notification_listener_create_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Appointment',
+                action: 'create_search_time_slot_notification_listener_create_event'
+            },
+            "callback": "string",
+            "query": "string"
+          }
+    },
+    create_search_time_slot_notification_listener_attribute_value_change_event: function(request)
+    {
+        console.log("appointment_controller.create_search_time_slot_notification_listener_attribute_value_change_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Appointment',
+                action: 'create_search_time_slot_notification_listener_attribute_value_change_event'
+            },
+            "callback": "string",
+            "query": "string"
+          }
+    },
+    create_search_time_slot_notification_listener_state_change_event: function(request)
+    {
+        console.log("appointment_controller.create_search_time_slot_notification_listener_state_change_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Appointment',
+                action: 'create_search_time_slot_notification_listener_state_change_event'
+            },
+            "callback": "string",
+            "query": "string"
+          }
+    },
+    create_search_time_slot_notification_listener_delete_event: function(request)
+    {
+        console.log("appointment_controller.create_search_time_slot_notification_listener_delete_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Appointment',
+                action: 'create_search_time_slot_notification_listener_delete_event'
+            },
+            "callback": "string",
+            "query": "string"
+          }
+    },
+    
     create_hub: function(request)
     {
         console.log("appointment_controller.create_hub")
@@ -601,11 +1076,7 @@ module.exports = {
                 controller: 'Appointment',
                 action: 'destroy_hub'
             },
-            code: faker.datatype.number(),
-            reason: "string",
-            message: "string",
-            status: faker.datatype.number(),
-            referenceError: "string"
+            code: 204
         }
     }
 }

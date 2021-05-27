@@ -3,50 +3,6 @@ const faker = require('faker')
 
 //  === Controller ===
 module.exports = {
-    show: function(request)
-    {
-        console.log("usage_consumption_controller.show")
-        return {
-            id: request.params.id,
-            routeDetails: {
-                controller: 'Usage Consumption',
-                action: 'create'
-            },
-            href: faker.internet.url(),
-            name: faker.name.findName(),
-            description: faker.lorem.sentence(),
-            effectiveDate: faker.date.soon(),
-            relatedParty: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                name: faker.company.companyName()
-            },
-            bucket: [
-                {
-                    id: faker.datatype.uuid(),
-                    name: faker.system.fileName(),
-                    isShared: faker.random.boolean(),
-                    product: {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.commerce.productName(),
-                        desc: faker.lorem.sentence(),
-                        code: faker.address.zipCode()
-                    },
-                    bucketBalance: [
-                        {
-                            unit: faker.finance.currencyCode(),
-                            remainingValue: faker.datatype.number(),
-                            validFor: {
-                                startDateTime: faker.date.soon(),
-                                endDateTime:faker.date.soon()
-                            }
-                        }
-                    ]
-                }
-            ]
-        }
-    },
     index: function(request)
     {
         console.log("usage_consumption_controller.index")
@@ -58,40 +14,304 @@ module.exports = {
                     action: 'index'
                 },
                 href: faker.internet.url(),
-                name: faker.name.findName(),
-                description: faker.lorem.sentence(),
-                effectiveDate: faker.date.soon(),
-                relatedParty: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.company.companyName()
-                },
+                description: "string",
+                effectiveDate: new Date(),
+                name: "string",
                 bucket: [
-                    {
-                        id: faker.datatype.uuid(),
-                        name: faker.system.fileName(),
-                        isShared: faker.random.boolean(),
-                        product: {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url(),
-                            name: faker.commerce.productName(),
-                            desc: faker.lorem.sentence(),
-                            code: faker.address.zipCode()
+                  {
+                    id: "string",
+                    isShared: true,
+                    name: "string",
+                    usageType: "string",
+                    bucketBalance: [
+                      {
+                        remainingValueName: "string",
+                        remainingValue: {
+                          amount: 1,
+                          units: "string"
                         },
-                        bucketBalance: [
-                            {
-                                unit: faker.finance.currencyCode(),
-                                remainingValue: faker.datatype.number(),
-                                validFor: {
-                                    startDateTime: faker.date.soon(),
-                                    endDateTime:faker.date.soon()
-                                }
-                            }
-                        ]
-                    }
-                ]
+                        validFor: {
+                          endDateTime: new Date(),
+                          startDateTime: new Date()
+                        },
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string"
+                      }
+                    ],
+                    bucketCounter: [
+                      {
+                        counterType: "string",
+                        level: "string",
+                        valueName: "string",
+                        consumptionPeriod: {
+                          endDateTime: new Date(),
+                          startDateTime: new Date()
+                        },
+                        product: {
+                          id: "string",
+                          href: "string",
+                          name: "string",
+                          publicIdentifier: "string",
+                          "@baseType": "string",
+                          "@schemaLocation": "string",
+                          "@type": "string",
+                          "@referredType": "string"
+                        },
+                        user: {
+                          id: "string",
+                          href: "string",
+                          name: "string",
+                          role: "string",
+                          "@baseType": "string",
+                          "@schemaLocation": "string",
+                          "@type": "string",
+                          "@referredType": "string"
+                        },
+                        value: {
+                          amount: 1,
+                          units: "string"
+                        },
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string"
+                      }
+                    ],
+                    product: [
+                      {
+                        id: "string",
+                        href: "string",
+                        name: "string",
+                        publicIdentifier: "string",
+                        outOfBucketCounter: [
+                          {
+                            counterType: "string",
+                            level: "string",
+                            valueName: "string",
+                            consumptionPeriod: {
+                              endDateTime: new Date(),
+                              startDateTime: new Date()
+                            },
+                            product: {
+                              id: "string",
+                              href: "string",
+                              name: "string",
+                              publicIdentifier: "string",
+                              "@baseType": "string",
+                              "@schemaLocation": "string",
+                              "@type": "string",
+                              "@referredType": "string"
+                            },
+                            user: {
+                              id: "string",
+                              href: "string",
+                              name: "string",
+                              role: "string",
+                              "@baseType": "string",
+                              "@schemaLocation": "string",
+                              "@type": "string",
+                              "@referredType": "string"
+                            },
+                            value: {
+                              amount: 1,
+                              units: "string"
+                            },
+                            "@baseType": "string",
+                            "@schemaLocation": "string",
+                            "@type": "string"
+                          }
+                        ],
+                        user: [
+                          {
+                            id: "string",
+                            href: "string",
+                            name: "string",
+                            role: "string",
+                            "@baseType": "string",
+                            "@schemaLocation": "string",
+                            "@type": "string",
+                            "@referredType": "string"
+                          }
+                        ],
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string"
+                      }
+                    ],
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                relatedParty: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
             }
         ]
+    },
+    show: function(request)
+    {
+        console.log("usage_consumption_controller.show")
+        return {
+            id: request.params.id,
+            routeDetails: {
+                controller: 'Usage Consumption',
+                action: 'show'
+            },
+            href: faker.internet.url(),
+            description: "string",
+            effectiveDate: new Date(),
+            name: "string",
+            bucket: [
+              {
+                id: "string",
+                isShared: true,
+                name: "string",
+                usageType: "string",
+                bucketBalance: [
+                  {
+                    remainingValueName: "string",
+                    remainingValue: {
+                      amount: 1,
+                      units: "string"
+                    },
+                    validFor: {
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                bucketCounter: [
+                  {
+                    counterType: "string",
+                    level: "string",
+                    valueName: "string",
+                    consumptionPeriod: {
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
+                    },
+                    product: {
+                      id: "string",
+                      href: "string",
+                      name: "string",
+                      publicIdentifier: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
+                    },
+                    user: {
+                      id: "string",
+                      href: "string",
+                      name: "string",
+                      role: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
+                    },
+                    value: {
+                      amount: 1,
+                      units: "string"
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                product: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    publicIdentifier: "string",
+                    outOfBucketCounter: [
+                      {
+                        counterType: "string",
+                        level: "string",
+                        valueName: "string",
+                        consumptionPeriod: {
+                          endDateTime: new Date(),
+                          startDateTime: new Date()
+                        },
+                        product: {
+                          id: "string",
+                          href: "string",
+                          name: "string",
+                          publicIdentifier: "string",
+                          "@baseType": "string",
+                          "@schemaLocation": "string",
+                          "@type": "string",
+                          "@referredType": "string"
+                        },
+                        user: {
+                          id: "string",
+                          href: "string",
+                          name: "string",
+                          role: "string",
+                          "@baseType": "string",
+                          "@schemaLocation": "string",
+                          "@type": "string",
+                          "@referredType": "string"
+                        },
+                        value: {
+                          amount: 1,
+                          units: "string"
+                        },
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string"
+                      }
+                    ],
+                    user: [
+                      {
+                        id: "string",
+                        href: "string",
+                        name: "string",
+                        role: "string",
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string",
+                        "@referredType": "string"
+                      }
+                    ],
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            relatedParty: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+        }
     },
     destroy: function(request)
     {
@@ -102,8 +322,76 @@ module.exports = {
                 controller: 'Usage Consumption',
                 action: 'destroy'
             },
-            status: "usage_consumption entry destroyed successfully"
+            code: 204
         }
+    },
+
+    index_requests: function(request)
+    {
+        console.log("usage_consumption_controller.index_requests")        
+        return [
+            {
+                id: faker.datatype.uuid(),
+                routeDetails: {
+                    controller: 'Usage Consumption',
+                    action: 'index_request'
+                },
+                href: faker.internet.url(),
+                creationDate: new Date(),
+                lastUpdate: new Date(),
+                status: "string",
+                bucket: [
+                  {
+                    id: "string",
+                    name: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                product: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  publicIdentifier: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                relatedParty: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    role: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                usageConsumptionReport: {
+                  id: "string",
+                  href: "string",
+                  description: "string",
+                  effectiveDate: new Date(),
+                  name: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                validPeriod: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+            }
+        ]
     },
     create_request: function(request)
     {
@@ -116,27 +404,59 @@ module.exports = {
             },
             href: faker.internet.url(),
             creationDate: new Date(),
-            status: "created",
             lastUpdate: new Date(),
-            callbackUrl: faker.internet.url(),
-            validPeriod: {
-                startDateTime: faker.date.soon(),
-                endDateTime: faker.date.soon()
-            },
-            product: {
-                id: faker.datatype.uuid(),
-                user: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                }
-            },
+            status: "string",
             bucket: [
-                {
-                    id: faker.datatype.uuid()
-                }
-            ]
-        }
+              {
+                id: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            product: {
+              id: "string",
+              href: "string",
+              name: "string",
+              publicIdentifier: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            relatedParty: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            usageConsumptionReport: {
+              id: "string",
+              href: "string",
+              description: "string",
+              effectiveDate: new Date(),
+              name: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            validPeriod: {
+              endDateTime: new Date(),
+              startDateTime: new Date()
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+          }
     },
     show_request: function(request)
     {
@@ -149,62 +469,59 @@ module.exports = {
             },
             href: faker.internet.url(),
             creationDate: new Date(),
-            status: "created",
             lastUpdate: new Date(),
-            callbackUrl: faker.internet.url(),
-            validPeriod: {
-                startDateTime: faker.date.soon(),
-                endDateTime: faker.date.soon()
-            },
-            product: {
-                id: faker.datatype.uuid(),
-                user: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: faker.name.findName()
-                }
-            },
+            status: "string",
             bucket: [
-                {
-                    id: faker.datatype.uuid()
-                }
-            ]
-        }
-    },
-    index_requests: function(request)
-    {
-        console.log("usage_consumption_controller.index_requests")
-        return [
-            {
-                id: faker.datatype.uuid(),
-                routeDetails: {
-                    controller: 'Usage Consumption',
-                    action: 'index_request'
-                },
-                href: faker.internet.url(),
-                creationDate: new Date(),
-                status: "created",
-                lastUpdate: new Date(),
-                callbackUrl: faker.internet.url(),
-                validPeriod: {
-                    startDateTime: faker.date.soon(),
-                    endDateTime: faker.date.soon()
-                },
-                product: {
-                    id: faker.datatype.uuid(),
-                    user: {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: faker.name.findName()
-                    }
-                },
-                bucket: [
-                    {
-                        id: faker.datatype.uuid()
-                    }
-                ]
-            }
-        ]
+              {
+                id: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            product: {
+              id: "string",
+              href: "string",
+              name: "string",
+              publicIdentifier: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            relatedParty: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            usageConsumptionReport: {
+              id: "string",
+              href: "string",
+              description: "string",
+              effectiveDate: new Date(),
+              name: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            validPeriod: {
+              endDateTime: new Date(),
+              startDateTime: new Date()
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+          }
     },
     destroy_request: function(request)
     {
@@ -215,9 +532,25 @@ module.exports = {
                 controller: 'Usage Consumption',
                 action: 'destroy_request'
             },
-            status: "usage_consumption request destroyed successfully"
+            code: 204
         }
     },
+
+    create_listener_request_state_change: function(request)
+    {
+        console.log("usage_consumption_controller.create_listener_request_state_change")
+
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'usage_consumption_controller',
+                action: 'create_listener_request_state_change'
+            },
+            callback: "string",
+            query: "string"
+        }
+    },
+
     create_hub: function(request)
     {
         console.log("usage_consumption_controller.create_hub")
@@ -240,7 +573,7 @@ module.exports = {
                 controller: 'Usage Consumption',
                 action: 'destroy_hub'
             },
-            status: "usage_consumption hub destroyed successfully"
+            code: 204
         }
     }
 }

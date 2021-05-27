@@ -23,15 +23,29 @@ geographical_site_management_routes.delete('/:geographic_site_id', (request, res
     response.send( geographical_site_management_controller.destroy(request) )
 })
 
+
+geographical_site_management_routes.post("/client/listener", (request, response) => {
+    response.send( geographical_site_management_controller.create_client_listener_site_create_event( request ) )
+})
+geographical_site_management_routes.post("/client/listener", (request, response) => {
+    response.send( geographical_site_management_controller.create_client_listener_attribute_value_change_event( request ) )
+})
+geographical_site_management_routes.post("/client/listener", (request, response) => {
+    response.send( geographical_site_management_controller.create_client_listener_status_change_event( request ) )
+})
+geographical_site_management_routes.post("/client/listener", (request, response) => {
+    response.send( geographical_site_management_controller.create_client_listener_delete_event( request ) )
+})
+
+
+
 geographical_site_management_routes.post("/hub", (request, response) => {
     response.send( geographical_site_management_controller.create_hub( request ) )
 })
 geographical_site_management_routes.delete("/hub/:hub_id", (request, response) => {
     response.send( geographical_site_management_controller.destroy_hub( request ) )
 })
-geographical_site_management_routes.post("/client/listener", (request, response) => {
-    response.send( geographical_site_management_controller.create_client_listener( request ) )
-})
+
 
 
 //  === Exports ===

@@ -24,5 +24,19 @@ privacy_profile_routes.delete("/:id", (request, response) => {
     response.send( privacy_controller.destroy_profile( request ) )
 })
 
+privacy_profile_routes.post("/create_event", (request, response) => {
+    response.send( privacy_controller.listener_profile_create_event( request ) )
+})
+privacy_profile_routes.post("/attribute_value_change", (request, response) => {
+    response.send( privacy_controller.listener_profile_attribute_value_change( request ) )
+})
+privacy_profile_routes.post("/state_change_event", (request, response) => {
+    response.send( privacy_controller.listener_profile_state_change_event( request ) )
+})
+privacy_profile_routes.post("/delete_event", (request, response) => {
+    response.send( privacy_controller.listener_profile_delete_event( request ) )
+})
+
+
 //  === Exports ===
 module.exports = privacy_profile_routes

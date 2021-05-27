@@ -15,38 +15,43 @@ module.exports = {
                     action: 'index_catalog'
                 },
                 href: faker.internet.url(),
-                name: "string",
-                description: faker.random.words(),
-                catalogType: faker.random.words(),
-                version: "1.0",
-                validFor: {
-                    startDateTime: new Date(),
-                    endDateTime: new Date()    
-                },
+                catalogType: "string",
+                description: "string",
                 lastUpdate: new Date(),
-                lifecycleStatus: "active",
-                relatedParty: [
-                    {
-                        href: faker.internet.url(),
-                        id: faker.datatype.uuid(),
-                        name: "string",
-                        role: "string"
-                    },
-                    {
-                        href: faker.internet.url(),
-                        id: faker.datatype.uuid(),
-                        name: "string",
-                        role: "string"
-                    }
-                ],
+                lifecycleStatus: "string",
+                name: "string",
+                version: "string",
                 category: [
-                    {
-                        href: faker.internet.url(),
-                        id: faker.datatype.uuid(),
-                        name: "string"
-                    }
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    version: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
                 ],
-                "@type": "Catalog"
+                relatedParty: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    role: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
             }
         ]
     },
@@ -60,38 +65,43 @@ module.exports = {
                 action: 'show_catalog'
             },
             href: faker.internet.url(),
-            name: "string",
-            description: faker.random.words(),
-            catalogType: faker.random.words(),
-            version: "1.0",
-            validFor: {
-                startDateTime: new Date(),
-                endDateTime: new Date()    
-            },
+            catalogType: "string",
+            description: "string",
             lastUpdate: new Date(),
-            lifecycleStatus: "active",
-            relatedParty: [
-                {
-                    href: faker.internet.url(),
-                    id: faker.datatype.uuid(),
-                    name: "string",
-                    role: "string"
-                },
-                {
-                    href: faker.internet.url(),
-                    id: faker.datatype.uuid(),
-                    name: "string",
-                    role: "string"
-                }
-            ],
+            lifecycleStatus: "string",
+            name: "string",
+            version: "string",
             category: [
-                {
-                    href: faker.internet.url(),
-                    id: faker.datatype.uuid(),
-                    name: "string"
-                }
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                version: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
-            "@type": "Catalog"
+            relatedParty: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date()
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     create_catalog: function(request)
@@ -104,11 +114,43 @@ module.exports = {
                 action: 'create_catalog'
             },
             href: faker.internet.url(),
-            name: "string",
-            description: faker.random.words(),
+            catalogType: "string",
+            description: "string",
             lastUpdate: new Date(),
-            lifecycleStatus: "active",
-            "@type": "Catalog" 
+            lifecycleStatus: "string",
+            name: "string",
+            version: "string",
+            category: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                version: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            relatedParty: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date()
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     update_catalog: function(request)
@@ -121,41 +163,43 @@ module.exports = {
                 action: 'update_catalog'
             },
             href: faker.internet.url(),
-            name: "string",
-            description: faker.random.words(),
-            catalogType: faker.random.words(),
-            version: "1.0",
-            validFor: {
-                startDateTime: new Date(),
-                endDateTime: new Date()    
-            },
+            catalogType: "string",
+            description: "string",
             lastUpdate: new Date(),
-            lifecycleStatus: "active",
-            relatedParty: [
-                {
-                    href: faker.internet.url(),
-                    id: faker.datatype.uuid(),
-                    name: "string",
-                    role: "string"
-                },
-                {
-                    href: faker.internet.url(),
-                    id: faker.datatype.uuid(),
-                    name: "string",
-                    role: "string"
-                }
-            ],
+            lifecycleStatus: "string",
+            name: "string",
+            version: "string",
             category: [
-                {
-                    href: faker.internet.url(),
-                    id: faker.datatype.uuid(),
-                    name: "string"
-                }
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                version: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
-            "@type": "Catalog"
-           
-            
-           
+            relatedParty: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date()
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
 
     },
@@ -183,84 +227,93 @@ module.exports = {
                     action: 'index_category'
                 },
                 href: faker.internet.url(),
-                name: "string",
-                description: faker.random.words(),
-                version: "1.0",
-                validFor: {
-                    startDateTime: new Date(),
-                    endDateTime: new Date()    
-                },
-                lifecycleStatus: "active",
+                description: "string",
                 isRoot: true,
                 lastUpdate: new Date(),
-
-                catalogType: faker.random.words(),
-                subCategory: [
-                    {
-                        href: faker.internet.url(),
-                        id: faker.datatype.uuid(),
-                        name: "string",
-                        version: "1.0"
-                    },
-                    {
-                        href: faker.internet.url(),
-                        id: faker.datatype.uuid(),
-                        name: "string",
-                        version: "1.0"
-                    }
-                ],
+                lifecycleStatus: "string",
+                name: "string",
+                parentId: "string",
+                version: "string",
                 productOffering: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: "string"
-                    }
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
                 ],
-                "@type": "Category"
+                subCategory: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    version: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
             }
         ]
     },
     show_category: function(request)
     {
         console.log("product_catalog_management_controller.show_category")
+        
         return {
             id: request.params.id,
             routeDetails: {
                 controller: 'Product Catalog Management',
                 action: 'show_category'
             },
-            href: faker.internet.url(),
-            name: "string",
-            description: faker.random.words(),
-            version: "1.0",
-            validFor: {
-                startDateTime: new Date(),
-                endDateTime: new Date()    
-            },
-            lifecycleStatus: "active",
+            description: "string",
+            isRoot: true,
             lastUpdate: new Date(),
-            subCategory: [
-                {
-                    href: faker.internet.url(),
-                    id: faker.datatype.uuid(),
-                    name: "string",
-                    version: "1.0"
-                },
-                {
-                    href: faker.internet.url(),
-                    id: faker.datatype.uuid(),
-                    name: "string",
-                    version: "1.0"
-                }
-            ],
+            lifecycleStatus: "string",
+            name: "string",
+            parentId: "string",
+            version: "string",
             productOffering: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string"
-                }
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
-            "@type": "Category"
+            subCategory: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                version: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date()
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     create_category: function(request)
@@ -273,11 +326,43 @@ module.exports = {
                 action: 'create_category'
             },
             href: faker.internet.url(),
-            name: "string",
-            description: faker.random.words(),
-            version: "1.0",
+            description: "string",
+            isRoot: true,
             lastUpdate: new Date(),
-            "@type": "Category"
+            lifecycleStatus: "string",
+            name: "string",
+            parentId: "string",
+            version: "string",
+            productOffering: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            subCategory: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                version: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date()
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     update_category: function(request)
@@ -289,39 +374,43 @@ module.exports = {
                 controller: 'Product Catalog Management',
                 action: 'update_category'
             },
-            href: faker.internet.url(),
-            name: "string",
-            description: faker.random.words(),
-            version: "1.0",
-            validFor: {
-                startDateTime: new Date(),
-                endDateTime: new Date()    
-            },
-            lifecycleStatus: "active",
+            description: "string",
             isRoot: true,
             lastUpdate: new Date(),
-            subCategory: [
-                {
-                    href: faker.internet.url(),
-                    id: faker.datatype.uuid(),
-                    name: "string",
-                    version: "1.0"
-                },
-                {
-                    href: faker.internet.url(),
-                    id: faker.datatype.uuid(),
-                    name: "string",
-                    version: "1.0"
-                }
-            ],
+            lifecycleStatus: "string",
+            name: "string",
+            parentId: "string",
+            version: "string",
             productOffering: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string"
-                }
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
-            "@type": "Category"
+            subCategory: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                version: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date()
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     destroy_category: function(request)
@@ -348,139 +437,242 @@ module.exports = {
                     action: 'index_product_offering'
                 },
                 href: faker.internet.url(),
-                name: "string",
-                description: faker.random.words(),
-                version: "1.0",
-                validFor: {
-                    startDateTime: new Date(),
-                    endDateTime: new Date()    
-                },
-                lastUpdate: new Date(),
-                lifecycleStatus: "Active",
-                isBundle: false,
+                description: "string",
+                isBundle: true,
                 isSellable: true,
+                lastUpdate: new Date(),
+                lifecycleStatus: "string",
+                name: "string",
                 statusReason: "string",
-                place: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: "string",
-                        "@referredType": "GeographicAddress"
-                    }
-                ],
-                serviceLevelAgreement: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
+                version: "string",
+                agreement: [
+                  {
+                    id: "string",
+                    href: "string",
                     name: "string",
-                    "@referredType": "BusinessSLA"
-                },
-                productSpecification: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    version: "1.0",
-                    name: "string",
-                    "@referredType": "DeviceSpecification"
-                },
-                channel: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: "string"
-                    }
-                ],
-                serviceCandidate: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    version: "1.0",
-                    name: "string"
-                },
-                category: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        version: "1.0",
-                        name: "string"
-                    }
-                ],
-                resourceCandidate: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string"
-                },
-                productOfferingTerm: [
-                    {
-                        name: "string",
-                        description: faker.random.words(),
-                        duration: {
-                            amount: 3,
-                            units: "string"
-                        },
-                        validFor: {
-                            startDateTime: new Date(),
-                            endDateTime: new Date()    
-                        }
-                    }
-                ],
-                productOfferingPrice: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: "string"
-                    }
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
                 ],
                 attachment: [
-                    {
-                        description: faker.random.words(),
-                        mimeType: "string",
-                        url: faker.internet.url()
-                    }
+                  {
+                    id: "string",
+                    href: "string",
+                    attachmentType: "string",
+                    content: "string",
+                    description: "string",
+                    mimeType: "string",
+                    name: "string",
+                    url: "string",
+                    size: {
+                      amount: 1,
+                      units: "string"
+                    },
+                    validFor: {
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                bundledProductOffering: [
+                  {
+                    id: "string",
+                    href: "string",
+                    lifecycleStatus: "string",
+                    name: "string",
+                    bundledProductOfferingOption: {
+                      numberRelOfferDefault: 0,
+                      numberRelOfferLowerLimit: 0,
+                      numberRelOfferUpperLimit: 0,
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                category: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    version: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                channel: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
                 ],
                 marketSegment: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: "string" 
-                    }
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                place: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
                 ],
                 prodSpecCharValueUse: [
-                    {
-                        name: "string",
-                        description: faker.random.words(),
-                        valueType: "number",
-                        minCardinality: 1,
-                        maxCardinality: 1,
+                  {
+                    description: "string",
+                    maxCardinality: 0,
+                    minCardinality: 0,
+                    name: "string",
+                    valueType: "string",
+                    productSpecCharacteristicValue: [
+                      {
+                        isDefault: true,
+                        rangeInterval: "string",
+                        regex: "string",
+                        unitOfMeasure: "string",
+                        valueFrom: "string",
+                        valueTo: "string",
+                        valueType: "string",
                         validFor: {
-                            startDateTime: new Date(),
-                            endDateTime: new Date()    
+                          endDateTime: new Date(),
+                          startDateTime: new Date()
                         },
-                        productSpecCharacteristicValue: [
-                            {
-                                isDefault: true,
-                                valueType: "number",
-                                validFor: {
-                                    startDateTime: new Date(),
-                                    endDateTime: new Date()    
-                                },
-                                value: 8
-                            },
-                            {
-                                isDefault: true,
-                                valueType: "number",
-                                validFor: {
-                                    startDateTime: new Date(),
-                                    endDateTime: new Date()    
-                                },
-                                value: 16 
-                            }
-                        ],
-                        productSpecification: {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url(),
-                            version: "1.1" 
-                        }
-                    }
+                        value: "string",
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string"
+                      }
+                    ],
+                    productSpecification: {
+                      id: "string",
+                      href: "string",
+                      name: "string",
+                      version: "string",
+                      targetProductSchema: {
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string"
+                      },
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
+                    },
+                    validFor: {
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
                 ],
-                "@type": "ProductOffering"
+                productOfferingPrice: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                productOfferingTerm: [
+                  {
+                    description: "string",
+                    name: "string",
+                    duration: {
+                      amount: 1,
+                      units: "string"
+                    },
+                    validFor: {
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                productSpecification: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  version: "string",
+                  targetProductSchema: {
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  },
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                resourceCandidate: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  version: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                serviceCandidate: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  version: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                serviceLevelAgreement: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
             }
         ]
     },
@@ -494,139 +686,242 @@ module.exports = {
                 action: 'show_product_offering'
             },
             href: faker.internet.url(),
-            name: "string",
-            description: faker.random.words(),
-            version: "1.0",
-            validFor: {
-                startDateTime: new Date(),
-                endDateTime: new Date()    
-            },
-            lastUpdate: new Date(),
-            lifecycleStatus: "Active",
-            isBundle: false,
+            description: "string",
+            isBundle: true,
             isSellable: true,
+            lastUpdate: new Date(),
+            lifecycleStatus: "string",
+            name: "string",
             statusReason: "string",
-            place: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string",
-                    "@referredType": "GeographicAddress"
-                }
-            ],
-            serviceLevelAgreement: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
+            version: "string",
+            agreement: [
+              {
+                id: "string",
+                href: "string",
                 name: "string",
-                "@referredType": "BusinessSLA"
-            },
-            productSpecification: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                version: "1.0",
-                name: "string",
-                "@referredType": "DeviceSpecification"
-            },
-            channel: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string"
-                }
-            ],
-            serviceCandidate: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                version: "1.0",
-                name: "string"
-            },
-            category: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    version: "1.0",
-                    name: "string"
-                }
-            ],
-            resourceCandidate: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                name: "string"
-            },
-            productOfferingTerm: [
-                {
-                    name: "string",
-                    description: faker.random.words(),
-                    duration: {
-                        amount: 3,
-                        units: "string"
-                    },
-                    validFor: {
-                        startDateTime: new Date(),
-                        endDateTime: new Date()    
-                    }
-                }
-            ],
-            productOfferingPrice: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string"
-                }
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             attachment: [
-                {
-                    description: faker.random.words(),
-                    mimeType: "string",
-                    url: faker.internet.url()
-                }
+              {
+                id: "string",
+                href: "string",
+                attachmentType: "string",
+                content: "string",
+                description: "string",
+                mimeType: "string",
+                name: "string",
+                url: "string",
+                size: {
+                  amount: 1,
+                  units: "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            bundledProductOffering: [
+              {
+                id: "string",
+                href: "string",
+                lifecycleStatus: "string",
+                name: "string",
+                bundledProductOfferingOption: {
+                  numberRelOfferDefault: 0,
+                  numberRelOfferLowerLimit: 0,
+                  numberRelOfferUpperLimit: 0,
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            category: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                version: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            channel: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             marketSegment: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string" 
-                }
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            place: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             prodSpecCharValueUse: [
-                {
-                    name: "string",
-                    description: faker.random.words(),
-                    valueType: "number",
-                    minCardinality: 1,
-                    maxCardinality: 1,
+              {
+                description: "string",
+                maxCardinality: 0,
+                minCardinality: 0,
+                name: "string",
+                valueType: "string",
+                productSpecCharacteristicValue: [
+                  {
+                    isDefault: true,
+                    rangeInterval: "string",
+                    regex: "string",
+                    unitOfMeasure: "string",
+                    valueFrom: "string",
+                    valueTo: "string",
+                    valueType: "string",
                     validFor: {
-                        startDateTime: new Date(),
-                        endDateTime: new Date()    
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
                     },
-                    productSpecCharacteristicValue: [
-                        {
-                            isDefault: true,
-                            valueType: "number",
-                            validFor: {
-                                startDateTime: new Date(),
-                                endDateTime: new Date()    
-                            },
-                            value: 8
-                        },
-                        {
-                            isDefault: true,
-                            valueType: "number",
-                            validFor: {
-                                startDateTime: new Date(),
-                                endDateTime: new Date()    
-                            },
-                            value: 16 
-                        }
-                    ],
-                    productSpecification: {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        version: "1.1" 
-                    }
-                }
+                    value: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                productSpecification: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  version: "string",
+                  targetProductSchema: {
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  },
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
-            "@type": "ProductOffering"
+            productOfferingPrice: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            productOfferingTerm: [
+              {
+                description: "string",
+                name: "string",
+                duration: {
+                  amount: 1,
+                  units: "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            productSpecification: {
+              id: "string",
+              href: "string",
+              name: "string",
+              version: "string",
+              targetProductSchema: {
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              },
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            resourceCandidate: {
+              id: "string",
+              href: "string",
+              name: "string",
+              version: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            serviceCandidate: {
+              id: "string",
+              href: "string",
+              name: "string",
+              version: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            serviceLevelAgreement: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date()
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     create_product_offering: function(request)
@@ -639,137 +934,242 @@ module.exports = {
                 action: 'create_product_offering'
             },
             href: faker.internet.url(),
-            name: "string",
-            description: faker.random.words(),
-            version: "1.0",
-            validFor: {
-                startDateTime: new Date(),
-                endDateTime: new Date()    
-            },
-            isBundle: false,
+            description: "string",
+            isBundle: true,
             isSellable: true,
+            lastUpdate: new Date(),
+            lifecycleStatus: "string",
+            name: "string",
             statusReason: "string",
-            place: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string",
-                    "@referredType": "GeographicAddress"
-                }
-            ],
-            serviceLevelAgreement: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
+            version: "string",
+            agreement: [
+              {
+                id: "string",
+                href: "string",
                 name: "string",
-                "@referredType": "BusinessSLA"
-            },
-            productSpecification: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                version: "1.0",
-                name: "string",
-                "@referredType": "DeviceSpecification"
-            },
-            channel: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string"
-                }
-            ],
-            serviceCandidate: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                version: "1.0",
-                name: "string"
-            },
-            category: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    version: "1.0",
-                    name: "string"
-                }
-            ],
-            resourceCandidate: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                name: "string"
-            },
-            productOfferingTerm: [
-                {
-                    name: "string",
-                    description: faker.random.words(),
-                    duration: {
-                        amount: 3,
-                        units: "string"
-                    },
-                    validFor: {
-                        startDateTime: new Date(),
-                        endDateTime: new Date()    
-                    }
-                }
-            ],
-            productOfferingPrice: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string"
-                }
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             attachment: [
-                {
-                    description: faker.random.words(),
-                    mimeType: "string",
-                    url: faker.internet.url()
-                }
+              {
+                id: "string",
+                href: "string",
+                attachmentType: "string",
+                content: "string",
+                description: "string",
+                mimeType: "string",
+                name: "string",
+                url: "string",
+                size: {
+                  amount: 1,
+                  units: "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            bundledProductOffering: [
+              {
+                id: "string",
+                href: "string",
+                lifecycleStatus: "string",
+                name: "string",
+                bundledProductOfferingOption: {
+                  numberRelOfferDefault: 0,
+                  numberRelOfferLowerLimit: 0,
+                  numberRelOfferUpperLimit: 0,
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            category: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                version: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            channel: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             marketSegment: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string" 
-                }
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            place: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             prodSpecCharValueUse: [
-                {
-                    name: "string",
-                    description: faker.random.words(),
-                    valueType: "number",
-                    minCardinality: 1,
-                    maxCardinality: 1,
+              {
+                description: "string",
+                maxCardinality: 0,
+                minCardinality: 0,
+                name: "string",
+                valueType: "string",
+                productSpecCharacteristicValue: [
+                  {
+                    isDefault: true,
+                    rangeInterval: "string",
+                    regex: "string",
+                    unitOfMeasure: "string",
+                    valueFrom: "string",
+                    valueTo: "string",
+                    valueType: "string",
                     validFor: {
-                        startDateTime: new Date(),
-                        endDateTime: new Date()    
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
                     },
-                    productSpecCharacteristicValue: [
-                        {
-                            isDefault: true,
-                            valueType: "number",
-                            validFor: {
-                                startDateTime: new Date(),
-                                endDateTime: new Date()    
-                            },
-                            value: 8
-                        },
-                        {
-                            isDefault: true,
-                            valueType: "number",
-                            validFor: {
-                                startDateTime: new Date(),
-                                endDateTime: new Date()    
-                            },
-                            value: 16 
-                        }
-                    ],
-                    productSpecification: {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        version: "1.1" 
-                    }
-                }
+                    value: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                productSpecification: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  version: "string",
+                  targetProductSchema: {
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  },
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
-            "@type": "ProductOffering"
+            productOfferingPrice: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            productOfferingTerm: [
+              {
+                description: "string",
+                name: "string",
+                duration: {
+                  amount: 1,
+                  units: "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            productSpecification: {
+              id: "string",
+              href: "string",
+              name: "string",
+              version: "string",
+              targetProductSchema: {
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              },
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            resourceCandidate: {
+              id: "string",
+              href: "string",
+              name: "string",
+              version: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            serviceCandidate: {
+              id: "string",
+              href: "string",
+              name: "string",
+              version: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            serviceLevelAgreement: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date()
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     update_product_offering: function(request)
@@ -782,139 +1182,242 @@ module.exports = {
                 action: 'update_product_offering'
             },
             href: faker.internet.url(),
-            name: "string",
-            description: faker.random.words(),
-            version: "1.0",
-            validFor: {
-                startDateTime: new Date(),
-                endDateTime: new Date()    
-            },
-            lastUpdate: new Date(),
-            lifecycleStatus: "Active",
-            isBundle: false,
+            description: "string",
+            isBundle: true,
             isSellable: true,
+            lastUpdate: new Date(),
+            lifecycleStatus: "string",
+            name: "string",
             statusReason: "string",
-            place: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string",
-                    "@referredType": "GeographicAddress"
-                }
-            ],
-            serviceLevelAgreement: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
+            version: "string",
+            agreement: [
+              {
+                id: "string",
+                href: "string",
                 name: "string",
-                "@referredType": "BusinessSLA"
-            },
-            productSpecification: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                version: "1.0",
-                name: "string",
-                "@referredType": "DeviceSpecification"
-            },
-            channel: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string"
-                }
-            ],
-            serviceCandidate: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                version: "1.0",
-                name: "string"
-            },
-            category: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    version: "1.0",
-                    name: "string"
-                }
-            ],
-            resourceCandidate: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                name: "string"
-            },
-            productOfferingTerm: [
-                {
-                    name: "string",
-                    description: faker.random.words(),
-                    duration: {
-                        amount: 3,
-                        units: "string"
-                    },
-                    validFor: {
-                        startDateTime: new Date(),
-                        endDateTime: new Date()    
-                    }
-                }
-            ],
-            productOfferingPrice: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string"
-                }
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             attachment: [
-                {
-                    description: faker.random.words(),
-                    mimeType: "string",
-                    url: faker.internet.url()
-                }
+              {
+                id: "string",
+                href: "string",
+                attachmentType: "string",
+                content: "string",
+                description: "string",
+                mimeType: "string",
+                name: "string",
+                url: "string",
+                size: {
+                  amount: 1,
+                  units: "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            bundledProductOffering: [
+              {
+                id: "string",
+                href: "string",
+                lifecycleStatus: "string",
+                name: "string",
+                bundledProductOfferingOption: {
+                  numberRelOfferDefault: 0,
+                  numberRelOfferLowerLimit: 0,
+                  numberRelOfferUpperLimit: 0,
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            category: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                version: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            channel: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             marketSegment: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string" 
-                }
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            place: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             prodSpecCharValueUse: [
-                {
-                    name: "string",
-                    description: faker.random.words(),
-                    valueType: "number",
-                    minCardinality: 1,
-                    maxCardinality: 1,
+              {
+                description: "string",
+                maxCardinality: 0,
+                minCardinality: 0,
+                name: "string",
+                valueType: "string",
+                productSpecCharacteristicValue: [
+                  {
+                    isDefault: true,
+                    rangeInterval: "string",
+                    regex: "string",
+                    unitOfMeasure: "string",
+                    valueFrom: "string",
+                    valueTo: "string",
+                    valueType: "string",
                     validFor: {
-                        startDateTime: new Date(),
-                        endDateTime: new Date()    
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
                     },
-                    productSpecCharacteristicValue: [
-                        {
-                            isDefault: true,
-                            valueType: "number",
-                            validFor: {
-                                startDateTime: new Date(),
-                                endDateTime: new Date()    
-                            },
-                            value: 8
-                        },
-                        {
-                            isDefault: true,
-                            valueType: "number",
-                            validFor: {
-                                startDateTime: new Date(),
-                                endDateTime: new Date()    
-                            },
-                            value: 16 
-                        }
-                    ],
-                    productSpecification: {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        version: "1.1" 
-                    }
-                }
+                    value: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                productSpecification: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  version: "string",
+                  targetProductSchema: {
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  },
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
-            "@type": "ProductOffering"
+            productOfferingPrice: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            productOfferingTerm: [
+              {
+                description: "string",
+                name: "string",
+                duration: {
+                  amount: 1,
+                  units: "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            productSpecification: {
+              id: "string",
+              href: "string",
+              name: "string",
+              version: "string",
+              targetProductSchema: {
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              },
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            resourceCandidate: {
+              id: "string",
+              href: "string",
+              name: "string",
+              version: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            serviceCandidate: {
+              id: "string",
+              href: "string",
+              name: "string",
+              version: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            serviceLevelAgreement: {
+              id: "string",
+              href: "string",
+              name: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date()
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     destroy_product_offering: function(request)
@@ -941,79 +1444,171 @@ module.exports = {
                     action: 'index_product_offering_price'
                 },
                 href: faker.internet.url(),
-                name: "string",
-                description: faker.random.words(),
-                version: "1.0",
-                validFor: {
-                    startDateTime: new Date(),
-                    endDateTime: new Date()    
-                },
-                priceType: "Recurring",
-                recurringChargePeriodType: "monthly",
-                recurringChargePeriodLength: 1,
+                description: "string",
+                isBundle: true,
                 lastUpdate: new Date(),
-                isBundle: false,
-                lifecycleStatus: "Active",
-                price: {
-                    unit: "EUR",
-                    amount: 50
-                },
-                percentage: 0.0,
-                productOfferingTerm: [
-                    {
-                        name: "string",
-                        description: "string",
-                        duration: {
-                            amount: 12,
-                            units: "month"
-                        },
-                        validFor: {
-                            startDateTime: new Date(),
-                            endDateTime: new Date()    
-                        }
-                    }
-                ],
-                place: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: "string",
-                        "@referredType": "GeographicAddress"
-                    }
+                lifecycleStatus: "string",
+                name: "string",
+                percentage: 0,
+                priceType: "string",
+                recurringChargePeriodLength: 0,
+                recurringChargePeriodType: "string",
+                version: "string",
+                bundledPopRelationship: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
                 ],
                 constraint: [
-                    {
-                        "@referredType": "PriceConstraint",
-                        name: "string",
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url()
-                    }
-                ],
-                pricingLogicAlgorithm: {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    "@type": "RecurringRatingPLA",
-                    "@baseType": "PricingLogicAlgorithm",
-                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Product/RecurringRatingPLA.schema.json",
+                  {
+                    id: "string",
+                    href: "string",
                     name: "string",
-                    description: faker.random.words(),
-                    plaSpecId: "525",
-                    validFor: {
-                        startDateTime: new Date(),
-                        endDateTime: new Date()    
-                    }
-                },
-                tax: [
-                    {
-                        taxAmount: {
-                            unit: "EUR",
-                            amount: 50
-                        },
-                        taxCategory: "VAT",
-                        taxRate: 20.00
-                    }
+                    version: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
                 ],
-                "@type": "ProductOfferingPrice"
+                place: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                popRelationship: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    relationshipType: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                price: {
+                  unit: "string",
+                  value: 0
+                },
+                pricingLogicAlgorithm: [
+                  {
+                    id: "string",
+                    href: "string",
+                    description: "string",
+                    name: "string",
+                    plaSpecId: "string",
+                    validFor: {
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                prodSpecCharValueUse: [
+                  {
+                    description: "string",
+                    maxCardinality: 0,
+                    minCardinality: 0,
+                    name: "string",
+                    valueType: "string",
+                    productSpecCharacteristicValue: [
+                      {
+                        isDefault: true,
+                        rangeInterval: "string",
+                        regex: "string",
+                        unitOfMeasure: "string",
+                        valueFrom: "string",
+                        valueTo: "string",
+                        valueType: "string",
+                        validFor: {
+                          endDateTime: new Date(),
+                          startDateTime: new Date()
+                        },
+                        value: "string",
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string"
+                      }
+                    ],
+                    productSpecification: {
+                      id: "string",
+                      href: "string",
+                      name: "string",
+                      version: "string",
+                      targetProductSchema: {
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string"
+                      },
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
+                    },
+                    validFor: {
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                productOfferingTerm: [
+                  {
+                    description: "string",
+                    name: "string",
+                    duration: {
+                      amount: 1,
+                      units: "string"
+                    },
+                    validFor: {
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                tax: [
+                  {
+                    taxCategory: "string",
+                    taxRate: 0,
+                    taxAmount: {
+                      unit: "string",
+                      value: 0
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                unitOfMeasure: {
+                  amount: 1,
+                  units: "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
             }
         ]
     },
@@ -1027,79 +1622,171 @@ module.exports = {
                 action: 'show_product_offering_price'
             },
             href: faker.internet.url(),
-            name: "string",
-            description: faker.random.words(),
-            version: "1.0",
-            validFor: {
-                startDateTime: new Date(),
-                endDateTime: new Date()    
-            },
-            priceType: "Recurring",
-            recurringChargePeriodType: "monthly",
-            recurringChargePeriodLength: 1,
+            description: "string",
+            isBundle: true,
             lastUpdate: new Date(),
-            isBundle: false,
-            lifecycleStatus: "Active",
-            price: {
-                unit: "EUR",
-                amount: 50
-            },
-            percentage: 0.0,
-            productOfferingTerm: [
-                {
-                    name: "string",
-                    description: "string",
-                    duration: {
-                        amount: 12,
-                        units: "month"
-                    },
-                    validFor: {
-                        startDateTime: new Date(),
-                        endDateTime: new Date()    
-                    }
-                }
-            ],
-            place: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string",
-                    "@referredType": "GeographicAddress"
-                }
+            lifecycleStatus: "string",
+            name: "string",
+            percentage: 0,
+            priceType: "string",
+            recurringChargePeriodLength: 0,
+            recurringChargePeriodType: "string",
+            version: "string",
+            bundledPopRelationship: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
             constraint: [
-                {
-                    "@referredType": "PriceConstraint",
-                    name: "string",
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url()
-                }
-            ],
-            pricingLogicAlgorithm: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                "@type": "RecurringRatingPLA",
-                "@baseType": "PricingLogicAlgorithm",
-                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Product/RecurringRatingPLA.schema.json",
+              {
+                id: "string",
+                href: "string",
                 name: "string",
-                description: faker.random.words(),
-                plaSpecId: "525",
-                validFor: {
-                    startDateTime: new Date(),
-                    endDateTime: new Date()    
-                }
-            },
-            tax: [
-                {
-                    taxAmount: {
-                        unit: "EUR",
-                        amount: 50
-                    },
-                    taxCategory: "VAT",
-                    taxRate: 20.00
-                }
+                version: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
-            "@type": "ProductOfferingPrice"
+            place: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            popRelationship: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                relationshipType: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            price: {
+              unit: "string",
+              value: 0
+            },
+            pricingLogicAlgorithm: [
+              {
+                id: "string",
+                href: "string",
+                description: "string",
+                name: "string",
+                plaSpecId: "string",
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            prodSpecCharValueUse: [
+              {
+                description: "string",
+                maxCardinality: 0,
+                minCardinality: 0,
+                name: "string",
+                valueType: "string",
+                productSpecCharacteristicValue: [
+                  {
+                    isDefault: true,
+                    rangeInterval: "string",
+                    regex: "string",
+                    unitOfMeasure: "string",
+                    valueFrom: "string",
+                    valueTo: "string",
+                    valueType: "string",
+                    validFor: {
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
+                    },
+                    value: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                productSpecification: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  version: "string",
+                  targetProductSchema: {
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  },
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            productOfferingTerm: [
+              {
+                description: "string",
+                name: "string",
+                duration: {
+                  amount: 1,
+                  units: "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            tax: [
+              {
+                taxCategory: "string",
+                taxRate: 0,
+                taxAmount: {
+                  unit: "string",
+                  value: 0
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            unitOfMeasure: {
+              amount: 1,
+              units: "string"
+            },
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date()
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     create_product_offering_price: function(request)
@@ -1112,77 +1799,171 @@ module.exports = {
                 action: 'create_product_offering_price'
             },
             href: faker.internet.url(),
+            description: "string",
+            isBundle: true,
+            lastUpdate: new Date(),
+            lifecycleStatus: "string",
             name: "string",
-            description: faker.random.words(),
-            version: "1.0",
-            validFor: {
-                startDateTime: new Date(),
-                endDateTime: new Date()    
-            },
-            priceType: "Recurring",
-            recurringChargePeriodType: "monthly",
-            recurringChargePeriodLength: 1,
-            isBundle: false,
-            price: {
-                unit: "EUR",
-                amount: 50
-            },
-            percentage: 0.0,
-            productOfferingTerm: [
-                {
-                    name: "string",
-                    description: "string",
-                    duration: {
-                        amount: 12,
-                        units: "month"
-                    },
-                    validFor: {
-                        startDateTime: new Date(),
-                        endDateTime: new Date()    
-                    }
-                }
-            ],
-            place: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string",
-                    "@referredType": "GeographicAddress"
-                }
+            percentage: 0,
+            priceType: "string",
+            recurringChargePeriodLength: 0,
+            recurringChargePeriodType: "string",
+            version: "string",
+            bundledPopRelationship: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
             constraint: [
-                {
-                    "@referredType": "PriceConstraint",
-                    name: "string",
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url()
-                }
-            ],
-            pricingLogicAlgorithm: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                "@type": "RecurringRatingPLA",
-                "@baseType": "PricingLogicAlgorithm",
-                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Product/RecurringRatingPLA.schema.json",
+              {
+                id: "string",
+                href: "string",
                 name: "string",
-                description: faker.random.words(),
-                plaSpecId: "525",
-                validFor: {
-                    startDateTime: new Date(),
-                    endDateTime: new Date()    
-                }
-            },
-            tax: [
-                {
-                    taxAmount: {
-                        unit: "EUR",
-                        amount: 50
-                    },
-                    taxCategory: "VAT",
-                    taxRate: 20.00
-                }
+                version: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
-            "@type": "ProductOfferingPrice"
+            place: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            popRelationship: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                relationshipType: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            price: {
+              unit: "string",
+              value: 0
+            },
+            pricingLogicAlgorithm: [
+              {
+                id: "string",
+                href: "string",
+                description: "string",
+                name: "string",
+                plaSpecId: "string",
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            prodSpecCharValueUse: [
+              {
+                description: "string",
+                maxCardinality: 0,
+                minCardinality: 0,
+                name: "string",
+                valueType: "string",
+                productSpecCharacteristicValue: [
+                  {
+                    isDefault: true,
+                    rangeInterval: "string",
+                    regex: "string",
+                    unitOfMeasure: "string",
+                    valueFrom: "string",
+                    valueTo: "string",
+                    valueType: "string",
+                    validFor: {
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
+                    },
+                    value: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                productSpecification: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  version: "string",
+                  targetProductSchema: {
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  },
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            productOfferingTerm: [
+              {
+                description: "string",
+                name: "string",
+                duration: {
+                  amount: 1,
+                  units: "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            tax: [
+              {
+                taxCategory: "string",
+                taxRate: 0,
+                taxAmount: {
+                  unit: "string",
+                  value: 0
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            unitOfMeasure: {
+              amount: 1,
+              units: "string"
+            },
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date()
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     update_product_offering_price: function(request)
@@ -1195,79 +1976,171 @@ module.exports = {
                 action: 'update_product_offering_price'
             },
             href: faker.internet.url(),
-            name: "string",
-            description: faker.random.words(),
-            version: "1.0",
-            validFor: {
-                startDateTime: new Date(),
-                endDateTime: new Date()    
-            },
-            priceType: "Recurring",
-            recurringChargePeriodType: "monthly",
-            recurringChargePeriodLength: 1,
+            description: "string",
+            isBundle: true,
             lastUpdate: new Date(),
-            isBundle: false,
-            lifecycleStatus: "Active",
-            price: {
-                unit: "EUR",
-                amount: 50
-            },
-            percentage: 0.0,
-            productOfferingTerm: [
-                {
-                    name: "string",
-                    description: "string",
-                    duration: {
-                        amount: 12,
-                        units: "month"
-                    },
-                    validFor: {
-                        startDateTime: new Date(),
-                        endDateTime: new Date()    
-                    }
-                }
-            ],
-            place: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string",
-                    "@referredType": "GeographicAddress"
-                }
+            lifecycleStatus: "string",
+            name: "string",
+            percentage: 0,
+            priceType: "string",
+            recurringChargePeriodLength: 0,
+            recurringChargePeriodType: "string",
+            version: "string",
+            bundledPopRelationship: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
             constraint: [
-                {
-                    "@referredType": "PriceConstraint",
-                    name: "string",
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url()
-                }
-            ],
-            pricingLogicAlgorithm: {
-                id: faker.datatype.uuid(),
-                href: faker.internet.url(),
-                "@type": "RecurringRatingPLA",
-                "@baseType": "PricingLogicAlgorithm",
-                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Product/RecurringRatingPLA.schema.json",
+              {
+                id: "string",
+                href: "string",
                 name: "string",
-                description: faker.random.words(),
-                plaSpecId: "525",
-                validFor: {
-                    startDateTime: new Date(),
-                    endDateTime: new Date()    
-                }
-            },
-            tax: [
-                {
-                    taxAmount: {
-                        unit: "EUR",
-                        amount: 50
-                    },
-                    taxCategory: "VAT",
-                    taxRate: 20.00
-                }
+                version: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
-            "@type": "ProductOfferingPrice"
+            place: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            popRelationship: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                relationshipType: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            price: {
+              unit: "string",
+              value: 0
+            },
+            pricingLogicAlgorithm: [
+              {
+                id: "string",
+                href: "string",
+                description: "string",
+                name: "string",
+                plaSpecId: "string",
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            prodSpecCharValueUse: [
+              {
+                description: "string",
+                maxCardinality: 0,
+                minCardinality: 0,
+                name: "string",
+                valueType: "string",
+                productSpecCharacteristicValue: [
+                  {
+                    isDefault: true,
+                    rangeInterval: "string",
+                    regex: "string",
+                    unitOfMeasure: "string",
+                    valueFrom: "string",
+                    valueTo: "string",
+                    valueType: "string",
+                    validFor: {
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
+                    },
+                    value: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                productSpecification: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  version: "string",
+                  targetProductSchema: {
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  },
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            productOfferingTerm: [
+              {
+                description: "string",
+                name: "string",
+                duration: {
+                  amount: 1,
+                  units: "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            tax: [
+              {
+                taxCategory: "string",
+                taxRate: 0,
+                taxAmount: {
+                  unit: "string",
+                  value: 0
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            unitOfMeasure: {
+              amount: 1,
+              units: "string"
+            },
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date()
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     destroy_product_offering_price: function(request)
@@ -1286,6 +2159,7 @@ module.exports = {
     index_product_specification: function(request)
     {
         console.log("product_catalog_management_controller.index_product_specification")
+        
         return [
             {
                 id: faker.datatype.uuid(),
@@ -1294,162 +2168,171 @@ module.exports = {
                     action: 'index_product_specification'
                 },
                 href: faker.internet.url(),
-                name: "string",
                 brand: "string",
-                productNumber: "string",
-                description: faker.random.words(),
+                description: "string",
                 isBundle: true,
                 lastUpdate: new Date(),
-                lifecycleStatus: "Active",
-                validFor: {
-                    startDateTime: new Date(),
-                    endDateTime: new Date()    
-                },
-                version: "2.1",
-                relatedParty: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        role: "string",
-                        name: "string",
-                        validFor: {
-                            startDateTime: new Date()
-                        }
-                    }
-                ],
+                lifecycleStatus: "string",
+                name: "string",
+                productNumber: "string",
+                version: "string",
                 attachment: [
-                    {
-                        name: "Product Picture",
-                        mimeType: "image/jpeg",
-                        url: faker.internet.url()
+                  {
+                    id: "string",
+                    href: "string",
+                    attachmentType: "string",
+                    content: "string",
+                    description: "string",
+                    mimeType: "string",
+                    name: "string",
+                    url: "string",
+                    size: {
+                      amount: 1,
+                      units: "string"
                     },
-                    {
-                        name: "Product Picture",
-                        mimeType: "image/jpeg",
-                        url: faker.internet.url()
-                    }
+                    validFor: {
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
                 ],
                 bundledProductSpecification: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: "string"
-                    },
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: "string"
-                    }
-                ],
-                targetProductSchema:{
-                    "@type": "Firewall",
-                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Product/Firewall.schema.json"
-                },
-                productSpecificationRelationship: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        relationshipType: "string",
-                        validFor: {
-                            startDateTime: new Date()
-                        }
-                    }
-                ],
-                serviceSpecification: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: "string",
-                        version: "1.0"
-                    }
-                ],
-                resourceSpecification: [
-                    {
-                        id: faker.datatype.uuid(),
-                        href: faker.internet.url(),
-                        name: "string",
-                        version: "1.0"
-                    }
+                  {
+                    id: "string",
+                    href: "string",
+                    lifecycleStatus: "string",
+                    name: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
                 ],
                 productSpecCharacteristic: [
-                    {
+                  {
+                    configurable: true,
+                    description: "string",
+                    extensible: true,
+                    isUnique: true,
+                    maxCardinality: 0,
+                    minCardinality: 0,
+                    name: "string",
+                    regex: "string",
+                    valueType: "string",
+                    productSpecCharRelationship: [
+                      {
+                        id: "string",
+                        href: "string",
+                        charSpecSeq: 0,
                         name: "string",
-                        description: faker.random.words(),
-                        valueType: "string",
-                        configurable: true,
-                        minCardinality: 1,
-                        maxCardinality: 1,
-                        isUnique: true,
-                        productSpecCharRelationship: [
-                            {
-                                id: faker.datatype.uuid(),
-                                href: faker.internet.url(),
-                                relationshipType: "string",
-                                name: "string",
-                                validFor: {
-                                    startDateTime: new Date()
-                                }
-                            }
-                        ],
-                        productSpecCharacteristicValue: [
-                            {
-                                isDefault: true,
-                                valueType: "number",
-                                validFor: {
-                                    startDateTime: new Date(),
-                                    endDateTime: new Date()    
-                                },
-                                value: 8
-                            },
-                            {
-                                isDefault: true,
-                                valueType: "number",
-                                validFor: {
-                                    startDateTime: new Date(),
-                                    endDateTime: new Date()    
-                                },
-                                value: 16 
-                            },
-                            {
-                                isDefault: false,
-                                valueType: "number",
-                                validFor: {
-                                    startDateTime: new Date(),
-                                    endDateTime: new Date()    
-                                },
-                                value: 24
-                            }
-                        ],
+                        relationshipType: "string",
                         validFor: {
-                            startDateTime: new Date()
-                        }
+                          endDateTime: new Date(),
+                          startDateTime: new Date()
+                        },
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string"
+                      }
+                    ],
+                    productSpecCharacteristicValue: [
+                      {
+                        isDefault: true,
+                        rangeInterval: "string",
+                        regex: "string",
+                        unitOfMeasure: "string",
+                        valueFrom: "string",
+                        valueTo: "string",
+                        valueType: "string",
+                        validFor: {
+                          endDateTime: new Date(),
+                          startDateTime: new Date()
+                        },
+                        value: "string",
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string"
+                      }
+                    ],
+                    validFor: {
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
                     },
-                    {
-                        name: "string",
-                        description: faker.random.words(),
-                        valueType: "string",
-                        configurable: true,
-                        minCardinality: 1,
-                        maxCardinality: 1,
-                        isUnique: true,
-                        productSpecCharacteristicValue: [
-                            {
-                                isDefault: true,
-                                valueType: "string",
-                                value: "Black"
-                            },
-                            {
-                                isDefault: false,
-                                valueType: "string",
-                                value: "White" 
-                            }
-                        ],
-                        validFor: {
-                            startDateTime: new Date()
-                        }
-                    }
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
                 ],
-                "@type": "ProductSpecification"
+                productSpecificationRelationship: [
+                  {
+                    id: "string",
+                    href: "string",
+                    relationshipType: "string",
+                    validFor: {
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                relatedParty: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    role: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                resourceSpecification: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    version: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                serviceSpecification: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    version: "string",
+                    targetServiceSchema: {
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                targetProductSchema: {
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
             }
         ]
     },
@@ -1463,163 +2346,171 @@ module.exports = {
                 action: 'show_product_specification'
             },
             href: faker.internet.url(),
-            name: "string",
             brand: "string",
-            productNumber: "string",
-            description: faker.random.words(),
+            description: "string",
             isBundle: true,
             lastUpdate: new Date(),
-            lifecycleStatus: "Active",
-            validFor: {
-                startDateTime: new Date(),
-                endDateTime: new Date()    
-            },
-            version: "2.1",
-            relatedParty: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    role: "string",
-                    name: "string",
-                    validFor: {
-                        startDateTime: new Date()
-                    }
-                }
-            ],
+            lifecycleStatus: "string",
+            name: "string",
+            productNumber: "string",
+            version: "string",
             attachment: [
-                {
-                    name: "Product Picture",
-                    mimeType: "image/jpeg",
-                    url: faker.internet.url()
+              {
+                id: "string",
+                href: "string",
+                attachmentType: "string",
+                content: "string",
+                description: "string",
+                mimeType: "string",
+                name: "string",
+                url: "string",
+                size: {
+                  amount: 1,
+                  units: "string"
                 },
-                {
-                    name: "Product Picture",
-                    mimeType: "image/jpeg",
-                    url: faker.internet.url()
-                }
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             bundledProductSpecification: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string"
-                },
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string"
-                }
-            ],
-            targetProductSchema:{
-                "@type": "Firewall",
-                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Product/Firewall.schema.json"
-            },
-            productSpecificationRelationship: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    relationshipType: "string",
-                    validFor: {
-                        startDateTime: new Date()
-                    }
-                }
-            ],
-            serviceSpecification: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string",
-                    version: "1.0"
-                }
-            ],
-            resourceSpecification: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string",
-                    version: "1.0"
-                }
+              {
+                id: "string",
+                href: "string",
+                lifecycleStatus: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
             productSpecCharacteristic: [
-                {
+              {
+                configurable: true,
+                description: "string",
+                extensible: true,
+                isUnique: true,
+                maxCardinality: 0,
+                minCardinality: 0,
+                name: "string",
+                regex: "string",
+                valueType: "string",
+                productSpecCharRelationship: [
+                  {
+                    id: "string",
+                    href: "string",
+                    charSpecSeq: 0,
                     name: "string",
-                    description: faker.random.words(),
-                    valueType: "string",
-                    configurable: true,
-                    minCardinality: 1,
-                    maxCardinality: 1,
-                    isUnique: true,
-                    productSpecCharRelationship: [
-                        {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url(),
-                            relationshipType: "string",
-                            name: "string",
-                            validFor: {
-                                startDateTime: new Date()
-                            }
-                        }
-                    ],
-                    productSpecCharacteristicValue: [
-                        {
-                            isDefault: true,
-                            valueType: "number",
-                            validFor: {
-                                startDateTime: new Date(),
-                                endDateTime: new Date()    
-                            },
-                            value: 8
-                        },
-                        {
-                            isDefault: true,
-                            valueType: "number",
-                            validFor: {
-                                startDateTime: new Date(),
-                                endDateTime: new Date()    
-                            },
-                            value: 16 
-                        },
-                        {
-                            isDefault: false,
-                            valueType: "number",
-                            validFor: {
-                                startDateTime: new Date(),
-                                endDateTime: new Date()    
-                            },
-                            value: 24
-                        }
-                    ],
+                    relationshipType: "string",
                     validFor: {
-                        startDateTime: new Date()
-                    }
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                productSpecCharacteristicValue: [
+                  {
+                    isDefault: true,
+                    rangeInterval: "string",
+                    regex: "string",
+                    unitOfMeasure: "string",
+                    valueFrom: "string",
+                    valueTo: "string",
+                    valueType: "string",
+                    validFor: {
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
+                    },
+                    value: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
                 },
-                {
-                    name: "string",
-                    description: faker.random.words(),
-                    valueType: "string",
-                    configurable: true,
-                    minCardinality: 1,
-                    maxCardinality: 1,
-                    isUnique: true,
-                    productSpecCharacteristicValue: [
-                        {
-                            isDefault: true,
-                            valueType: "string",
-                            value: "Black"
-                        },
-                        {
-                            isDefault: false,
-                            valueType: "string",
-                            value: "White" 
-                        }
-                    ],
-                    validFor: {
-                        startDateTime: new Date()
-                    }
-                }
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
-            "@type": "ProductSpecification"
-            
+            productSpecificationRelationship: [
+              {
+                id: "string",
+                href: "string",
+                relationshipType: "string",
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            relatedParty: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            resourceSpecification: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                version: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            serviceSpecification: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                version: "string",
+                targetServiceSchema: {
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            targetProductSchema: {
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date()
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     create_product_specification: function(request)
@@ -1632,160 +2523,171 @@ module.exports = {
                 action: 'create_product_specification'
             },
             href: faker.internet.url(),
-            name: "string",
             brand: "string",
-            productNumber: "string",
-            description: faker.random.words(),
+            description: "string",
             isBundle: true,
-            validFor: {
-                startDateTime: new Date(),
-                endDateTime: new Date()    
-            },
-            version: "2.1",
-            relatedParty: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    role: "string",
-                    name: "string",
-                    validFor: {
-                        startDateTime: new Date()
-                    }
-                }
-            ],
+            lastUpdate: new Date(),
+            lifecycleStatus: "string",
+            name: "string",
+            productNumber: "string",
+            version: "string",
             attachment: [
-                {
-                    name: "Product Picture",
-                    mimeType: "image/jpeg",
-                    url: faker.internet.url()
+              {
+                id: "string",
+                href: "string",
+                attachmentType: "string",
+                content: "string",
+                description: "string",
+                mimeType: "string",
+                name: "string",
+                url: "string",
+                size: {
+                  amount: 1,
+                  units: "string"
                 },
-                {
-                    name: "Product Picture",
-                    mimeType: "image/jpeg",
-                    url: faker.internet.url()
-                }
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             bundledProductSpecification: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string"
-                },
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string"
-                }
-            ],
-            targetProductSchema:{
-                "@type": "Firewall",
-                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Product/Firewall.schema.json"
-            },
-            productSpecificationRelationship: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    relationshipType: "string",
-                    validFor: {
-                        startDateTime: new Date()
-                    }
-                }
-            ],
-            serviceSpecification: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string",
-                    version: "1.0"
-                }
-            ],
-            resourceSpecification: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string",
-                    version: "1.0"
-                }
+              {
+                id: "string",
+                href: "string",
+                lifecycleStatus: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
             productSpecCharacteristic: [
-                {
+              {
+                configurable: true,
+                description: "string",
+                extensible: true,
+                isUnique: true,
+                maxCardinality: 0,
+                minCardinality: 0,
+                name: "string",
+                regex: "string",
+                valueType: "string",
+                productSpecCharRelationship: [
+                  {
+                    id: "string",
+                    href: "string",
+                    charSpecSeq: 0,
                     name: "string",
-                    description: faker.random.words(),
-                    valueType: "string",
-                    configurable: true,
-                    minCardinality: 1,
-                    maxCardinality: 1,
-                    isUnique: true,
-                    productSpecCharRelationship: [
-                        {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url(),
-                            relationshipType: "string",
-                            name: "string",
-                            validFor: {
-                                startDateTime: new Date()
-                            }
-                        }
-                    ],
-                    productSpecCharacteristicValue: [
-                        {
-                            isDefault: true,
-                            valueType: "number",
-                            validFor: {
-                                startDateTime: new Date(),
-                                endDateTime: new Date()    
-                            },
-                            value: 8
-                        },
-                        {
-                            isDefault: true,
-                            valueType: "number",
-                            validFor: {
-                                startDateTime: new Date(),
-                                endDateTime: new Date()    
-                            },
-                            value: 16 
-                        },
-                        {
-                            isDefault: false,
-                            valueType: "number",
-                            validFor: {
-                                startDateTime: new Date(),
-                                endDateTime: new Date()    
-                            },
-                            value: 24
-                        }
-                    ],
+                    relationshipType: "string",
                     validFor: {
-                        startDateTime: new Date()
-                    }
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                productSpecCharacteristicValue: [
+                  {
+                    isDefault: true,
+                    rangeInterval: "string",
+                    regex: "string",
+                    unitOfMeasure: "string",
+                    valueFrom: "string",
+                    valueTo: "string",
+                    valueType: "string",
+                    validFor: {
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
+                    },
+                    value: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
                 },
-                {
-                    name: "string",
-                    description: faker.random.words(),
-                    valueType: "string",
-                    configurable: true,
-                    minCardinality: 1,
-                    maxCardinality: 1,
-                    isUnique: true,
-                    productSpecCharacteristicValue: [
-                        {
-                            isDefault: true,
-                            valueType: "string",
-                            value: "Black"
-                        },
-                        {
-                            isDefault: false,
-                            valueType: "string",
-                            value: "White" 
-                        }
-                    ],
-                    validFor: {
-                        startDateTime: new Date()
-                    }
-                }
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
-            "@type": "ProductSpecification"   
+            productSpecificationRelationship: [
+              {
+                id: "string",
+                href: "string",
+                relationshipType: "string",
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            relatedParty: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            resourceSpecification: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                version: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            serviceSpecification: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                version: "string",
+                targetServiceSchema: {
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            targetProductSchema: {
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date()
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     update_product_specification: function(request)
@@ -1798,165 +2700,171 @@ module.exports = {
                 action: 'update_product_specification'
             },
             href: faker.internet.url(),
-            name: "string",
             brand: "string",
-            productNumber: "string",
-            description: faker.random.words(),
+            description: "string",
             isBundle: true,
             lastUpdate: new Date(),
-            lifecycleStatus: "Active",
-            validFor: {
-                startDateTime: new Date(),
-                endDateTime: new Date()    
-            },
-            version: "2.1",
-            relatedParty: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    role: "string",
-                    name: "string",
-                    validFor: {
-                        startDateTime: new Date()
-                    }
-                }
-            ],
+            lifecycleStatus: "string",
+            name: "string",
+            productNumber: "string",
+            version: "string",
             attachment: [
-                {
-                    name: "Product Picture",
-                    mimeType: "image/jpeg",
-                    url: faker.internet.url()
+              {
+                id: "string",
+                href: "string",
+                attachmentType: "string",
+                content: "string",
+                description: "string",
+                mimeType: "string",
+                name: "string",
+                url: "string",
+                size: {
+                  amount: 1,
+                  units: "string"
                 },
-                {
-                    name: "Product Picture",
-                    mimeType: "image/jpeg",
-                    url: faker.internet.url()
-                }
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
             ],
             bundledProductSpecification: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string"
-                },
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string"
-                }
-            ],
-            targetProductSchema:{
-                "@type": "Firewall",
-                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Product/Firewall.schema.json"
-            },
-            productSpecificationRelationship: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    relationshipType: "string",
-                    validFor: {
-                        startDateTime: new Date()
-                    }
-                }
-            ],
-            serviceSpecification: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string",
-                    version: "1.0"
-                }
-            ],
-            resourceSpecification: [
-                {
-                    id: faker.datatype.uuid(),
-                    href: faker.internet.url(),
-                    name: "string",
-                    version: "1.0"
-                }
+              {
+                id: "string",
+                href: "string",
+                lifecycleStatus: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
             productSpecCharacteristic: [
-                {
+              {
+                configurable: true,
+                description: "string",
+                extensible: true,
+                isUnique: true,
+                maxCardinality: 0,
+                minCardinality: 0,
+                name: "string",
+                regex: "string",
+                valueType: "string",
+                productSpecCharRelationship: [
+                  {
+                    id: "string",
+                    href: "string",
+                    charSpecSeq: 0,
                     name: "string",
-                    description: faker.random.words(),
-                    valueType: "string",
-                    configurable: true,
-                    minCardinality: 1,
-                    maxCardinality: 1,
-                    isUnique: true,
-                    productSpecCharRelationship: [
-                        {
-                            id: faker.datatype.uuid(),
-                            href: faker.internet.url(),
-                            relationshipType: "string",
-                            name: "string",
-                            validFor: {
-                                startDateTime: new Date()
-                            }
-                        }
-                    ],
-                    productSpecCharacteristicValue: [
-                        {
-                            isDefault: true,
-                            valueType: "number",
-                            validFor: {
-                                startDateTime: new Date(),
-                                endDateTime: new Date()    
-                            },
-                            value: 8
-                        },
-                        {
-                            isDefault: true,
-                            valueType: "number",
-                            validFor: {
-                                startDateTime: new Date(),
-                                endDateTime: new Date()    
-                            },
-                            value: 16 
-                        },
-                        {
-                            isDefault: false,
-                            valueType: "number",
-                            validFor: {
-                                startDateTime: new Date(),
-                                endDateTime: new Date()    
-                            },
-                            value: 24
-                        }
-                    ],
+                    relationshipType: "string",
                     validFor: {
-                        startDateTime: new Date()
-                    }
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                productSpecCharacteristicValue: [
+                  {
+                    isDefault: true,
+                    rangeInterval: "string",
+                    regex: "string",
+                    unitOfMeasure: "string",
+                    valueFrom: "string",
+                    valueTo: "string",
+                    valueType: "string",
+                    validFor: {
+                      endDateTime: new Date(),
+                      startDateTime: new Date()
+                    },
+                    value: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
                 },
-                {
-                    name: "string",
-                    description: faker.random.words(),
-                    valueType: "string",
-                    configurable: true,
-                    minCardinality: 1,
-                    maxCardinality: 1,
-                    isUnique: true,
-                    productSpecCharacteristicValue: [
-                        {
-                            isDefault: true,
-                            valueType: "string",
-                            value: "Black"
-                        },
-                        {
-                            isDefault: false,
-                            valueType: "string",
-                            value: "White" 
-                        }
-                    ],
-                    validFor: {
-                        startDateTime: new Date()
-                    }
-                }
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
             ],
-            "@type": "ProductSpecification"
-           
-            
-           
+            productSpecificationRelationship: [
+              {
+                id: "string",
+                href: "string",
+                relationshipType: "string",
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            relatedParty: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                role: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            resourceSpecification: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                version: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            serviceSpecification: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                version: "string",
+                targetServiceSchema: {
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            targetProductSchema: {
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string"
+            },
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date()
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
 
     },
@@ -1984,39 +2892,40 @@ module.exports = {
                     action: 'index_import_job'
                 },
                 href: faker.internet.url(),
-                contentType: "application/json",
-                creationDate: new Date(),
                 completionDate: new Date(),
-                path: "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/Catalog/3830",
-                status: "completed",
-                url: faker.internet.url(),
-                errorLog: faker.internet.url(),
-                "@type": "ImportJob"
-
-                
-            }
+                contentType: "string",
+                creationDate: new Date(),
+                errorLog: "string",
+                path: "string",
+                url: "string",
+                status: "Not Started",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
         ]
     },
     show_import_job: function(request)
     {
         console.log("product_catalog_management_controller.show_import_job")
         return {
-            id: request.params.id,
-            routeDetails: {
-                controller: 'Product Catalog Management',
-                action: 'show_import_job'
-            },
-            href: faker.internet.url(),
-            contentType: "application/json",
-            creationDate: new Date(),
-            completionDate: new Date(),
-            path: "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/Catalog/3830",
-            status: "completed",
-            url: faker.internet.url(),
-            errorLog: faker.internet.url(),
-            "@type": "ImportJob"
-            
-        }
+                id: request.params.id,
+                routeDetails: {
+                    controller: 'Product Catalog Management',
+                    action: 'show_import_job'
+                },
+                href: faker.internet.url(),
+                completionDate: new Date(),
+                contentType: "string",
+                creationDate: new Date(),
+                errorLog: "string",
+                path: "string",
+                url: "string",
+                status: "Not Started",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
     },
     create_import_job: function(request)
     {
@@ -2028,16 +2937,17 @@ module.exports = {
                 action: 'create_import_job'
             },
             href: faker.internet.url(),
-            contentType: "application/json",
+            completionDate: new Date(),
+            contentType: "string",
             creationDate: new Date(),
-            path: "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/Catalog/3830",
-            status: "completed",
-            url: faker.internet.url(),
-            errorLog: faker.internet.url(),
-            "@type": "ImportJob"
-            
-            
-        }
+            errorLog: "string",
+            path: "string",
+            url: "string",
+            status: "Not Started",
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+          }
     },
     destroy_import_job: function(request)
     {
@@ -2063,17 +2973,17 @@ module.exports = {
                     action: 'index_export_job'
                 },
                 href: faker.internet.url(),
-                contentType: "application/json",
+                completionDate: new Date(),
+                contentType: "string",
                 creationDate: new Date(),
-                path: "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/Catalog/3830",
-                query: "category.id=7757",
-                status: "completed",
-                url: faker.internet.url(),
-                errorLog: faker.internet.url(),
-                "@type": "ImportJob"
-                
-
-                
+                errorLog: "string",
+                path: "string",
+                query: "string",
+                url: "string",
+                status: "Not Started",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
             }
         ]
     },
@@ -2084,18 +2994,20 @@ module.exports = {
             id: request.params.id,
             routeDetails: {
                 controller: 'Product Catalog Management',
-                action: 'show_export_job'
+                action: 'shwo_export_job'
             },
             href: faker.internet.url(),
-            contentType: "application/json",
+            completionDate: new Date(),
+            contentType: "string",
             creationDate: new Date(),
-            path: "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/Catalog/3830",
-            query: "category.id=7757",
-            status: "completed",
-            url: faker.internet.url(),
-            errorLog: faker.internet.url(),
-            "@type": "ImportJob"
-            
+            errorLog: "string",
+            path: "string",
+            query: "string",
+            url: "string",
+            status: "Not Started",
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     create_export_job: function(request)
@@ -2108,16 +3020,17 @@ module.exports = {
                 action: 'create_export_job'
             },
             href: faker.internet.url(),
-            contentType: "application/json",
+            completionDate: new Date(),
+            contentType: "string",
             creationDate: new Date(),
-            path: "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/Catalog/3830",
-            query: "category.id=7757",
-            status: "completed",
-            url: faker.internet.url(),
-            errorLog: faker.internet.url(),
-            "@type": "ImportJob"
-            
-            
+            errorLog: "string",
+            path: "string",
+            query: "string",
+            url: "string",
+            status: "Not Started",
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
     destroy_export_job: function(request)
@@ -2130,6 +3043,206 @@ module.exports = {
                 action: 'destroy_export_job'
             },
             code: 204
+        }
+    },
+
+    create_listener_catalog_create_event: function(request)
+    {
+        console.log("product_catalog_management_controller.create_listener_catalog_create_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Product Catalog Management',
+                action: 'create_listener_catalog_create_event'
+            },
+           callback: "string",
+           query: "string"
+        }
+    },
+    create_listener_catalog_delete_event: function(request)
+    {
+        console.log("product_catalog_management_controller.create_listener_catalog_delete_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Product Catalog Management',
+                action: 'create_listener_catalog_delete_event'
+            },
+           callback: "string",
+           query: "string"
+        }
+    },
+    create_listener_catalog_batch_event: function(request)
+    {
+        console.log("product_catalog_management_controller.create_listener_catalog_batch_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Product Catalog Management',
+                action: 'create_listener_catalog_batch_event'
+            },
+           callback: "string",
+           query: "string"
+        }
+    },
+
+    create_listener_category_create_event: function(request)
+    {
+        console.log("product_catalog_management_controller.create_listener_category_create_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Product Catalog Management',
+                action: 'create_listener_category_create_event'
+            },
+           callback: "string",
+           query: "string"
+        }
+    },
+    create_listener_category_delete_event: function(request)
+    {
+        console.log("product_catalog_management_controller.create_listener_category_delete_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Product Catalog Management',
+                action: 'create_listener_category_delete_event'
+            },
+           callback: "string",
+           query: "string"
+        }
+    },
+
+    create_listener_product_offerenig_create_event: function(request)
+    {
+        console.log("product_catalog_management_controller.create_listener_product_offerenig_create_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Product Catalog Management',
+                action: 'create_listener_product_offerenig_create_event'
+            },
+           callback: "string",
+           query: "string"
+        }
+    },
+    create_listener_product_offering_attribute_value_change_event: function(request)
+    {
+        console.log("product_catalog_management_controller.create_listener_product_offering_attribute_value_change_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Product Catalog Management',
+                action: 'create_listener_product_offering_attribute_value_change_event'
+            },
+           callback: "string",
+           query: "string"
+        }
+    },
+    create_listener_product_offering_state_change_event: function(request)
+    {
+        console.log("product_catalog_management_controller.create_listener_product_offering_state_change_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Product Catalog Management',
+                action: 'create_listener_product_offering_state_change_event'
+            },
+           callback: "string",
+           query: "string"
+        }
+    },
+    create_listener_product_offering_delete_event: function(request)
+    {
+        console.log("product_catalog_management_controller.create_listener_product_offering_delete_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Product Catalog Management',
+                action: 'create_listener_product_offering_delete_event'
+            },
+           callback: "string",
+           query: "string"
+        }
+    },
+
+    create_listener_product_offering_price_change_event: function(request)
+    {
+        console.log("product_catalog_management_controller.create_listener_product_offering_price_change_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Product Catalog Management',
+                action: 'create_listener_product_offering_price_change_event'
+            },
+           callback: "string",
+           query: "string"
+        }
+    },
+    create_listener_product_offering_price_attribute_value_change_event: function(request)
+    {
+        console.log("product_catalog_management_controller.create_listener_product_offering_price_attribute_value_change_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Product Catalog Management',
+                action: 'create_listener_product_offering_price_attribute_value_change_event'
+            },
+           callback: "string",
+           query: "string"
+        }
+    },
+    create_listener_product_offering_price_state_change_event: function(request)
+    {
+        console.log("product_catalog_management_controller.create_listener_product_offering_price_state_change_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Product Catalog Management',
+                action: 'create_listener_product_offering_price_state_change_event'
+            },
+           callback: "string",
+           query: "string"
+        }
+    },
+    create_listener_product_offering_price_delete_event: function(request)
+    {
+        console.log("product_catalog_management_controller.create_listener_product_offering_price_delete_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Product Catalog Management',
+                action: 'create_listener_product_offering_price_delete_event'
+            },
+           callback: "string",
+           query: "string"
+        }
+    },
+
+    create_listener_product_spesification_create_event: function(request)
+    {
+        console.log("product_catalog_management_controller.create_listener_product_spesification_create_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Product Catalog Management',
+                action: 'create_listener_product_spesification_create_event'
+            },
+           callback: "string",
+           query: "string"
+        }
+    },
+    create_listener_product_spesification_delete_event: function(request)
+    {
+        console.log("product_catalog_management_controller.create_listener_product_spesification_delete_event")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Product Catalog Management',
+                action: 'create_listener_product_spesification_delete_event'
+            },
+           callback: "string",
+           query: "string"
         }
     },
 
@@ -2160,18 +3273,6 @@ module.exports = {
             code: 204
         }
     },
-    create_client_listener: function(request)
-    {
-        console.log("product_catalog_management_controller.create_client_listener")
 
-        return {
-            id: faker.datatype.uuid(),
-            routeDetails: {
-                controller: 'Product Catalog Management',
-                action: 'create_client_listener'
-            },
-           code: 201
-        }
-    },
 
 }

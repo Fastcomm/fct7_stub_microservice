@@ -37,6 +37,36 @@ appointment_routes.delete('/time_slot/:slot_id', (request, response) => {
     response.send( appointment_controller.destroy_time_slot(request) )
 })
 
+
+appointment_routes.post('/listener/appointment/create_event', (request, response) => {
+    response.send( appointment_controller.create_appointment_notification_listener_create_event(request) )
+})
+appointment_routes.post('/listener/appointment/attribute_value_change_event', (request, response) => {
+    response.send( appointment_controller.create_appointment_notification_listener_attribute_value_change_event(request) )
+})
+appointment_routes.post('/listener/appointment/state_change_event', (request, response) => {
+    response.send( appointment_controller.create_appointment_notification_listener_state_change_event(request) )
+})
+appointment_routes.post('/listener/appointment/delete_event', (request, response) => {
+    response.send( appointment_controller.create_appointment_notification_listener_delete_event(request) )
+})
+
+appointment_routes.post('/listener/search_time_slot/create_event', (request, response) => {
+    response.send( appointment_controller.create_search_time_slot_notification_listener_create_event(request) )
+})
+appointment_routes.post('/listener/search_time_slot/attribute_value_change_event', (request, response) => {
+    response.send( appointment_controller.create_search_time_slot_notification_listener_attribute_value_change_event(request) )
+})
+appointment_routes.post('/listener/search_time_slot/state_change_event', (request, response) => {
+    response.send( appointment_controller.create_search_time_slot_notification_listener_state_change_event(request) )
+})
+appointment_routes.post('/listener/search_time_slot/delete_event', (request, response) => {
+    response.send( appointment_controller.create_search_time_slot_notification_listener_delete_event(request) )
+})
+
+
+
+
 appointment_routes.post("/hub", (request, response) => {
     response.send( appointment_controller.create_hub( request ) )
 })

@@ -26,5 +26,15 @@ shopping_cart_management_routes.delete('/hub/:id', (request, response) => {
     response.send( shopping_cart_management_controller.destroy_hub(request) )
 })
 
+shopping_cart_management_routes.post('/listener_create_event', (request, response) => {
+    response.send( shopping_cart_management_controller.create_listener_create_event(request) )
+})
+shopping_cart_management_routes.post('/listener_attribute_value_change_event', (request, response) => {
+    response.send( shopping_cart_management_controller.create_listener_attribute_value_change_event(request) )
+})
+shopping_cart_management_routes.post('/listener_delete_event', (request, response) => {
+    response.send( shopping_cart_management_controller.create_listener_delete_event(request) )
+})
+
 //  === Exports ===
 module.exports = shopping_cart_management_routes

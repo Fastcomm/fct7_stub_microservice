@@ -3,7 +3,6 @@ const faker = require('faker')
 
 //  === Controller ===
 module.exports = {
-
     index: function(request)
     {
         console.log("recommendation_management_controller.index")
@@ -14,72 +13,761 @@ module.exports = {
                     controller: 'Recommendation Management',
                     action: 'index'
                 },
-                description: faker.lorem.sentence(),
                 href: faker.internet.url(),
+                description: "string",
+                instantSyncRecommendation: true,
                 name: "string",
-                type: "string",
-                validFor: {
-                    endDateTime: new Date(),
-                    startDateTime: new Date()
-                },
-                order: {
-                    href: "string",
+                recommendationType: "string",
+                category: [
+                  {
                     id: "string",
-                    "@referredType": "string"
-                },
-                location: {
                     href: "string",
-                    id: "string",
                     name: "string",
-                    role: "string",
-                    "@referredType": "string",
-                    "@type": "string",
+                    version: "string",
+                    "@baseType": "string",
                     "@schemaLocation": "string",
-                    "@baseType": "string"
-                },
-                channel: {
-                    href: "string",
-                    id: "string",
-                    name: "string",
+                    "@type": "string",
                     "@referredType": "string"
-                },
-                category: {
-                    href: "string",
-                    id: "string",
-                    name: "string",
-                    "@referredType": "string"
-                },
-                shoppingCart: {
-                    href: "string",
-                    id: "string",
-                    "@referredType": "string"
-                },
-                relatedParty: {
-                    href: "string",
-                    id: "string",
-                    name: "string",
-                    role: "string",
-                    "@referredType": "string"
-                },
-                item: [
-                    {
-                        priority: 0,
-                        offering: {
-                            href: "string",
-                            id: "string",
-                            name: "string",
-                            "@referredType": "string"
-                        },
-                        "@type": "string",
-                        "@schemaLocation": "string",
-                        "@baseType": "string"
-                    }
+                  }
                 ],
-                "@type": "string",
+                channel: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                place: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                productOrder: [
+                  {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                productOrderItem: [
+                  {
+                    entityHref: "string",
+                    entityId: "string",
+                    itemId: "string",
+                    name: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                recommendationItem: [
+                  {
+                    id: "string",
+                    priority: 0,
+                    product: {
+                      id: "string",
+                      href: "string",
+                      description: "string",
+                      isBundle: true,
+                      isCustomerVisible: true,
+                      name: "string",
+                      orderDate: new Date(),
+                      productSerialNumber: "string",
+                      startDate: new Date(),
+                      terminationDate: new Date(),
+                      agreement: [
+                        {
+                          id: "string",
+                          href: "string",
+                          agreementItemId: "string",
+                          name: "string",
+                          "@baseType": "string",
+                          "@schemaLocation": "string",
+                          "@type": "string",
+                          "@referredType": "string"
+                        }
+                      ],
+                      billingAccount: {
+                        id: "string",
+                        href: "string",
+                        name: "string",
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string",
+                        "@referredType": "string"
+                      },
+                      place: [
+                        {
+                          id: "string",
+                          href: "string",
+                          name: "string",
+                          role: "string",
+                          "@baseType": "string",
+                          "@schemaLocation": "string",
+                          "@type": "string",
+                          "@referredType": "string"
+                        }
+                      ],
+                      product: [
+                        "string"
+                      ],
+                      productCharacteristic: [
+                        {
+                          id: "string",
+                          name: "string",
+                          valueType: "string",
+                          characteristicRelationship: [
+                            {
+                              id: "string",
+                              relationshipType: "string",
+                              "@baseType": "string",
+                              "@schemaLocation": "string",
+                              "@type": "string"
+                            }
+                          ],
+                          value: "string",
+                          "@baseType": "string",
+                          "@schemaLocation": "string",
+                          "@type": "string"
+                        }
+                      ],
+                      productOffering: {
+                        id: "string",
+                        href: "string",
+                        name: "string",
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string",
+                        "@referredType": "string"
+                      },
+                      productOrderItem: [
+                        {
+                          orderItemAction: "string",
+                          orderItemId: "string",
+                          productOrderHref: "string",
+                          productOrderId: "string",
+                          role: "string",
+                          "@baseType": "string",
+                          "@schemaLocation": "string",
+                          "@type": "string",
+                          "@referredType": "string"
+                        }
+                      ],
+                      productPrice: [
+                        {
+                          description: "string",
+                          name: "string",
+                          priceType: "string",
+                          recurringChargePeriod: "string",
+                          unitOfMeasure: "string",
+                          billingAccount: {
+                            id: "string",
+                            href: "string",
+                            name: "string",
+                            "@baseType": "string",
+                            "@schemaLocation": "string",
+                            "@type": "string",
+                            "@referredType": "string"
+                          },
+                          price: {
+                            percentage: 0,
+                            taxRate: 0,
+                            dutyFreeAmount: {
+                              unit: "string",
+                              value: 0
+                            },
+                            taxIncludedAmount: {
+                              unit: "string",
+                              value: 0
+                            },
+                            "@baseType": "string",
+                            "@schemaLocation": "string",
+                            "@type": "string"
+                          },
+                          productOfferingPrice: {
+                            id: "string",
+                            href: "string",
+                            name: "string",
+                            "@baseType": "string",
+                            "@schemaLocation": "string",
+                            "@type": "string",
+                            "@referredType": "string"
+                          },
+                          productPriceAlteration: [
+                            {
+                              applicationDuration: 0,
+                              description: "string",
+                              name: "string",
+                              priceType: "string",
+                              priority: 0,
+                              recurringChargePeriod: "string",
+                              unitOfMeasure: "string",
+                              price: {
+                                percentage: 0,
+                                taxRate: 0,
+                                dutyFreeAmount: {
+                                  unit: "string",
+                                  value: 0
+                                },
+                                taxIncludedAmount: {
+                                  unit: "string",
+                                  value: 0
+                                },
+                                "@baseType": "string",
+                                "@schemaLocation": "string",
+                                "@type": "string"
+                              },
+                              productOfferingPrice: {
+                                id: "string",
+                                href: "string",
+                                name: "string",
+                                "@baseType": "string",
+                                "@schemaLocation": "string",
+                                "@type": "string",
+                                "@referredType": "string"
+                              },
+                              "@baseType": "string",
+                              "@schemaLocation": "string",
+                              "@type": "string"
+                            }
+                          ],
+                          "@baseType": "string",
+                          "@schemaLocation": "string",
+                          "@type": "string"
+                        }
+                      ],
+                      productRelationship: [
+                        {
+                          relationshipType: "string",
+                          product: "string",
+                          "@baseType": "string",
+                          "@schemaLocation": "string",
+                          "@type": "string"
+                        }
+                      ],
+                      productSpecification: {
+                        id: "string",
+                        href: "string",
+                        name: "string",
+                        version: "string",
+                        targetProductSchema: {
+                          "@baseType": "string",
+                          "@schemaLocation": "string",
+                          "@type": "string"
+                        },
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string",
+                        "@referredType": "string"
+                      },
+                      productTerm: [
+                        {
+                          description: "string",
+                          name: "string",
+                          duration: {
+                            amount: 1,
+                            units: "string"
+                          },
+                          validFor: {
+                            endDateTime: new Date(),
+                            startDateTime: new Date()
+                          },
+                          "@baseType": "string",
+                          "@schemaLocation": "string",
+                          "@type": "string"
+                        }
+                      ],
+                      realizingResource: [
+                        {
+                          id: "string",
+                          href: "string",
+                          "@baseType": "string",
+                          "@schemaLocation": "string",
+                          "@type": "string",
+                          "@referredType": "string"
+                        }
+                      ],
+                      realizingService: [
+                        {
+                          id: "string",
+                          href: "string",
+                          name: "string",
+                          "@baseType": "string",
+                          "@schemaLocation": "string",
+                          "@type": "string",
+                          "@referredType": "string"
+                        }
+                      ],
+                      relatedParty: [
+                        {
+                          id: "string",
+                          href: "string",
+                          name: "string",
+                          role: "string",
+                          "@baseType": "string",
+                          "@schemaLocation": "string",
+                          "@type": "string",
+                          "@referredType": "string"
+                        }
+                      ],
+                      status: "created",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
+                    },
+                    productOffering: {
+                      id: "string",
+                      href: "string",
+                      name: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string"
+                  }
+                ],
+                relatedParty: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  role: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                shoppingCart: [
+                  {
+                    id: "string",
+                    href: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                shoppingCartItem: [
+                  {
+                    entityHref: "string",
+                    entityId: "string",
+                    itemId: "string",
+                    name: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  }
+                ],
+                state: "accepted",
+                validFor: {
+                  endDateTime: new Date(),
+                  startDateTime: new Date()
+                },
+                "@baseType": "string",
                 "@schemaLocation": "string",
-                "@baseType": "string"
+                "@type": "string"
             }
         ]
+    },
+    create: function(request)
+    {
+        console.log("recommendation_management_controller.create")
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Recommendation Management',
+                action: 'create'
+            },
+            href: faker.internet.url(),
+            description: "string",
+            instantSyncRecommendation: true,
+            name: "string",
+            recommendationType: "string",
+            category: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                version: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            channel: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            place: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            productOrder: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            productOrderItem: [
+              {
+                entityHref: "string",
+                entityId: "string",
+                itemId: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            recommendationItem: [
+              {
+                id: "string",
+                priority: 0,
+                product: {
+                  id: "string",
+                  href: "string",
+                  description: "string",
+                  isBundle: true,
+                  isCustomerVisible: true,
+                  name: "string",
+                  orderDate: new Date(),
+                  productSerialNumber: "string",
+                  startDate: new Date(),
+                  terminationDate: new Date(),
+                  agreement: [
+                    {
+                      id: "string",
+                      href: "string",
+                      agreementItemId: "string",
+                      name: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
+                    }
+                  ],
+                  billingAccount: {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  },
+                  place: [
+                    {
+                      id: "string",
+                      href: "string",
+                      name: "string",
+                      role: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
+                    }
+                  ],
+                  product: [
+                    "string"
+                  ],
+                  productCharacteristic: [
+                    {
+                      id: "string",
+                      name: "string",
+                      valueType: "string",
+                      characteristicRelationship: [
+                        {
+                          id: "string",
+                          relationshipType: "string",
+                          "@baseType": "string",
+                          "@schemaLocation": "string",
+                          "@type": "string"
+                        }
+                      ],
+                      value: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    }
+                  ],
+                  productOffering: {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  },
+                  productOrderItem: [
+                    {
+                      orderItemAction: "string",
+                      orderItemId: "string",
+                      productOrderHref: "string",
+                      productOrderId: "string",
+                      role: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
+                    }
+                  ],
+                  productPrice: [
+                    {
+                      description: "string",
+                      name: "string",
+                      priceType: "string",
+                      recurringChargePeriod: "string",
+                      unitOfMeasure: "string",
+                      billingAccount: {
+                        id: "string",
+                        href: "string",
+                        name: "string",
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string",
+                        "@referredType": "string"
+                      },
+                      price: {
+                        percentage: 0,
+                        taxRate: 0,
+                        dutyFreeAmount: {
+                          unit: "string",
+                          value: 0
+                        },
+                        taxIncludedAmount: {
+                          unit: "string",
+                          value: 0
+                        },
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string"
+                      },
+                      productOfferingPrice: {
+                        id: "string",
+                        href: "string",
+                        name: "string",
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string",
+                        "@referredType": "string"
+                      },
+                      productPriceAlteration: [
+                        {
+                          applicationDuration: 0,
+                          description: "string",
+                          name: "string",
+                          priceType: "string",
+                          priority: 0,
+                          recurringChargePeriod: "string",
+                          unitOfMeasure: "string",
+                          price: {
+                            percentage: 0,
+                            taxRate: 0,
+                            dutyFreeAmount: {
+                              unit: "string",
+                              value: 0
+                            },
+                            taxIncludedAmount: {
+                              unit: "string",
+                              value: 0
+                            },
+                            "@baseType": "string",
+                            "@schemaLocation": "string",
+                            "@type": "string"
+                          },
+                          productOfferingPrice: {
+                            id: "string",
+                            href: "string",
+                            name: "string",
+                            "@baseType": "string",
+                            "@schemaLocation": "string",
+                            "@type": "string",
+                            "@referredType": "string"
+                          },
+                          "@baseType": "string",
+                          "@schemaLocation": "string",
+                          "@type": "string"
+                        }
+                      ],
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    }
+                  ],
+                  productRelationship: [
+                    {
+                      relationshipType: "string",
+                      product: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    }
+                  ],
+                  productSpecification: {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    version: "string",
+                    targetProductSchema: {
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  },
+                  productTerm: [
+                    {
+                      description: "string",
+                      name: "string",
+                      duration: {
+                        amount: 1,
+                        units: "string"
+                      },
+                      validFor: {
+                        endDateTime: new Date(),
+                        startDateTime: new Date()
+                      },
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    }
+                  ],
+                  realizingResource: [
+                    {
+                      id: "string",
+                      href: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
+                    }
+                  ],
+                  realizingService: [
+                    {
+                      id: "string",
+                      href: "string",
+                      name: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
+                    }
+                  ],
+                  relatedParty: [
+                    {
+                      id: "string",
+                      href: "string",
+                      name: "string",
+                      role: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
+                    }
+                  ],
+                  status: "created",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                productOffering: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            relatedParty: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            shoppingCart: [
+              {
+                id: "string",
+                href: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            shoppingCartItem: [
+              {
+                entityHref: "string",
+                entityId: "string",
+                itemId: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            state: "accepted",
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date()
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
+        }
     },
     show: function(request)
     {
@@ -90,70 +778,377 @@ module.exports = {
                 controller: 'Recommendation Management',
                 action: 'show'
             },
-            description: faker.lorem.sentence(),
-                href: faker.internet.url(),
+            href: faker.internet.url(),
+            description: "string",
+            instantSyncRecommendation: true,
+            name: "string",
+            recommendationType: "string",
+            category: [
+              {
+                id: "string",
+                href: "string",
                 name: "string",
-                type: "string",
-                validFor: {
-                    endDateTime: new Date(),
-                    startDateTime: new Date()
-                },
-                order: {
-                    href: "string",
-                    id: "string",
-                    "@referredType": "string"
-                },
-                location: {
-                    href: "string",
-                    id: "string",
-                    name: "string",
-                    role: "string",
-                    "@referredType": "string",
-                    "@type": "string",
-                    "@schemaLocation": "string",
-                    "@baseType": "string"
-                },
-                channel: {
-                    href: "string",
-                    id: "string",
-                    name: "string",
-                    "@referredType": "string"
-                },
-                category: {
-                    href: "string",
-                    id: "string",
-                    name: "string",
-                    "@referredType": "string"
-                },
-                shoppingCart: {
-                    href: "string",
-                    id: "string",
-                    "@referredType": "string"
-                },
-                relatedParty: {
-                    href: "string",
-                    id: "string",
-                    name: "string",
-                    role: "string",
-                    "@referredType": "string"
-                },
-                item: [
-                    {
-                        priority: 0,
-                        offering: {
-                            href: "string",
-                            id: "string",
-                            name: "string",
-                            "@referredType": "string"
-                        },
-                        "@type": "string",
-                        "@schemaLocation": "string",
-                        "@baseType": "string"
-                    }
-                ],
-                "@type": "string",
+                version: "string",
+                "@baseType": "string",
                 "@schemaLocation": "string",
-                "@baseType": "string"
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            channel: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            place: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            productOrder: [
+              {
+                id: "string",
+                href: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            productOrderItem: [
+              {
+                entityHref: "string",
+                entityId: "string",
+                itemId: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            recommendationItem: [
+              {
+                id: "string",
+                priority: 0,
+                product: {
+                  id: "string",
+                  href: "string",
+                  description: "string",
+                  isBundle: true,
+                  isCustomerVisible: true,
+                  name: "string",
+                  orderDate: new Date(),
+                  productSerialNumber: "string",
+                  startDate: new Date(),
+                  terminationDate: new Date(),
+                  agreement: [
+                    {
+                      id: "string",
+                      href: "string",
+                      agreementItemId: "string",
+                      name: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
+                    }
+                  ],
+                  billingAccount: {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  },
+                  place: [
+                    {
+                      id: "string",
+                      href: "string",
+                      name: "string",
+                      role: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
+                    }
+                  ],
+                  product: [
+                    "string"
+                  ],
+                  productCharacteristic: [
+                    {
+                      id: "string",
+                      name: "string",
+                      valueType: "string",
+                      characteristicRelationship: [
+                        {
+                          id: "string",
+                          relationshipType: "string",
+                          "@baseType": "string",
+                          "@schemaLocation": "string",
+                          "@type": "string"
+                        }
+                      ],
+                      value: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    }
+                  ],
+                  productOffering: {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  },
+                  productOrderItem: [
+                    {
+                      orderItemAction: "string",
+                      orderItemId: "string",
+                      productOrderHref: "string",
+                      productOrderId: "string",
+                      role: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
+                    }
+                  ],
+                  productPrice: [
+                    {
+                      description: "string",
+                      name: "string",
+                      priceType: "string",
+                      recurringChargePeriod: "string",
+                      unitOfMeasure: "string",
+                      billingAccount: {
+                        id: "string",
+                        href: "string",
+                        name: "string",
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string",
+                        "@referredType": "string"
+                      },
+                      price: {
+                        percentage: 0,
+                        taxRate: 0,
+                        dutyFreeAmount: {
+                          unit: "string",
+                          value: 0
+                        },
+                        taxIncludedAmount: {
+                          unit: "string",
+                          value: 0
+                        },
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string"
+                      },
+                      productOfferingPrice: {
+                        id: "string",
+                        href: "string",
+                        name: "string",
+                        "@baseType": "string",
+                        "@schemaLocation": "string",
+                        "@type": "string",
+                        "@referredType": "string"
+                      },
+                      productPriceAlteration: [
+                        {
+                          applicationDuration: 0,
+                          description: "string",
+                          name: "string",
+                          priceType: "string",
+                          priority: 0,
+                          recurringChargePeriod: "string",
+                          unitOfMeasure: "string",
+                          price: {
+                            percentage: 0,
+                            taxRate: 0,
+                            dutyFreeAmount: {
+                              unit: "string",
+                              value: 0
+                            },
+                            taxIncludedAmount: {
+                              unit: "string",
+                              value: 0
+                            },
+                            "@baseType": "string",
+                            "@schemaLocation": "string",
+                            "@type": "string"
+                          },
+                          productOfferingPrice: {
+                            id: "string",
+                            href: "string",
+                            name: "string",
+                            "@baseType": "string",
+                            "@schemaLocation": "string",
+                            "@type": "string",
+                            "@referredType": "string"
+                          },
+                          "@baseType": "string",
+                          "@schemaLocation": "string",
+                          "@type": "string"
+                        }
+                      ],
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    }
+                  ],
+                  productRelationship: [
+                    {
+                      relationshipType: "string",
+                      product: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    }
+                  ],
+                  productSpecification: {
+                    id: "string",
+                    href: "string",
+                    name: "string",
+                    version: "string",
+                    targetProductSchema: {
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    },
+                    "@baseType": "string",
+                    "@schemaLocation": "string",
+                    "@type": "string",
+                    "@referredType": "string"
+                  },
+                  productTerm: [
+                    {
+                      description: "string",
+                      name: "string",
+                      duration: {
+                        amount: 1,
+                        units: "string"
+                      },
+                      validFor: {
+                        endDateTime: new Date(),
+                        startDateTime: new Date()
+                      },
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string"
+                    }
+                  ],
+                  realizingResource: [
+                    {
+                      id: "string",
+                      href: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
+                    }
+                  ],
+                  realizingService: [
+                    {
+                      id: "string",
+                      href: "string",
+                      name: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
+                    }
+                  ],
+                  relatedParty: [
+                    {
+                      id: "string",
+                      href: "string",
+                      name: "string",
+                      role: "string",
+                      "@baseType": "string",
+                      "@schemaLocation": "string",
+                      "@type": "string",
+                      "@referredType": "string"
+                    }
+                  ],
+                  status: "created",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                productOffering: {
+                  id: "string",
+                  href: "string",
+                  name: "string",
+                  "@baseType": "string",
+                  "@schemaLocation": "string",
+                  "@type": "string",
+                  "@referredType": "string"
+                },
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string"
+              }
+            ],
+            relatedParty: {
+              id: "string",
+              href: "string",
+              name: "string",
+              role: "string",
+              "@baseType": "string",
+              "@schemaLocation": "string",
+              "@type": "string",
+              "@referredType": "string"
+            },
+            shoppingCart: [
+              {
+                id: "string",
+                href: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            shoppingCartItem: [
+              {
+                entityHref: "string",
+                entityId: "string",
+                itemId: "string",
+                name: "string",
+                "@baseType": "string",
+                "@schemaLocation": "string",
+                "@type": "string",
+                "@referredType": "string"
+              }
+            ],
+            state: "accepted",
+            validFor: {
+              endDateTime: new Date(),
+              startDateTime: new Date()
+            },
+            "@baseType": "string",
+            "@schemaLocation": "string",
+            "@type": "string"
         }
     },
 
@@ -190,20 +1185,33 @@ module.exports = {
             "@schemaLocation": "string"
         }
     },
-    create_client_listener: function(request)
+
+    create_listener_create_event: function(request)
     {
-        console.log("Recommendation Management.create_client_listener")
+        console.log("Recommendation Management.create_listener_create_event")
 
         return {
             id: faker.datatype.uuid(),
             routeDetails: {
                 controller: 'Recommendation Management',
-                action: 'create_client_listener'
+                action: 'create_listener_create_event'
             },
-            event: {},
-            eventType: "EVENT_TYPE",
-            eventTime: "string",
-            eventId: "string"
+            callback: "string",
+            query: "string"
+        }
+    },
+    create_listener_state_change_event: function(request)
+    {
+        console.log("Recommendation Management.create_listener_state_change_event")
+
+        return {
+            id: faker.datatype.uuid(),
+            routeDetails: {
+                controller: 'Recommendation Management',
+                action: 'create_listener_state_change_event'
+            },
+            callback: "string",
+            query: "string"
         }
     }
 }
