@@ -2599,7 +2599,7 @@ module.exports = {
             id: request.params.id,
             routeDetails: {
                 controller: 'Account Management',
-                action: 'show_billing'
+                action: 'show_settlement'
             },
             href: faker.internet.url(),
             accountType: "string",
