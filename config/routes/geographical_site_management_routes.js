@@ -24,16 +24,16 @@ geographical_site_management_routes.delete('/:geographic_site_id', (request, res
 })
 
 
-geographical_site_management_routes.post("/client/listener", (request, response) => {
+geographical_site_management_routes.post("/client/listener/create_event", (request, response) => {
     response.send( geographical_site_management_controller.create_client_listener_site_create_event( request ) )
 })
-geographical_site_management_routes.post("/client/listener", (request, response) => {
+geographical_site_management_routes.post("/client/listener/value_change_event", (request, response) => {
     response.send( geographical_site_management_controller.create_client_listener_attribute_value_change_event( request ) )
 })
-geographical_site_management_routes.post("/client/listener", (request, response) => {
+geographical_site_management_routes.post("/client/listener/change_event", (request, response) => {
     response.send( geographical_site_management_controller.create_client_listener_status_change_event( request ) )
 })
-geographical_site_management_routes.post("/client/listener", (request, response) => {
+geographical_site_management_routes.post("/client/listener/delete_event", (request, response) => {
     response.send( geographical_site_management_controller.create_client_listener_delete_event( request ) )
 })
 
