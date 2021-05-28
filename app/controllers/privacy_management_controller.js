@@ -588,7 +588,7 @@ module.exports = {
             id: request.params.id,
             routeDetails: {
                 controller: 'Privacy Management',
-                action: 'create_profile_specification'
+                action: 'show_profile_specification'
             },
             href: faker.internet.url(),
             description: "string",
@@ -701,7 +701,7 @@ module.exports = {
             id: request.params.id,
             routeDetails: {
                 controller: 'Privacy Management',
-                action: 'create_profile_specification'
+                action: 'update_profile_specification'
             },
             href: faker.internet.url(),
             description: "string",
